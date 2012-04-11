@@ -1,0 +1,25 @@
+{% extends "feeds/Gbase.html" %}
+{% block title %}{{object.evidence}}{{ object.author_title }}{% endblock %}
+{% block content %}
+<p><a href="{% url item_list %}">&laquo; Back to full listing</a></p>
+
+<p>{{object.shelfmark_1}} {{object.shelfmark_2}}. {{object.evidence}}{{ object.author_title }}-{{object.modern_location_1}} {{object.modern_location_2}},{{object.provenance}}</p>
+<h3>Evidence Images</h3>
+<table>
+{% for photo in object.photo_set.all %}
+<tr>
+<td>
+<a href="{{ photo.image.url }}" rel="lightbox-journey"  title="{{ photo.title }}">
+<img src=" {{ photo.image.thumb_url }}" /> 
+</a>
+</td>
+<td><li>{{ photo.caption }}</li><li>{{ photo.title }}</li></td>
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
+
+
+
+
+

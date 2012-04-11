@@ -1,0 +1,26 @@
+{% extends "feeds/Gbase.html" %}
+{% block title %} Home{% endblock %}
+{% block content %}
+<h2>MLGB Image Store! </h3>
+<p>Here you find images of various books.Below are some highlighted
+books; use the link at the bottom to see the full listing.</p>
+
+<table>
+<tr>
+{% for item in item_list|slice:":3" %}
+{% if item.photo_set.count %}
+<td>
+<a href="{{item.get_absolute_url}}" ><b>{{item.author_title}}</b><br/>
+{% if item.photo_set.count %}
+<img src="{{item.photo_set.all.0.image.thumb_url}}" />
+{% else %}
+<span>No photo found! </span>
+{% endif %}
+</a>
+</td>
+{% endif %}
+{% endfor %}
+</tr>
+</table>
+<p><a href="{% url item_list %}">View the full list &raquo; </a></p>
+{% endblock %}

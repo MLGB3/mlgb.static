@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% block title %}
+<title>{{object.evidence}}{{ object.author_title }}</title>
+{% endblock %}
+{% block pages %}
+<div id="pages">
+  <h2>Pages</h2>
+  <ul>
+    <li class="active"><a id="page1" href="http://163.1.127.175/">Home</a></li>
+    <li><a id="page2" href="http://163.1.127.175/">ImageStore</a></li>
+    <li><a id="page4" href="http://163.1.127.175/">Index</a></li>
+    <li><a id="page4" href="http://163.1.127.175/">About the Project</a></li>
+    <li><a id="page5" href="http://163.1.127.175/">Contact</a></li>
+    <li><a id="page6" href="http://163.1.127.175/">Links</a></li>
+    <li><a id="page7" href="http://163.1.127.175/">Archives</a></li>
+  </ul>
+</div>
+{% endblock %}
+{% block posts %}
+ <div id="posts" class="post">
+{% autoescape off %}
+    <h3 class="posted">{{object.evidence}}{{ object.author_title }} - {{object.provenance}}</h3>
+        <table id="mlgbdetail">
+            <tr><td id="mlgbdetailtext">Provenance:</td><td id="mlgbdetailvalue">{{object.provenance}}</td></tr>
+            <tr><td id="mlgbdetailtext">Location:</td><td id="mlgbdetailvalue">{{object.modern_location_2}},{{object.modern_location_1}} </td></tr>
+            {% if object.shelfmark_1 or object.shelfmark_2 %}
+            <tr><td id="mlgbdetailtext">Shelfmark:</td><td id="mlgbdetailvalue">{{object.shelfmark_1}} {{object.shelfmark_2}}</td></tr>
+            {% endif %}
+            <tr><td id="mlgbdetailtext">Author/Title:</td><td id="mlgbdetailvalue">{{object.evidence}}{{ object.author_title }}</td></tr>
+             {% for photo in object.photo_set.all %}
+            <tr>
+            <td><ul><li>Evidence:</li><li>{{ photo.caption }}</li></ul></td>
+            <td>
+            <a href="{{ photo.image.url }}" rel="lightbox-journey"  title="{{ photo.title }}"><img src=" {{ photo.image.thumb_url }}" /></a>
+            </td>
+            </tr>
+            {% endfor %}
+           {% for contains in object.contains_set.all %}
+            <tr>
+            <td id="mlgbdetailtext">Contents of the book:</td>
+            <td id="contains">
+            	<textarea border="0" style="text-indent:5px;width:730px;height:140px">{{ contains.contains }}</textarea>{% if contains.urls %}
+             <a href="{{ contains.urls }}"><img src="/mlgb/media/img/book.png" alt="Link to the Book Site" border="0" /></a>
+            {% endif %}
+            </td>
+            </tr>
+            {% endfor %}
+        
+            {% if object.date %}
+            <tr><td id="mlgbdetailtext">Date:</td><td id="mlgbdetailvalue">{{object.date}}</td></tr>
+            {% endif %}
+            {% if object.pressmark %}
+            <tr><td id="mlgbdetailtext">Pressmark:</td><td id="mlgbdetailvalue">{{object.pressmark}}</td></tr>
+            {% endif %}
+            {% if object.medieval_catalogue %}
+            <tr><td id="mlgbdetailtext">Medieval Catalogue:</td><td id="mlgbdetailvalue">{{object.medieval_catalogue}}</td></tr>
+            {% endif %}
+	    {% if object.ownership %}
+            <tr><td id="mlgbdetailtext">Ownership:</td><td id="mlgbdetailvalue">{{object.ownership}}</td></tr>
+            {% endif %}
+            {% if object.notes %}
+            <tr><td id="mlgbdetailtext">Notes:</td><td id="mlgbdetailvalue">{{object.notes}}</td></tr>
+            {% endif %}
+            {% if object.pr_bk %}
+            <tr><td id="mlgbdetailtext"></td><td id="mlgbdetailvalue">Printed Book</td></tr>
+            {% endif %}
+	    
+        </table>
+
+{% endautoescape %}
+<p align="center">
+<a href="/mlgb/download/?q=1&i={{object.id}}" title="CSV" target="_blank"></a>
+&nbsp;
+<a href="/mlgb/download/?q=2&i={{object.id}}" title="PDF" target="_blank"></a>
+</p>
+ </div>
+
+{% endblock %}
+
+{% block search %}  
+  <div id="search" class="boxed">
+    <h2 class="heading">Search</h2>
+    <div class="content">
+   
+    
+     <form action="/mlgb/" method="get">
+      <div>
+		  <input name="s" type="text" size="30" /><br > <br >
+		  <select name="se">
+			<option></option>
+          	<option>Author/Title</option>
+	     <option>Modern Library/Institution</option>
+            <option>Medieval Library</option>
+            
+          </select><br ><br >
+		  <select name="pa">
+			<option>All</option>
+          	<option>100</option>
+            <option>200</option>
+            <option>500</option>
+			<option>1000</option>
+          </select><br ><br >
+		  <input type="submit" value="Go" /> <label></label>
+          </div>
+		</form>
+
+    </div>
+  </div>
+  
+{% endblock %}
+{% block archives %} 
+  <div id="archives" class="boxed">
+   
+  </div>
+{% endblock %}
+{% block useful_links %} 
+  <div id="Useful_Links" class="boxed">
+   
+  </div>
+{% endblock %}
+
+
+
+
+
+
+
+

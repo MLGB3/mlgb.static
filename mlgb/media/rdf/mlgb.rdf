@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf    'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+    <!ENTITY rdfs   'http://www.w3.org/2000/01/rdf-schema#'>
+    <!ENTITY xsd    'http://www.w3.org/2001/XMLSchema#'>
+    <!ENTITY owl   'http://www.w3.org/2002/07/owl#'>
+    <!ENTITY mlgb  'http://mlgb.xyang/media/rdf/mlgb'>
+]>
+
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="&rdfs;"
+    xmlns:xsd="&xsd;"
+    xmlns:owl="&owl;"
+    xmlns="http://mlgb.xyang/media/rdf/mlgb#"
+    xml:base="&mlgb;"
+>
+
+<owl:Ontology rdf:about="">
+  <owl:versionInfo>$Id: mlgb.owl,v 1.0 27 Oct 2009  $</owl:versionInfo>
+  <rdfs:comment>Medieval Library Great Britain</rdfs:comment>
+</owl:Ontology>
+
+<!--************ Enumerations ************-->
+
+<owl:Class rdf:ID='DBID'>
+    <owl:oneOf rdf:parseType='Collection'>
+        <DBID rdf:ID='1'/>
+        <DBID rdf:ID='2'/>
+        <DBID rdf:ID='3'/>
+    </owl:oneOf>
+</owl:Class>
+
+<owl:Class rdf:ID='UUID'>
+    <owl:oneOf rdf:parseType='Collection'>
+        <UUID rdf:ID='xxxxxxxxxxxxxxxxxxxxxxxxxxxxx'/>
+        <UUID rdf:ID='xxxxxxxxxxxxxxxxxxxxxxxxxxxxx'/>
+    </owl:oneOf>
+</owl:Class>
+
+<owl:Class rdf:ID='EvidenceSymbol'>
+    <owl:oneOf rdf:parseType='Collection'>
+        <EvidenceSymbol rdf:ID='e'/>
+        <EvidenceSymbol rdf:ID='b'/>
+        <EvidenceSymbol rdf:ID='l'/>
+    </owl:oneOf>
+</owl:Class>
+
+<owl:Class rdf:ID='PlaceName'>
+    <owl:oneOf rdf:parseType='Collection'>
+        <PlaceName rdf:ID='Cambridge'/>
+        <PlaceName rdf:ID='Exeter'/>
+        <PlaceName rdf:ID='Oxford'/>
+    </owl:oneOf>
+</owl:Class>
+
+<owl:Class rdf:ID='Institutions'>
+    <owl:oneOf rdf:parseType='Collection'>
+        <Institutions rdf:ID='National Library'/>
+        <Institutions rdf:ID='Cathedral'/>
+        <Institutions rdf:ID='Bodleian'/>
+    </owl:oneOf>
+</owl:Class>
+
+<owl:Class rdf:ID='Archive'>
+    <owl:oneOf rdf:parseType='Collection'>
+        <Archive rdf:ID='Advocates'/>
+        <Archive rdf:ID='Additional'/>
+        <Archive rdf:ID='Cotton'/>
+    </owl:oneOf>
+</owl:Class>
+
+<owl:Class rdf:ID='Provenance'>
+    <owl:oneOf rdf:parseType='Collection'>
+        <Provenance rdf:ID='Peterborough Abbey'/>
+        <Provenance rdf:ID='Exeter Cathedral'/>
+    </owl:oneOf>
+</owl:Class>
+
+<!--************  ************-->
+
+<owl:Class rdf:ID='Location'>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#placename"/>
+            <owl:allValuesFrom rdf:resource="#PLaceName"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#institutions"/>
+            <owl:allValuesFrom rdf:resource="#Institutions"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:ID='ShelfMark'>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#archive"/>
+            <owl:allValuesFrom rdf:resource="#Archive"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mark"/>
+	    <owl:allValuesFrom rdf:resource="&xsd;string"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:ID='Book'>
+
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#uuid"/>
+            <owl:allValuesFrom rdf:resource="#UUID"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#dbid"/>
+            <owl:allValuesFrom rdf:resource="#DBID"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#provenance"/>
+            <owl:allValuesFrom rdf:resource="#Provenance"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#location"/>
+            <owl:allValuesFrom rdf:resource="#Location"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#shelfmark"/>
+            <owl:allValuesFrom rdf:resource="#ShelfMark"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#evidencesymbol"/>
+            <owl:allValuesFrom rdf:resource="#EvidenceSymbol"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#authortitle"/>
+            <owl:allValuesFrom rdf:resource="&xsd;string"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#date"/>
+            <owl:allValuesFrom rdf:resource="&xsd;string"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#pressmark"/>
+            <owl:allValuesFrom rdf:resource="&xsd;string"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#mcatalogue"/>
+            <owl:allValuesFrom rdf:resource="&xsd;string"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#unknown"/>
+            <owl:allValuesFrom rdf:resource="&xsd;string"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+        <owl:Restriction>
+            <owl:onProperty rdf:resource="#notes"/>
+            <owl:allValuesFrom rdf:resource="#Notes"/>
+        </owl:Restriction>
+    </rdfs:subClassOf>
+</owl:Class>
+
+<owl:DatatypeProperty rdf:ID="mark"/>
+<owl:DatatypeProperty rdf:ID="authortitle"/>
+<owl:DatatypeProperty rdf:ID="date"/>
+<owl:DatatypeProperty rdf:ID="pressmark"/>
+<owl:DatatypeProperty rdf:ID="mcatalogue"/>
+<owl:DatatypeProperty rdf:ID="unknown"/>
+<owl:DatatypeProperty rdf:ID="notes"/>
+
+<owl:ObjectProperty rdf:ID="dbid"/>
+<owl:ObjectProperty rdf:ID="uuid"/>
+<owl:ObjectProperty rdf:ID="provenance"/>
+<owl:ObjectProperty rdf:ID="location"/>
+<owl:ObjectProperty rdf:ID="shelfmark"/>
+<owl:ObjectProperty rdf:ID="evidencesymbol"/>
+
+<!--************ (instantiations) ************-->
+<Evidence rdf:ID="evidence_1">
+    <number rdf:datatype="&xsd;integer">1</number>
+    <name rdf:datatype="&xsd;string">Alkali metal</name>
+    <evidencesymbol rdf:resource="#e"/>
+</Evidence>
+
+<book rdf:ID="uuid">
+    <uuid rdf:resource="#uuid"/>
+    <dbid rdf:resource="#dbid"/>
+    <provenance rdf:resource="#Peterborough"/>
+    <location rdf:resource="#location_1"/>
+    <shelfmark rdf:resource="#shelfmark_1"/>
+    <evidencesymbol rdf:resource="#e"/>
+    <authortitle rdf:datatype="&xsd;string">asdfadf</authortitle>
+    <date rdf:datatype="&xsd;string">1.00794</date>
+    <pressmark rdf:datatype="&xsd;string">asfd</pressmark>
+    <mcatalogue rdf:datatype="&xsd;string">1333-74-0</mcatalogue>
+    <unknown rdf:datatype="&xsd;string">1333-74-0</unknown>
+    <notes rdf:datatype="&xsd;string">1333-74-0</notes>
+</book>
+
+</rdf:RDF>

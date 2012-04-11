@@ -1,0 +1,78 @@
+
+{% extends "base.html" %}
+{% block title %}
+<title>MLGB3 Treeviewer</title>
+{% endblock %}
+{% block pages %}
+<div id="pages">
+  <h2>Pages</h2>
+  <ul>
+    <li class="active"><a id="page1" href="http://163.1.127.175/">Home</a></li>
+    <li><a id="page2" href="http://163.1.127.175/">ImageStore</a></li>
+    <li><a id="page4" href="http://163.1.127.175/">Index</a></li>
+    <li><a id="page4" href="http://163.1.127.175/">About the Project</a></li>
+    <li><a id="page5" href="http://163.1.127.175/">Contact</a></li>
+    <li><a id="page6" href="http://163.1.127.175/">Links</a></li>
+    <li><a id="page7" href="http://163.1.127.175/">Archives</a></li>
+  </ul>
+</div>
+{% endblock %}
+{% block posts %}
+	<div id="posts">
+	
+	{% if nodis %}
+	
+	<fieldset>
+	<legend align="center" style="font-weight:;color:#000066">"{{s}}" </legend>{% endif %}
+	{% if lists %}
+    <div class="content">
+     <ul>
+      {% for i in p1 %}
+      <li><a href='http://163.1.127.175/mlgb/?s={{i.k}}+&se={{s}}&pa=All'>{{i.k}}</a> ({{i.v}}) </li>
+      {% endfor %}
+      </ul>
+	{% endif %}
+	{% if nodis %}</fieldset>{% endif %}	
+
+	</div>
+{% endblock %}
+{% block search %}  
+  <div id="search" class="boxed">
+    <h2 class="heading">Search</h2>
+    <div class="content">
+   
+    
+     <form action="/mlgb/" method="get">
+      <div>
+		  <input name="s" type="text" size="30" /><br > <br >
+		  <select name="se">
+			<option></option>
+          	<option>Author/Title</option>
+	     <option>Modern Library/Institution</option>
+            <option>Medieval Library</option>
+            
+          </select><br ><br >
+		  <select name="pa">
+			<option>All</option>
+          	<option>100</option>
+            <option>200</option>
+            <option>500</option>
+			<option>1000</option>
+          </select><br ><br >
+		  <input type="submit" value="Go" /> <label></label>
+          </div>
+		</form>
+
+    </div>
+  </div>
+{% endblock %}
+{% block archives %} 
+  <div id="archives" class="boxed">
+   
+  </div>
+{% endblock %}
+{% block useful_links %} 
+  <div id="Useful_Links" class="boxed">
+   
+  </div>
+{% endblock %}

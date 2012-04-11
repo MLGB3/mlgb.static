@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+<style type="text/css">
+body
+{
+/*font-family:verdana;
+margin-left:210px;
+background:#5d9ab2 url('img_tree.png') no-repeat 10px 5px;*/
+}
+span
+{
+display:block;
+}
+.head1
+{
+position:relative;
+left:2px;
+}
+.head2
+{
+	position:relative;
+	left:100px;
+} 
+.detail
+{
+	position:relative;
+	left:200px;
+} 
+.hidden 
+{
+	display:none
+	/*
+	onmouseover="this.style.opacity=1;this.filters.alpha.opacity=100"
+	onmouseout="this.style.opacity=0.4;this.filters.alpha.opacity=40"
+	*/
+}
+img 
+{
+	float:left;
+	width: 95;
+	height: 84;
+
+}
+
+.label
+{
+
+
+	float: left;
+	text-align: left;
+
+	color:black;
+	/*background-color:#B1A8A8;
+	border: 1px solid #0000ff;
+	*/
+	width: 200px;
+	height: auto;
+	padding: 0px;
+	margin: 2px;
+	background-repeat: no-repeat;
+}	
+li{display:inline}
+
