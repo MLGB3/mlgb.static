@@ -35,11 +35,18 @@
             </td>
             </tr>
             {% endfor %}
+            {% if object.evidence_notes %}
+            <tr>
+            <td id="mlgbdetailtext">Notes on evidence:</td>
+            <td id="mlgbdetailvalue">{{object.evidence_notes}}</td>
+            </tr>
+            {% endif %}
            {% for contains in object.contains_set.all %}
             <tr>
             <td id="mlgbdetailtext">Contents of the book:</td>
             <td id="contains">
-            	<textarea border="0" style="text-indent:5px;width:730px;height:140px">{{ contains.contains }}</textarea>{% if contains.urls %}
+            {{ contains.contains }}
+            {% if contains.urls %}
              <a href="{{ contains.urls }}"><img src="/mlgb/media/img/book.png" alt="Link to the Book Site" border="0" /></a>
             {% endif %}
             </td>
