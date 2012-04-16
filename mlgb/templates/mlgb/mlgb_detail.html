@@ -55,7 +55,7 @@
             {% endfor %}
         
             {% if object.date %}
-            <tr><td id="mlgbdetailtext">Date:</td><td id="mlgbdetailvalue">{{object.date}}</td></tr>
+            <tr><td id="mlgbdetailtext">Date:</td><td id="mlgbdetailvalue">{{object.date|fix_dashes}}</td></tr>
             {% endif %}
             {% if object.pressmark %}
             <tr><td id="mlgbdetailtext">Pressmark:</td><td id="mlgbdetailvalue">{{object.pressmark|fix_dashes}}</td></tr>
