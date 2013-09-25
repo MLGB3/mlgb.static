@@ -1,129 +1,190 @@
 {% extends "base.html" %}
 {% load mlgb_custom_filters %}
+  
 {% block title %}
-<title>{{object.evidence}}{{ object.author_title }}</title>
+<title>
+{{ object.author_title|default:"Details of book" }}
+{# do we really need evidence code in the page title? (evidence code {{object.evidence}}) #}
+</title>
 {% endblock %}
-{% block pages %}
-<div id="pages">
-  <h2>Pages</h2>
-  <ul>
-    <li class="active"><a id="page1" href="http://163.1.127.175/">Home</a></li>
-    <li><a id="page2" href="http://163.1.127.175/">ImageStore</a></li>
-    <li><a id="page4" href="http://163.1.127.175/">Index</a></li>
-    <li><a id="page4" href="http://163.1.127.175/">About the Project</a></li>
-    <li><a id="page5" href="http://163.1.127.175/">Contact</a></li>
-    <li><a id="page6" href="http://163.1.127.175/">Links</a></li>
-    <li><a id="page7" href="http://163.1.127.175/">Archives</a></li>
-  </ul>
-</div>
-{% endblock %}
+
 {% block posts %}
- <div id="posts" class="post">
-{% autoescape off %}
-    <h3 class="posted">{{object.evidence}}{{ object.author_title|fix_dashes }} - {{object.provenance|fix_dashes}}</h3>
-        <table id="mlgbdetail">
-            <tr><td id="mlgbdetailtext">Provenance:</td><td id="mlgbdetailvalue">{{object.provenance|fix_dashes}}</td></tr>
-            <tr><td id="mlgbdetailtext">Location:</td><td id="mlgbdetailvalue">{{object.modern_location_2|fix_dashes}},{{object.modern_location_1|fix_dashes}} </td></tr>
-            {% if object.shelfmark_1 or object.shelfmark_2 %}
-            <tr><td id="mlgbdetailtext">Shelfmark:</td><td id="mlgbdetailvalue">{{object.shelfmark_1|fix_dashes}} {{object.shelfmark_2|fix_dashes}}</td></tr>
-            {% endif %}
-            <tr><td id="mlgbdetailtext">Author/Title:</td><td id="mlgbdetailvalue">{{object.evidence}}{{ object.author_title|fix_dashes }}</td></tr>
-             {% for photo in object.photo_set.all %}
-            <tr>
-            <td><ul><li>Evidence:</li><li>{{ photo.caption|fix_dashes }}</li></ul></td>
-            <td>
-            <a href="{{ photo.image.url }}" rel="lightbox-journey"  title="{{ photo.title }}"><img src=" {{ photo.image.thumb_url }}" /></a>
-            </td>
-            </tr>
-            {% endfor %}
-            {% if object.evidence_notes %}
-            <tr>
-            <td id="mlgbdetailtext">Notes on evidence:</td>
-            <td id="mlgbdetailvalue">{{object.evidence_notes|fix_dashes}}</td>
-            </tr>
-            {% endif %}
-           {% for contains in object.contains_set.all %}
-            <tr>
-            <td id="mlgbdetailtext">Contents of the book:</td>
-            <td id="contains">
-            {{ contains.contains|fix_dashes }}
-            {% if contains.urls %}
-             <a href="{{ contains.urls }}"><img src="/mlgb/media/img/book.png" alt="Link to the Book Site" border="0" /></a>
-            {% endif %}
-            </td>
-            </tr>
-            {% endfor %}
-        
-            {% if object.date %}
-            <tr><td id="mlgbdetailtext">Date:</td><td id="mlgbdetailvalue">{{object.date|fix_dashes}}</td></tr>
-            {% endif %}
-            {% if object.pressmark %}
-            <tr><td id="mlgbdetailtext">Pressmark:</td><td id="mlgbdetailvalue">{{object.pressmark|fix_dashes}}</td></tr>
-            {% endif %}
-            {% if object.medieval_catalogue %}
-            <tr><td id="mlgbdetailtext">Medieval Catalogue:</td><td id="mlgbdetailvalue">{{object.medieval_catalogue|fix_dashes}}</td></tr>
-            {% endif %}
-	    {% if object.ownership %}
-            <tr><td id="mlgbdetailtext">Ownership:</td><td id="mlgbdetailvalue">{{object.ownership|fix_dashes}}</td></tr>
-            {% endif %}
-            {% if object.notes %}
-            <tr><td id="mlgbdetailtext">Notes:</td><td id="mlgbdetailvalue">{{object.notes|fix_dashes}}</td></tr>
-            {% endif %}
-            {% if object.pr_bk %}
-            <tr><td id="mlgbdetailtext"></td><td id="mlgbdetailvalue">Printed Book</td></tr>
-            {% endif %}
-	    
-        </table>
+<div id="posts" class="post">
+  {% autoescape off %}
 
-{% endautoescape %}
-<p align="center">
-<a href="/mlgb/download/?q=1&i={{object.id}}" title="CSV" target="_blank"></a>
-&nbsp;
-<a href="/mlgb/download/?q=2&i={{object.id}}" title="PDF" target="_blank"></a>
-</p>
- </div>
+  <h3 class="posted">
+  {{ object.author_title|fix_dashes }} &mdash; {{object.provenance|fix_dashes}}
+  {# do we really need evidence code in the heading? (evidence code {{object.evidence}}) #}
+  </h3>
 
+  <table id="mlgbdetail">
+
+    <tr>
+    <td id="mlgbdetailtext">Provenance:</td>
+    <td id="mlgbdetailvalue">{{object.provenance|fix_dashes}}</td>
+    </tr>
+
+    <tr>
+    <td id="mlgbdetailtext">Location:</td>
+    <td id="mlgbdetailvalue">
+    {{object.modern_location_2|fix_dashes}}, {{object.modern_location_1|fix_dashes}} 
+    </td>
+    </tr>
+
+    {% if object.shelfmark_1 or object.shelfmark_2 %}
+    <tr>
+    <td id="mlgbdetailtext">Shelfmark:</td>
+    <td id="mlgbdetailvalue">{{object.shelfmark_1|fix_dashes}} {{object.shelfmark_2|fix_dashes}}</td>
+    </tr>
+    {% endif %}
+
+    <tr>
+    <td id="mlgbdetailtext">Author/Title:</td>
+    <td id="mlgbdetailvalue">{{ object.author_title|fix_dashes }}</td>
+    </tr>
+
+    {% if object.evidence %}
+    <tr>
+    <td id="mlgbdetailtext">Type of evidence:</td>
+    <td id="mlgbdetailvalue">{{object.evidence}}</td>
+    </tr>
+    {% endif %}
+
+    {% for photo in object.photo_set.all %}
+    <tr>
+    <td><ul><li>Evidence:</li><li>{{ photo.caption|fix_dashes }}</li></ul></td>
+    <td>
+    <a href="{{ photo.image.url }}" rel="lightbox-journey"  title="{{ photo.title }}">
+    <img src=" {{ photo.image.thumb_url }}" />
+    </a>
+    </td>
+    </tr>
+    {% endfor %}
+
+
+    {% if object.evidence_notes %}
+    <tr>
+    <td id="mlgbdetailtext">Notes on evidence:</td>
+    <td id="mlgbdetailvalue">{{object.evidence_notes|fix_dashes}}</td>
+    </tr>
+    {% endif %}
+
+
+    {% for contains in object.contains_set.all %}
+    <tr>
+    <td id="mlgbdetailtext">Contents of the book:</td>
+    <td id="contains">
+    {{ contains.contains|fix_dashes }}
+    {% if contains.urls %}
+    <a href="{{ contains.urls }}">
+    <img src="/mlgb/media/img/book.png" alt="Link to the Book Site" border="0" />
+    </a>
+    {% endif %}
+    </td>
+    </tr>
+    {% endfor %}
+
+
+    {% if object.date %}
+    <tr>
+    <td id="mlgbdetailtext">Date:</td>
+    <td id="mlgbdetailvalue">{{object.date|fix_dashes}}</td>
+    </tr>
+    {% endif %}
+
+
+    {% if object.pressmark %}
+    <tr>
+    <td id="mlgbdetailtext">Pressmark:</td>
+    <td id="mlgbdetailvalue">{{object.pressmark|fix_dashes}}</td>
+    </tr>
+    {% endif %}
+
+
+    {% if object.medieval_catalogue %}
+    <tr>
+    <td id="mlgbdetailtext">Medieval Catalogue:</td>
+    <td id="mlgbdetailvalue">{{object.medieval_catalogue|fix_dashes}}</td>
+    </tr>
+    {% endif %}
+
+
+    {% if object.ownership %}
+    <tr>
+    <td id="mlgbdetailtext">Ownership:</td>
+    <td id="mlgbdetailvalue">{{object.ownership|fix_dashes}}</td>
+    </tr>
+    {% endif %}
+
+
+    {% if object.notes %}
+    <tr>
+    <td id="mlgbdetailtext">Notes:</td>
+    <td id="mlgbdetailvalue">{{object.notes|fix_dashes}}</td>
+    </tr>
+    {% endif %}
+
+
+    {% if object.pr_bk %}
+    <tr>
+    <td id="mlgbdetailtext"></td>
+    <td id="mlgbdetailvalue">Printed Book</td>
+    </tr>
+    {% endif %}
+
+  </table>
+
+  {% endautoescape %}
+
+  <p align="center">
+  <a href="/mlgb/download/?q=1&i={{object.id}}" title="CSV" target="_blank"></a>
+  &nbsp;
+  <a href="/mlgb/download/?q=2&i={{object.id}}" title="PDF" target="_blank"></a>
+  </p>
+
+</div>
 {% endblock %}
 
 {% block search %}  
-  <div id="search" class="boxed">
-    <h2 class="heading">Search</h2>
-    <div class="content">
-   
-    
-     <form action="/mlgb/" method="get">
+<div id="search" class="boxed">
+  <h2 class="heading">Search</h2>
+  <div class="content">
+    <form action="/mlgb/" method="get">
       <div>
-		  <input name="s" type="text" size="30" /><br > <br >
-		  <select name="se">
-			<option></option>
-          	<option>Author/Title</option>
-	     <option>Modern Library/Institution</option>
-            <option>Medieval Library</option>
-            
-          </select><br ><br >
-		  <select name="pa">
-			<option>All</option>
-          	<option>100</option>
-            <option>200</option>
-            <option>500</option>
-			<option>1000</option>
-          </select><br ><br >
-		  <input type="submit" value="Go" /> <label></label>
-          </div>
-		</form>
 
-    </div>
-  </div>
-  
+        <input name="s" type="text" size="30" /><br > <br >
+
+        <select name="se">
+          <option></option>
+          <option>Author/Title</option>
+          <option>Modern Library/Institution</option>
+          <option>Medieval Library</option>
+        </select><br ><br >
+
+        <select name="pa">
+          <option>All</option>
+          <option>100</option>
+          <option>200</option>
+          <option>500</option>
+          <option>1000</option>
+        </select><br ><br >
+
+        <input type="submit" value="Go" /> <label></label>
+      </div>
+    </form>
+  </div><!-- end div "content" -->
+</div><!-- end div "search" -->
 {% endblock %}
+
+
 {% block archives %} 
   <div id="archives" class="boxed">
-   
   </div>
 {% endblock %}
+
+
 {% block useful_links %} 
   <div id="Useful_Links" class="boxed">
-   
   </div>
 {% endblock %}
 
