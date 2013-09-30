@@ -1,63 +1,76 @@
-
 {% extends "base.html" %}
 {% load mlgb_custom_filters %}
+
 {% block title %}
 <title>MLGB3 Treeviewer</title>
 {% endblock %}
 
 {% block posts %}
-	<div id="posts">
-	{% if nodis %}
-	
-	<fieldset id="mlgbtreeview">
-	<legend align="center" style="font-weight:;color:#000066">{{no}} retrieval on "{{s}}" </legend>
-	{% endif %}
-	{% if lists %}
+  <div id="posts">
+
+  {% if nodis %}
+  <fieldset id="mlgbtreeview">
+  <legend align="center" style="font-weight:;color:#000066">
+  "{{s}}": {{no}} 
+  {% if no == 1 %}
+  record
+  {% else %}
+  records 
+  {% endif %}
+  retrieved
+  </legend>
+  {% endif %}
+
+  {% if lists %}
     <div id="sidetree">
-	  <div class="treeheader">&nbsp;</div>
-		{% autoescape off %}{{ lists|fix_dashes }}{% endautoescape %}
-	</div>
-	{% endif %}
-	{% if nodis %}</fieldset>{% endif %}
-	</div>
+    <div class="treeheader">&nbsp;</div>
+    {% autoescape off %}{{ lists|fix_dashes }}{% endautoescape %}
+    </div>
+  {% endif %}
+
+  {% if nodis %}</fieldset>{% endif %}
+  </div>
 {% endblock %}
+
 {% block search %}  
   <div id="search" class="boxed">
     <h2 class="heading">Search</h2>
     <div class="content">
-   
     
-     <form action="/mlgb/" method="get">
+    <form action="/mlgb/" method="get">
       <div>
-		  <input name="s" type="text" size="30" /><br > <br >
-		  <select name="se">
-			<option></option>
-          	<option>Author/Title</option>
-	     <option>Modern Library/Institution</option>
-            <option>Medieval Library</option>
-            
-          </select><br ><br >
-		  <select name="pa">
-			<option>All</option>
-          	<option>100</option>
-            <option>200</option>
-            <option>500</option>
-			<option>1000</option>
-          </select><br ><br >
-		  <input type="submit" value="Go" /> <label></label>
-          </div>
-		</form>
+      <input name="s" type="text" size="30" /><br > <br >
 
-    </div>
-  </div>
+      <select name="se">
+      <option></option>
+      <option>Author/Title</option>
+      <option>Modern Library/Institution</option>
+      <option>Medieval Library</option>
+      </select><br ><br >
+
+      <select name="pa">
+      <option>All</option>
+      <option>100</option>
+      <option>200</option>
+      <option>500</option>
+      <option>1000</option>
+      </select><br ><br >
+
+      <input type="submit" value="Go" /> <label></label>
+      </div>
+    </form>
+
+    </div> <!-- end div class "content" -->
+  </div>   <!-- end div id "search" -->
 {% endblock %}
+
 {% block archives %} 
   <div id="archives" class="boxed">
-   
   </div>
 {% endblock %}
+
 {% block useful_links %} 
   <div id="Useful_Links" class="boxed">
-   
   </div>
 {% endblock %}
+
