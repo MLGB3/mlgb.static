@@ -2,6 +2,7 @@
 Design by Free CSS Templates
 http://www.freecsstemplates.org
 Released for free under a Creative Commons Attribution 2.5 License
+Adapted 2010-2013 by BDLSS
 */
 
 /*
@@ -514,4 +515,31 @@ div#posts {
 
 #posts .content a:hover {
   color: #FF0000;
+}
+
+a.booklink {
+  color: #666666;
+  text-decoration: none;
+}
+
+a.booklink:hover {
+  color: #666666;
+  text-decoration: underline;
+}
+
+span.outerhead, span.modern_location_heading {
+  font-weight: bold;
+}
+
+span.spacer {
+  margin-left: 5px;
+}
+
+a.evidence, button.evidence_decoder {
+  font-style: italic;
+}
+
+button.evidence_decoder {
+  background: #ffffff;
+  border: none;
 }
