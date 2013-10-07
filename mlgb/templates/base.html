@@ -76,32 +76,14 @@
   <h2>Pages</h2>
 
   <ul>
-    <li id="home_listitem"><a id="page1" href="/">Home</a></li>
-    <!-- <li id="imagestore_listitem"><a id="page2" href="/">ImageStore</a></li> -->
-    <!-- <li id="index_listitem"><a id="page4" href="/">Index</a></li> -->
-    <li id="about_listitem"><a id="page4" href="/about/">About the Project</a></li>
-    <!-- <li id="contact_listitem"><a id="page5" href="/">Contact</a></li> -->
+    <li id="home_listitem"
+    {%if pagename == "home"%} class="active" {% endif %}
+    ><a id="home_link" href="/">Home</a></li>
+
+    <li id="about_listitem"
+    {% if pagename == "about" %} class="active" {% endif %}
+    ><a id="about_link" href="/about/">About the Project</a></li>
   </ul>
-
-  <script type="text/javascript">
-  // Highlight the current tab
-  var base_url = "http://mlgb3.bodleian.ox.ac.uk";
-  var about_url = base_url + "/about";
-  var curr_url = document.location.href;
-  var active_item_id = "";
-
-  if( curr_url == base_url || curr_url == base_url + '/' ) {
-    active_item_id = "home_listitem"; 
-  }
-  else if( curr_url == about_url || curr_url == about_url + '/' ) {
-    active_item_id = "about_listitem"; 
-  }
-
-  if( active_item_id ) {
-    var active_listitem = document.getElementById( active_item_id );
-    active_listitem.className = "active"; 
-  }
-  </script>
 </div><!-- end div pages -->
 {% endblock %}{# end block pages #}
 
