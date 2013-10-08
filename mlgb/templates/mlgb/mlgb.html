@@ -11,13 +11,7 @@
   {% if nodis %}
   <fieldset id="mlgbtreeview">
   <legend align="center" style="font-weight:;color:#000066">
-  "{{s}}": {{no}} 
-  {% if no == 1 %}
-  record
-  {% else %}
-  records 
-  {% endif %}
-  retrieved
+  "{{s}}"
   </legend>
   {% endif %}
 
@@ -39,24 +33,33 @@
     
     <form action="/mlgb/" method="get">
       <div>
-      <input name="s" type="text" size="30" /><br > <br >
+      <label for="s">Enter your search term: </label>
+      <br>
+      <input name="s" type="text" size="30" />
+      <br > <br >
 
+      <label for="se">Field to search: </label>
+      <br>
       <select name="se">
-      <option></option>
+      <option value="">All fields</option>
       <option>Author/Title</option>
       <option>Modern Library/Institution</option>
       <option>Medieval Library</option>
-      </select><br ><br >
+      </select>
+      <br ><br >
 
+      <label for="pa">Records per page: </label>
+      <br>
       <select name="pa">
       <option>All</option>
       <option>100</option>
       <option>200</option>
       <option>500</option>
       <option>1000</option>
-      </select><br ><br >
+      </select>
+      <br ><br >
 
-      <input type="submit" value="Go" /> <label></label>
+      <input type="submit" value="Go" />
       </div>
     </form>
 

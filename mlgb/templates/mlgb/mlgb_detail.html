@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "mlgb/mlgb.html" %}
 {% load mlgb_custom_filters %}
   
 {% block title %}
@@ -16,6 +16,7 @@
   {{ object.author_title|fix_dashes }} &mdash; {{object.provenance|fix_dashes}}
   {# do we really need evidence code in the heading? (evidence code {{object.evidence}}) #}
   </h3>
+  <br>
 
   <table id="mlgbdetail">
 
@@ -146,48 +147,6 @@
 </div>
 {% endblock %}
 
-{% block search %}  
-<div id="search" class="boxed">
-  <h2 class="heading">Search</h2>
-  <div class="content">
-    <form action="/mlgb/" method="get">
-      <div>
-
-        <input name="s" type="text" size="30" /><br > <br >
-
-        <select name="se">
-          <option></option>
-          <option>Author/Title</option>
-          <option>Modern Library/Institution</option>
-          <option>Medieval Library</option>
-        </select><br ><br >
-
-        <select name="pa">
-          <option>All</option>
-          <option>100</option>
-          <option>200</option>
-          <option>500</option>
-          <option>1000</option>
-        </select><br ><br >
-
-        <input type="submit" value="Go" /> <label></label>
-      </div>
-    </form>
-  </div><!-- end div "content" -->
-</div><!-- end div "search" -->
-{% endblock %}
-
-
-{% block archives %} 
-  <div id="archives" class="boxed">
-  </div>
-{% endblock %}
-
-
-{% block useful_links %} 
-  <div id="Useful_Links" class="boxed">
-  </div>
-{% endblock %}
 
 
 
