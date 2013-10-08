@@ -9,23 +9,23 @@
   <div id="posts">
 
   {# ========== start treeview containing search results ========== #}
-  {% if nodis %}
+  {% if showtree %}
   <fieldset id="mlgbtreeview">
   <legend align="center" style="font-weight:;color:#000066">
-  "{{s}}"
+  "{{search_term}}"
   </legend>
   {% endif %}
 
   {# ========== start display of search results ========== #}
-  {% if lists %} {# all the HTML for the search results treeview is already set in variable 'lists' #}
+  {% if result_string %} {# the HTML for the search results is already set in variable 'result_string' #}
     <div id="sidetree">
     <div class="treeheader">&nbsp;</div>
-    {% autoescape off %}{{ lists|fix_dashes }}{% endautoescape %}
+    {% autoescape off %}{{ result_string|fix_dashes }}{% endautoescape %}
     </div>
   {% endif %}
   {# =========== end display of search results =========== #}
 
-  {% if nodis %}</fieldset>{% endif %}
+  {% if showtree %}</fieldset>{% endif %}
   {# =========== end treeview containing search results =========== #}
 
   </div>
