@@ -8,6 +8,7 @@
 {% block posts %}
   <div id="posts">
 
+  {# ========== start treeview containing search results ========== #}
   {% if nodis %}
   <fieldset id="mlgbtreeview">
   <legend align="center" style="font-weight:;color:#000066">
@@ -15,53 +16,115 @@
   </legend>
   {% endif %}
 
-  {% if lists %}
+  {# ========== start display of search results ========== #}
+  {% if lists %} {# all the HTML for the search results treeview is already set in variable 'lists' #}
     <div id="sidetree">
     <div class="treeheader">&nbsp;</div>
     {% autoescape off %}{{ lists|fix_dashes }}{% endautoescape %}
     </div>
   {% endif %}
+  {# =========== end display of search results =========== #}
 
   {% if nodis %}</fieldset>{% endif %}
+  {# =========== end treeview containing search results =========== #}
+
   </div>
 {% endblock %}
 
 {% block search %}  
   <div id="search" class="boxed">
-    <h2 class="heading">Search</h2>
+    <h2 class="heading">Search
+    {% if search_term %} Again {% endif %}
+    </h2>
     <div class="content">
-    
+
+    {# ================== start search form ================== #}
     <form action="/mlgb/" method="get">
       <div>
       <label for="s">Enter your search term: </label>
       <br>
-      <input name="s" type="text" size="30" />
-      <br > <br >
+      <input name="s" id="s" type="text" size="30" 
+      {% if search_term %} value="{{search_term}}" {% endif %}
+      /> <br > <br >
 
       <label for="se">Field to search: </label>
       <br>
-      <select name="se">
+      <select name="se" id="se">
+
       <option value="">All fields</option>
-      <option>Author/Title</option>
-      <option>Modern Library/Institution</option>
-      <option>Medieval Library</option>
+
+      <option
+      {% if field_to_search|lower == 'author/title' %} SELECTED {% endif %}
+      >Author/Title</option>
+
+      <option
+      {% if field_to_search|lower == 'modern library/institution' %} SELECTED {% endif %}
+      {% if field_to_search|lower == 'library/institution'  %} SELECTED {% endif %}
+      >Modern Library/Institution</option>
+
+      <option
+      {% if field_to_search|lower == 'medieval library' %} SELECTED {% endif %}
+      >Medieval Library</option>
+
       </select>
       <br ><br >
 
       <label for="pa">Records per page: </label>
       <br>
-      <select name="pa">
-      <option>All</option>
-      <option>100</option>
-      <option>200</option>
-      <option>500</option>
-      <option>1000</option>
+      <select name="pa" id="pa">
+
+      <option
+      {% if page_size|lower == 'all' %} SELECTED {% endif %}
+      >All</option>
+
+      <option
+      {% if page_size == '100' %} SELECTED {% endif %}
+      >100</option>
+
+      <option
+      {% if page_size == '200' %} SELECTED {% endif %}
+      >200</option>
+
+      <option
+      {% if page_size == '500' %} SELECTED {% endif %}
+      >500</option>
+
+      <option
+      {% if page_size == '1000' %} SELECTED {% endif %}
+      >1000</option>
+
       </select>
       <br ><br >
 
+      <script type="text/javascript">
+      function clearSearchFields() {
+
+        var search_term = document.getElementById( 's' );
+        search_term.value = "";
+
+        var fieldToSearch = document.getElementById( 'se' );
+        for (var i = 0; i < fieldToSearch.options.length; i++) {
+          if( fieldToSearch.options[i].value == "" ) {
+            fieldToSearch.selectedIndex = i;
+            break;
+          }
+        }
+
+        var pageSize = document.getElementById( 'pa' );
+        for (var i = 0; i < pageSize.options.length; i++) {
+          if( pageSize.options[i].value == "All" ) {
+            pageSize.selectedIndex = i;
+            break;
+          }
+        }
+      }
+      </script>
+
       <input type="submit" value="Go" />
+      <input type="button" value="Clear" onclick="clearSearchFields()" />
       </div>
     </form>
+    {# ================== end search form ================== #}
 
     </div> <!-- end div class "content" -->
   </div>   <!-- end div id "search" -->
