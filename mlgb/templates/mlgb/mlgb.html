@@ -10,22 +10,19 @@
 
   {# ========== start treeview containing search results ========== #}
   {% if showtree %}
-  <fieldset id="mlgbtreeview">
-  <legend align="center" style="font-weight:;color:#000066">
-  "{{search_term}}"
-  </legend>
+  <div id="mlgbtreeview">
   {% endif %}
 
   {# ========== start display of search results ========== #}
   {% if result_string %} {# the HTML for the search results is already set in variable 'result_string' #}
-    <div id="sidetree">
-    <div class="treeheader">&nbsp;</div>
-    {% autoescape off %}{{ result_string|fix_dashes }}{% endautoescape %}
+    <div class="treeheader">
+    Searching {{field_to_search|lower|default:"all fields"}}: <strong> {{search_term}}</strong>
     </div>
+    {% autoescape off %}{{ result_string|fix_dashes }}{% endautoescape %}
   {% endif %}
   {# =========== end display of search results =========== #}
 
-  {% if showtree %}</fieldset>{% endif %}
+  {% if showtree %}</div>{% endif %}
   {# =========== end treeview containing search results =========== #}
 
   </div>

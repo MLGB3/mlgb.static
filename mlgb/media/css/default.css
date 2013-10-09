@@ -217,6 +217,15 @@ div.moreoptions {
   border-bottom: 5px solid #580505;
 }
 
+#mlgbtreeview {
+  margin-left: 5px;
+  margin-right: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  padding: 10px;
+}
+
 .boxed .content {
   /*background: #F2F2F2 url(../img/img5.gif) repeat-x left bottom;*/
   background-color:  #F2F2F2;
@@ -482,9 +491,6 @@ div#posts {
 #mlgbdetail li {
   padding: 3px 0;
   /*border-bottom: 1px dotted #5D0E0E;*/
-}
-#mlgbtreeview {
-  margin-left:30px;
 }
 /*------------------------------------*/
 #posts .content {
