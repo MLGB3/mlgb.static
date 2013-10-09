@@ -11,12 +11,14 @@
   {# ========== start treeview containing search results ========== #}
   {% if showtree %}
   <div id="mlgbtreeview">
+  {% else %}
+    {% if search_term %} No records retrieved. {% endif %}
   {% endif %}
 
   {# ========== start display of search results ========== #}
   {% if result_string %} {# the HTML for the search results is already set in variable 'result_string' #}
     <div class="treeheader">
-    Searching {{field_to_search|lower|default:"all fields"}}: <strong> {{search_term}}</strong>
+    Searching {{field_to_search|lower|default:"all fields"}} for: <strong> {{search_term}}</strong>
     </div>
     {% autoescape off %}{{ result_string|fix_dashes }}{% endautoescape %}
   {% endif %}
