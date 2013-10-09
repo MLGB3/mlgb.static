@@ -39,8 +39,8 @@ $().ready(function() {
     <div class="content">
       <form method="get" action="/mlgb/">
         <div>
-          <input type="text" id="s" name="s" value="" size="35" />
-          <input type="hidden" name="pa" value="{{default_rows_per_page}}" />
+          <input type="text" id="search_term" name="search_term" value="" size="35" />
+          <input type="hidden" name="page_size" value="{{default_rows_per_page}}" />
           <input type="submit" id="submit1" value="Go" />
         </div>
       </form>
@@ -54,21 +54,21 @@ $().ready(function() {
       <ul>
 
         <li class="first">
-        <a href="/mlgb/category/?searching=medieval_library&pa={{default_rows_per_page}}">
+        <a href="/mlgb/category/?field_to_search=medieval_library&page_size={{default_rows_per_page}}">
         Medieval Library
         </a> 
         ({{medieval_library_count}})
         </li>
 
         <li>
-        <a href="/mlgb/category/?searching=modern_library&pa={{default_rows_per_page}}">
+        <a href="/mlgb/category/?field_to_search=modern_library&page_size={{default_rows_per_page}}">
         Modern Library/Institution
         </a> 
         ({{modern_library_count}})
         </li>
 
         <li>
-        <a href="/mlgb/category/?searching=place&pa={{default_rows_per_page}}">
+        <a href="/mlgb/category/?field_to_search=place&page_size={{default_rows_per_page}}">
         Location
         </a> 
         ({{location_count}})

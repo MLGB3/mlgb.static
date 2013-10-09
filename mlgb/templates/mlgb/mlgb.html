@@ -40,15 +40,15 @@
     {# ================== start search form ================== #}
     <form action="/mlgb/" method="get">
       <div>
-      <label for="s">Enter your search term: </label>
+      <label for="search_term">Enter your search term: </label>
       <br>
-      <input name="s" id="s" type="text" size="30" 
+      <input name="search_term" id="search_term" type="text" size="30" 
       {% if search_term %} value="{{search_term}}" {% endif %}
       /> <br > <br >
 
-      <label for="se">Field to search: </label>
+      <label for="field_to_search">Field to search: </label>
       <br>
-      <select name="se" id="se">
+      <select name="field_to_search" id="field_to_search">
 
       <option value="">All fields</option>
 
@@ -68,13 +68,9 @@
       </select>
       <br ><br >
 
-      <label for="pa">Records per page: </label>
+      <label for="page_size">Records per page: </label>
       <br>
-      <select name="pa" id="pa">
-
-      <option
-      {% if page_size|lower == 'all' %} SELECTED {% endif %}
-      >All</option>
+      <select name="page_size" id="page_size">
 
       <option
       {% if page_size == '100' %} SELECTED {% endif %}
@@ -92,16 +88,20 @@
       {% if page_size == '1000' %} SELECTED {% endif %}
       >1000</option>
 
+      <option
+      {% if page_size|lower == 'all' %} SELECTED {% endif %}
+      >All</option>
+
       </select>
       <br ><br >
 
       <script type="text/javascript">
       function clearSearchFields() {
 
-        var search_term = document.getElementById( 's' );
+        var search_term = document.getElementById( 'search_term' );
         search_term.value = "";
 
-        var fieldToSearch = document.getElementById( 'se' );
+        var fieldToSearch = document.getElementById( 'field_to_search' );
         for (var i = 0; i < fieldToSearch.options.length; i++) {
           if( fieldToSearch.options[i].value == "" ) {
             fieldToSearch.selectedIndex = i;
@@ -109,7 +109,7 @@
           }
         }
 
-        var pageSize = document.getElementById( 'pa' );
+        var pageSize = document.getElementById( 'page_size' );
         for (var i = 0; i < pageSize.options.length; i++) {
           if( pageSize.options[i].value == "All" ) {
             pageSize.selectedIndex = i;

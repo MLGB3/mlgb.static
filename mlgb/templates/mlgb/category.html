@@ -10,7 +10,7 @@
   {% if display_legend %}
   <fieldset>
   <legend align="center" style="color:#000066">
-  "{{category_desc}}"
+  "{{field_to_search}}"
   </legend>
   {% endif %}
 
@@ -19,7 +19,7 @@
       <ul>
       {% for library_or_city in category_data %}
         <li>
-        <a href="/mlgb/?s={{library_or_city.name}}+&se={{category_desc}}&pa={{pagesize}}">
+        <a href="/mlgb/?search_term={{library_or_city.name}}&field_to_search={{field_to_search}}&page_size={{page_size}}">
         {{library_or_city.name}}
         </a> 
         ({{library_or_city.number_of_records}}) 

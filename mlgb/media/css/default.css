@@ -381,7 +381,7 @@ div#posts {
   padding: 20px 10px;
 }
 
-#s, se, pa{
+#search_term {
   width: 160px;
   padding: 2px 1px;
   font: /*bold 10px*/ "Trebuchet MS", Arial, Helvetica, sans-serif;
