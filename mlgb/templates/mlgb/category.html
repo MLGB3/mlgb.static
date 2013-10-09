@@ -1,65 +1,35 @@
 
-{% extends "base.html" %}
+{% extends "mlgb/mlgb.html" %}
 {% block title %}
 <title>MLGB3 Treeviewer</title>
 {% endblock %}
 
 {% block posts %}
-	<div id="posts">
-	
-	{% if nodis %}
-	
-	<fieldset>
-	<legend align="center" style="font-weight:;color:#000066">"{{s}}" </legend>{% endif %}
-	{% if lists %}
+  <div id="posts">
+  
+  {% if display_legend %}
+  <fieldset>
+  <legend align="center" style="color:#000066">
+  "{{category_desc}}"
+  </legend>
+  {% endif %}
+
+  {% if category_data %}
     <div class="content">
-     <ul>
-      {% for i in p1 %}
-      <li><a href='/mlgb/?s={{i.k}}+&se={{s}}&pa=All'>{{i.k}}</a> ({{i.v}}) </li>
+      <ul>
+      {% for library_or_city in category_data %}
+        <li>
+        <a href="/mlgb/?s={{library_or_city.name}}+&se={{category_desc}}&pa={{pagesize}}">
+        {{library_or_city.name}}
+        </a> 
+        ({{library_or_city.number_of_records}}) 
+        </li>
       {% endfor %}
       </ul>
-	{% endif %}
-	{% if nodis %}</fieldset>{% endif %}	
+    </div><!-- end div class "content" -->
+  {% endif %}
 
-	</div>
-{% endblock %}
-{% block search %}  
-  <div id="search" class="boxed">
-    <h2 class="heading">Search</h2>
-    <div class="content">
-   
-    
-     <form action="/mlgb/" method="get">
-      <div>
-		  <input name="s" type="text" size="30" /><br > <br >
-		  <select name="se">
-			<option></option>
-          	<option>Author/Title</option>
-	     <option>Modern Library/Institution</option>
-            <option>Medieval Library</option>
-            
-          </select><br ><br >
-		  <select name="pa">
-			<option>All</option>
-          	<option>100</option>
-            <option>200</option>
-            <option>500</option>
-			<option>1000</option>
-          </select><br ><br >
-		  <input type="submit" value="Go" /> <label></label>
-          </div>
-		</form>
+  {% if display_legend %}</fieldset>{% endif %}  
 
-    </div>
-  </div>
-{% endblock %}
-{% block archives %} 
-  <div id="archives" class="boxed">
-   
-  </div>
-{% endblock %}
-{% block useful_links %} 
-  <div id="Useful_Links" class="boxed">
-   
-  </div>
+  </div><!-- end div ID "posts" -->
 {% endblock %}
