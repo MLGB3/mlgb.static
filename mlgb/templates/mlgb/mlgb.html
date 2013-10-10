@@ -57,13 +57,21 @@
       >Author/Title</option>
 
       <option
+      {% if field_to_search|lower == 'location' %} SELECTED {% endif %}
+      >Location</option>
+
+      <option
+      {% if field_to_search|lower == 'medieval library' %} SELECTED {% endif %}
+      >Medieval Library</option>
+
+      <option
       {% if field_to_search|lower == 'modern library/institution' %} SELECTED {% endif %}
       {% if field_to_search|lower == 'library/institution'  %} SELECTED {% endif %}
       >Modern Library/Institution</option>
 
       <option
-      {% if field_to_search|lower == 'medieval library' %} SELECTED {% endif %}
-      >Medieval Library</option>
+      {% if field_to_search|lower == 'shelfmark' %} SELECTED {% endif %}
+      >Shelfmark</option>
 
       </select>
       <br ><br >
