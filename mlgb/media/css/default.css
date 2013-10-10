@@ -14,6 +14,9 @@ dark red/maroon: #580505
 very, very pale grey/blue: #F2F2F2 
 */
 
+
+/* ================== General ================== */
+
 body {
   margin: 0 0 0 0;
   padding-left: 12px;
@@ -53,27 +56,21 @@ br.clearright {
   clear: right;
 }
 
-/* Header */
+/* ================== Header ================== */
 
 #header {
   width: 100%;
   height: 105px;
-  /*margin: 0 auto;*/
   margin: none;
-  /*background: #000000 url(../img/img1.jpg);*/
   background-color: #44687d;
   background: #44687d url(../photos/Peterborough_Bodley_163_2.jpg);
-
-/*
-  border-left-width: 15px;
-  border-left-style: solid;
-  border-left-color: #44687d;
-*/
   padding-right: 15px;
 }
+
 #header img {
     border:none;
 }
+
 #header h1, #header h2, #header div,{
   float: left;
   padding: 0px 0 0 0px;
@@ -93,38 +90,30 @@ br.clearright {
   border-left-width: 15px;
   border-left-style: solid;
   border-left-color: #44687d;
-
 }
 
 #mellon a img {
-  /*float: right;*/
   padding: 5px;
   width:258px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-
 #mlgb3 a h1 {
-  /*float: right;*/
-  /*padding: 0px 55px 0 0%;*/
   margin-left: 22px;
-  /*width:200px;*/
-  /*font-size: 48px;*/
 }
+
 #header a {
   text-decoration: none;
   color: #FFFFFF;
 }
 
-/* Pages */
+/* ==================  Pages (i.e. navigation bar)  ================== */
 
 #pages {
   clear: both;
   width: 100%;
   height: 40px;
-  /*margin: 0 ;*/
-  /*background: #000000 url(../img/img2.gif);*/
   background-color: #44687d;
   border-bottom: 5px solid #580505;
   padding-right: 15px;
@@ -166,7 +155,6 @@ br.clearright {
   display: inline-block;
   padding-left: 14px;
   padding-right: 14px;
-  /*background: #580505 url(../img/img3.gif);*/
   background-color: #580505;
   border-top: 1px solid #580505;
   border-left: 1px solid #580505;
@@ -181,7 +169,7 @@ br.clearright {
 
 }
 
-/* Boxed */
+/* ==================  Boxed  ==================  */
 
 div.moreoptions {
   margin-top: 26px;
@@ -198,9 +186,7 @@ div.moreoptions {
 .boxed .heading {
   height: 26px;
   padding: 6px 0 0 10px;
-  /*background: #5F1010 url(../img/img4.gif);
   border: 1px solid #000000;
-  border-bottom: none;*/
   font-size: 1em;
   color: #FFFFFF;
   background-color: #44687d; /* teal */
@@ -217,17 +203,7 @@ div.moreoptions {
   border-bottom: 5px solid #580505;
 }
 
-#mlgbtreeview {
-  margin-left: 5px;
-  margin-right: 5px;
-  border-style: solid;
-  border-color: #666666;
-  border-width: 1px;
-  padding: 10px;
-}
-
 .boxed .content {
-  /*background: #F2F2F2 url(../img/img5.gif) repeat-x left bottom;*/
   background-color:  #F2F2F2;
   border-bottom: 1px dotted #44687d;
 }
@@ -258,7 +234,7 @@ div.moreoptions {
   color: #FF0000;
 }
 
-/* Posts */
+/* ==================  CLASS post (see below for ID posts)  ================== */
 
 .post {
   background: #F2F2F2 url(../img/img5.gif) repeat-x left bottom;
@@ -289,11 +265,6 @@ div.moreoptions {
   border-top-right-radius: 6px; 
 }
 
-div#posts {
-  min-width: 450px;
-  max-width: 740px;
-}
-
 .post .story {
   padding: 10px 20px;
   float: left;
@@ -303,7 +274,7 @@ div#posts {
   padding: 1px 10px;
 }
 
-/* Content */
+/* ==================  ID "content"  ================== */
 
 #content {
   max-width: 1000px;
@@ -311,7 +282,9 @@ div#posts {
   padding: 20px ;
   margin-top: 20px;
 }
-/* about */
+
+/* ==================  About  ================== */
+
 .about {
   width:80%;
   margin-left:10%;
@@ -360,21 +333,22 @@ div#posts {
 .about .content a:hover {
   color: #FF0000;
 }
-/* Posts */
+
+/* ==================  ID "posts" ================== */
+
+div#posts {
+  min-width: 450px;
+  max-width: 740px;
+}
 
 #posts {
   float: left;
-  /*width: 1000px;*/
   width:75%;
   margin-bottom:5px;
 }
 
-/* Archives */
 
-#archives {
-}
-
-/* Search */
+/* ==================  Search  ================== */
 
 #search form {
   margin: 0;
@@ -384,7 +358,7 @@ div#posts {
 #search_term {
   width: 160px;
   padding: 2px 1px;
-  font: /*bold 10px*/ "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
 #submit1 {
@@ -399,7 +373,8 @@ div#posts {
   border-radius: 4px; 
 }
 
-/* Footer */
+/* ==================  Footer  ================== */
+
 #footer {
   clear: both;
   width: 100%;
@@ -409,7 +384,6 @@ div#posts {
   border-bottom-style: dotted;
   border-bottom-width: 1px;
   border-bottom-color: #44687d;
-  /*background: #FFFFFF url(../img/img5.gif) repeat-x;*/
 }
 
 #footer p {
@@ -426,75 +400,75 @@ div#posts {
   margin-right:20px;
 }
 /*---------image store------------------*/
+
 #mlgbstore {
   margin-left:30px;
-
 }
 
-
-}
 #mlgbstore ul {
   margin: 0px;
   padding: 10px;
   list-style: none;
 }
+
 #mlgbstore img {
   border:none;
-  
-  
 }
+
 #mlgbstore li {
   padding: 3px 0;
-  /*border-bottom: 1px dotted #5D0E0E;*/
 }
+
 #mlgbstoreimg {
   width:200px;
 }
+
 #mlgbstorelist {
   margin-left:10px;
   color:#006;
-
-  
 }
-/*---------image store end---------------*/
+
+/* ================== Detail ================== */
+
 #mlgbdetail {
   margin-left:20px;
-
 }
 
 #mlgbdetailtext {
   text-transform:uppercase;
   text-align:left;
-       vertical-align:top;
+  vertical-align:top;
   font-weight:bold;
   width:17%;
 }
+
 #mlgbdetailvalue {
   margin-left:10px;
   color:#333;
-
 }
-#mlgbdetailvalue p{
+
+#mlgbdetailvalue p {
   margin:0;
   margin-top:5px;
 }
+
 #mlgbdetail ul {
   margin: 0px;
   padding: 10px;
   list-style: none;
 }
+
 #mlgbdetail img {
   border:none;
-  
-  
 }
+  
 #mlgbdetail li {
   padding: 3px 0;
-  /*border-bottom: 1px dotted #5D0E0E;*/
 }
-/*------------------------------------*/
+
+/* ================== ID "posts", class "content"  ================== */
+
 #posts .content {
-  /*background: #F2F2F2 url(../img/img5.gif) repeat-x left bottom;*/
 }
 
 #posts .content ul {
@@ -505,7 +479,6 @@ div#posts {
 
 #posts .content li {
   padding: 3px 0;
-  /*border-top: 1px dotted #5D0E0E;*/
 }
 
 #posts .content li.first {
@@ -514,13 +487,23 @@ div#posts {
 
 #posts .content a {
   padding-left: 10px;
-  /*background: transparent url(../img/img8.gif) no-repeat left center;*/
   text-decoration: none;
   color: #5D0E0E;
 }
 
 #posts .content a:hover {
   color: #FF0000;
+}
+
+/* ================== Search Results  ================== */
+
+#mlgbtreeview {
+  margin-left: 5px;
+  margin-right: 5px;
+  border-style: solid;
+  border-color: #666666;
+  border-width: 1px;
+  padding: 10px;
 }
 
 a.booklink {
@@ -549,3 +532,4 @@ button.evidence_decoder {
   background: #ffffff;
   border: none;
 }
+
