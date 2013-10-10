@@ -22,8 +22,8 @@
     Displaying all records...
     {% else %}
     Searching {{field_label|lower|default:"all fields"}} for: <strong> {{search_term}}</strong>
-    </div><!-- end div class "treeheader" -->
     {% endif %}
+    </div><!-- end div class "treeheader" -->
     {% autoescape off %}{{ result_string|fix_dashes }}{% endautoescape %}
   {% endif %}
   {# =========== end display of search results =========== #}
