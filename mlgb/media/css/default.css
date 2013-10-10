@@ -336,17 +336,16 @@ div.moreoptions {
 
 /* ==================  ID "posts" ================== */
 
-div#posts {
-  min-width: 450px;
-  max-width: 740px;
-}
-
 #posts {
   float: left;
   width:75%;
   margin-bottom:5px;
 }
 
+div#posts {
+  min-width: 450px;
+  max-width: 740px;
+}
 
 /* ==================  Search  ================== */
 
@@ -496,6 +495,10 @@ div#posts {
 }
 
 /* ================== Search Results  ================== */
+
+div#searchresults {
+  width: 1000px;
+}
 
 #mlgbtreeview {
   margin-left: 5px;
