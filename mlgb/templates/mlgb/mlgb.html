@@ -5,8 +5,9 @@
 <title>MLGB3 Treeviewer</title>
 {% endblock %}
 
+{% block content %}
+<div id="searchresults">
 {% block posts %}
-  <div id="searchresults">
   <div id="posts">
 
   {# ========== start treeview containing search results ========== #}
@@ -124,7 +125,6 @@
 
     </div> <!-- end div class "content" -->
   </div>   <!-- end div id "search" -->
-  </div> <!-- end div id="searchresults" -->
 {% endblock %}
 
 {% block archives %} 
@@ -136,4 +136,6 @@
   <div id="Useful_Links" class="boxed">
   </div>
 {% endblock %}
+</div> <!-- end div id="searchresults" -->
+{% endblock %}{# end block 'content' #}
 

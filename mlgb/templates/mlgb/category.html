@@ -5,13 +5,10 @@
 {% endblock %}
 
 {% block posts %}
-  <div id="posts">
   
-  {% if display_legend %}
-  <fieldset>
-  <legend align="center" style="color:#000066">
-  "{{category_desc}}"
-  </legend>
+  {% if display_catg_desc %}
+  <div class="boxed category">
+  <h2 class="heading" > {{category_desc}} </h2>
   {% endif %}
 
   {% if category_data %}
@@ -29,7 +26,6 @@
     </div><!-- end div class "content" -->
   {% endif %}
 
-  {% if display_legend %}</fieldset>{% endif %}  
+  {% if display_catg_desc %}</div><!-- end div class 'category' -->{% endif %}  
 
-  </div><!-- end div ID "posts" -->
 {% endblock %}

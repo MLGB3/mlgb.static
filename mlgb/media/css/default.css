@@ -171,7 +171,7 @@ br.clearright {
 
 /* ==================  Boxed  ==================  */
 
-div.moreoptions {
+div.moreoptions, div.bookdetail {
   margin-top: 26px;
 }
 
@@ -498,6 +498,11 @@ div#posts {
 
 div#searchresults {
   width: 1000px;
+}
+
+div.category {
+  min-width: 450px;
+  max-width: 740px;
 }
 
 #mlgbtreeview {

@@ -88,6 +88,7 @@
 {% endblock %}{# end block pages #}
 
 <div id="content">
+{% block content %}
 
   {% block posts %}
   <div id="posts" class="post">
@@ -167,6 +168,7 @@
   </div><!-- end div class "moreoptions" -->
   {% endblock %}{# end block "more options" #}
 
+{% endblock %}{# end block content #}
 </div><!-- end div id "content" -->
 
 {% block footer %}
