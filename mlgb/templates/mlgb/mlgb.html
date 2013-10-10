@@ -18,16 +18,20 @@
   {# ========== start display of search results ========== #}
   {% if result_string %} {# the HTML for the search results is already set in variable 'result_string' #}
     <div class="treeheader">
-    Searching {{field_to_search|lower|default:"all fields"}} for: <strong> {{search_term}}</strong>
-    </div>
+    {% if search_term == '*' %}
+    Displaying all records...
+    {% else %}
+    Searching {{field_label|lower|default:"all fields"}} for: <strong> {{search_term}}</strong>
+    </div><!-- end div class "treeheader" -->
+    {% endif %}
     {% autoescape off %}{{ result_string|fix_dashes }}{% endautoescape %}
   {% endif %}
   {# =========== end display of search results =========== #}
 
-  {% if showtree %}</div>{% endif %}
+  {% if showtree %}</div><!-- end div ID "mlgbtreeview" -->{% endif %}
   {# =========== end treeview containing search results =========== #}
 
-  </div>
+  </div><!-- end div "posts" -->
 {% endblock %}
 
 {% block search %}  
@@ -43,65 +47,45 @@
       <label for="search_term">Enter your search term: </label>
       <br>
       <input name="search_term" id="search_term" type="text" size="30" 
-      {% if search_term %} value="{{search_term}}" {% endif %}
+      {% if search_term == "*" or not search_term %} 
+      value=""
+      {% else %}
+      value="{{search_term}}" 
+      {% endif %}
       /> <br > <br >
 
       <label for="field_to_search">Field to search: </label>
-      <br>
-      <select name="field_to_search" id="field_to_search">
-
-      <option value="">All fields</option>
-
-      <option
-      {% if field_to_search|lower == 'author/title' %} SELECTED {% endif %}
-      >Author/Title</option>
-
-      <option
-      {% if field_to_search|lower == 'location' %} SELECTED {% endif %}
-      >Location</option>
-
-      <option
-      {% if field_to_search|lower == 'medieval library' %} SELECTED {% endif %}
-      >Medieval Library</option>
-
-      <option
-      {% if field_to_search|lower == 'modern library/institution' %} SELECTED {% endif %}
-      {% if field_to_search|lower == 'library/institution'  %} SELECTED {% endif %}
-      >Modern Library/Institution</option>
-
-      <option
-      {% if field_to_search|lower == 'shelfmark' %} SELECTED {% endif %}
-      >Shelfmark</option>
-
-      </select>
-      <br ><br >
+      <br />
+      {% for field_dict in searchable_fields %}
+        {% for val, desc in field_dict.items %}
+        <input type="radio" value="{{val}}" name="field_to_search" id="search_{{val|default:'all'}}"
+        {% if val == field_to_search %} CHECKED {% endif %}
+        /> 
+        <label for="search_{{val|default:'all'}}">
+        {{desc}} 
+        </label>
+        <br>
+        {% endfor %}
+      {% endfor %}
+      <br />
 
       <label for="page_size">Records per page: </label>
-      <br>
-      <select name="page_size" id="page_size">
+      <br />
+      {% for possible_size in page_sizes %}
+        <input type="radio" value="{{possible_size}}" name="page_size" id="page_size_{{possible_size}}"
+        {% if page_size %}
+          {% if possible_size == page_size %} CHECKED {% endif %}
+        {% else %}
+          {% if possible_size|lower == 'all' %} CHECKED {% endif %}
+        {% endif %}
+        />
+        <label for="page_size_{{possible_size}}"> 
+        {{possible_size}} 
+        </label>
+        <br>
+      {% endfor %}
 
-      <option
-      {% if page_size == '100' %} SELECTED {% endif %}
-      >100</option>
-
-      <option
-      {% if page_size == '200' %} SELECTED {% endif %}
-      >200</option>
-
-      <option
-      {% if page_size == '500' %} SELECTED {% endif %}
-      >500</option>
-
-      <option
-      {% if page_size == '1000' %} SELECTED {% endif %}
-      >1000</option>
-
-      <option
-      {% if page_size|lower == 'all' %} SELECTED {% endif %}
-      >All</option>
-
-      </select>
-      <br ><br >
+      <br />
 
       <script type="text/javascript">
       function clearSearchFields() {
@@ -109,21 +93,25 @@
         var search_term = document.getElementById( 'search_term' );
         search_term.value = "";
 
-        var fieldToSearch = document.getElementById( 'field_to_search' );
-        for (var i = 0; i < fieldToSearch.options.length; i++) {
-          if( fieldToSearch.options[i].value == "" ) {
-            fieldToSearch.selectedIndex = i;
-            break;
-          }
+        {% for field_dict in searchable_fields %} {% for val, desc in field_dict.items %}
+        var oneField = document.getElementById( 'search_{{val|default:"all"}}' );
+        if( oneField.value == '') {
+          oneField.checked = true;
         }
+        else {
+          oneField.checked = false;
+        }
+        {% endfor %} {% endfor %}
 
-        var pageSize = document.getElementById( 'page_size' );
-        for (var i = 0; i < pageSize.options.length; i++) {
-          if( pageSize.options[i].value == "All" ) {
-            pageSize.selectedIndex = i;
-            break;
-          }
+        {% for possible_size in page_sizes %}
+        var pageSize = document.getElementById( 'page_size_{{possible_size}}' );
+        if( pageSize.value.toLowerCase() == 'all' || pageSize.value == '') {
+          pageSize.checked = true;
         }
+        else {
+          pageSize.checked = false;
+        }
+        {% endfor %}
       }
       </script>
 
