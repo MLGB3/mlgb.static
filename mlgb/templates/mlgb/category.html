@@ -5,27 +5,53 @@
 {% endblock %}
 
 {% block maincontent %}
-  
-  {% if display_catg_desc %}
+  <a name="category_top"> 
+  </a>
   <div class="boxed category">
   <h2 class="heading" > {{category_desc}} </h2>
-  {% endif %}
 
   {% if category_data %}
-    <div class="pretty-print">
-      <ul>
-      {% for library_or_city in category_data %}
-        <li>
-        <a href="/mlgb/?search_term={{library_or_city.name}}&field_to_search={{field_to_search}}&page_size={{page_size}}">
-        {{library_or_city.name}}
-        </a> 
-        ({{library_or_city.number_of_records}}) 
-        </li>
+
+    <div class="letterlinks">
+    {% for letter_dict in category_data %}
+      {% for letter, library_or_city_list in letter_dict.items %}
+        <a href="#letter{{letter}}" title="Go to entries starting with {{letter}}">
+        {{letter}}
+        </a>
+        <span class="spacer"> </span>
       {% endfor %}
-      </ul>
-    </div><!-- end div class "pretty-print" -->
+    {% endfor %}
+    </div>
+
+
+    {% for letter_dict in category_data %}
+      {% for letter, library_or_city_list in letter_dict.items %}
+
+        <a name="letter{{letter}}">
+        <h3>{{letter}}</h3>
+        </a>
+
+        <div class="pretty-print">
+        <ul>
+        {% for library_or_city in library_or_city_list %}
+          <li>
+          <a href="/mlgb/?search_term={{library_or_city.name}}&field_to_search={{field_to_search}}&page_size={{page_size}}">
+          {{library_or_city.name}}
+          </a> 
+          ({{library_or_city.number_of_records}}) 
+          </li>
+        {% endfor %}
+        </ul>
+        </div><!-- end div class "pretty-print" -->
+
+        <p class="back_to_top">
+        <a href="#category_top">Back to top</a>
+        </p>
+      {% endfor %}
+    {% endfor %}
+
+
   {% endif %}
 
-  {% if display_catg_desc %}</div><!-- end div class 'category' -->{% endif %}  
-
+  </div><!-- end div class 'category' -->  
 {% endblock %}
