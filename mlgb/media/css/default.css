@@ -203,50 +203,50 @@ div.moreoptions {
   border-bottom: 5px solid #580505;
 }
 
-.boxed .content {
+.boxed .pretty-print {
   background-color:  #F2F2F2;
   border-bottom: 1px dotted #44687d;
 }
 
-.boxed .content ul {
+.boxed .pretty-print ul {
   margin: 0;
   padding: 10px;
   list-style: none;
 }
 
-.boxed .content li {
+.boxed .pretty-print li {
   padding: 3px 0;
   border-top: 1px dotted #44687d;
 }
 
-.boxed .content li.first {
+.boxed .pretty-print li.first {
   border: none;
 }
 
-.boxed .content a {
+.boxed .pretty-print a {
   padding-left: 10px;
   background: transparent url(../img/img8.gif) no-repeat left center;
   text-decoration: none;
   color: #5D0E0E;
 }
 
-.boxed .content a:hover {
+.boxed .pretty-print a:hover {
   color: #FF0000;
 }
 
-/* ==================  CLASS post (see below for ID posts)  ================== */
+/* ==================  class "main-pretty-print"  ================== */
 
-.post {
+.main-pretty-print {
   background: #F2F2F2 url(../img/img5.gif) repeat-x left bottom;
 }
 
-.post .title {
+.main-pretty-print .title {
   padding: 0 0 0 13px;
   background: #FFFFFF url(../img/img9.gif) no-repeat left center;
   color: #000000;
 }
 
-.post .posted, .about .posted  {
+.main-pretty-print .posted, .about .posted, .main-pretty-print .bookheading  {
   padding: 2px 10px 4px 10px;
   background-color: #44687d; /* teal */
   border-bottom: 5px solid #580505; /* dark red */
@@ -265,18 +265,18 @@ div.moreoptions {
   border-top-right-radius: 6px; 
 }
 
-.post .story {
+.main-pretty-print .story {
   padding: 10px 20px;
   float: left;
 }
 
-.post .meta {
+.main-pretty-print .meta {
   padding: 1px 10px;
 }
 
-/* ==================  ID "content"  ================== */
+/* ==================  ID "wrapper"  ================== */
 
-#content {
+#wrapper {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px ;
@@ -304,45 +304,45 @@ div.moreoptions {
   color: #000000;
 }
 
-.about .content {
+.about .pretty-print {
   background: #F2F2F2 url(../img/img5.gif) repeat-x left bottom;
 }
 
-.about .content ul {
+.about .pretty-print ul {
   margin: 0;
   padding: 10px;
   list-style: none;
 }
 
-.about .content li {
+.about .pretty-print li {
   padding: 3px 0;
   border-top: 1px dotted #44687d;
 }
 
-.about .content li.first {
+.about .pretty-print li.first {
   border: none;
 }
 
-.about .content a {
+.about .pretty-print a {
   padding-left: 10px;
   background: transparent url(../img/img8.gif) no-repeat left center;
   text-decoration: none;
   color: #5D0E0E;
 }
 
-.about .content a:hover {
+.about .pretty-print a:hover {
   color: #FF0000;
 }
 
-/* ==================  ID "posts" ================== */
+/* ==================  ID "maincontent" ================== */
 
-#posts {
+#maincontent {
   float: left;
   width:75%;
   margin-bottom:5px;
 }
 
-div#posts {
+div#maincontent {
   min-width: 450px;
   max-width: 740px;
 }
@@ -465,32 +465,32 @@ div#posts {
   padding: 3px 0;
 }
 
-/* ================== ID "posts", class "content"  ================== */
+/* ================== ID "maincontent", class "pretty-print"  ================== */
 
-#posts .content {
+#maincontent .pretty-print {
 }
 
-#posts .content ul {
+#maincontent .pretty-print ul {
   margin: 0;
   padding: 10px;
   list-style: none;
 }
 
-#posts .content li {
+#maincontent .pretty-print li {
   padding: 3px 0;
 }
 
-#posts .content li.first {
+#maincontent .pretty-print li.first {
   border: none;
 }
 
-#posts .content a {
+#maincontent .pretty-print a {
   padding-left: 10px;
   text-decoration: none;
   color: #5D0E0E;
 }
 
-#posts .content a:hover {
+#maincontent .pretty-print a:hover {
   color: #FF0000;
 }
 
@@ -513,7 +513,7 @@ div.category, div.treeview {
   max-width: 740px;
 }
 
-div.results {
+div.resultdetails {
   border-style: solid;
   border-color: #44687d; /* teal */
   border-width: 1px;
