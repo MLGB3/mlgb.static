@@ -8,11 +8,11 @@
 </title>
 {% endblock %}
 
-{% block posts %}
-<div id="posts" class="post bookdetail">
+{% block maincontent %}
+<div id="maincontent" class="main-pretty-print bookdetail">
   {% autoescape off %}
 
-  <h3 class="posted">
+  <h3 class="bookheading">
   {{ object.author_title|fix_dashes }} &mdash; {{object.provenance|fix_dashes}}
   {# do we really need evidence code in the heading? (evidence code {{object.evidence}}) #}
   </h3>

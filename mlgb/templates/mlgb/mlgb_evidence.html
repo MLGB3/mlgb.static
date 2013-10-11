@@ -3,8 +3,8 @@
 <title>{{object.evidence}}{{ object.author_title }}</title>
 {% endblock %}
 
-{% block posts %}
- <div id="posts" class="post">
+{% block maincontent %}
+ <div id="maincontent" class="main-pretty-print">
     <h3 class="posted">{{object.evidence}}{{ object.author_title }} - {{object.provenance}}</h3>
         <table id="mlgbdetail">
             {% for photo in object.photo_set.all %}
@@ -20,7 +20,7 @@
 {% block search %}  
   <div id="search" class="boxed">
     <h2 class="heading">Search</h2>
-    <div class="content">
+    <div class="pretty-print">
      <form action="/mlgb/" method="get">
       <div>
 		  <input name="s" type="text" size="30" /><br > <br >

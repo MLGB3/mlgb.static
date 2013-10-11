@@ -5,15 +5,15 @@
 <title>MLGB3 Treeviewer</title>
 {% endblock %}
 
-{% block content %}
+{% block content_wrapper %}
 <div id="searchresults">
-{% block posts %}
+{% block maincontent %}
 
   {# ========== start treeview containing search results ========== #}
   <div id="{% if number_of_records %}mlgbtreeview{% else %}nonefound{% endif %}" class="boxed treeview">
   <h2 class="heading">Search Results</h2>
 
-  <div class="results">
+  <div class="resultdetails">
   
   {% if search_term %}
     <div class="treeheader">
@@ -32,19 +32,19 @@
   {% if result_string %} {# the HTML for the search results is already set in variable 'result_string' #}
     {% autoescape off %}{{ result_string|fix_dashes }}{% endautoescape %}
   {% endif %}
-  </div> <!-- end div class results -->
+  </div> <!-- end div class resultdetails -->
 
   </div><!-- end div ID "mlgbtreeview" -->
   {# =========== end treeview containing search results =========== #}
 
-{% endblock %}
+{% endblock %} {# end block 'maincontent' #}
 
 {% block search %}  
   <div id="search" class="boxed">
     <h2 class="heading">Search
     {% if search_term %} Again {% endif %}
     </h2>
-    <div class="content">
+    <div class="pretty-print">
 
     {# ================== start search form ================== #}
     <form action="/mlgb/" method="get">
@@ -126,7 +126,7 @@
     </form>
     {# ================== end search form ================== #}
 
-    </div> <!-- end div class "content" -->
+    </div> <!-- end div class "pretty-print" -->
   </div>   <!-- end div id "search" -->
 {% endblock %}
 
@@ -137,5 +137,5 @@
 {% endblock %}
 
 </div> <!-- end div id="searchresults" -->
-{% endblock %}{# end block 'content' #}
+{% endblock %}{# end block 'content_wrapper' #}
 

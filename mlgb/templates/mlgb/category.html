@@ -4,7 +4,7 @@
 <title>MLGB3 Treeviewer</title>
 {% endblock %}
 
-{% block posts %}
+{% block maincontent %}
   
   {% if display_catg_desc %}
   <div class="boxed category">
@@ -12,7 +12,7 @@
   {% endif %}
 
   {% if category_data %}
-    <div class="content">
+    <div class="pretty-print">
       <ul>
       {% for library_or_city in category_data %}
         <li>
@@ -23,7 +23,7 @@
         </li>
       {% endfor %}
       </ul>
-    </div><!-- end div class "content" -->
+    </div><!-- end div class "pretty-print" -->
   {% endif %}
 
   {% if display_catg_desc %}</div><!-- end div class 'category' -->{% endif %}  

@@ -87,11 +87,11 @@
 </div><!-- end div pages -->
 {% endblock %}{# end block pages #}
 
-<div id="content">
-{% block content %}
+<div id="wrapper">
+{% block content_wrapper %}
 
-  {% block posts %}
-  <div id="posts" class="post">
+  {% block maincontent %}
+  <div id="maincontent" class="main-pretty-print">
     <h2 class="title">Medieval Libraries of Great Britain</h2>
 
     <h3 class="posted">
@@ -141,8 +141,8 @@
     <a href="/" class="comment">1 Comment &raquo;</a></p>
     -->
     </div><!-- end div class "meta" -->
-  </div><!-- end div "posts" -->
-  {% endblock %}{# end block posts #}
+  </div><!-- end div "maincontent" -->
+  {% endblock %}{# end block maincontent #}
 
   {% block moreoptions %}
   <div class="moreoptions">
@@ -155,21 +155,21 @@
   {% block useful_links %} 
   <div id="Useful_Links" class="boxed">
     <h2 class="heading">Useful Links</h2>
-    <div class="content">
+    <div class="pretty-print">
       <ul>
         <li class="first"><a href="http://www.ox.ac.uk/">University of Oxford</a></li>
         <li><a href="http://www.mellon.org/">Mellon Foundation</a></li>
         <li><a href="http://www.history.ox.ac.uk/">Faculty of History</a></li>
         <li><a href="http://www.bodleian.ox.ac.uk/">Bodleian Libraries</a></li>
       </ul>
-    </div><!-- end div class "content" within div "useful links" -->
+    </div><!-- end div class "pretty-print" within div "useful links" -->
   </div><!-- end div "useful links" -->
   {% endblock %}{# end block useful links #}
   </div><!-- end div class "moreoptions" -->
   {% endblock %}{# end block "more options" #}
 
-{% endblock %}{# end block content #}
-</div><!-- end div id "content" -->
+{% endblock %}{# end block content_wrapper #}
+</div><!-- end div id "wrapper" -->
 
 {% block footer %}
 <div id="footer">
