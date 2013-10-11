@@ -8,6 +8,7 @@ Adapted 2010-2013 by BDLSS
 /*
 Colours from the University of Oxford branding toolkit:
 teal: R=68 G=104 B=125 = #44687d
+Wedgwood blue: #c5d2e0
 
 Colours from original version of MLGB3 website
 dark red/maroon: #580505
@@ -62,8 +63,8 @@ br.clearright {
   width: 100%;
   height: 105px;
   margin: none;
-  background-color: #44687d;
-  background: #44687d url(../photos/Peterborough_Bodley_163_2.jpg);
+  background-color: #c5d2e0;
+  background: #c5d2e0 url(../photos/Peterborough_Bodley_163_2.jpg);
   padding-right: 15px;
 }
 
@@ -81,15 +82,15 @@ br.clearright {
 
   border-top-width: 9px;
   border-top-style: solid;
-  border-top-color: #44687d;
+  border-top-color: #c5d2e0;
 
   border-right-width: 15px;
   border-right-style: solid;
-  border-right-color: #44687d;
+  border-right-color: #c5d2e0;
 
   border-left-width: 15px;
   border-left-style: solid;
-  border-left-color: #44687d;
+  border-left-color: #c5d2e0;
 }
 
 #mellon a img {
@@ -105,7 +106,7 @@ br.clearright {
 
 #header a {
   text-decoration: none;
-  color: #FFFFFF;
+  color: #44687d;
 }
 
 /* ==================  Pages (i.e. navigation bar)  ================== */
@@ -114,7 +115,7 @@ br.clearright {
   clear: both;
   width: 100%;
   height: 40px;
-  background-color: #44687d;
+  background-color: #c5d2e0;
   border-bottom: 5px solid #580505;
   padding-right: 15px;
 
@@ -148,7 +149,7 @@ br.clearright {
   letter-spacing: -1px;
   font-size: 14px;
   font-weight: bold;
-  color: #FFFFFF;
+  color: #44687d;
 }
 
 #pages a:hover, #pages .active a {
@@ -156,6 +157,7 @@ br.clearright {
   padding-left: 14px;
   padding-right: 14px;
   background-color: #580505;
+  color: #FFFFFF;
   border-top: 1px solid #580505;
   border-left: 1px solid #580505;
   border-right: 1px solid #580505;
@@ -188,12 +190,12 @@ div.moreoptions {
   padding: 6px 0 0 10px;
   border: 1px solid #000000;
   font-size: 1em;
-  color: #FFFFFF;
-  background-color: #44687d; /* teal */
+  color: #44687d;
+  background-color: #c5d2e0; /* wedgwood blue */
 
-  border-top: 1px solid #44687d; /* teal */
-  border-left: 1px solid #44687d;
-  border-right: 1px solid #44687d;
+  border-top: 1px solid #c5d2e0; /* wedgwood blue */
+  border-left: 1px solid #c5d2e0;
+  border-right: 1px solid #c5d2e0;
   -webkit-border-top-left-radius: 6px;  
   -moz-border-top-left-radius: 6px;  
   border-top-left-radius: 6px; 
@@ -205,7 +207,7 @@ div.moreoptions {
 
 .boxed .pretty-print {
   background-color:  #F2F2F2;
-  border-bottom: 1px dotted #44687d;
+  border-bottom: 1px dotted #c5d2e0;
 }
 
 .boxed .pretty-print ul {
@@ -216,7 +218,7 @@ div.moreoptions {
 
 .boxed .pretty-print li {
   padding: 3px 0;
-  border-top: 1px dotted #44687d;
+  border-top: 1px dotted #c5d2e0;
 }
 
 .boxed .pretty-print li.first {
@@ -248,15 +250,15 @@ div.moreoptions {
 
 .main-pretty-print .posted, .about .posted, .main-pretty-print .bookheading  {
   padding: 2px 10px 4px 10px;
-  background-color: #44687d; /* teal */
+  background-color: #c5d2e0; /* wedgwood blue */
   border-bottom: 5px solid #580505; /* dark red */
   font-size: .7em;
   font-weight: normal;
-  color: #FFFFFF;
+  color: #44687d;
 
-  border-top: 1px solid #44687d; /*teal*/
-  border-left: 1px solid #44687d;
-  border-right: 1px solid #44687d;
+  border-top: 1px solid #c5d2e0; /*wedgwood blue*/
+  border-left: 1px solid #c5d2e0;
+  border-right: 1px solid #c5d2e0;
   -webkit-border-top-left-radius: 6px;  
   -moz-border-top-left-radius: 6px;  
   border-top-left-radius: 6px; 
@@ -316,7 +318,7 @@ div.moreoptions {
 
 .about .pretty-print li {
   padding: 3px 0;
-  border-top: 1px dotted #44687d;
+  border-top: 1px dotted #c5d2e0;
 }
 
 .about .pretty-print li.first {
@@ -382,7 +384,7 @@ div#maincontent {
   background-color: #F2F2F2 ;
   border-bottom-style: dotted;
   border-bottom-width: 1px;
-  border-bottom-color: #44687d;
+  border-bottom-color: #c5d2e0;
 }
 
 #footer p {
@@ -515,7 +517,7 @@ div.category, div.treeview {
 
 div.resultdetails {
   border-style: solid;
-  border-color: #44687d; /* teal */
+  border-color: #c5d2e0; /* wedgwood blue */
   border-width: 1px;
   border-top: none; 
   padding: 10px;
