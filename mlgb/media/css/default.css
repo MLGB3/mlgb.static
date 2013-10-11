@@ -11,7 +11,6 @@ teal: R=68 G=104 B=125 = #44687d
 Wedgwood blue: #c5d2e0
 
 Colours from original version of MLGB3 website
-dark red/maroon: #580505
 very, very pale grey/blue: #F2F2F2 
 */
 
@@ -63,7 +62,7 @@ br.clearright {
   width: 100%;
   height: 105px;
   margin: none;
-  background-color: #c5d2e0;
+  background-color: #c5d2e0; /* Wedgwood blue */
   background: #c5d2e0 url(../photos/Peterborough_Bodley_163_2.jpg);
   padding-right: 15px;
 }
@@ -82,15 +81,15 @@ br.clearright {
 
   border-top-width: 9px;
   border-top-style: solid;
-  border-top-color: #c5d2e0;
+  border-top-color: #c5d2e0; /* Wedgwood blue */
 
   border-right-width: 15px;
   border-right-style: solid;
-  border-right-color: #c5d2e0;
+  border-right-color: #c5d2e0; /* Wedgwood blue */
 
   border-left-width: 15px;
   border-left-style: solid;
-  border-left-color: #c5d2e0;
+  border-left-color: #c5d2e0; /* Wedgwood blue */
 }
 
 #mellon a img {
@@ -106,7 +105,7 @@ br.clearright {
 
 #header a {
   text-decoration: none;
-  color: #44687d;
+  color: #44687d; /* teal */
 }
 
 /* ==================  Pages (i.e. navigation bar)  ================== */
@@ -115,8 +114,8 @@ br.clearright {
   clear: both;
   width: 100%;
   height: 40px;
-  background-color: #c5d2e0;
-  border-bottom: 5px solid #580505;
+  background-color: #c5d2e0; /* Wedgwood blue */
+  border-bottom: 5px solid #44687d; /* teal */
   padding-right: 15px;
 
 }
@@ -149,18 +148,18 @@ br.clearright {
   letter-spacing: -1px;
   font-size: 14px;
   font-weight: bold;
-  color: #44687d;
+  color: #44687d; /* teal */
 }
 
 #pages a:hover, #pages .active a {
   display: inline-block;
   padding-left: 14px;
   padding-right: 14px;
-  background-color: #580505;
+  background-color: #44687d; /* teal */
   color: #FFFFFF;
-  border-top: 1px solid #580505;
-  border-left: 1px solid #580505;
-  border-right: 1px solid #580505;
+  border-top: 1px solid #44687d; /* teal */
+  border-left: 1px solid #44687d; /* teal */
+  border-right: 1px solid #44687d; /* teal */
   -webkit-border-top-left-radius: 6px;  
   -moz-border-top-left-radius: 6px;  
   border-top-left-radius: 6px; 
@@ -190,7 +189,7 @@ div.moreoptions {
   padding: 6px 0 0 10px;
   border: 1px solid #000000;
   font-size: 1em;
-  color: #44687d;
+  color: #44687d; /* teal */
   background-color: #c5d2e0; /* wedgwood blue */
 
   border-top: 1px solid #c5d2e0; /* wedgwood blue */
@@ -202,12 +201,12 @@ div.moreoptions {
   -webkit-border-top-right-radius: 6px;  
   -moz-border-top-right-radius: 6px;  
   border-top-right-radius: 6px; 
-  border-bottom: 5px solid #580505;
+  border-bottom: 5px solid #44687d; /* teal */
 }
 
 .boxed .pretty-print {
   background-color:  #F2F2F2;
-  border-bottom: 1px dotted #c5d2e0;
+  border-bottom: 1px dotted #c5d2e0; /* Wedgwood blue */
 }
 
 .boxed .pretty-print ul {
@@ -218,7 +217,7 @@ div.moreoptions {
 
 .boxed .pretty-print li {
   padding: 3px 0;
-  border-top: 1px dotted #c5d2e0;
+  border-top: 1px dotted #c5d2e0; /* Wedgwood blue */
 }
 
 .boxed .pretty-print li.first {
@@ -251,10 +250,10 @@ div.moreoptions {
 .main-pretty-print .posted, .about .posted, .main-pretty-print .bookheading  {
   padding: 2px 10px 4px 10px;
   background-color: #c5d2e0; /* wedgwood blue */
-  border-bottom: 5px solid #580505; /* dark red */
+  border-bottom: 5px solid #44687d; /* teal */
   font-size: .7em;
   font-weight: normal;
-  color: #44687d;
+  color: #44687d; /* teal */
 
   border-top: 1px solid #c5d2e0; /*wedgwood blue*/
   border-left: 1px solid #c5d2e0;
@@ -318,7 +317,7 @@ div.moreoptions {
 
 .about .pretty-print li {
   padding: 3px 0;
-  border-top: 1px dotted #c5d2e0;
+  border-top: 1px dotted #c5d2e0; /* Wedgwood blue */
 }
 
 .about .pretty-print li.first {
@@ -364,8 +363,8 @@ div#maincontent {
 
 #submit1 {
   width: 40px;
-  background: #5F1010 url(../img/img7.gif) repeat-x;
-  border: 1px solid #580505 ;
+  background-color: #44687d; /* teal */
+  border: 1px solid #44687d ;
   text-transform: uppercase;
   font: bold 10px "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: #FFFFFF;
@@ -384,7 +383,7 @@ div#maincontent {
   background-color: #F2F2F2 ;
   border-bottom-style: dotted;
   border-bottom-width: 1px;
-  border-bottom-color: #c5d2e0;
+  border-bottom-color: #44687d; /* teal */
 }
 
 #footer p {
