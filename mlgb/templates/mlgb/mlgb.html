@@ -107,7 +107,7 @@
 
         {% for possible_size in page_sizes %}
         var pageSize = document.getElementById( 'page_size_{{possible_size}}' );
-        if( pageSize.value.toLowerCase() == 'all' || pageSize.value == '') {
+        if( pageSize.value.toLowerCase() == '{{default_rows_per_page}}' ) {
           pageSize.checked = true;
         }
         else {
