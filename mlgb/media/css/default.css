@@ -173,7 +173,7 @@ br.clearright {
 /* ==================  Boxed  ==================  */
 
 div.moreoptions {
-  margin-top: 26px;
+  margin-top: 2px;
 }
 
 .boxed {
@@ -247,7 +247,7 @@ div.moreoptions {
   color: #000000;
 }
 
-.main-pretty-print .posted, .about .posted, .main-pretty-print .bookheading  {
+.main-pretty-print .posted, .about .posted{
   padding: 2px 10px 4px 10px;
   background-color: #c5d2e0; /* wedgwood blue */
   border-bottom: 5px solid #44687d; /* teal */
@@ -275,10 +275,43 @@ div.moreoptions {
   padding: 1px 10px;
 }
 
+.main-pretty-print .heading, .main-pretty-print .bookheading {
+
+  text-transform: none;
+  min-height: 24px;
+  padding: 4px 2px 2px 10px;
+  border: 1px solid #000000;
+  color: #44687d; /* teal */
+  background-color: #c5d2e0; /* wedgwood blue */
+
+  border-top: 1px solid #c5d2e0; /* wedgwood blue */
+  border-left: 1px solid #c5d2e0;
+  border-right: 1px solid #c5d2e0;
+  -webkit-border-top-left-radius: 6px;  
+  -moz-border-top-left-radius: 6px;  
+  border-top-left-radius: 6px; 
+  -webkit-border-top-right-radius: 6px;  
+  -moz-border-top-right-radius: 6px;  
+  border-top-right-radius: 6px; 
+  border-bottom: 5px solid #44687d; /* teal */
+}
+
+
+.main-pretty-print .heading {
+  margin-top: 2px;
+  font-size: 1.5em;
+}
+
+.main-pretty-print .bookheading {
+  margin-top: 0px;
+  font-size: 0.9em;
+  min-height: 26px;
+}
+
 /* ==================  ID "wrapper"  ================== */
 
 #wrapper {
-  max-width: 1000px;
+  width: 1000px;
   margin: 0 auto;
   padding: 20px ;
   margin-top: 20px;
