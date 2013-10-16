@@ -591,12 +591,12 @@ div.resultdetails {
   padding: 10px;
 }
 
-a.booklink {
+a.booklink, .browse_provenance a {
   color: #666666;
   text-decoration: none;
 }
 
-a.booklink:hover {
+a.booklink:hover, .browse_provenance a:hover {
   color: #666666;
   text-decoration: underline;
 }
@@ -661,15 +661,15 @@ div.browseresults div.book_row_1 div.browse_shelfmarks  {
 }
 
 div.browseresults div.book_row_1 div.browse_authortitle  {
-  width: 38%;
+  width: 30%;
 }
 
-div.browseresults div.book_row_1 div.browse_date_of_work  {
-  width: 20%;
+div.browseresults div.book_row_1 div.browse_provenance  {
+  width: 30%;
 }
 
 div.browseresults div.book_row_1 div.browse_editlink {
-  width: 5%;
+  width: 3%;
 }
 
 div.browseresults div.book_row_2_hidden  {
