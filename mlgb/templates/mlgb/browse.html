@@ -1,0 +1,28 @@
+{% extends "mlgb/mlgb.html" %}
+{% load mlgb_custom_filters %}
+
+{% block title %}
+<title>MLGB3 Browse</title>
+{% endblock %}
+
+{% block maincontent %}
+
+  <div id="{% if number_of_records %}mlgbbrowse{% else %}nonefound{% endif %}" 
+       class="boxed treeview browse">
+  <h2 class="heading">{{page_title|default:"Browse"}}</h2>
+
+  <div class="resultdetails">
+  
+  {% if not number_of_records %}
+    {% if search_term %}<p>No records retrieved.</p>{% endif %}
+  {% endif %}
+
+  {% if result_string %} {# the HTML for the search results is already set in variable 'result_string' #}
+    {% autoescape off %}{{ result_string|fix_dashes }}{% endautoescape %}
+  {% endif %}
+  </div> <!-- end div class resultdetails -->
+
+  </div><!-- end div ID "mlgbbrowse" -->
+
+{% endblock %} {# end block 'maincontent' #}
+

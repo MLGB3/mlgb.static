@@ -534,7 +534,7 @@ div#searchresults {
   width: 1000px;
 }
 
-div#mlgbtreeview {
+div#mlgbtreeview, div#mlgbbrowse {
   width: 740px;
 }
 
@@ -542,10 +542,23 @@ div#nonefound {
   width: 450px;
 }
 
-div.category, div.treeview {
+div.category, div.treeview, div.browse {
   min-width: 450px;
   max-width: 740px;
 }
+
+div.browse h3 {
+  text-transform: none;
+}
+
+div.browse ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-left: 5px;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
 
 div.letterlinks {
   margin-top: 10px;
@@ -570,7 +583,7 @@ div.letterlinks a {
   border-radius: 2px; 
 }
 
-div.letterlinks a:hover {
+div.letterlinks a:hover, div.letterlinks a.selected {
   background-color:  #44687d; /* teal */
   color:  #ffffff;
 }
@@ -616,5 +629,10 @@ a.evidence, button.evidence_decoder {
 button.evidence_decoder {
   background: #ffffff;
   border: none;
+}
+
+table.browseresults tr td  {
+  vertical-align: top;
+  padding: 2px;
 }
 

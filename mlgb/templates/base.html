@@ -5,9 +5,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
+{# ............................................................. #}
 {% block title %}
 <title>MLGB3</title>
 {% endblock %}
+{# ............................................................. #}
 
 <link href="/mlgb/media/css/default.css" rel="stylesheet" type="text/css" />
 
@@ -46,6 +48,7 @@
 {# ============================================================= #}
 
 <body>
+{# ............................................................. #}
 {% block header %}
 <div id="header">  
 
@@ -70,7 +73,9 @@
 
 </div><!-- end div header -->
 {% endblock %}{# end block header #}
+{# ............................................................. #}
 
+{# ............................................................. #}
 {% block pages %}
 <div id="pages">
   <h2>Pages</h2>
@@ -80,16 +85,23 @@
     {%if pagename == "home"%} class="active" {% endif %}
     ><a id="home_link" href="/">Home</a></li>
 
+    <li id="browse_listitem"
+    {% if pagename == "browse" %} class="active" {% endif %}
+    ><a id="browse_link" href="/mlgb/browse/">Browse</a></li>
+
     <li id="about_listitem"
     {% if pagename == "about" %} class="active" {% endif %}
     ><a id="about_link" href="/about/">About the Project</a></li>
   </ul>
 </div><!-- end div pages -->
 {% endblock %}{# end block pages #}
+{# ............................................................. #}
 
 <div id="wrapper">
+{# ............................................................. #}
 {% block content_wrapper %}
 
+  {# ............................................................. #}
   {% block maincontent %}
   <div id="maincontent" class="main-pretty-print">
 
@@ -141,32 +153,42 @@
     </div><!-- end div class "meta" -->
   </div><!-- end div "maincontent" -->
   {% endblock %}{# end block maincontent #}
+  {# ............................................................. #}
 
+  {# ............................................................. #}
   {% block moreoptions %}
-  <div class="moreoptions">
-  {% block search %}  
-  {% endblock %}
 
-  {% block archives %} 
-  {% endblock %}
+    <div class="moreoptions">
 
-  {% block useful_links %} 
-  <div id="Useful_Links" class="boxed">
-    <h2 class="heading">Useful Links</h2>
-    <div class="pretty-print">
-      <ul>
-        <li class="first"><a href="http://www.ox.ac.uk/">University of Oxford</a></li>
-        <li><a href="http://www.mellon.org/">Mellon Foundation</a></li>
-        <li><a href="http://www.history.ox.ac.uk/">Faculty of History</a></li>
-        <li><a href="http://www.bodleian.ox.ac.uk/">Bodleian Libraries</a></li>
-      </ul>
-    </div><!-- end div class "pretty-print" within div "useful links" -->
-  </div><!-- end div "useful links" -->
-  {% endblock %}{# end block useful links #}
-  </div><!-- end div class "moreoptions" -->
+    {% block search %}  
+    {% endblock %}
+
+    {% block archives %} 
+    {% endblock %}
+
+    {# ............................................................. #}
+    {% block useful_links %} 
+    <div id="Useful_Links" class="boxed">
+      <h2 class="heading">Useful Links</h2>
+      <div class="pretty-print">
+        <ul>
+          <li class="first"><a href="http://www.ox.ac.uk/">University of Oxford</a></li>
+          <li><a href="http://www.mellon.org/">Mellon Foundation</a></li>
+          <li><a href="http://www.history.ox.ac.uk/">Faculty of History</a></li>
+          <li><a href="http://www.bodleian.ox.ac.uk/">Bodleian Libraries</a></li>
+        </ul>
+      </div><!-- end div class "pretty-print" within div "useful links" -->
+    </div><!-- end div "useful links" -->
+    {% endblock %}{# end block useful links #}
+    {# ............................................................. #}
+
+    </div><!-- end div class "moreoptions" -->
+
   {% endblock %}{# end block "more options" #}
+  {# ............................................................. #}
 
 {% endblock %}{# end block content_wrapper #}
+{# ............................................................. #}
 </div><!-- end div id "wrapper" -->
 
 {% block footer %}
