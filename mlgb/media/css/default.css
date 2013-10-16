@@ -547,19 +547,6 @@ div.category, div.treeview, div.browse {
   max-width: 740px;
 }
 
-div.browse h3 {
-  text-transform: none;
-}
-
-div.browse ul {
-  list-style-type: circle;
-  list-style-position: inside;
-  margin-left: 5px;
-  margin-bottom: 15px;
-  font-size: 0.9em;
-}
-
-
 div.letterlinks {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -631,8 +618,66 @@ button.evidence_decoder {
   border: none;
 }
 
-table.browseresults tr td  {
+/* ================= Browse ================= */
+
+div.browse h3 {
+  text-transform: none;
+}
+
+div.browse ul {
+  list-style-type: circle;
+  list-style-position: inside;
+  margin-left: 28px;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+}
+
+div.browseresults div.book_row_1 div  {
   vertical-align: top;
   padding: 2px;
+  display: inline-block;
+}
+
+div.browse_concertina button {
+  padding: 0px;
+  height: 20px;
+  width: 20px;
+  background-color: #f2f2f2;
+  border-style: dotted;
+  border-width: 1px;
+  border-color: #44687d; /* teal */
+}
+
+div.browseresults div.book_row_1 div.browse_concertina {
+  width: 3%;
+}
+
+div.browseresults div.book_row_1 div.browse_evidence  {
+  width: 5%;
+}
+
+div.browseresults div.book_row_1 div.browse_shelfmarks  {
+  width: 20%;
+}
+
+div.browseresults div.book_row_1 div.browse_authortitle  {
+  width: 38%;
+}
+
+div.browseresults div.book_row_1 div.browse_date_of_work  {
+  width: 20%;
+}
+
+div.browseresults div.book_row_1 div.browse_editlink {
+  width: 5%;
+}
+
+div.browseresults div.book_row_2_hidden  {
+  display: none;
+}
+
+div.browseresults div.book_row_2_displayed  {
+  display: block;
+  width:100%;
 }
 
