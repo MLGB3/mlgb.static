@@ -681,3 +681,9 @@ div.browseresults div.book_row_2_displayed  {
   width:100%;
 }
 
+div#rightbar_options {
+  width: 232px;
+  margin-right: 25px;
+  float: right;
+}
+

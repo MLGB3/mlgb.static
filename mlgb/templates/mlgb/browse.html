@@ -26,6 +26,9 @@
 
 {% endblock %} {# end block 'maincontent' #}
 
+{% block moreoptions %}  
+<div id="rightbar_options">
+
 {% block browseoptions %} 
 
   <div id="browseoptions" class="boxed">
@@ -58,3 +61,12 @@
 {% block archives %}
   {% include 'includes/categorylinks.html' %}
 {% endblock %}
+
+{% block search %}
+  {% include 'includes/searchwithoptions.html' %}
+{% endblock %}
+
+</div><!-- end rightbar options -->
+{% endblock %} {# end block moreoptions #}
+
+
