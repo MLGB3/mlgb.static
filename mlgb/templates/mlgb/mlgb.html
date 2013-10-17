@@ -39,100 +39,15 @@
 
 {% endblock %} {# end block 'maincontent' #}
 
+{% block browseoptions %} 
+{% endblock %}
+
 {% block archives %} 
 {% endblock %}
 
 {% block search %}  
-  <div id="search" class="boxed">
-    <h2 class="heading">Search
-    {% if search_term %} Again {% endif %}
-    </h2>
-    <div class="pretty-print">
-
-    {# ================== start search form ================== #}
-    <form action="/mlgb/" method="get">
-      <div>
-      <label for="search_term">Enter your search term: </label>
-      <br>
-      <input name="search_term" id="search_term" type="text" size="30" 
-      {% if search_term == "*" or not search_term %} 
-      value=""
-      {% else %}
-      value="{{search_term}}" 
-      {% endif %}
-      /> <br > <br >
-
-      <label for="field_to_search">Field to search: </label>
-      <br />
-      {% for field_dict in searchable_fields %}
-        {% for val, desc in field_dict.items %}
-        <input type="radio" value="{{val}}" name="field_to_search" id="search_{{val|default:'all'}}"
-        {% if val == field_to_search %} CHECKED {% endif %}
-        /> 
-        <label for="search_{{val|default:'all'}}">
-        {{desc}} 
-        </label>
-        <br>
-        {% endfor %}
-      {% endfor %}
-      <br />
-
-      <label for="page_size">Records per page: </label>
-      <br />
-      {% for possible_size in page_sizes %}
-        <input type="radio" value="{{possible_size}}" name="page_size" id="page_size_{{possible_size}}"
-        {% if page_size %}
-          {% if possible_size == page_size %} CHECKED {% endif %}
-        {% else %}
-          {% if possible_size|lower == 'all' %} CHECKED {% endif %}
-        {% endif %}
-        />
-        <label for="page_size_{{possible_size}}"> 
-        {{possible_size}} 
-        </label>
-        <br>
-      {% endfor %}
-
-      <br />
-
-      <script type="text/javascript">
-      function clearSearchFields() {
-
-        var search_term = document.getElementById( 'search_term' );
-        search_term.value = "";
-
-        {% for field_dict in searchable_fields %} {% for val, desc in field_dict.items %}
-        var oneField = document.getElementById( 'search_{{val|default:"all"}}' );
-        if( oneField.value == '') {
-          oneField.checked = true;
-        }
-        else {
-          oneField.checked = false;
-        }
-        {% endfor %} {% endfor %}
-
-        {% for possible_size in page_sizes %}
-        var pageSize = document.getElementById( 'page_size_{{possible_size}}' );
-        if( pageSize.value.toLowerCase() == '{{default_rows_per_page}}' ) {
-          pageSize.checked = true;
-        }
-        else {
-          pageSize.checked = false;
-        }
-        {% endfor %}
-      }
-      </script>
-
-      <input type="submit" value="Go" />
-      <input type="button" value="Clear" onclick="clearSearchFields()" />
-      </div>
-    </form>
-    {# ================== end search form ================== #}
-
-    </div> <!-- end div class "pretty-print" -->
-  </div>   <!-- end div id "search" -->
+  {% include 'includes/searchwithoptions.html' %}
 {% endblock %}
-
 
 {% block useful_links %} 
 {% endblock %}

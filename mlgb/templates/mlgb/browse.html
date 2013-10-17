@@ -26,6 +26,35 @@
 
 {% endblock %} {# end block 'maincontent' #}
 
+{% block browseoptions %} 
+
+  <div id="browseoptions" class="boxed">
+    <h2 class="heading">Browse Options</h2>
+    <div class="pretty-print">
+      <ul>
+
+        <li class="first">
+        <a href="/mlgb/browse/?order_by=medieval_library">
+        Browse by medieval library
+        </a> 
+        </li>
+
+        <li>
+        <a href="/mlgb/browse/?order_by=modern_library">
+        Browse by modern library/institution
+        </a> 
+        </li>
+
+        <li>
+        <a href="/mlgb/browse/?order_by=location">
+        Browse by current location
+        </a> 
+        </li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}
+
 {% block archives %}
   {% include 'includes/categorylinks.html' %}
 {% endblock %}
