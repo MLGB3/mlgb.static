@@ -48,32 +48,5 @@ $().ready(function() {
   </div>
 {% endblock %}
 {% block archives %} 
-  <div id="archives" class="boxed">
-    <h2 class="heading">Categories</h2>
-    <div class="pretty-print">
-      <ul>
-
-        <li class="first">
-        <a href="/mlgb/category/?field_to_search=medieval_library&page_size={{default_rows_per_page}}">
-        Medieval Library
-        </a> 
-        ({{medieval_library_count}})
-        </li>
-
-        <li>
-        <a href="/mlgb/category/?field_to_search=modern_library&page_size={{default_rows_per_page}}">
-        Modern Library/Institution
-        </a> 
-        ({{modern_library_count}})
-        </li>
-
-        <li>
-        <a href="/mlgb/category/?field_to_search=location&page_size={{default_rows_per_page}}">
-        Location
-        </a> 
-        ({{location_count}})
-        </li>
-      </ul>
-    </div>
-  </div>
+  {% include 'includes/categorylinks.html' %}
 {% endblock %}
