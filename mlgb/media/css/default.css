@@ -591,12 +591,12 @@ div.resultdetails {
   padding: 10px;
 }
 
-a.booklink, .browse_provenance a {
+a.booklink, .browse_provenance a, .browse_modern_library a  {
   color: #666666;
   text-decoration: none;
 }
 
-a.booklink:hover, .browse_provenance a:hover {
+a.booklink:hover, .browse_provenance a:hover, .browse_modern_library a:hover  {
   color: #666666;
   text-decoration: underline;
 }
