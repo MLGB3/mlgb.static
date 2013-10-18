@@ -139,6 +139,13 @@
   {% endautoescape %}
 
   <p align="center">
+  {% if editable %}
+     Book ID {{object.id}}:
+     <a href="/admin/books/book/{{object.id}}" title="Edit this record" target="_blank" class="editlink">
+     edit
+     </a>
+  {% endif %}
+  <br>
   <a href="/mlgb/download/?q=1&i={{object.id}}" title="CSV" target="_blank"></a>
   &nbsp;
   <a href="/mlgb/download/?q=2&i={{object.id}}" title="PDF" target="_blank"></a>

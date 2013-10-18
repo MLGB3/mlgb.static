@@ -83,15 +83,15 @@
   <ul>
     <li id="home_listitem"
     {%if pagename == "home"%} class="active" {% endif %}
-    ><a id="home_link" href="/">Home</a></li>
+    ><a id="home_link" href="{% if editable %}/e{% endif %}/">Home</a></li>
 
     <li id="browse_listitem"
     {% if pagename == "browse" %} class="active" {% endif %}
-    ><a id="browse_link" href="/mlgb/browse/">Browse</a></li>
+    ><a id="browse_link" href="{% if editable %}/e{% endif %}/mlgb/browse/">Browse</a></li>
 
     <li id="about_listitem"
     {% if pagename == "about" %} class="active" {% endif %}
-    ><a id="about_link" href="/about/">About the Project</a></li>
+    ><a id="about_link" href="{% if editable %}/e{% endif %}/about/">About the Project</a></li>
   </ul>
 </div><!-- end div pages -->
 {% endblock %}{# end block pages #}
@@ -134,8 +134,8 @@
       It is clear that a new edition of <em><strong>MLGB</strong></em>  must take advantage of 
       the possibilities offered by digital technology and the internet, and there are many ways 
       in which this will also make possible genuine improvements in the content that can be linked 
-      together in an electronic <a href="/" class="Mlgb3">MLGB3</a>. 
-      We also see an opportunity to bring to <a href="/" class="Mlgb3">MLGB3</a>
+      together in an electronic <a href="{% if editable %}/e{% endif %}/" class="Mlgb3">MLGB3</a>. 
+      We also see an opportunity to bring to <a href="{% if editable %}/e{% endif %}/" class="Mlgb3">MLGB3</a>
       a new avenue of entry, allowing the surviving books there listed by provenance to be searched
       by author and title through the same search-route as serves the Corpus, the cumulative
       index-list of identifications. We envisage that in the future this will further serve as a

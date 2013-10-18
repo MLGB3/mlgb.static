@@ -37,19 +37,19 @@
       <ul>
 
         <li class="first">
-        <a href="/mlgb/browse/?order_by=medieval_library">
+        <a href="{% if editable %}/e{% endif %}/mlgb/browse/?order_by=medieval_library">
         Browse by medieval library
         </a> 
         </li>
 
         <li>
-        <a href="/mlgb/browse/?order_by=modern_library">
+        <a href="{% if editable %}/e{% endif %}/mlgb/browse/?order_by=modern_library">
         Browse by name of modern library/institution
         </a> 
         </li>
 
         <li>
-        <a href="/mlgb/browse/?order_by=location">
+        <a href="{% if editable %}/e{% endif %}/mlgb/browse/?order_by=location">
         Browse by current location
         </a> 
         </li>

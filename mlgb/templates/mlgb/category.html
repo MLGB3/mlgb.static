@@ -35,7 +35,7 @@
         <ul>
         {% for library_or_city in library_or_city_list %}
           <li>
-          <a href="/mlgb/?search_term={{library_or_city.name}}&field_to_search={{field_to_search}}&page_size={{page_size}}">
+          <a href="{% if editable %}/e{% endif %}/mlgb/?search_term={{library_or_city.name}}&field_to_search={{field_to_search}}&page_size={{page_size}}">
           {{library_or_city.name}}
           </a> 
           ({{library_or_city.number_of_records}}) 

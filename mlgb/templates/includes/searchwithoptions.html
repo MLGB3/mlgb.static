@@ -6,7 +6,7 @@
     <div class="pretty-print">
 
     {# ================== start search form ================== #}
-    <form action="/mlgb/" method="get">
+    <form action="{% if editable %}/e{% endif %}/mlgb/" method="get">
       <div>
       <label for="search_term">Enter your search term: </label>
       <br>

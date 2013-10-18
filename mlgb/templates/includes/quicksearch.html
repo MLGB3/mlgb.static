@@ -2,7 +2,7 @@
   <div id="search" class="boxed">
     <h2 class="heading">Quick Search</h2>
     <div class="pretty-print">
-      <form method="get" action="/mlgb/">
+      <form method="get" action="{% if editable %}/e{% endif %}/mlgb/">
         <div>
           <input type="text" id="search_term" name="search_term" value="" size="35" />
           <input type="hidden" name="page_size" value="{{default_rows_per_page}}" />

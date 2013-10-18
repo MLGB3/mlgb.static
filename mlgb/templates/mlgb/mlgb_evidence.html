@@ -11,7 +11,7 @@
             <tr><td>
             <a href="{{ photo.image.url }}" rel="lightbox"  title="{{ photo.title }}"><img src=" {{ photo.image.thumb_url }}" /></a>
             </td>
-            <td>&nbsp;&nbsp;{{ photo.caption }}&nbsp;&nbsp;<a href="/mlgb/book/{{object.id}}/"><img src="/mlgb/media/img/detail.gif" alt="detail" border="0" /></a>
+            <td>&nbsp;&nbsp;{{ photo.caption }}&nbsp;&nbsp;<a href="{% if editable %}/e{% endif %}/mlgb/book/{{object.id}}/"><img src="/mlgb/media/img/detail.gif" alt="detail" border="0" /></a>
             </td></tr>
             {% endfor %}
         </table>
@@ -21,7 +21,7 @@
   <div id="search" class="boxed">
     <h2 class="heading">Search</h2>
     <div class="pretty-print">
-     <form action="/mlgb/" method="get">
+     <form action="{% if editable %}/e{% endif %}/mlgb/" method="get">
       <div>
 		  <input name="s" type="text" size="30" /><br > <br >
 		  <select name="se">

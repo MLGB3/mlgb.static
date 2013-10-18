@@ -598,12 +598,12 @@ div.resultdetails {
   padding: 10px;
 }
 
-a.booklink, .browse_provenance a, .browse_modern_library a  {
+a.booklink, .browse_provenance a, .browse_modern_library a, a.editlink  {
   color: #666666;
   text-decoration: none;
 }
 
-a.booklink:hover, .browse_provenance a:hover, .browse_modern_library a:hover  {
+a.booklink:hover, .browse_provenance a:hover, .browse_modern_library a:hover, a.editlink:hover  {
   color: #666666;
   text-decoration: underline;
 }
@@ -703,3 +703,7 @@ div#rightbar_options {
   float: right;
 }
 
+a.editlink {
+  font-style: italic;
+  font-size: 0.9em;
+}
