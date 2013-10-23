@@ -303,6 +303,7 @@ div.moreoptions {
 .main-pretty-print .heading {
   margin-top: 2px;
   font-size: 1.5em;
+  height: 26px;
 }
 
 .main-pretty-print .bookheading {
