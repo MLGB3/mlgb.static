@@ -617,6 +617,7 @@ span.spacer {
   margin-left: 5px;
 }
 
+
 a.evidence, button.evidence_decoder {
   font-style: italic;
 }
@@ -651,8 +652,12 @@ div.browse ul {
 
 div.browseresults div.book_row_1 div  {
   vertical-align: top;
-  padding: 2px;
+  padding-left: 5px;
   display: inline-block;
+}
+
+div.browseresults div.book_row_1 div.columnhead {
+  margin-bottom: 5px;
 }
 
 div.browse_concertina button {
@@ -663,6 +668,11 @@ div.browse_concertina button {
   border-style: dotted;
   border-width: 1px;
   border-color: #44687d; /* teal */
+}
+
+div.browseresults div.book_row_1 div.browse_evidence a.evidence {
+  margin-left: 8px;
+  font-weight: bold;
 }
 
 div.browseresults div.book_row_1 div.browse_concertina {
@@ -677,12 +687,16 @@ div.browseresults div.book_row_1 div.browse_shelfmarks  {
   width: 15%;
 }
 
+div.browseresults div.book_row_1 div.browse_date  {
+  width: 5%;
+}
+
 div.browseresults div.book_row_1 div.browse_authortitle  {
   width: 30%;
 }
 
 div.browseresults div.book_row_1 div.browse_provenance  {
-  width: 35%;
+  width: 30%;
 }
 
 div.browseresults div.book_row_1 div.browse_editlink {
