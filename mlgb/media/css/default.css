@@ -627,6 +627,7 @@ button.evidence_decoder {
   border: none;
   height: 20px;
   width: 20px;
+  padding: 1px;
 }
 
 button.evidence_decoder:hover {
@@ -653,21 +654,34 @@ div.browse ul {
 div.browseresults div.book_row_1 div  {
   vertical-align: top;
   padding-left: 5px;
+  margin-bottom: 2px;
   display: inline-block;
 }
 
 div.browseresults div.book_row_1 div.columnhead {
   margin-bottom: 5px;
+  font-style: italic;
+  font-size: 0.9em;
+  padding-left: 7px;
+}
+
+div.browseresults div.book_row_1 div.first2cols  {
+  width: 45px;
 }
 
 div.browse_concertina button {
   padding: 0px;
   height: 20px;
-  width: 20px;
+  width: 15px;
+  font-size: 0.7em;
   background-color: #f2f2f2;
   border-style: dotted;
   border-width: 1px;
   border-color: #44687d; /* teal */
+}
+
+div.browseresults div.book_row_1 div.browse_concertina {
+  width: 20px;
 }
 
 div.browseresults div.book_row_1 div.browse_evidence a.evidence {
@@ -675,42 +689,41 @@ div.browseresults div.book_row_1 div.browse_evidence a.evidence {
   font-weight: bold;
 }
 
-div.browseresults div.book_row_1 div.browse_concertina {
-  width: 3%;
-}
-
 div.browseresults div.book_row_1 div.browse_evidence  {
-  width: 5%;
+  width: 25px;
 }
 
 div.browseresults div.book_row_1 div.browse_shelfmarks  {
-  width: 15%;
+  width: 145px;
 }
 
 div.browseresults div.book_row_1 div.browse_date  {
-  width: 5%;
+  width: 65px;
 }
 
 div.browseresults div.book_row_1 div.browse_authortitle  {
-  width: 30%;
+  width: 190px;
 }
 
-div.browseresults div.book_row_1 div.browse_provenance  {
-  width: 30%;
+div.browseresults div.book_row_1 div.browse_provenance,
+div.browseresults div.book_row_1 div.browse_modern_library   {
+  width: 185px;
 }
 
 div.browseresults div.book_row_1 div.browse_editlink {
-  width: 3%;
+  width: 20px;
+  float: right;
 }
 
-div.browseresults div.book_row_2_hidden  {
+div.book_row_2_hidden  {
   display: none;
 }
 
-div.browseresults div.book_row_2_displayed  {
+div.book_row_2_displayed  {
   display: block;
-  width:100%;
+  width: 100%;
 }
+
 
 div#rightbar_options {
   width: 232px;
