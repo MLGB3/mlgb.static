@@ -613,6 +613,13 @@ span.outerhead, span.modern_location_heading, span.heading2 {
   font-weight: bold;
 }
 
+span.outerhead {
+  font-size: 11pt;
+}
+span.heading2 {
+  font-size: 9pt;
+}
+
 span.spacer {
   margin-left: 5px;
 }

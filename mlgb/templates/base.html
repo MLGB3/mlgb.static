@@ -38,6 +38,47 @@
     })
 </script>
 
+<script type="text/javascript">
+function jsChangeSearch( parmName, parmVal ) {
+  var foundParm = false;
+  var search = window.location.search;
+  if( search.length == 0 ) {
+    window.location.search = '?' + parmName + '=' + parmVal;
+    return;
+  }
+  var parts = search.split( '&' );
+  var numParts = parts.length;
+  for( i = 0; i < numParts; i++ ) {
+    var part = parts[ i ];
+    if( i == 0 ) {
+      var firstChar = part.substring( 0, 1 );
+      if( firstChar == '?' ) {
+        part = part.substring( 1 );
+        parts[i] = part;
+      }
+    }
+    var pair = part.split( '=' );
+    if( pair.length == 2 ) {
+      var searchName = pair[0];
+      if( searchName == parmName ) {
+        foundParm = true;
+        parts[i] = searchName + '=' + parmVal;
+        break;
+      }
+    }
+    else {
+      alert( 'Invalid search term(s).' );
+      return;
+    }
+  }
+  var newSearch = '?' + parts.join( '&' );
+  if( ! foundParm ) {
+    newSearch = newSearch + '&' + parmName + '=' + parmVal;
+  }
+  window.location.search = newSearch;
+}
+</script>
+
 {% block js %}
 {% endblock %}
 
