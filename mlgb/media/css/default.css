@@ -609,7 +609,7 @@ a.booklink:hover, .browse_provenance a:hover, .browse_modern_library a:hover, a.
   text-decoration: underline;
 }
 
-span.outerhead, span.modern_location_heading {
+span.outerhead, span.modern_location_heading, span.heading2 {
   font-weight: bold;
 }
 
@@ -622,7 +622,12 @@ a.evidence, button.evidence_decoder {
   font-style: italic;
 }
 
-button.evidence_decoder {
+li.one_book a.evidence, span.noevidence {
+  display: inline-block;
+  text-align: center;
+}
+
+button.evidence_decoder, li.one_book a.evidence, span.noevidence {
   background: #ffffff;
   border: none;
   height: 20px;
@@ -722,6 +727,9 @@ div.book_row_2_hidden  {
 div.book_row_2_displayed  {
   display: block;
   width: 100%;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted #c5d2e0; /* Wedgwood blue */
 }
 
 
