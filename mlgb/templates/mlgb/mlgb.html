@@ -37,9 +37,15 @@
   </div><!-- end div ID "mlgbtreeview" -->
   {# =========== end treeview containing search results =========== #}
 
+  {% if printing %}
+  <script>
+    window.print();
+  </script>
+  {% endif %}
 {% endblock %} {# end block 'maincontent' #}
 
 {% block moreoptions %} 
+{% if not printing %}
 
 {% block browseoptions %} 
 {% endblock %}
@@ -54,6 +60,7 @@
 {% block useful_links %} 
 {% endblock %}
 
+{% endif %}
 {% endblock %}  {# end block moreoptions #}
 
 </div> <!-- end div id="searchresults" -->

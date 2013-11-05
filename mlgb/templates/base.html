@@ -88,9 +88,10 @@ function jsChangeSearch( parmName, parmVal ) {
 
 {# ============================================================= #}
 
-<body>
+<body{% if printing %} class="printout" {% endif %}>
 {# ............................................................. #}
 {% block header %}
+{% if not printing %}
 <div id="header">  
 
   <div id="oxlogo">
@@ -113,11 +114,20 @@ function jsChangeSearch( parmName, parmVal ) {
    </div><!-- end div mellon -->
 
 </div><!-- end div header -->
+
+{% else %}
+<div id="printheader">  
+<h1>
+MLGB3: Medieval Libraries of Great Britain III
+</h1>
+</div><!-- end div printheader -->
+{% endif %}
 {% endblock %}{# end block header #}
 {# ............................................................. #}
 
 {# ............................................................. #}
 {% block pages %}
+{% if not printing %}
 <div id="pages">
   <h2>Pages</h2>
 
@@ -135,6 +145,7 @@ function jsChangeSearch( parmName, parmVal ) {
     ><a id="about_link" href="{% if editable %}/e{% endif %}/about/">About the Project</a></li>
   </ul>
 </div><!-- end div pages -->
+{% endif %}
 {% endblock %}{# end block pages #}
 {# ............................................................. #}
 

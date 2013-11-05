@@ -28,9 +28,16 @@
 
   </div><!-- end div ID "mlgbbrowse" -->
 
+  {% if printing %}
+  <script>
+    window.print();
+  </script>
+  {% endif %}
+
 {% endblock %} {# end block 'maincontent' #}
 
 {% block moreoptions %}  
+{% if not printing %}
 <div id="rightbar_options">
 
 {% block browseoptions %} 
@@ -71,6 +78,7 @@
 {% endblock %}
 
 </div><!-- end rightbar options -->
+{% endif %}
 {% endblock %} {# end block moreoptions #}
 
 
