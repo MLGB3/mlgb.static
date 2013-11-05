@@ -29,6 +29,10 @@ body {
   color: #666666;
 }
 
+body.printout {
+  width: 780px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -562,7 +566,7 @@ div.letterlinks {
   border-bottom: 1px dotted #c5d2e0; /* Wedgwood blue */
 }
 
-div.letterlinks a {
+div.letterlinks a, a.go_to_page, button.go_to_page {
   font-weight: bold;
   margin: 5px;
   text-decoration: none;
@@ -578,11 +582,33 @@ div.letterlinks a {
   border-radius: 2px; 
 }
 
-div.letterlinks a:hover, div.letterlinks a.selected {
+div.letterlinks a:hover, div.letterlinks a.selected, a.go_to_page:hover, button.go_to_page:hover {
   background-color:  #44687d; /* teal */
   color:  #ffffff;
 }
 
+a.go_to_page {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  -webkit-border-radius: 5px;  
+  -moz-border-radius: 5px;  
+  border-radius: 5px; 
+}
+
+button.go_to_page {
+  border-color: #c5d2e0; /* wedgwood blue */
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 5px;  
+  -moz-border-radius: 5px;  
+  border-radius: 5px; 
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+button.go_to_page:hover {
+  border-color:  #44687d; /* teal */
+}
 .category h3 {
   margin: 10px;
 }
@@ -755,4 +781,5 @@ select#order_by2 {
   width: 210px;
   font-size: 0.9em;
 }
+
 
