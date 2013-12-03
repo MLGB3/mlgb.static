@@ -140,6 +140,10 @@ MLGB3: Medieval Libraries of Great Britain III
     {% if pagename == "browse" %} class="active" {% endif %}
     ><a id="browse_link" href="{% if editable %}/e{% endif %}/mlgb/browse/">Browse</a></li>
 
+    <li id="index_listitem"
+    {% if pagename == "index" %} class="active" {% endif %}
+    ><a id="index_link" href="{% if editable %}/e{% endif %}/authortitle/browse/">Author/Title Index</a></li>
+
     <li id="about_listitem"
     {% if pagename == "about" %} class="active" {% endif %}
     ><a id="about_link" href="{% if editable %}/e{% endif %}/about/">About the Project</a></li>
