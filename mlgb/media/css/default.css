@@ -783,3 +783,25 @@ select#order_by2 {
 }
 
 
+/* ================= Index ================= */
+
+table.catalogue_entries { margin-top: 10px; 
+                          margin-bottom: 20px; 
+                          border-bottom-style: dotted; 
+                          border-bottom-width: 1px; 
+                          border-bottom-color: #44687d; /* teal */
+                          width: 90%;
+                        }
+
+tr.catalogue_entry_head td { font-size: 0.9em;
+                             vertical-align: top; }
+
+tr.catalogue_entry td { vertical-align: top;
+                        width: 50%;
+                        max-width: 50%;
+                        padding-right: 10px;
+                        padding-bottom: 5px; }
+
+h3.index_entry { display: inline; }
+
+
