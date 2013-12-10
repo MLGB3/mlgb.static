@@ -807,3 +807,6 @@ h3.index_entry { display: inline; }
 span.index_catalogue_entry:hover, a.link_from_index_to_book:hover {
   font-weight: bold;
 }
+
+span.biblio_block { font-size: 0.9em; }
+
