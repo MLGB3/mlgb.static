@@ -804,4 +804,6 @@ tr.catalogue_entry td { vertical-align: top;
 
 h3.index_entry { display: inline; }
 
-
+span.index_catalogue_entry:hover, a.link_from_index_to_book:hover {
+  font-weight: bold;
+}
