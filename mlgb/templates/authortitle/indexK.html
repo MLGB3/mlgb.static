@@ -1,34 +1,38 @@
-{% extends "mlgb/mlgb.html" %}
+{% extends "base.html" %}
 {% block title %}
 <title>MLGB3 Author/Title Index</title>
 {% endblock %}
 {% block treeview %}<script type="text/javascript">    $(function() {        $("#tree").treeview({            collapsed: true,            animated: "medium",            control:"#sidetreecontrol",            prerendered: false,            persist: "location"        });    })</script>{% endblock %}{% block maincontent %}
 <h2>Author/Title Index: K</h2>
-<div class="letterlinks"><a href="/authortitle/browse/A/">A</a>
-<span class="spacer"> </span><a href="/authortitle/browse/B/">B</a>
-<span class="spacer"> </span><a href="/authortitle/browse/C/">C</a>
-<span class="spacer"> </span><a href="/authortitle/browse/D/">D</a>
-<span class="spacer"> </span><a href="/authortitle/browse/E/">E</a>
-<span class="spacer"> </span><a href="/authortitle/browse/F/">F</a>
-<span class="spacer"> </span><a href="/authortitle/browse/G/">G</a>
-<span class="spacer"> </span><a href="/authortitle/browse/H/">H</a>
-<span class="spacer"> </span><a href="/authortitle/browse/IJ/">IJ</a>
-<span class="spacer"> </span><a href="/authortitle/browse/K/">K</a>
-<span class="spacer"> </span><a href="/authortitle/browse/L/">L</a>
-<span class="spacer"> </span><a href="/authortitle/browse/M/">M</a>
-<span class="spacer"> </span><a href="/authortitle/browse/N/">N</a>
-<span class="spacer"> </span><a href="/authortitle/browse/O/">O</a>
-<span class="spacer"> </span><a href="/authortitle/browse/P/">P</a>
-<span class="spacer"> </span><a href="/authortitle/browse/Q/">Q</a>
-<span class="spacer"> </span><a href="/authortitle/browse/R/">R</a>
-<span class="spacer"> </span><a href="/authortitle/browse/S/">S</a>
-<span class="spacer"> </span><a href="/authortitle/browse/T/">T</a>
-<span class="spacer"> </span><a href="/authortitle/browse/U/">U</a>
-<span class="spacer"> </span><a href="/authortitle/browse/V/">V</a>
-<span class="spacer"> </span><a href="/authortitle/browse/W/">W</a>
-<span class="spacer"> </span><a href="/authortitle/browse/X/">X</a>
-<span class="spacer"> </span><a href="/authortitle/browse/Z/">Z</a>
-</div><div id="sidetreecontrol">
+<div class="letterlinks"><a href="{% if editable %}/e{% endif %}/authortitle/browse/A/">A</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/B/">B</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/C/">C</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/D/">D</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/E/">E</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/F/">F</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/G/">G</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/H/">H</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/IJ/">IJ</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/K/">K</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/L/">L</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/M/">M</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/N/">N</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/O/">O</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/P/">P</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/Q/">Q</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/R/">R</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/S/">S</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/T/">T</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/U/">U</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/V/">V</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/W/">W</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/X/">X</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/Z/">Z</a>
+</div>
+
+<div class="index">
+
+<div id="sidetreecontrol">
 <a href="?#">Collapse All</a> | <a href="?#">Expand All</a>
 </div>
 <ul class="treeview" id="tree">
@@ -49,13 +53,13 @@ bergeres</i></span>
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Kalendar of Shepherdes, tr. from Le compost et Kalendrier des 
-bergeres" class="index_catalogue_entry">B55.&para;59</span></td>
+bergeres" class="index_catalogue_entry"  onclick="alert('Kalendar of Shepherdes, tr. from Le compost et Kalendrier des  bergeres')" >B55.&para;59</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Monk Bretton: Inventory of books, 1558</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Kalendar of Shepherdes, tr. from Le compost et Kalendrier des 
-bergeres" class="index_catalogue_entry">C7.&para;12</span></td>
+bergeres" class="index_catalogue_entry"  onclick="alert('Kalendar of Shepherdes, tr. from Le compost et Kalendrier des  bergeres')" >C7.&para;12</span></td>
 <td class="catalogue_name">CARTHUSIANS: London: Loans to Mountgrace, 1519/20</td>
 
 </tr>
@@ -81,7 +85,7 @@ Thorndike/Kibre 882.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Khalid []
- -- Quaestiones et responsiones, Latin tr." class="index_catalogue_entry">UC48.*391<sup>x</sup></span></td>
+ -- Quaestiones et responsiones, Latin tr." class="index_catalogue_entry"  onclick="alert('Khalid []  -- Quaestiones et responsiones, Latin tr.')" >UC48.*391<sup>x</sup></span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: Peterhouse: Catalogue, 24 Dec. 1418</td>
 
 </tr>
@@ -90,6 +94,9 @@ Thorndike/Kibre 882.
 </ul><!-- end list of books for one author -->
 
 </li><!-- end outerhead list item --></ul><!-- end tree -->
+</div><!-- end div class "index" -->
 {% endblock %}
 {% block search %}
+{% endblock %}
+{% block useful_links %}
 {% endblock %}

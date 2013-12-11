@@ -1,34 +1,38 @@
-{% extends "mlgb/mlgb.html" %}
+{% extends "base.html" %}
 {% block title %}
 <title>MLGB3 Author/Title Index</title>
 {% endblock %}
 {% block treeview %}<script type="text/javascript">    $(function() {        $("#tree").treeview({            collapsed: true,            animated: "medium",            control:"#sidetreecontrol",            prerendered: false,            persist: "location"        });    })</script>{% endblock %}{% block maincontent %}
 <h2>Author/Title Index: Z</h2>
-<div class="letterlinks"><a href="/authortitle/browse/A/">A</a>
-<span class="spacer"> </span><a href="/authortitle/browse/B/">B</a>
-<span class="spacer"> </span><a href="/authortitle/browse/C/">C</a>
-<span class="spacer"> </span><a href="/authortitle/browse/D/">D</a>
-<span class="spacer"> </span><a href="/authortitle/browse/E/">E</a>
-<span class="spacer"> </span><a href="/authortitle/browse/F/">F</a>
-<span class="spacer"> </span><a href="/authortitle/browse/G/">G</a>
-<span class="spacer"> </span><a href="/authortitle/browse/H/">H</a>
-<span class="spacer"> </span><a href="/authortitle/browse/IJ/">IJ</a>
-<span class="spacer"> </span><a href="/authortitle/browse/K/">K</a>
-<span class="spacer"> </span><a href="/authortitle/browse/L/">L</a>
-<span class="spacer"> </span><a href="/authortitle/browse/M/">M</a>
-<span class="spacer"> </span><a href="/authortitle/browse/N/">N</a>
-<span class="spacer"> </span><a href="/authortitle/browse/O/">O</a>
-<span class="spacer"> </span><a href="/authortitle/browse/P/">P</a>
-<span class="spacer"> </span><a href="/authortitle/browse/Q/">Q</a>
-<span class="spacer"> </span><a href="/authortitle/browse/R/">R</a>
-<span class="spacer"> </span><a href="/authortitle/browse/S/">S</a>
-<span class="spacer"> </span><a href="/authortitle/browse/T/">T</a>
-<span class="spacer"> </span><a href="/authortitle/browse/U/">U</a>
-<span class="spacer"> </span><a href="/authortitle/browse/V/">V</a>
-<span class="spacer"> </span><a href="/authortitle/browse/W/">W</a>
-<span class="spacer"> </span><a href="/authortitle/browse/X/">X</a>
-<span class="spacer"> </span><a href="/authortitle/browse/Z/">Z</a>
-</div><div id="sidetreecontrol">
+<div class="letterlinks"><a href="{% if editable %}/e{% endif %}/authortitle/browse/A/">A</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/B/">B</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/C/">C</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/D/">D</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/E/">E</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/F/">F</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/G/">G</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/H/">H</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/IJ/">IJ</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/K/">K</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/L/">L</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/M/">M</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/N/">N</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/O/">O</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/P/">P</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/Q/">Q</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/R/">R</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/S/">S</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/T/">T</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/U/">U</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/V/">V</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/W/">W</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/X/">X</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/Z/">Z</a>
+</div>
+
+<div class="index">
+
+<div id="sidetreecontrol">
 <a href="?#">Collapse All</a> | <a href="?#">Expand All</a>
 </div>
 <ul class="treeview" id="tree">
@@ -50,61 +54,61 @@ Stegm&uuml;ller <i>Bibl.</i> 8400.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zacharias of Besan{c,}on OPrem [{+}1156]
- -- De concordia euangelistarum" class="index_catalogue_entry">A16.?*14</span></td>
+ -- De concordia euangelistarum" class="index_catalogue_entry"  onclick="alert('Zacharias of Besan{c,}on OPrem [{+}1156]  -- De concordia euangelistarum')" >A16.?*14</span></td>
 <td class="catalogue_name">AUGUSTINIAN CANONS: Lanthony: Catalogue, late 14th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zacharias of Besan{c,}on OPrem [{+}1156]
- -- De concordia euangelistarum" class="index_catalogue_entry">B49.2</span></td>
+ -- De concordia euangelistarum" class="index_catalogue_entry"  onclick="alert('Zacharias of Besan{c,}on OPrem [{+}1156]  -- De concordia euangelistarum')" >B49.2</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Gloucester: Leland, c. 1536-40</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zacharias of Besan{c,}on OPrem [{+}1156]
- -- De concordia euangelistarum" class="index_catalogue_entry">B79.*241</span></td>
+ -- De concordia euangelistarum" class="index_catalogue_entry"  onclick="alert('Zacharias of Besan{c,}on OPrem [{+}1156]  -- De concordia euangelistarum')" >B79.*241</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Rochester: Catalogue, 1202</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zacharias of Besan{c,}on OPrem [{+}1156]
- -- De concordia euangelistarum" class="index_catalogue_entry">BA1.285</span></td>
+ -- De concordia euangelistarum" class="index_catalogue_entry"  onclick="alert('Zacharias of Besan{c,}on OPrem [{+}1156]  -- De concordia euangelistarum')" >BA1.285</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zacharias of Besan{c,}on OPrem [{+}1156]
- -- De concordia euangelistarum" class="index_catalogue_entry">H2.*908</span></td>
+ -- De concordia euangelistarum" class="index_catalogue_entry"  onclick="alert('Zacharias of Besan{c,}on OPrem [{+}1156]  -- De concordia euangelistarum')" >H2.*908</span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zacharias of Besan{c,}on OPrem [{+}1156]
- -- De concordia euangelistarum" class="index_catalogue_entry">H2.*1042</span></td>
+ -- De concordia euangelistarum" class="index_catalogue_entry"  onclick="alert('Zacharias of Besan{c,}on OPrem [{+}1156]  -- De concordia euangelistarum')" >H2.*1042</span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zacharias of Besan{c,}on OPrem [{+}1156]
- -- De concordia euangelistarum" class="index_catalogue_entry">K673.1</span></td>
+ -- De concordia euangelistarum" class="index_catalogue_entry"  onclick="alert('Zacharias of Besan{c,}on OPrem [{+}1156]  -- De concordia euangelistarum')" >K673.1</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zacharias of Besan{c,}on OPrem [{+}1156]
- -- De concordia euangelistarum" class="index_catalogue_entry">R62 (2 copies, one of them = B49.2)</span></td>
+ -- De concordia euangelistarum" class="index_catalogue_entry"  onclick="alert('Zacharias of Besan{c,}on OPrem [{+}1156]  -- De concordia euangelistarum')" >R62 (2 copies, one of them = B49.2)</span></td>
 <td class="catalogue_name">REGISTRUM ANGLIE</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zacharias of Besan{c,}on OPrem [{+}1156]
- -- De concordia euangelistarum" class="index_catalogue_entry">UC29.77 = UC30.67</span></td>
+ -- De concordia euangelistarum" class="index_catalogue_entry"  onclick="alert('Zacharias of Besan{c,}on OPrem [{+}1156]  -- De concordia euangelistarum')" >UC29.77 = UC30.67</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: King's College: Inventory, c. 1457</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zacharias of Besan{c,}on OPrem [{+}1156]
- -- De concordia euangelistarum" class="index_catalogue_entry">UC30.67</span></td>
+ -- De concordia euangelistarum" class="index_catalogue_entry"  onclick="alert('Zacharias of Besan{c,}on OPrem [{+}1156]  -- De concordia euangelistarum')" >UC30.67</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: King's College: Inventory for the Marian commissioners, 31 January 1557</td>
 
 </tr>
@@ -131,7 +135,7 @@ Lindberg 212; Thorndike/Kibre 116.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zacharias Salernitanus [12th cent.]
- -- De passionibus oculorum" class="index_catalogue_entry">BA1.&dagger;1250a (`practica nobilis de passionibus oculorum')</span></td>
+ -- De passionibus oculorum" class="index_catalogue_entry"  onclick="alert('Zacharias Salernitanus [12th cent.]  -- De passionibus oculorum')" >BA1.&dagger;1250a (`practica nobilis de passionibus oculorum')</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
@@ -159,28 +163,28 @@ sig. Q5r&ndash;R8v; Carmody, 40&ndash;43; Thorndike/Kibre 312, 1411.
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
  -- De interrogationibus qui dicitur liber iudiciorum arabum, tr. 
-John of Seville" class="index_catalogue_entry">A20.1161j (`liber Zael de iudiciis et interrogantibus')</span></td>
+John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- De interrogationibus qui dicitur liber iudiciorum arabum, tr.  John of Seville')" >A20.1161j (`liber Zael de iudiciis et interrogantibus')</span></td>
 <td class="catalogue_name">AUGUSTINIAN CANONS: Leicester: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
  -- De interrogationibus qui dicitur liber iudiciorum arabum, tr. 
-John of Seville" class="index_catalogue_entry">BA1.1161p (`Interrogaciones Zaelis de 28. mansionibus lune')</span></td>
+John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- De interrogationibus qui dicitur liber iudiciorum arabum, tr.  John of Seville')" >BA1.1161p (`Interrogaciones Zaelis de 28. mansionibus lune')</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
  -- De interrogationibus qui dicitur liber iudiciorum arabum, tr. 
-John of Seville" class="index_catalogue_entry">BA1.1165b (`liber interrogacionum uel questionum eiusdem')</span></td>
+John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- De interrogationibus qui dicitur liber iudiciorum arabum, tr.  John of Seville')" >BA1.1165b (`liber interrogacionum uel questionum eiusdem')</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
  -- De interrogationibus qui dicitur liber iudiciorum arabum, tr. 
-John of Seville" class="index_catalogue_entry">SS1.&para;124f (`Zahel de interrogacionibus eleccionibus et temporum
+John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- De interrogationibus qui dicitur liber iudiciorum arabum, tr.  John of Seville')" >SS1.&para;124f (`Zahel de interrogacionibus eleccionibus et temporum
    significacionibus in iudiciis')</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
@@ -188,7 +192,7 @@ John of Seville" class="index_catalogue_entry">SS1.&para;124f (`Zahel de interro
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
  -- De interrogationibus qui dicitur liber iudiciorum arabum, tr. 
-John of Seville" class="index_catalogue_entry">SS1.126c</span></td>
+John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- De interrogationibus qui dicitur liber iudiciorum arabum, tr.  John of Seville')" >SS1.126c</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
@@ -203,7 +207,7 @@ sig. S3v&ndash;S5v; Carmody, 40&ndash;43; Thorndike/Kibre 1411.
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
  -- De significatore temporis in interrogationibus, tr. John of
-Seville" class="index_catalogue_entry">SS1.126cde (`item liber sapientis de iudiciis siue de presciencia 
+Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- De significatore temporis in interrogationibus, tr. John of Seville')" >SS1.126cde (`item liber sapientis de iudiciis siue de presciencia 
    futurorum. item electiones Zahel. idem de temporibus')</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
@@ -211,7 +215,7 @@ Seville" class="index_catalogue_entry">SS1.126cde (`item liber sapientis de iudi
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
  -- De significatore temporis in interrogationibus, tr. John of
-Seville" class="index_catalogue_entry">UO1.104 (`Zael de uita hominis')</span></td>
+Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- De significatore temporis in interrogationibus, tr. John of Seville')" >UO1.104 (`Zael de uita hominis')</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
@@ -225,25 +229,25 @@ of Zahel'.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
- -- Fatidica, tr. Hermann of Carinthia" class="index_catalogue_entry">BA1.&dagger;1161k (`Zael de reuolucionibus annorum')</span></td>
+ -- Fatidica, tr. Hermann of Carinthia" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- Fatidica, tr. Hermann of Carinthia')" >BA1.&dagger;1161k (`Zael de reuolucionibus annorum')</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
- -- Fatidica, tr. Hermann of Carinthia" class="index_catalogue_entry">UC27.*13<sup>x</sup></span></td>
+ -- Fatidica, tr. Hermann of Carinthia" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- Fatidica, tr. Hermann of Carinthia')" >UC27.*13<sup>x</sup></span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: Gonville and Caius College: Leland, c. 1535</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
- -- Fatidica, tr. Hermann of Carinthia" class="index_catalogue_entry">UC43.*85<sup>x</sup> = UC47.*117<sup>x</sup></span></td>
+ -- Fatidica, tr. Hermann of Carinthia" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- Fatidica, tr. Hermann of Carinthia')" >UC43.*85<sup>x</sup> = UC47.*117<sup>x</sup></span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: Pembroke College: List of benefactors, c. 1490</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
- -- Fatidica, tr. Hermann of Carinthia" class="index_catalogue_entry">UC47.*117<sup>x</sup></span></td>
+ -- Fatidica, tr. Hermann of Carinthia" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- Fatidica, tr. Hermann of Carinthia')" >UC47.*117<sup>x</sup></span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: Pembroke College: List of benefactors, compiled 1617</td>
 
 </tr>
@@ -262,35 +266,35 @@ to the Arabic original. The five are <i>Introductorius</i>, <i>Quinquaginta prae
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
  -- Introductorius ad scienciam iudiciorum astrorum in 
-interrogationibus, tr. John of Seville" class="index_catalogue_entry">A20.1160ac (`liber Zael')</span></td>
+interrogationibus, tr. John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- Introductorius ad scienciam iudiciorum astrorum in  interrogationibus, tr. John of Seville')" >A20.1160ac (`liber Zael')</span></td>
 <td class="catalogue_name">AUGUSTINIAN CANONS: Leicester: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
  -- Introductorius ad scienciam iudiciorum astrorum in 
-interrogationibus, tr. John of Seville" class="index_catalogue_entry">BA1.1161o (`Introductorius Zaelus')</span></td>
+interrogationibus, tr. John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- Introductorius ad scienciam iudiciorum astrorum in  interrogationibus, tr. John of Seville')" >BA1.1161o (`Introductorius Zaelus')</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
  -- Introductorius ad scienciam iudiciorum astrorum in 
-interrogationibus, tr. John of Seville" class="index_catalogue_entry">BA1.1162 (`liber iudiciorum Zachel')</span></td>
+interrogationibus, tr. John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- Introductorius ad scienciam iudiciorum astrorum in  interrogationibus, tr. John of Seville')" >BA1.1162 (`liber iudiciorum Zachel')</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
  -- Introductorius ad scienciam iudiciorum astrorum in 
-interrogationibus, tr. John of Seville" class="index_catalogue_entry">BA1.1165a (`introductorius Zaelis in iudiciis')</span></td>
+interrogationibus, tr. John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- Introductorius ad scienciam iudiciorum astrorum in  interrogationibus, tr. John of Seville')" >BA1.1165a (`introductorius Zaelis in iudiciis')</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
  -- Introductorius ad scienciam iudiciorum astrorum in 
-interrogationibus, tr. John of Seville" class="index_catalogue_entry">SS1.&para;124f (`Zahel de interrogacionibus eleccionibus et temporum
+interrogationibus, tr. John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- Introductorius ad scienciam iudiciorum astrorum in  interrogationibus, tr. John of Seville')" >SS1.&para;124f (`Zahel de interrogacionibus eleccionibus et temporum
    significacionibus in iudiciis')</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
@@ -298,7 +302,7 @@ interrogationibus, tr. John of Seville" class="index_catalogue_entry">SS1.&para;
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
  -- Introductorius ad scienciam iudiciorum astrorum in 
-interrogationibus, tr. John of Seville" class="index_catalogue_entry">SS1.126cde (`item liber sapientis de iudiciis siue de presciencia 
+interrogationibus, tr. John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- Introductorius ad scienciam iudiciorum astrorum in  interrogationibus, tr. John of Seville')" >SS1.126cde (`item liber sapientis de iudiciis siue de presciencia 
    futurorum. item electiones Zahel. idem de temporibus')</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
@@ -306,7 +310,7 @@ interrogationibus, tr. John of Seville" class="index_catalogue_entry">SS1.126cde
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
  -- Introductorius ad scienciam iudiciorum astrorum in 
-interrogationibus, tr. John of Seville" class="index_catalogue_entry">UO1.101 (`Zael de iudiciis astrorum')</span></td>
+interrogationibus, tr. John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- Introductorius ad scienciam iudiciorum astrorum in  interrogationibus, tr. John of Seville')" >UO1.101 (`Zael de iudiciis astrorum')</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
@@ -320,26 +324,26 @@ Venice 1493 (Goff P1089), sig. R8v&ndash;S3v; ed. C. M. Crofts, PhD diss.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
- -- Liber electionum, tr. John of Seville" class="index_catalogue_entry">BA1.1161e (`Zael de eleccionibus')</span></td>
+ -- Liber electionum, tr. John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- Liber electionum, tr. John of Seville')" >BA1.1161e (`Zael de eleccionibus')</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
- -- Liber electionum, tr. John of Seville" class="index_catalogue_entry">BA1.1163 (`electiones Zaelis')</span></td>
+ -- Liber electionum, tr. John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- Liber electionum, tr. John of Seville')" >BA1.1163 (`electiones Zaelis')</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
- -- Liber electionum, tr. John of Seville" class="index_catalogue_entry">SS1.&para;124f (`Zahel de interrogacionibus eleccionibus et temporum
+ -- Liber electionum, tr. John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- Liber electionum, tr. John of Seville')" >SS1.&para;124f (`Zahel de interrogacionibus eleccionibus et temporum
    significacionibus in iudiciis')</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
- -- Liber electionum, tr. John of Seville" class="index_catalogue_entry">SS1.126cde (`item liber sapientis de iudiciis siue de presciencia 
+ -- Liber electionum, tr. John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- Liber electionum, tr. John of Seville')" >SS1.126cde (`item liber sapientis de iudiciis siue de presciencia 
    futurorum. item electiones Zahel. idem de temporibus')</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
@@ -354,7 +358,7 @@ Thorndike/Kibre 595.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Zahel (Sahl ibn Bishr al-Isra'ili) [{+}822/50]
- -- Quinquaginta praecepta, Latin tr." class="index_catalogue_entry">SS1.&para;124<sup>x</sup></span></td>
+ -- Quinquaginta praecepta, Latin tr." class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al-Isra\'ili) [{+}822/50]  -- Quinquaginta praecepta, Latin tr.')" >SS1.&para;124<sup>x</sup></span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
@@ -399,7 +403,7 @@ who had the reference from Isidore.
 <td class="catalogue_entry_code"><span title="<>`Zoroastes, king of Bactria'
  -- work reported from Higden's Polychronicon, II 9 (ed. Lumby, 2. 276),
 who had the reference from Isidore.
-" class="index_catalogue_entry">K674</span></td>
+" class="index_catalogue_entry"  onclick="alert('<>`Zoroastes, king of Bactria\'  -- work reported from Higden\'s Polychronicon, II 9 (ed. Lumby, 2. 276), who had the reference from Isidore. ')" >K674</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE</td>
 
 </tr>
@@ -408,6 +412,9 @@ who had the reference from Isidore.
 </ul><!-- end list of books for one author -->
 
 </li><!-- end outerhead list item --></ul><!-- end tree -->
+</div><!-- end div class "index" -->
 {% endblock %}
 {% block search %}
+{% endblock %}
+{% block useful_links %}
 {% endblock %}

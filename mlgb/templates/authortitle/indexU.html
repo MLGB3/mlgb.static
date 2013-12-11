@@ -1,34 +1,38 @@
-{% extends "mlgb/mlgb.html" %}
+{% extends "base.html" %}
 {% block title %}
 <title>MLGB3 Author/Title Index</title>
 {% endblock %}
 {% block treeview %}<script type="text/javascript">    $(function() {        $("#tree").treeview({            collapsed: true,            animated: "medium",            control:"#sidetreecontrol",            prerendered: false,            persist: "location"        });    })</script>{% endblock %}{% block maincontent %}
 <h2>Author/Title Index: U</h2>
-<div class="letterlinks"><a href="/authortitle/browse/A/">A</a>
-<span class="spacer"> </span><a href="/authortitle/browse/B/">B</a>
-<span class="spacer"> </span><a href="/authortitle/browse/C/">C</a>
-<span class="spacer"> </span><a href="/authortitle/browse/D/">D</a>
-<span class="spacer"> </span><a href="/authortitle/browse/E/">E</a>
-<span class="spacer"> </span><a href="/authortitle/browse/F/">F</a>
-<span class="spacer"> </span><a href="/authortitle/browse/G/">G</a>
-<span class="spacer"> </span><a href="/authortitle/browse/H/">H</a>
-<span class="spacer"> </span><a href="/authortitle/browse/IJ/">IJ</a>
-<span class="spacer"> </span><a href="/authortitle/browse/K/">K</a>
-<span class="spacer"> </span><a href="/authortitle/browse/L/">L</a>
-<span class="spacer"> </span><a href="/authortitle/browse/M/">M</a>
-<span class="spacer"> </span><a href="/authortitle/browse/N/">N</a>
-<span class="spacer"> </span><a href="/authortitle/browse/O/">O</a>
-<span class="spacer"> </span><a href="/authortitle/browse/P/">P</a>
-<span class="spacer"> </span><a href="/authortitle/browse/Q/">Q</a>
-<span class="spacer"> </span><a href="/authortitle/browse/R/">R</a>
-<span class="spacer"> </span><a href="/authortitle/browse/S/">S</a>
-<span class="spacer"> </span><a href="/authortitle/browse/T/">T</a>
-<span class="spacer"> </span><a href="/authortitle/browse/U/">U</a>
-<span class="spacer"> </span><a href="/authortitle/browse/V/">V</a>
-<span class="spacer"> </span><a href="/authortitle/browse/W/">W</a>
-<span class="spacer"> </span><a href="/authortitle/browse/X/">X</a>
-<span class="spacer"> </span><a href="/authortitle/browse/Z/">Z</a>
-</div><div id="sidetreecontrol">
+<div class="letterlinks"><a href="{% if editable %}/e{% endif %}/authortitle/browse/A/">A</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/B/">B</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/C/">C</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/D/">D</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/E/">E</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/F/">F</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/G/">G</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/H/">H</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/IJ/">IJ</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/K/">K</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/L/">L</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/M/">M</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/N/">N</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/O/">O</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/P/">P</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/Q/">Q</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/R/">R</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/S/">S</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/T/">T</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/U/">U</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/V/">V</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/W/">W</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/X/">X</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/Z/">Z</a>
+</div>
+
+<div class="index">
+
+<div id="sidetreecontrol">
 <a href="?#">Collapse All</a> | <a href="?#">Expand All</a>
 </div>
 <ul class="treeview" id="tree">
@@ -49,13 +53,13 @@
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Ubertinus de Casali [1259--c. 1330]
- -- Arbor uitae crucifixae Iesus Christi" class="index_catalogue_entry">SH63.&para;8 = SH65.&para;83</span></td>
+ -- Arbor uitae crucifixae Iesus Christi" class="index_catalogue_entry"  onclick="alert('Ubertinus de Casali [1259--c. 1330]  -- Arbor uitae crucifixae Iesus Christi')" >SH63.&para;8 = SH65.&para;83</span></td>
 <td class="catalogue_name">SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions: Rome, English hospital: List of donations, November 1498</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Ubertinus de Casali [1259--c. 1330]
- -- Arbor uitae crucifixae Iesus Christi" class="index_catalogue_entry">SH65.&para;83</span></td>
+ -- Arbor uitae crucifixae Iesus Christi" class="index_catalogue_entry"  onclick="alert('Ubertinus de Casali [1259--c. 1330]  -- Arbor uitae crucifixae Iesus Christi')" >SH65.&para;83</span></td>
 <td class="catalogue_name">SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions: Rome, English hospital: Inventory of goods, 1502-3</td>
 
 </tr>
@@ -81,86 +85,86 @@ It is also the title of works by Clement of Lanthony and Zacharias of Besan&cced
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as
-translated by Victor of Capua" class="index_catalogue_entry">B67.136</span></td>
+translated by Victor of Capua" class="index_catalogue_entry"  onclick="alert('Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as translated by Victor of Capua')" >B67.136</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Ramsey: Fragment of catalogue, mid-14th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as
-translated by Victor of Capua" class="index_catalogue_entry">B69.&dagger;12</span></td>
+translated by Victor of Capua" class="index_catalogue_entry"  onclick="alert('Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as translated by Victor of Capua')" >B69.&dagger;12</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Ramsey: Books borrowed by John de Haliwell, ?13th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as
-translated by Victor of Capua" class="index_catalogue_entry">B120.531 (`consonantia quattuor euangelistarum')</span></td>
+translated by Victor of Capua" class="index_catalogue_entry"  onclick="alert('Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as translated by Victor of Capua')" >B120.531 (`consonantia quattuor euangelistarum')</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: York St Mary's: Index catalogue of selected authors, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as
-translated by Victor of Capua" class="index_catalogue_entry">H2.*589 (`Ammonius Alexandrinus de concordia quatuor 
+translated by Victor of Capua" class="index_catalogue_entry"  onclick="alert('Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as translated by Victor of Capua')" >H2.*589 (`Ammonius Alexandrinus de concordia quatuor 
    euangeliorum')</span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as
-translated by Victor of Capua" class="index_catalogue_entry">H2.*644</span></td>
+translated by Victor of Capua" class="index_catalogue_entry"  onclick="alert('Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as translated by Victor of Capua')" >H2.*644</span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as
-translated by Victor of Capua" class="index_catalogue_entry">H2.*1023 (w. Peter the Chanter's gl.)</span></td>
+translated by Victor of Capua" class="index_catalogue_entry"  onclick="alert('Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as translated by Victor of Capua')" >H2.*1023 (w. Peter the Chanter's gl.)</span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as
-translated by Victor of Capua" class="index_catalogue_entry">H2.*1448</span></td>
+translated by Victor of Capua" class="index_catalogue_entry"  onclick="alert('Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as translated by Victor of Capua')" >H2.*1448</span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as
-translated by Victor of Capua" class="index_catalogue_entry">K30.2 (`canones euangeliorum'), K568.&lt;&gt;1 (attrib. Tatian)</span></td>
+translated by Victor of Capua" class="index_catalogue_entry"  onclick="alert('Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as translated by Victor of Capua')" >K30.2 (`canones euangeliorum'), K568.&lt;&gt;1 (attrib. Tatian)</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE</td>
 
 </tr>
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><a href="/mlgb/book/343/"  title="Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as
+<td class="catalogue_entry_code"><a href="{% if editable %}/e{% endif %}/mlgb/book/343/"  title="Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as
 translated by Victor of Capua: full details of book"  class="link_from_index_to_book">P1.*1 (`Ammonius Alexandrinus de quattuor euangeliis') = H2.*590</a></td>
 <td class="catalogue_name">PREMONSTRATENSIANS: Barlings: Lincolnshire list, 1528</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as
-translated by Victor of Capua" class="index_catalogue_entry">H2.*590</span></td>
+translated by Victor of Capua" class="index_catalogue_entry"  onclick="alert('Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as translated by Victor of Capua')" >H2.*590</span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as
-translated by Victor of Capua" class="index_catalogue_entry">P8.*1 (`concordancia Eusebii super quattuor euangelistas') = H2.*568</span></td>
+translated by Victor of Capua" class="index_catalogue_entry"  onclick="alert('Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as translated by Victor of Capua')" >P8.*1 (`concordancia Eusebii super quattuor euangelistas') = H2.*568</span></td>
 <td class="catalogue_name">PREMONSTRATENSIANS</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as
-translated by Victor of Capua" class="index_catalogue_entry">H2.*568 (`unum ex quatuor scriptum')</span></td>
+translated by Victor of Capua" class="index_catalogue_entry"  onclick="alert('Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as translated by Victor of Capua')" >H2.*568 (`unum ex quatuor scriptum')</span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as
-translated by Victor of Capua" class="index_catalogue_entry">UC50.118</span></td>
+translated by Victor of Capua" class="index_catalogue_entry"  onclick="alert('Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as translated by Victor of Capua')" >UC50.118</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: Queens' College: Inventory, 1472</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as
-translated by Victor of Capua" class="index_catalogue_entry">UC53.1 (`unus ex quattuor')</span></td>
+translated by Victor of Capua" class="index_catalogue_entry"  onclick="alert('Vnum ex quatuor most commonly refers to the gospel harmony of Tatian, as translated by Victor of Capua')" >UC53.1 (`unus ex quattuor')</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: St Catharine's College: List of benefactors, 1504 &times; 1522</td>
 
 </tr>
@@ -192,7 +196,7 @@ translated by Victor of Capua" class="index_catalogue_entry">UC53.1 (`unus ex qu
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Ulf Birgersson OSS [{+}1433]
- -- Vita Katerinae" class="index_catalogue_entry">SS1.*797h</span></td>
+ -- Vita Katerinae" class="index_catalogue_entry"  onclick="alert('Ulf Birgersson OSS [{+}1433]  -- Vita Katerinae')" >SS1.*797h</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
@@ -225,13 +229,13 @@ M&uuml;ller, <i>Oratores Attici</i> (Paris 1847&ndash;58), 2. 518&ndash;738.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Domitius Ulpianus [c160--228]
- -- Scholia on Demosthenes" class="index_catalogue_entry">UC7.&para;147 (`commentaria U. in Olinth. et Philip. Demosthenis grece')</span></td>
+ -- Scholia on Demosthenes" class="index_catalogue_entry"  onclick="alert('Domitius Ulpianus [c160--228]  -- Scholia on Demosthenes')" >UC7.&para;147 (`commentaria U. in Olinth. et Philip. Demosthenis grece')</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: University: Inventory for the Marian commissioners, 1557</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Domitius Ulpianus [c160--228]
- -- Scholia on Demosthenes" class="index_catalogue_entry">UO33.&para;*100a (`U. in Demosthenis Olynth. et Philip. .#.')</span></td>
+ -- Scholia on Demosthenes" class="index_catalogue_entry"  onclick="alert('Domitius Ulpianus [c160--228]  -- Scholia on Demosthenes')" >UO33.&para;*100a (`U. in Demosthenis Olynth. et Philip. .#.')</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
@@ -246,55 +250,55 @@ M&uuml;ller, <i>Oratores Attici</i> (Paris 1847&ndash;58), 2. 518&ndash;738.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Domitius Ulpianus [c160--228]
- -- Ordo iudicarius" class="index_catalogue_entry">B39.129 (`Ulpianus de edendo')</span></td>
+ -- Ordo iudicarius" class="index_catalogue_entry"  onclick="alert('Domitius Ulpianus [c160--228]  -- Ordo iudicarius')" >B39.129 (`Ulpianus de edendo')</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Glastonbury: Catalogue, 1247, with additions</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Domitius Ulpianus [c160--228]
- -- Ordo iudicarius" class="index_catalogue_entry">B39.&dagger;374b (`summa qui dicitur libellus iudiciarius')</span></td>
+ -- Ordo iudicarius" class="index_catalogue_entry"  onclick="alert('Domitius Ulpianus [c160--228]  -- Ordo iudicarius')" >B39.&dagger;374b (`summa qui dicitur libellus iudiciarius')</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Glastonbury: Catalogue, 1247, with additions</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Domitius Ulpianus [c160--228]
- -- Ordo iudicarius" class="index_catalogue_entry">B120.570 (`Wulpianus de edendo', 2 copies)</span></td>
+ -- Ordo iudicarius" class="index_catalogue_entry"  onclick="alert('Domitius Ulpianus [c160--228]  -- Ordo iudicarius')" >B120.570 (`Wulpianus de edendo', 2 copies)</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: York St Mary's: Index catalogue of selected authors, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Domitius Ulpianus [c160--228]
- -- Ordo iudicarius" class="index_catalogue_entry">BM1.270a (`liber de ordine iudiciorum'), 277p</span></td>
+ -- Ordo iudicarius" class="index_catalogue_entry"  onclick="alert('Domitius Ulpianus [c160--228]  -- Ordo iudicarius')" >BM1.270a (`liber de ordine iudiciorum'), 277p</span></td>
 <td class="catalogue_name">BENEDICTINES: Dover-St Martin's: John Whitfield's catalogue, 1389</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Domitius Ulpianus [c160--228]
- -- Ordo iudicarius" class="index_catalogue_entry">BM1.401c (`liber de ordine iudiciorum', inc. close)</span></td>
+ -- Ordo iudicarius" class="index_catalogue_entry"  onclick="alert('Domitius Ulpianus [c160--228]  -- Ordo iudicarius')" >BM1.401c (`liber de ordine iudiciorum', inc. close)</span></td>
 <td class="catalogue_name">BENEDICTINES: Dover-St Martin's: John Whitfield's catalogue, 1389</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Domitius Ulpianus [c160--228]
- -- Ordo iudicarius" class="index_catalogue_entry">H2.*878<sup>x</sup></span></td>
+ -- Ordo iudicarius" class="index_catalogue_entry"  onclick="alert('Domitius Ulpianus [c160--228]  -- Ordo iudicarius')" >H2.*878<sup>x</sup></span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Domitius Ulpianus [c160--228]
- -- Ordo iudicarius" class="index_catalogue_entry">H2.*1344<sup>x</sup></span></td>
+ -- Ordo iudicarius" class="index_catalogue_entry"  onclick="alert('Domitius Ulpianus [c160--228]  -- Ordo iudicarius')" >H2.*1344<sup>x</sup></span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Domitius Ulpianus [c160--228]
- -- Ordo iudicarius" class="index_catalogue_entry">Z14.142c (`Ulpianus de edendo')</span></td>
+ -- Ordo iudicarius" class="index_catalogue_entry"  onclick="alert('Domitius Ulpianus [c160--228]  -- Ordo iudicarius')" >Z14.142c (`Ulpianus de edendo')</span></td>
 <td class="catalogue_name">CISTERCIANS: Meaux: Inventory of books, 1396</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Domitius Ulpianus [c160--228]
- -- Ordo iudicarius" class="index_catalogue_entry">Z14.281e</span></td>
+ -- Ordo iudicarius" class="index_catalogue_entry"  onclick="alert('Domitius Ulpianus [c160--228]  -- Ordo iudicarius')" >Z14.281e</span></td>
 <td class="catalogue_name">CISTERCIANS: Meaux: Inventory of books, 1396</td>
 
 </tr>
@@ -320,7 +324,7 @@ M&uuml;ller, <i>Oratores Attici</i> (Paris 1847&ndash;58), 2. 518&ndash;738.
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="<>Ulricus Engelberti OP of Strassburg [{+} after 1278]
  -- works reported from the Dominican catalogue, % 24.
-" class="index_catalogue_entry">K640</span></td>
+" class="index_catalogue_entry"  onclick="alert('<>Ulricus Engelberti OP of Strassburg [{+} after 1278]  -- works reported from the Dominican catalogue, % 24. ')" >K640</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE</td>
 
 </tr>
@@ -345,7 +349,7 @@ M&uuml;ller, <i>Oratores Attici</i> (Paris 1847&ndash;58), 2. 518&ndash;738.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Udalricus Zasius (Ulrich Zasius) [1461--1535]
- -- Consilia" class="index_catalogue_entry">UO19.&para;177</span></td>
+ -- Consilia" class="index_catalogue_entry"  onclick="alert('Udalricus Zasius (Ulrich Zasius) [1461--1535]  -- Consilia')" >UO19.&para;177</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
@@ -357,13 +361,13 @@ M&uuml;ller, <i>Oratores Attici</i> (Paris 1847&ndash;58), 2. 518&ndash;738.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Udalricus Zasius (Ulrich Zasius) [1461--1535]
- -- In titulis Institutionum de actionibus enarratio" class="index_catalogue_entry">S23.&para;*82</span></td>
+ -- In titulis Institutionum de actionibus enarratio" class="index_catalogue_entry"  onclick="alert('Udalricus Zasius (Ulrich Zasius) [1461--1535]  -- In titulis Institutionum de actionibus enarratio')" >S23.&para;*82</span></td>
 <td class="catalogue_name">SCOTLAND: St Mary's College: Inventory of books, probably 1588</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Udalricus Zasius (Ulrich Zasius) [1461--1535]
- -- In titulis Institutionum de actionibus enarratio" class="index_catalogue_entry">UO19.&para;174</span></td>
+ -- In titulis Institutionum de actionibus enarratio" class="index_catalogue_entry"  onclick="alert('Udalricus Zasius (Ulrich Zasius) [1461--1535]  -- In titulis Institutionum de actionibus enarratio')" >UO19.&para;174</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
@@ -376,7 +380,7 @@ M&uuml;ller, <i>Oratores Attici</i> (Paris 1847&ndash;58), 2. 518&ndash;738.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Udalricus Zasius (Ulrich Zasius) [1461--1535]
- -- Intellectus singulares in nonnulla loca iuris ciuilis" class="index_catalogue_entry">UO19.&para;178</span></td>
+ -- Intellectus singulares in nonnulla loca iuris ciuilis" class="index_catalogue_entry"  onclick="alert('Udalricus Zasius (Ulrich Zasius) [1461--1535]  -- Intellectus singulares in nonnulla loca iuris ciuilis')" >UO19.&para;178</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
@@ -388,19 +392,19 @@ M&uuml;ller, <i>Oratores Attici</i> (Paris 1847&ndash;58), 2. 518&ndash;738.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Udalricus Zasius (Ulrich Zasius) [1461--1535]
- -- Lecturae on the Digest" class="index_catalogue_entry">S23.&para;*82</span></td>
+ -- Lecturae on the Digest" class="index_catalogue_entry"  onclick="alert('Udalricus Zasius (Ulrich Zasius) [1461--1535]  -- Lecturae on the Digest')" >S23.&para;*82</span></td>
 <td class="catalogue_name">SCOTLAND: St Mary's College: Inventory of books, probably 1588</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Udalricus Zasius (Ulrich Zasius) [1461--1535]
- -- Lecturae on the Digest" class="index_catalogue_entry">UO19.&para;174 (uetus)</span></td>
+ -- Lecturae on the Digest" class="index_catalogue_entry"  onclick="alert('Udalricus Zasius (Ulrich Zasius) [1461--1535]  -- Lecturae on the Digest')" >UO19.&para;174 (uetus)</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Udalricus Zasius (Ulrich Zasius) [1461--1535]
- -- Lecturae on the Digest" class="index_catalogue_entry">UO19.&para;*175 (nouum)</span></td>
+ -- Lecturae on the Digest" class="index_catalogue_entry"  onclick="alert('Udalricus Zasius (Ulrich Zasius) [1461--1535]  -- Lecturae on the Digest')" >UO19.&para;*175 (nouum)</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
@@ -425,7 +429,7 @@ M&uuml;ller, <i>Oratores Attici</i> (Paris 1847&ndash;58), 2. 518&ndash;738.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Ulrich Zwingli [1484--1531]
- -- Opera" class="index_catalogue_entry">UO33.&para;*291</span></td>
+ -- Opera" class="index_catalogue_entry"  onclick="alert('Ulrich Zwingli [1484--1531]  -- Opera')" >UO33.&para;*291</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
@@ -459,7 +463,7 @@ M&uuml;ller, <i>Oratores Attici</i> (Paris 1847&ndash;58), 2. 518&ndash;738.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urban II (Odo of Lagery OSB) [c1035--1099, sedit 1088--1099]
- -- Decrees of the council of Clermont (1095)" class="index_catalogue_entry">SH39.6 (`de papa Vrbano pro Iherusalem lucrand' de manibus
+ -- Decrees of the council of Clermont (1095)" class="index_catalogue_entry"  onclick="alert('Urban II (Odo of Lagery OSB) [c1035--1099, sedit 1088--1099]  -- Decrees of the council of Clermont (1095)')" >SH39.6 (`de papa Vrbano pro Iherusalem lucrand' de manibus
    Sarazenorum')</span></td>
 <td class="catalogue_name">SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions: London, Gray's Inn: Bequest by Edmund Pickering, 26 November 1488</td>
 
@@ -473,7 +477,7 @@ note.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urban II (Odo of Lagery OSB) [c1035--1099, sedit 1088--1099]
- -- Epistolae de approbatione habitus canonicorum regularium" class="index_catalogue_entry">A20.108d = 477c = 702b</span></td>
+ -- Epistolae de approbatione habitus canonicorum regularium" class="index_catalogue_entry"  onclick="alert('Urban II (Odo of Lagery OSB) [c1035--1099, sedit 1088--1099]  -- Epistolae de approbatione habitus canonicorum regularium')" >A20.108d = 477c = 702b</span></td>
 <td class="catalogue_name">AUGUSTINIAN CANONS: Leicester: Catalogue, 15th cent.</td>
 
 </tr>
@@ -499,7 +503,7 @@ d'Urbain IV</i> (Rome 1892&ndash;8), 2. 423&ndash;5 (no. 874); Potthast 18998.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urban IV (Jacques Pantale<on) [c. 1200--1264, sedit 1261--4]
- -- Bull `Transiturus de hoc' (1264)" class="index_catalogue_entry">SS2.144d (`de institucione festi corporis Christi')</span></td>
+ -- Bull `Transiturus de hoc' (1264)" class="index_catalogue_entry"  onclick="alert('Urban IV (Jacques Pantale<on) [c. 1200--1264, sedit 1261--4]  -- Bull `Transiturus de hoc\' (1264)')" >SS2.144d (`de institucione festi corporis Christi')</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Class-marks reconstructed from Betson's Index and from erasure</td>
 
 </tr>
@@ -526,7 +530,7 @@ of the Great Schism</i> (London 1948), 11&ndash;25.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urban VI (Bartolomeo Prignano) [1318--1389, sedit 1378--1389]
- -- Factum Vrbani" class="index_catalogue_entry">SS1.618g (`Vrbanus VI in suo professu contra cardinales rebelles .#.')</span></td>
+ -- Factum Vrbani" class="index_catalogue_entry"  onclick="alert('Urban VI (Bartolomeo Prignano) [1318--1389, sedit 1378--1389]  -- Factum Vrbani')" >SS1.618g (`Vrbanus VI in suo professu contra cardinales rebelles .#.')</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
@@ -558,7 +562,7 @@ Venice 1492 (Goff U65); Lohr, 194.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urbanus Averroista of Bologna OSM [early 14th cent.]
- -- Expositio commenti Averrois in VIII libros Physicorum" class="index_catalogue_entry">UC10.&para;*40</span></td>
+ -- Expositio commenti Averrois in VIII libros Physicorum" class="index_catalogue_entry"  onclick="alert('Urbanus Averroista of Bologna OSM [early 14th cent.]  -- Expositio commenti Averrois in VIII libros Physicorum')" >UC10.&para;*40</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: Christ's College: Medieval donors in a register of donors, 1623</td>
 
 </tr>
@@ -585,7 +589,7 @@ nouuelle et ancienne</i>: pr. [Geneva] 1542 (Higman R45), &amp;c.
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urbanus Regius (Urbano Regio) [1489--1541]
  -- De noua ac antiqua doctrina, French tr. as La doctrine 
-nouuelle et ancienne" class="index_catalogue_entry">H2.&para;265</span></td>
+nouuelle et ancienne" class="index_catalogue_entry"  onclick="alert('Urbanus Regius (Urbano Regio) [1489--1541]  -- De noua ac antiqua doctrina, French tr. as La doctrine  nouuelle et ancienne')" >H2.&para;265</span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
@@ -598,7 +602,7 @@ nouuelle et ancienne" class="index_catalogue_entry">H2.&para;265</span></td>
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urbanus Regius (Urbano Regio) [1489--1541]
- -- Loci theologici e patribus et scholasticis collecti" class="index_catalogue_entry">S21.&para;130</span></td>
+ -- Loci theologici e patribus et scholasticis collecti" class="index_catalogue_entry"  onclick="alert('Urbanus Regius (Urbano Regio) [1489--1541]  -- Loci theologici e patribus et scholasticis collecti')" >S21.&para;130</span></td>
 <td class="catalogue_name">SCOTLAND: St Andrews, St Leonard's College: Books in the college library, 1597 or 1599</td>
 
 </tr>
@@ -624,7 +628,7 @@ nouuelle et ancienne" class="index_catalogue_entry">H2.&para;265</span></td>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="<>Ursinus []
  -- work reported from Gennadius, % 27.
-" class="index_catalogue_entry">K634</span></td>
+" class="index_catalogue_entry"  onclick="alert('<>Ursinus []  -- work reported from Gennadius, % 27. ')" >K634</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE</td>
 
 </tr>
@@ -650,55 +654,55 @@ Thorndike/Kibre 258.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urso of Calabria [late 12th cent.]
- -- Liber aphorismorum" class="index_catalogue_entry">A20.&dagger;303s (`prouerbia Vspionis')</span></td>
+ -- Liber aphorismorum" class="index_catalogue_entry"  onclick="alert('Urso of Calabria [late 12th cent.]  -- Liber aphorismorum')" >A20.&dagger;303s (`prouerbia Vspionis')</span></td>
 <td class="catalogue_name">AUGUSTINIAN CANONS: Leicester: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urso of Calabria [late 12th cent.]
- -- Liber aphorismorum" class="index_catalogue_entry">A20.745d</span></td>
+ -- Liber aphorismorum" class="index_catalogue_entry"  onclick="alert('Urso of Calabria [late 12th cent.]  -- Liber aphorismorum')" >A20.745d</span></td>
 <td class="catalogue_name">AUGUSTINIAN CANONS: Leicester: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urso of Calabria [late 12th cent.]
- -- Liber aphorismorum" class="index_catalogue_entry">FA8.142h</span></td>
+ -- Liber aphorismorum" class="index_catalogue_entry"  onclick="alert('Urso of Calabria [late 12th cent.]  -- Liber aphorismorum')" >FA8.142h</span></td>
 <td class="catalogue_name">FRIARS: York Austin Friars: Catalogue, 1382, with additions</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urso of Calabria [late 12th cent.]
- -- Liber aphorismorum" class="index_catalogue_entry">SS1.89a</span></td>
+ -- Liber aphorismorum" class="index_catalogue_entry"  onclick="alert('Urso of Calabria [late 12th cent.]  -- Liber aphorismorum')" >SS1.89a</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urso of Calabria [late 12th cent.]
- -- Liber aphorismorum" class="index_catalogue_entry">UO1.86 (`afforismi Vrsonis cum commento')</span></td>
+ -- Liber aphorismorum" class="index_catalogue_entry"  onclick="alert('Urso of Calabria [late 12th cent.]  -- Liber aphorismorum')" >UO1.86 (`afforismi Vrsonis cum commento')</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urso of Calabria [late 12th cent.]
- -- Liber aphorismorum" class="index_catalogue_entry">UO22.101</span></td>
+ -- Liber aphorismorum" class="index_catalogue_entry"  onclick="alert('Urso of Calabria [late 12th cent.]  -- Liber aphorismorum')" >UO22.101</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urso of Calabria [late 12th cent.]
- -- Liber aphorismorum" class="index_catalogue_entry">UO49.30 (`artem demonstratiuam cum aliis libris Vrsonis') = UO68.410</span></td>
+ -- Liber aphorismorum" class="index_catalogue_entry"  onclick="alert('Urso of Calabria [late 12th cent.]  -- Liber aphorismorum')" >UO49.30 (`artem demonstratiuam cum aliis libris Vrsonis') = UO68.410</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urso of Calabria [late 12th cent.]
- -- Liber aphorismorum" class="index_catalogue_entry">UO68.410 (`ars demonstratiua &dagger;Versoris cum aliis')</span></td>
+ -- Liber aphorismorum" class="index_catalogue_entry"  onclick="alert('Urso of Calabria [late 12th cent.]  -- Liber aphorismorum')" >UO68.410 (`ars demonstratiua &dagger;Versoris cum aliis')</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urso of Calabria [late 12th cent.]
- -- Liber aphorismorum" class="index_catalogue_entry">UO70.*298<sup>x</sup></span></td>
+ -- Liber aphorismorum" class="index_catalogue_entry"  onclick="alert('Urso of Calabria [late 12th cent.]  -- Liber aphorismorum')" >UO70.*298<sup>x</sup></span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
@@ -714,13 +718,13 @@ Thorndike/Kibre 334.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urso of Calabria [late 12th cent.]
- -- Liber de effectibus qualitatum" class="index_catalogue_entry">BA1.*1218p (T/K 1275)</span></td>
+ -- Liber de effectibus qualitatum" class="index_catalogue_entry"  onclick="alert('Urso of Calabria [late 12th cent.]  -- Liber de effectibus qualitatum')" >BA1.*1218p (T/K 1275)</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Urso of Calabria [late 12th cent.]
- -- Liber de effectibus qualitatum" class="index_catalogue_entry">UO70.*298<sup>x</sup></span></td>
+ -- Liber de effectibus qualitatum" class="index_catalogue_entry"  onclick="alert('Urso of Calabria [late 12th cent.]  -- Liber de effectibus qualitatum')" >UO70.*298<sup>x</sup></span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
@@ -745,7 +749,7 @@ Thorndike/Kibre 334.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Usuard [{+}877]
- -- Martyrologium" class="index_catalogue_entry">BM1.276b K663.&lt;&gt;1</span></td>
+ -- Martyrologium" class="index_catalogue_entry"  onclick="alert('Usuard [{+}877]  -- Martyrologium')" >BM1.276b K663.&lt;&gt;1</span></td>
 <td class="catalogue_name">BENEDICTINES: Dover-St Martin's: John Whitfield's catalogue, 1389</td>
 
 </tr>
@@ -779,7 +783,7 @@ Thorndike/Kibre 334.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Uthred of Boldon OSB [{+}1397]
- -- Contra iniustas querelas fratrum" class="index_catalogue_entry">H2.*1343<sup>x</sup></span></td>
+ -- Contra iniustas querelas fratrum" class="index_catalogue_entry"  onclick="alert('Uthred of Boldon OSB [{+}1397]  -- Contra iniustas querelas fratrum')" >H2.*1343<sup>x</sup></span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
@@ -792,7 +796,7 @@ Sharpe, <i>Latin Writers</i>, 700.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Uthred of Boldon OSB [{+}1397]
- -- De esu et abstinentia carnium, inc. `Numquid licitum sit'" class="index_catalogue_entry">B16.14</span></td>
+ -- De esu et abstinentia carnium, inc. `Numquid licitum sit'" class="index_catalogue_entry"  onclick="alert('Uthred of Boldon OSB [{+}1397]  -- De esu et abstinentia carnium, inc. `Numquid licitum sit\'')" >B16.14</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Bury: Leland, c. 1536-40</td>
 
 </tr>
@@ -805,21 +809,21 @@ Sharpe, <i>Latin Writers</i>, 700.
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Uthred of Boldon OSB [{+}1397]
  -- De substantialibus regulae monachalis, inc. `Nouitio inquirenti'unpr.; Sharpe, Latin Writers, 701.
-" class="index_catalogue_entry">B16.15 (`de uariatione professionis monachorum')</span></td>
+" class="index_catalogue_entry"  onclick="alert('Uthred of Boldon OSB [{+}1397]  -- De substantialibus regulae monachalis, inc. `Nouitio inquirenti\'unpr.; Sharpe, Latin Writers, 701. ')" >B16.15 (`de uariatione professionis monachorum')</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Bury: Leland, c. 1536-40</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Uthred of Boldon OSB [{+}1397]
  -- De substantialibus regulae monachalis, inc. `Nouitio inquirenti'unpr.; Sharpe, Latin Writers, 701.
-" class="index_catalogue_entry">B91.6</span></td>
+" class="index_catalogue_entry"  onclick="alert('Uthred of Boldon OSB [{+}1397]  -- De substantialibus regulae monachalis, inc. `Nouitio inquirenti\'unpr.; Sharpe, Latin Writers, 701. ')" >B91.6</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: St Albans: Leland, c. 1536-40</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Uthred of Boldon OSB [{+}1397]
  -- De substantialibus regulae monachalis, inc. `Nouitio inquirenti'unpr.; Sharpe, Latin Writers, 701.
-" class="index_catalogue_entry">BP21.&dagger;181c (`questiones de regula s. benedicti et soluciones super tribus
+" class="index_catalogue_entry"  onclick="alert('Uthred of Boldon OSB [{+}1397]  -- De substantialibus regulae monachalis, inc. `Nouitio inquirenti\'unpr.; Sharpe, Latin Writers, 701. ')" >BP21.&dagger;181c (`questiones de regula s. benedicti et soluciones super tribus
    substancialibus in eadem regula')</span></td>
 <td class="catalogue_name">BENEDICTINES: Peterborough: Catalogue, late 14th cent.</td>
 
@@ -827,7 +831,7 @@ Sharpe, <i>Latin Writers</i>, 700.
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Uthred of Boldon OSB [{+}1397]
  -- De substantialibus regulae monachalis, inc. `Nouitio inquirenti'unpr.; Sharpe, Latin Writers, 701.
-" class="index_catalogue_entry">BP21.&dagger;321b (`quedam questiones et soluciones super certis articulis
+" class="index_catalogue_entry"  onclick="alert('Uthred of Boldon OSB [{+}1397]  -- De substantialibus regulae monachalis, inc. `Nouitio inquirenti\'unpr.; Sharpe, Latin Writers, 701. ')" >BP21.&dagger;321b (`quedam questiones et soluciones super certis articulis
    contentis in regula Benedicti')</span></td>
 <td class="catalogue_name">BENEDICTINES: Peterborough: Catalogue, late 14th cent.</td>
 
@@ -841,14 +845,14 @@ Sharpe, <i>Latin Writers</i>, 700.
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Uthred of Boldon OSB [{+}1397]
  -- De perfectione uiuendi in religione, inc. `Sacratissimo siquidem'unpr.; Sharpe, Latin Writers, 700.
-" class="index_catalogue_entry">B89.&dagger;32 (`de perfectione uite Christi hic in terra') ?= B90.13</span></td>
+" class="index_catalogue_entry"  onclick="alert('Uthred of Boldon OSB [{+}1397]  -- De perfectione uiuendi in religione, inc. `Sacratissimo siquidem\'unpr.; Sharpe, Latin Writers, 700. ')" >B89.&dagger;32 (`de perfectione uite Christi hic in terra') ?= B90.13</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: St Albans: Fragment of list of Whethamstede's books, after 1452</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Uthred of Boldon OSB [{+}1397]
  -- De perfectione uiuendi in religione, inc. `Sacratissimo siquidem'unpr.; Sharpe, Latin Writers, 700.
-" class="index_catalogue_entry">B90.13 (`de
+" class="index_catalogue_entry"  onclick="alert('Uthred of Boldon OSB [{+}1397]  -- De perfectione uiuendi in religione, inc. `Sacratissimo siquidem\'unpr.; Sharpe, Latin Writers, 700. ')" >B90.13 (`de
    perfectione priuate religionis')</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: St Albans: Bale's excerpts from list of Whethamstede's books, c. 1550</td>
 
@@ -858,6 +862,9 @@ Sharpe, <i>Latin Writers</i>, 700.
 </ul><!-- end list of books for one author -->
 
 </li><!-- end outerhead list item --></ul><!-- end tree -->
+</div><!-- end div class "index" -->
 {% endblock %}
 {% block search %}
+{% endblock %}
+{% block useful_links %}
 {% endblock %}

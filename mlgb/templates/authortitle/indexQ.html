@@ -1,34 +1,38 @@
-{% extends "mlgb/mlgb.html" %}
+{% extends "base.html" %}
 {% block title %}
 <title>MLGB3 Author/Title Index</title>
 {% endblock %}
 {% block treeview %}<script type="text/javascript">    $(function() {        $("#tree").treeview({            collapsed: true,            animated: "medium",            control:"#sidetreecontrol",            prerendered: false,            persist: "location"        });    })</script>{% endblock %}{% block maincontent %}
 <h2>Author/Title Index: Q</h2>
-<div class="letterlinks"><a href="/authortitle/browse/A/">A</a>
-<span class="spacer"> </span><a href="/authortitle/browse/B/">B</a>
-<span class="spacer"> </span><a href="/authortitle/browse/C/">C</a>
-<span class="spacer"> </span><a href="/authortitle/browse/D/">D</a>
-<span class="spacer"> </span><a href="/authortitle/browse/E/">E</a>
-<span class="spacer"> </span><a href="/authortitle/browse/F/">F</a>
-<span class="spacer"> </span><a href="/authortitle/browse/G/">G</a>
-<span class="spacer"> </span><a href="/authortitle/browse/H/">H</a>
-<span class="spacer"> </span><a href="/authortitle/browse/IJ/">IJ</a>
-<span class="spacer"> </span><a href="/authortitle/browse/K/">K</a>
-<span class="spacer"> </span><a href="/authortitle/browse/L/">L</a>
-<span class="spacer"> </span><a href="/authortitle/browse/M/">M</a>
-<span class="spacer"> </span><a href="/authortitle/browse/N/">N</a>
-<span class="spacer"> </span><a href="/authortitle/browse/O/">O</a>
-<span class="spacer"> </span><a href="/authortitle/browse/P/">P</a>
-<span class="spacer"> </span><a href="/authortitle/browse/Q/">Q</a>
-<span class="spacer"> </span><a href="/authortitle/browse/R/">R</a>
-<span class="spacer"> </span><a href="/authortitle/browse/S/">S</a>
-<span class="spacer"> </span><a href="/authortitle/browse/T/">T</a>
-<span class="spacer"> </span><a href="/authortitle/browse/U/">U</a>
-<span class="spacer"> </span><a href="/authortitle/browse/V/">V</a>
-<span class="spacer"> </span><a href="/authortitle/browse/W/">W</a>
-<span class="spacer"> </span><a href="/authortitle/browse/X/">X</a>
-<span class="spacer"> </span><a href="/authortitle/browse/Z/">Z</a>
-</div><div id="sidetreecontrol">
+<div class="letterlinks"><a href="{% if editable %}/e{% endif %}/authortitle/browse/A/">A</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/B/">B</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/C/">C</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/D/">D</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/E/">E</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/F/">F</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/G/">G</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/H/">H</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/IJ/">IJ</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/K/">K</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/L/">L</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/M/">M</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/N/">N</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/O/">O</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/P/">P</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/Q/">Q</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/R/">R</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/S/">S</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/T/">T</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/U/">U</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/V/">V</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/W/">W</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/X/">X</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/Z/">Z</a>
+</div>
+
+<div class="index">
+
+<div id="sidetreecontrol">
 <a href="?#">Collapse All</a> | <a href="?#">Expand All</a>
 </div>
 <ul class="treeview" id="tree">
@@ -50,7 +54,7 @@
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="<>Quadratus [], bishop of Athens
  -- work reported from Jerome, % 19.
-" class="index_catalogue_entry">K489</span></td>
+" class="index_catalogue_entry"  onclick="alert('<>Quadratus [], bishop of Athens  -- work reported from Jerome, % 19. ')" >K489</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE</td>
 
 </tr>
@@ -73,7 +77,7 @@
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><span title="Quadrilogus" class="index_catalogue_entry">Z14.84a</span></td>
+<td class="catalogue_entry_code"><span title="Quadrilogus" class="index_catalogue_entry"  onclick="alert('Quadrilogus')" >Z14.84a</span></td>
 <td class="catalogue_name">CISTERCIANS: Meaux: Inventory of books, 1396</td>
 
 </tr>
@@ -99,22 +103,22 @@ edited by G. S. Garnett &amp; J. G. H. Hudson (Cambridge 1994), 111&ndash;72.
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><span title="Quadripartitus" class="index_catalogue_entry">BA1.*895b (`leges regum Angl.')</span></td>
+<td class="catalogue_entry_code"><span title="Quadripartitus" class="index_catalogue_entry"  onclick="alert('Quadripartitus')" >BA1.*895b (`leges regum Angl.')</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><span title="Quadripartitus" class="index_catalogue_entry">BM1.9b (`leges regum Anglie', inc.)</span></td>
+<td class="catalogue_entry_code"><span title="Quadripartitus" class="index_catalogue_entry"  onclick="alert('Quadripartitus')" >BM1.9b (`leges regum Anglie', inc.)</span></td>
 <td class="catalogue_name">BENEDICTINES: Dover-St Martin's: John Whitfield's catalogue, 1389</td>
 
 </tr>
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><span title="Quadripartitus" class="index_catalogue_entry">H2.*1005<sup>x</sup></span></td>
+<td class="catalogue_entry_code"><span title="Quadripartitus" class="index_catalogue_entry"  onclick="alert('Quadripartitus')" >H2.*1005<sup>x</sup></span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><span title="Quadripartitus" class="index_catalogue_entry">SH46.*2a (`de ueteribus legibus Anglie')</span></td>
+<td class="catalogue_entry_code"><span title="Quadripartitus" class="index_catalogue_entry"  onclick="alert('Quadripartitus')" >SH46.*2a (`de ueteribus legibus Anglie')</span></td>
 <td class="catalogue_name">SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions: London, Guildhall: Bequest by Andrew Horn, 9 October 1328</td>
 
 </tr>
@@ -137,7 +141,7 @@ edited by G. S. Garnett &amp; J. G. H. Hudson (Cambridge 1994), 111&ndash;72.
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><span title="Quaedam narratio de nobili rege Arthuro" class="index_catalogue_entry">B45.53</span></td>
+<td class="catalogue_entry_code"><span title="Quaedam narratio de nobili rege Arthuro" class="index_catalogue_entry"  onclick="alert('Quaedam narratio de nobili rege Arthuro')" >B45.53</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Glastonbury: Bale, c. 1550</td>
 
 </tr>
@@ -164,14 +168,14 @@ questions of English origin, naming various English canonists, composed c.
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quaestiones Londinenses, a name given to the collection of 58 canonistic
 questions of English origin, naming various English canonists, composed c. 
-1196--8" class="index_catalogue_entry">BA1.*1692<sup>x</sup> = H2.*858<sup>x</sup></span></td>
+1196--8" class="index_catalogue_entry"  onclick="alert('Quaestiones Londinenses, a name given to the collection of 58 canonistic questions of English origin, naming various English canonists, composed c.  1196--8')" >BA1.*1692<sup>x</sup> = H2.*858<sup>x</sup></span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quaestiones Londinenses, a name given to the collection of 58 canonistic
 questions of English origin, naming various English canonists, composed c. 
-1196--8" class="index_catalogue_entry">H2.*858<sup>x</sup></span></td>
+1196--8" class="index_catalogue_entry"  onclick="alert('Quaestiones Londinenses, a name given to the collection of 58 canonistic questions of English origin, naming various English canonists, composed c.  1196--8')" >H2.*858<sup>x</sup></span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
@@ -196,13 +200,13 @@ questions of English origin, naming various English canonists, composed c.
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quarellus [?]
- -- Sermones" class="index_catalogue_entry">BA1.458c (`quedam excerpta de sermonibus quarelli'</span></td>
+ -- Sermones" class="index_catalogue_entry"  onclick="alert('Quarellus [?]  -- Sermones')" >BA1.458c (`quedam excerpta de sermonibus quarelli'</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quarellus [?]
- -- Sermones" class="index_catalogue_entry">BA1.674 (`sermones quarelli')</span></td>
+ -- Sermones" class="index_catalogue_entry"  onclick="alert('Quarellus [?]  -- Sermones')" >BA1.674 (`sermones quarelli')</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
@@ -226,7 +230,7 @@ Dean 685.
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><span title="Les Quatres filles de Dieu" class="index_catalogue_entry">BA1.*1516d (`historia de iiij sororibus')</span></td>
+<td class="catalogue_entry_code"><span title="Les Quatres filles de Dieu" class="index_catalogue_entry"  onclick="alert('Les Quatres filles de Dieu')" >BA1.*1516d (`historia de iiij sororibus')</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
@@ -250,17 +254,17 @@ accompanies <i>La mort le roi Artu</i>.]
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><span title="Queste del Saint Graal" class="index_catalogue_entry">B30.69b (`sankreal')</span></td>
+<td class="catalogue_entry_code"><span title="Queste del Saint Graal" class="index_catalogue_entry"  onclick="alert('Queste del Saint Graal')" >B30.69b (`sankreal')</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Evesham: Books bequeathed by Prior Nicholas (d. 1392) and others</td>
 
 </tr>
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><span title="Queste del Saint Graal" class="index_catalogue_entry">H1.&para;36</span></td>
+<td class="catalogue_entry_code"><span title="Queste del Saint Graal" class="index_catalogue_entry"  onclick="alert('Queste del Saint Graal')" >H1.&para;36</span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Richmond Palace: Inventory of books, February 1535</td>
 
 </tr>
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><span title="Queste del Saint Graal" class="index_catalogue_entry">H1.*93<sup>x</sup></span></td>
+<td class="catalogue_entry_code"><span title="Queste del Saint Graal" class="index_catalogue_entry"  onclick="alert('Queste del Saint Graal')" >H1.*93<sup>x</sup></span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Richmond Palace: Inventory of books, February 1535</td>
 
 </tr>
@@ -283,17 +287,17 @@ accompanies <i>La mort le roi Artu</i>.]
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><span title="Quid pro quo" class="index_catalogue_entry">A36.13d</span></td>
+<td class="catalogue_entry_code"><span title="Quid pro quo" class="index_catalogue_entry"  onclick="alert('Quid pro quo')" >A36.13d</span></td>
 <td class="catalogue_name">AUGUSTINIAN CANONS: Thurgarten: Inventory, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><span title="Quid pro quo" class="index_catalogue_entry">BA1.1232b</span></td>
+<td class="catalogue_entry_code"><span title="Quid pro quo" class="index_catalogue_entry"  onclick="alert('Quid pro quo')" >BA1.1232b</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><span title="Quid pro quo" class="index_catalogue_entry">BM1.347c</span></td>
+<td class="catalogue_entry_code"><span title="Quid pro quo" class="index_catalogue_entry"  onclick="alert('Quid pro quo')" >BM1.347c</span></td>
 <td class="catalogue_name">BENEDICTINES: Dover-St Martin's: John Whitfield's catalogue, 1389</td>
 
 </tr>
@@ -317,7 +321,7 @@ accompanies <i>La mort le roi Artu</i>.]
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><span title="Quinque claues sapientiae" class="index_catalogue_entry">BP21.&dagger;154c (`uersus de clauibus philosophie')</span></td>
+<td class="catalogue_entry_code"><span title="Quinque claues sapientiae" class="index_catalogue_entry"  onclick="alert('Quinque claues sapientiae')" >BP21.&dagger;154c (`uersus de clauibus philosophie')</span></td>
 <td class="catalogue_name">BENEDICTINES: Peterborough: Catalogue, late 14th cent.</td>
 
 </tr>
@@ -345,7 +349,7 @@ from the Roman invasion to the Norman Conquest.
 <td class="catalogue_entry_code"><span title="Quinque plagae, `Quinque plagas diuina ultio Britanniam affecit ab
 exordio quo cepit inhabitari', from Henry of Huntingdon, I 4, five `blows'
 from the Roman invasion to the Norman Conquest.
-" class="index_catalogue_entry">S2.117 (`una rotula de cronicis ex utroque latere script(a) et incipit
+" class="index_catalogue_entry"  onclick="alert('Quinque plagae, `Quinque plagas diuina ultio Britanniam affecit ab exordio quo cepit inhabitari\', from Henry of Huntingdon, I 4, five `blows\' from the Roman invasion to the Norman Conquest. ')" >S2.117 (`una rotula de cronicis ex utroque latere script(a) et incipit
    in primo latere Quinque plagas')</span></td>
 <td class="catalogue_name">SCOTLAND: Aberdeen cathedral: Catalogue, 12 March 1465</td>
 
@@ -376,7 +380,7 @@ from the Roman invasion to the Norman Conquest.
  -- De officio discipulorum, an excerpt (II 9) from the
 Institutio oratoria, with commentary by Iodocus Badius Ascensiuspr. with ps. Boethius, De disciplina scholarium, Lyon 1498 (GW 
 4569), &c.
-" class="index_catalogue_entry">UC22.&para;170</span></td>
+" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- De officio discipulorum, an excerpt (II 9) from the Institutio oratoria, with commentary by Iodocus Badius Ascensiuspr. with ps. Boethius, De disciplina scholarium, Lyon 1498 (GW  4569), &c. ')" >UC22.&para;170</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: Corpus Christi College: Books granted by Peter Nobys, after July 1525</td>
 
 </tr>
@@ -389,115 +393,115 @@ Winterbottom, OCT (1970).
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">B13.162a = B13.261</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >B13.162a = B13.261</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Bury: Catalogue, late 12th cent., and additions</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">B13.261 = R85.2</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >B13.261 = R85.2</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Bury: Catalogue, late 12th cent., and additions</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">R85.2 = K490.1</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >R85.2 = K490.1</span></td>
 <td class="catalogue_name">REGISTRUM ANGLIE</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">K490.1</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >K490.1</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">BM1.126p (exc.)</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >BM1.126p (exc.)</span></td>
 <td class="catalogue_name">BENEDICTINES: Dover-St Martin's: John Whitfield's catalogue, 1389</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">H2.833</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >H2.833</span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">S4.&para;7</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >S4.&para;7</span></td>
 <td class="catalogue_name">SCOTLAND: Aberdeen, King's College: Lists of borrowed books, c. 1557</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">SC243.&para;*14</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >SC243.&para;*14</span></td>
 <td class="catalogue_name">SECULAR INSTITUTIONS: Secular Colleges: Eton College: List of books returned to the bursars, 8 December 1558</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">UC7.&para;*155</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >UC7.&para;*155</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: University: Inventory for the Marian commissioners, 1557</td>
 
 </tr>
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><a href="/mlgb/book/1006/"  title="M. Fabius Quintilianus [{+} c100]
+<td class="catalogue_entry_code"><a href="{% if editable %}/e{% endif %}/mlgb/book/1006/"  title="M. Fabius Quintilianus [{+} c100]
  -- Institutio oratoria: full details of book"  class="link_from_index_to_book">UC48.*163a</a></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: Peterhouse: Catalogue, 24 Dec. 1418</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">UO1.119 (`Quinctillianus de institucione oratoris')</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >UO1.119 (`Quinctillianus de institucione oratoris')</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">UO13.&para;292 (`Quintilianus')</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >UO13.&para;292 (`Quintilianus')</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">UO16.&para;*355</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >UO16.&para;*355</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">UO19.&para;144</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >UO19.&para;144</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">UO22.*36</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >UO22.*36</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">UO24.&para;*29a = UO33.&para;*105a</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >UO24.&para;*29a = UO33.&para;*105a</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">UO33.&para;*105a</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >UO33.&para;*105a</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">UO27.&para;65</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >UO27.&para;65</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Institutio oratoria" class="index_catalogue_entry">UO33.&para;*104</span></td>
+ -- Institutio oratoria" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Institutio oratoria')" >UO33.&para;*104</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
@@ -511,98 +515,98 @@ Winterbottom, OCT (1970).
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Declamationes XIX maiores" class="index_catalogue_entry">A38.43a (`de causis')</span></td>
+ -- Declamationes XIX maiores" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Declamationes XIX maiores')" >A38.43a (`de causis')</span></td>
 <td class="catalogue_name">AUGUSTINIAN CANONS: Waltham: Catalogue, early 13th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Declamationes XIX maiores" class="index_catalogue_entry">A38.&dagger;43b (`Summa magistri Adelardi de eodem', 
+ -- Declamationes XIX maiores" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Declamationes XIX maiores')" >A38.&dagger;43b (`Summa magistri Adelardi de eodem', 
    epitome)</span></td>
 <td class="catalogue_name">AUGUSTINIAN CANONS: Waltham: Catalogue, early 13th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Declamationes XIX maiores" class="index_catalogue_entry">B13.90 = R85.1</span></td>
+ -- Declamationes XIX maiores" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Declamationes XIX maiores')" >B13.90 = R85.1</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Bury: Catalogue, late 12th cent., and additions</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Declamationes XIX maiores" class="index_catalogue_entry">R85.1 (`de causis') = K490.2</span></td>
+ -- Declamationes XIX maiores" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Declamationes XIX maiores')" >R85.1 (`de causis') = K490.2</span></td>
 <td class="catalogue_name">REGISTRUM ANGLIE</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Declamationes XIX maiores" class="index_catalogue_entry">K490.2</span></td>
+ -- Declamationes XIX maiores" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Declamationes XIX maiores')" >K490.2</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Declamationes XIX maiores" class="index_catalogue_entry">B19.&dagger;3 (`solutiones')</span></td>
+ -- Declamationes XIX maiores" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Declamationes XIX maiores')" >B19.&dagger;3 (`solutiones')</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Castle Acre: Leland, c. 1536-40</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Declamationes XIX maiores" class="index_catalogue_entry">B37.28 (`de causis')</span></td>
+ -- Declamationes XIX maiores" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Declamationes XIX maiores')" >B37.28 (`de causis')</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Glastonbury: Books copied for Abbot Henry of Blois (1126-71)</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Declamationes XIX maiores" class="index_catalogue_entry">BA1.1015q (`quintilianus', exc.)</span></td>
+ -- Declamationes XIX maiores" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Declamationes XIX maiores')" >BA1.1015q (`quintilianus', exc.)</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Declamationes XIX maiores" class="index_catalogue_entry">BA1.1498a</span></td>
+ -- Declamationes XIX maiores" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Declamationes XIX maiores')" >BA1.1498a</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Declamationes XIX maiores" class="index_catalogue_entry">UC29.153</span></td>
+ -- Declamationes XIX maiores" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Declamationes XIX maiores')" >UC29.153</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: King's College: Inventory, c. 1457</td>
 
 </tr>
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><a href="/mlgb/book/1005/"  title="M. Fabius Quintilianus [{+} c100]
+<td class="catalogue_entry_code"><a href="{% if editable %}/e{% endif %}/mlgb/book/1005/"  title="M. Fabius Quintilianus [{+} c100]
  -- Declamationes XIX maiores: full details of book"  class="link_from_index_to_book">UC48.*160a</a></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: Peterhouse: Catalogue, 24 Dec. 1418</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Declamationes XIX maiores" class="index_catalogue_entry">UO22.*37</span></td>
+ -- Declamationes XIX maiores" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Declamationes XIX maiores')" >UO22.*37</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Declamationes XIX maiores" class="index_catalogue_entry">UO24.&para;*29b = UO33.&para;*105b</span></td>
+ -- Declamationes XIX maiores" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Declamationes XIX maiores')" >UO24.&para;*29b = UO33.&para;*105b</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Declamationes XIX maiores" class="index_catalogue_entry">UO33.&para;*105b</span></td>
+ -- Declamationes XIX maiores" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Declamationes XIX maiores')" >UO33.&para;*105b</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Declamationes XIX maiores" class="index_catalogue_entry">UO33.&para;*132b</span></td>
+ -- Declamationes XIX maiores" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Declamationes XIX maiores')" >UO33.&para;*132b</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
- -- Declamationes XIX maiores" class="index_catalogue_entry">UO38.40</span></td>
+ -- Declamationes XIX maiores" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Declamationes XIX maiores')" >UO38.40</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
@@ -615,7 +619,7 @@ Winterbottom, OCT (1970).
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="M. Fabius Quintilianus [{+} c100]
  -- Declamationes, in the abbreviated form known as Excerpta Parisinaed. G. Lehnert, Teubner (1905), 389--431.
-" class="index_catalogue_entry">A38.?*43a (`de causis')</span></td>
+" class="index_catalogue_entry"  onclick="alert('M. Fabius Quintilianus [{+} c100]  -- Declamationes, in the abbreviated form known as Excerpta Parisinaed. G. Lehnert, Teubner (1905), 389--431. ')" >A38.?*43a (`de causis')</span></td>
 <td class="catalogue_name">AUGUSTINIAN CANONS: Waltham: Catalogue, early 13th cent.</td>
 
 </tr>
@@ -647,13 +651,13 @@ Winterbottom, OCT (1970).
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quiricus de Augustis [15th cent.]
- -- Lumen apothecariorum" class="index_catalogue_entry">B55.&para;134</span></td>
+ -- Lumen apothecariorum" class="index_catalogue_entry"  onclick="alert('Quiricus de Augustis [15th cent.]  -- Lumen apothecariorum')" >B55.&para;134</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Monk Bretton: Inventory of books, 1558</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quiricus de Augustis [15th cent.]
- -- Lumen apothecariorum" class="index_catalogue_entry">SS1.&para;129c</span></td>
+ -- Lumen apothecariorum" class="index_catalogue_entry"  onclick="alert('Quiricus de Augustis [15th cent.]  -- Lumen apothecariorum')" >SS1.&para;129c</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
@@ -677,7 +681,7 @@ Winterbottom, OCT (1970).
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quirinus [?]
-" class="index_catalogue_entry">A20.860d = 945, 946</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quirinus [?] ')" >A20.860d = 945, 946</span></td>
 <td class="catalogue_name">AUGUSTINIAN CANONS: Leicester: Catalogue, 15th cent.</td>
 
 </tr>
@@ -705,7 +709,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">A20.224w</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >A20.224w</span></td>
 <td class="catalogue_name">AUGUSTINIAN CANONS: Leicester: Catalogue, 15th cent.</td>
 
 </tr>
@@ -713,7 +717,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">B11.6c</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >B11.6c</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Burton: Catalogue, c. 1175</td>
 
 </tr>
@@ -721,7 +725,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">B13.22d</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >B13.22d</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Bury: Catalogue, late 12th cent., and additions</td>
 
 </tr>
@@ -729,7 +733,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">B39.264h</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >B39.264h</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Glastonbury: Catalogue, 1247, with additions</td>
 
 </tr>
@@ -737,7 +741,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">B68.348</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >B68.348</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Ramsey: Catalogue roll, late 14th cent.</td>
 
 </tr>
@@ -745,7 +749,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">B71.*43d</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >B71.*43d</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Reading: Catalogue, 1192</td>
 
 </tr>
@@ -753,7 +757,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">B77.*8a = B78.*6</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >B77.*8a = B78.*6</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Rochester: Catalogue, 1123</td>
 
 </tr>
@@ -761,7 +765,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">B78.*6 = B79.*15</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >B78.*6 = B79.*15</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Rochester: Fragments of catalogue, early 12th cent.</td>
 
 </tr>
@@ -769,7 +773,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">B79.*15 = H2.*594a</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >B79.*15 = H2.*594a</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Rochester: Catalogue, 1202</td>
 
 </tr>
@@ -777,7 +781,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">H2.*594a</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >H2.*594a</span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
@@ -785,7 +789,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">B120.&dagger;10 (`contra hereticos')</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >B120.&dagger;10 (`contra hereticos')</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: York St Mary's: Index catalogue of selected authors, 15th cent.</td>
 
 </tr>
@@ -793,7 +797,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">BA1.*457tt</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >BA1.*457tt</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
@@ -801,7 +805,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">BC4.32a</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >BC4.32a</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-Christ Church: Prior Eastry's catalogue, not after 1331.</td>
 
 </tr>
@@ -809,12 +813,12 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">BC4.210c</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >BC4.210c</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-Christ Church: Prior Eastry's catalogue, not after 1331.</td>
 
 </tr>
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><a href="/mlgb/book/174/"  title="Quodvultdeus [{+}453], bishop of Carthage
+<td class="catalogue_entry_code"><a href="{% if editable %}/e{% endif %}/mlgb/book/174/"  title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 : full details of book"  class="link_from_index_to_book">BP21.*25e</a></td>
@@ -825,7 +829,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">H2.*798<sup>x</sup></span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >H2.*798<sup>x</sup></span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
@@ -833,7 +837,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">H2.*1152<sup>x</sup></span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >H2.*1152<sup>x</sup></span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
@@ -841,7 +845,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">K1.199</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >K1.199</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE: Catalogus, c. 1360</td>
 
 </tr>
@@ -849,7 +853,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">P6.54i</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >P6.54i</span></td>
 <td class="catalogue_name">PREMONSTRATENSIANS: Titchfield: Catalogue, Michaelmas 1400</td>
 
 </tr>
@@ -857,7 +861,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">R1.99 (9 copies)</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >R1.99 (9 copies)</span></td>
 <td class="catalogue_name">REGISTRUM ANGLIE</td>
 
 </tr>
@@ -865,7 +869,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">SS1.858g</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >SS1.858g</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
@@ -873,7 +877,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">SS1.860o</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >SS1.860o</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
@@ -881,7 +885,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">SS1.866c</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >SS1.866c</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
@@ -889,7 +893,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">SS1.869s</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >SS1.869s</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
@@ -897,7 +901,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">SS1.&para;991e</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >SS1.&para;991e</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
@@ -905,7 +909,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">UC19.9k</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >UC19.9k</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: Corpus Christi College: Thomas Markaunt's bequest, 1439</td>
 
 </tr>
@@ -913,7 +917,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">UC39.57</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >UC39.57</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: King's Hall: Books granted by Henry VI, 2 July 1440</td>
 
 </tr>
@@ -921,7 +925,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">UC48.*441e</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >UC48.*441e</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: Peterhouse: Catalogue, 24 Dec. 1418</td>
 
 </tr>
@@ -929,7 +933,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">UO68.*164<sup>x</sup></span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >UO68.*164<sup>x</sup></span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
@@ -937,7 +941,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">UO68.296</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >UO68.296</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
 </tr>
@@ -945,7 +949,7 @@ sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other
 sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.]
-" class="index_catalogue_entry">Z19.25d</span></td>
+" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- (ps. Augustine), Sermo aduersus quinque haereses (serm. 10)CPL 410; ed. R. Braun, CCSL 60 (1976) 261--301. [This and the other sermons of Quodvultdeus are always ascribed to Augustine in manuscripts.] ')" >Z19.25d</span></td>
 <td class="catalogue_name">CISTERCIANS: Rievaulx: First catalogue, c.  1190-1200</td>
 
 </tr>
@@ -960,91 +964,91 @@ Paul the Deacon with the title `de aduentu domini' (<i>PL</i> 95. 1470&ndash;75)
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry">A20.225g (`de simbolo libri uel sermones quatuor', <i>serm.</i> 1&ndash;4)</span></td>
+ -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo contra iudaeos, paganos, et arianos (serm. 4)')" >A20.225g (`de simbolo libri uel sermones quatuor', <i>serm.</i> 1&ndash;4)</span></td>
 <td class="catalogue_name">AUGUSTINIAN CANONS: Leicester: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry">B77.*3b = H2.*849</span></td>
+ -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo contra iudaeos, paganos, et arianos (serm. 4)')" >B77.*3b = H2.*849</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Rochester: Catalogue, 1123</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry">H2.*849</span></td>
+ -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo contra iudaeos, paganos, et arianos (serm. 4)')" >H2.*849</span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry">B120.108 (`sermo de natiuitate Christi ``Vos inquam'' et est contra iudeos')</span></td>
+ -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo contra iudaeos, paganos, et arianos (serm. 4)')" >B120.108 (`sermo de natiuitate Christi ``Vos inquam'' et est contra iudeos')</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: York St Mary's: Index catalogue of selected authors, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry">BA1.346e (`expositio simboli', among Augustine)</span></td>
+ -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo contra iudaeos, paganos, et arianos (serm. 4)')" >BA1.346e (`expositio simboli', among Augustine)</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-St Augustine's: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry">BC4.38h&ndash;i (`sermo A. de natiuitate domini. sermo eiusdem contra paganos')</span></td>
+ -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo contra iudaeos, paganos, et arianos (serm. 4)')" >BC4.38h&ndash;i (`sermo A. de natiuitate domini. sermo eiusdem contra paganos')</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-Christ Church: Prior Eastry's catalogue, not after 1331.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry">BC4.44e</span></td>
+ -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo contra iudaeos, paganos, et arianos (serm. 4)')" >BC4.44e</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-Christ Church: Prior Eastry's catalogue, not after 1331.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry">BC4.45d&ndash;e</span></td>
+ -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo contra iudaeos, paganos, et arianos (serm. 4)')" >BC4.45d&ndash;e</span></td>
 <td class="catalogue_name">BENEDICTINES: Canterbury-Christ Church: Prior Eastry's catalogue, not after 1331.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry">FA8.109e (`sermo A. de natiuitate domini ``Vos inquam''$>')</span></td>
+ -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo contra iudaeos, paganos, et arianos (serm. 4)')" >FA8.109e (`sermo A. de natiuitate domini ``Vos inquam''$>')</span></td>
 <td class="catalogue_name">FRIARS: York Austin Friars: Catalogue, 1382, with additions</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry">K1.33 (`de aduentu domini secundo', attrib. Augustine, Vos inquam)</span></td>
+ -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo contra iudaeos, paganos, et arianos (serm. 4)')" >K1.33 (`de aduentu domini secundo', attrib. Augustine, Vos inquam)</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE: Catalogus, c. 1360</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry">K1.444 (`de symbolo contra iudaeos', inc.)</span></td>
+ -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo contra iudaeos, paganos, et arianos (serm. 4)')" >K1.444 (`de symbolo contra iudaeos', inc.)</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE: Catalogus, c. 1360</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry">K1.447 (`expositio symboli contra iudaeos, paganos, arrianos')</span></td>
+ -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo contra iudaeos, paganos, et arianos (serm. 4)')" >K1.447 (`expositio symboli contra iudaeos, paganos, arrianos')</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE: Catalogus, c. 1360</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry">P6.28b (`expositio simboli A. contra iudeos paganos et arrianos hereticos')</span></td>
+ -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo contra iudaeos, paganos, et arianos (serm. 4)')" >P6.28b (`expositio simboli A. contra iudeos paganos et arrianos hereticos')</span></td>
 <td class="catalogue_name">PREMONSTRATENSIANS: Titchfield: Catalogue, Michaelmas 1400</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry">R1.240 (`de simbolo contra iudeos', 10 copies)</span></td>
+ -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo contra iudaeos, paganos, et arianos (serm. 4)')" >R1.240 (`de simbolo contra iudeos', 10 copies)</span></td>
 <td class="catalogue_name">REGISTRUM ANGLIE</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry">UC48.*103<sup>x</sup> (Vos inquam)</span></td>
+ -- Sermo contra iudaeos, paganos, et arianos (serm. 4)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo contra iudaeos, paganos, et arianos (serm. 4)')" >UC48.*103<sup>x</sup> (Vos inquam)</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: Peterhouse: Catalogue, 24 Dec. 1418</td>
 
 </tr>
@@ -1056,7 +1060,7 @@ Paul the Deacon with the title `de aduentu domini' (<i>PL</i> 95. 1470&ndash;75)
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de accedentibus ad gratiam (serm. 8--9)" class="index_catalogue_entry">B13.&dagger;43d (`Augustinus de elemosina', among Quodvultdeus sermons)</span></td>
+ -- Sermo de accedentibus ad gratiam (serm. 8--9)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de accedentibus ad gratiam (serm. 8--9)')" >B13.&dagger;43d (`Augustinus de elemosina', among Quodvultdeus sermons)</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Bury: Catalogue, late 12th cent., and additions</td>
 
 </tr>
@@ -1068,79 +1072,79 @@ Paul the Deacon with the title `de aduentu domini' (<i>PL</i> 95. 1470&ndash;75)
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry">B13.43c</span></td>
+ -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cantico nouo (serm. 5)')" >B13.43c</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Bury: Catalogue, late 12th cent., and additions</td>
 
 </tr>
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><a href="/mlgb/book/176/"  title="Quodvultdeus [{+}453], bishop of Carthage
+<td class="catalogue_entry_code"><a href="{% if editable %}/e{% endif %}/mlgb/book/176/"  title="Quodvultdeus [{+}453], bishop of Carthage
  -- Sermo de cantico nouo (serm. 5): full details of book"  class="link_from_index_to_book">BP21.*16a</a></td>
 <td class="catalogue_name">BENEDICTINES: Peterborough: Catalogue, late 14th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry">FA8.112d</span></td>
+ -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cantico nouo (serm. 5)')" >FA8.112d</span></td>
 <td class="catalogue_name">FRIARS: York Austin Friars: Catalogue, 1382, with additions</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry">H2.*803<sup>x</sup></span></td>
+ -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cantico nouo (serm. 5)')" >H2.*803<sup>x</sup></span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry">K1.49</span></td>
+ -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cantico nouo (serm. 5)')" >K1.49</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE: Catalogus, c. 1360</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry">R1.175 (8 copies)</span></td>
+ -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cantico nouo (serm. 5)')" >R1.175 (8 copies)</span></td>
 <td class="catalogue_name">REGISTRUM ANGLIE</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry">SS1.338c</span></td>
+ -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cantico nouo (serm. 5)')" >SS1.338c</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry">SS1.864i</span></td>
+ -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cantico nouo (serm. 5)')" >SS1.864i</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry">SS1.*918kk</span></td>
+ -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cantico nouo (serm. 5)')" >SS1.*918kk</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry">SS1.921c</span></td>
+ -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cantico nouo (serm. 5)')" >SS1.921c</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry">SS1.1199<sup>i</sup></span></td>
+ -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cantico nouo (serm. 5)')" >SS1.1199<sup>i</sup></span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry">UC3.*100<sup>x</sup></span></td>
+ -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cantico nouo (serm. 5)')" >UC3.*100<sup>x</sup></span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: University: Register, 1473</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry">UC48.*101<sup>x</sup></span></td>
+ -- Sermo de cantico nouo (serm. 5)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cantico nouo (serm. 5)')" >UC48.*101<sup>x</sup></span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: Peterhouse: Catalogue, 24 Dec. 1418</td>
 
 </tr>
@@ -1152,73 +1156,73 @@ Paul the Deacon with the title `de aduentu domini' (<i>PL</i> 95. 1470&ndash;75)
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry">B13.43f</span></td>
+ -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cataclysmo (serm. 7)')" >B13.43f</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Bury: Catalogue, late 12th cent., and additions</td>
 
 </tr>
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><a href="/mlgb/book/176/"  title="Quodvultdeus [{+}453], bishop of Carthage
+<td class="catalogue_entry_code"><a href="{% if editable %}/e{% endif %}/mlgb/book/176/"  title="Quodvultdeus [{+}453], bishop of Carthage
  -- Sermo de cataclysmo (serm. 7): full details of book"  class="link_from_index_to_book">BP21.*16c</a></td>
 <td class="catalogue_name">BENEDICTINES: Peterborough: Catalogue, late 14th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry">FA8.112c</span></td>
+ -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cataclysmo (serm. 7)')" >FA8.112c</span></td>
 <td class="catalogue_name">FRIARS: York Austin Friars: Catalogue, 1382, with additions</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry">H2.*803<sup>x</sup></span></td>
+ -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cataclysmo (serm. 7)')" >H2.*803<sup>x</sup></span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry">K1.50 (`de catechumenis', inc.)</span></td>
+ -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cataclysmo (serm. 7)')" >K1.50 (`de catechumenis', inc.)</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE: Catalogus, c. 1360</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry">K1.90</span></td>
+ -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cataclysmo (serm. 7)')" >K1.90</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE: Catalogus, c. 1360</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry">R1.172 (9 copies)</span></td>
+ -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cataclysmo (serm. 7)')" >R1.172 (9 copies)</span></td>
 <td class="catalogue_name">REGISTRUM ANGLIE</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry">SS1.338e</span></td>
+ -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cataclysmo (serm. 7)')" >SS1.338e</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry">SS1.864k</span></td>
+ -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cataclysmo (serm. 7)')" >SS1.864k</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry">UC3.*100<sup>x</sup></span></td>
+ -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cataclysmo (serm. 7)')" >UC3.*100<sup>x</sup></span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: University: Register, 1473</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry">UC3.*146<sup>x</sup></span></td>
+ -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cataclysmo (serm. 7)')" >UC3.*146<sup>x</sup></span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: University: Register, 1473</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry">UC48.*101<sup>x</sup></span></td>
+ -- Sermo de cataclysmo (serm. 7)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cataclysmo (serm. 7)')" >UC48.*101<sup>x</sup></span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: Peterhouse: Catalogue, 24 Dec. 1418</td>
 
 </tr>
@@ -1230,61 +1234,61 @@ Paul the Deacon with the title `de aduentu domini' (<i>PL</i> 95. 1470&ndash;75)
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry">B13.43e</span></td>
+ -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de quarta feria (serm. 6)')" >B13.43e</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Bury: Catalogue, late 12th cent., and additions</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry">B39.56a (`de quadrifario beati Augustini')</span></td>
+ -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de quarta feria (serm. 6)')" >B39.56a (`de quadrifario beati Augustini')</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Glastonbury: Catalogue, 1247, with additions</td>
 
 </tr>
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><a href="/mlgb/book/176/"  title="Quodvultdeus [{+}453], bishop of Carthage
+<td class="catalogue_entry_code"><a href="{% if editable %}/e{% endif %}/mlgb/book/176/"  title="Quodvultdeus [{+}453], bishop of Carthage
  -- Sermo de quarta feria (serm. 6): full details of book"  class="link_from_index_to_book">BP21.*16b</a></td>
 <td class="catalogue_name">BENEDICTINES: Peterborough: Catalogue, late 14th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry">K1.166</span></td>
+ -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de quarta feria (serm. 6)')" >K1.166</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE: Catalogus, c. 1360</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry">R1.258 (8 copies)</span></td>
+ -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de quarta feria (serm. 6)')" >R1.258 (8 copies)</span></td>
 <td class="catalogue_name">REGISTRUM ANGLIE</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry">SS1.338d</span></td>
+ -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de quarta feria (serm. 6)')" >SS1.338d</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry">SS1.864j</span></td>
+ -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de quarta feria (serm. 6)')" >SS1.864j</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry">SS1.1199<sup>i</sup></span></td>
+ -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de quarta feria (serm. 6)')" >SS1.1199<sup>i</sup></span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry">UC3.*146<sup>x</sup></span></td>
+ -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de quarta feria (serm. 6)')" >UC3.*146<sup>x</sup></span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: University: Register, 1473</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry">UC48.*101<sup>x</sup></span></td>
+ -- Sermo de quarta feria (serm. 6)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de quarta feria (serm. 6)')" >UC48.*101<sup>x</sup></span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: Peterhouse: Catalogue, 24 Dec. 1418</td>
 
 </tr>
@@ -1298,37 +1302,37 @@ catechumenos</i> (<i>CPL</i> 309) as `de simbolo libri quatuor'.]
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermones de symbolo (serm. 1--3)" class="index_catalogue_entry">A20.225g (`de simbolo libri uel sermones quatuor')</span></td>
+ -- Sermones de symbolo (serm. 1--3)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermones de symbolo (serm. 1--3)')" >A20.225g (`de simbolo libri uel sermones quatuor')</span></td>
 <td class="catalogue_name">AUGUSTINIAN CANONS: Leicester: Catalogue, 15th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermones de symbolo (serm. 1--3)" class="index_catalogue_entry">B13.43b</span></td>
+ -- Sermones de symbolo (serm. 1--3)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermones de symbolo (serm. 1--3)')" >B13.43b</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Bury: Catalogue, late 12th cent., and additions</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermones de symbolo (serm. 1--3)" class="index_catalogue_entry">H2.*798<sup>x</sup> (w. CPL 309)</span></td>
+ -- Sermones de symbolo (serm. 1--3)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermones de symbolo (serm. 1--3)')" >H2.*798<sup>x</sup> (w. CPL 309)</span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermones de symbolo (serm. 1--3)" class="index_catalogue_entry">H2.*803<sup>x</sup> (w. CPL 309)</span></td>
+ -- Sermones de symbolo (serm. 1--3)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermones de symbolo (serm. 1--3)')" >H2.*803<sup>x</sup> (w. CPL 309)</span></td>
 <td class="catalogue_name">LIBRARIES OF KING HENRY VIII: Westminster: Inventory of the Upper Library, 1542</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermones de symbolo (serm. 1--3)" class="index_catalogue_entry">K1.443 (`de symbolo ad catechumenos libri 4')</span></td>
+ -- Sermones de symbolo (serm. 1--3)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermones de symbolo (serm. 1--3)')" >K1.443 (`de symbolo ad catechumenos libri 4')</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE: Catalogus, c. 1360</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermones de symbolo (serm. 1--3)" class="index_catalogue_entry">SS2.276 (`A. de symbolo libri 4')</span></td>
+ -- Sermones de symbolo (serm. 1--3)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermones de symbolo (serm. 1--3)')" >SS2.276 (`A. de symbolo libri 4')</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Class-marks reconstructed from Betson's Index and from erasure</td>
 
 </tr>
@@ -1340,62 +1344,62 @@ catechumenos</i> (<i>CPL</i> 309) as `de simbolo libri quatuor'.]
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry">B13.43g</span></td>
+ -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de tempore barbarico (serm. 11)')" >B13.43g</span></td>
 <td class="catalogue_name">BENEDICTINES: THE SHORTER CATALOGUES: Bury: Catalogue, late 12th cent., and additions</td>
 
 </tr>
 <tr class="catalogue_entry">
-<td class="catalogue_entry_code"><a href="/mlgb/book/176/"  title="Quodvultdeus [{+}453], bishop of Carthage
+<td class="catalogue_entry_code"><a href="{% if editable %}/e{% endif %}/mlgb/book/176/"  title="Quodvultdeus [{+}453], bishop of Carthage
  -- Sermo de tempore barbarico (serm. 11): full details of book"  class="link_from_index_to_book">BP21.*16d</a></td>
 <td class="catalogue_name">BENEDICTINES: Peterborough: Catalogue, late 14th cent.</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry">K1.41 (attrib. Augustine) = K1.457</span></td>
+ -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de tempore barbarico (serm. 11)')" >K1.41 (attrib. Augustine) = K1.457</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE: Catalogus, c. 1360</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry">K1.457 (`supra in B')</span></td>
+ -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de tempore barbarico (serm. 11)')" >K1.457 (`supra in B')</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE: Catalogus, c. 1360</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry">R1.173 (`de cursu barbarorum in Africa uel de tempore barbarico', 
+ -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de tempore barbarico (serm. 11)')" >R1.173 (`de cursu barbarorum in Africa uel de tempore barbarico', 
    8 copies)</span></td>
 <td class="catalogue_name">REGISTRUM ANGLIE</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry">SS1.338f</span></td>
+ -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de tempore barbarico (serm. 11)')" >SS1.338f</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry">SS1.864l</span></td>
+ -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de tempore barbarico (serm. 11)')" >SS1.864l</span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry">SS1.1199<sup>i</sup></span></td>
+ -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de tempore barbarico (serm. 11)')" >SS1.1199<sup>i</sup></span></td>
 <td class="catalogue_name">BRIGITTINES: Syon: Registrum of the library of the Brethren, c. 1500-c. 1524</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry">UC3.*146<sup>x</sup></span></td>
+ -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de tempore barbarico (serm. 11)')" >UC3.*146<sup>x</sup></span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: University: Register, 1473</td>
 
 </tr>
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry">UC48.*101<sup>x</sup></span></td>
+ -- Sermo de tempore barbarico (serm. 11)" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de tempore barbarico (serm. 11)')" >UC48.*101<sup>x</sup></span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: Peterhouse: Catalogue, 24 Dec. 1418</td>
 
 </tr>
@@ -1410,7 +1414,7 @@ catechumenos</i> (<i>CPL</i> 309) as `de simbolo libri quatuor'.]
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quodvultdeus [{+}453], bishop of Carthage
- -- Sermo de cantico Isaiae" class="index_catalogue_entry">K1.511</span></td>
+ -- Sermo de cantico Isaiae" class="index_catalogue_entry"  onclick="alert('Quodvultdeus [{+}453], bishop of Carthage  -- Sermo de cantico Isaiae')" >K1.511</span></td>
 <td class="catalogue_name">HENRY DE KIRKESTEDE: Catalogus, c. 1360</td>
 
 </tr>
@@ -1435,7 +1439,7 @@ and masters of the University of Paris concerning the Schism</span>
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Quoniam fideles (25 August 1395), an encyclical letter from the chancellor 
-and masters of the University of Paris concerning the Schism" class="index_catalogue_entry">UO72.6a (`diuersa scripta doctoris Parisius et uniuersitatis Oxon' de
+and masters of the University of Paris concerning the Schism" class="index_catalogue_entry"  onclick="alert('Quoniam fideles (25 August 1395), an encyclical letter from the chancellor  and masters of the University of Paris concerning the Schism')" >UO72.6a (`diuersa scripta doctoris Parisius et uniuersitatis Oxon' de
    sismate')</span></td>
 <td class="catalogue_name">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</td>
 
@@ -1445,6 +1449,9 @@ and masters of the University of Paris concerning the Schism" class="index_catal
 </ul><!-- end list of books for one author -->
 
 </li><!-- end outerhead list item --></ul><!-- end tree -->
+</div><!-- end div class "index" -->
 {% endblock %}
 {% block search %}
+{% endblock %}
+{% block useful_links %}
 {% endblock %}
