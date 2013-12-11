@@ -2,7 +2,7 @@
 {% block title %}
 <title>MLGB3 Author/Title Index</title>
 {% endblock %}
-{% block maincontent %}
+{% block treeview %}<script type="text/javascript">    $(function() {        $("#tree").treeview({            collapsed: true,            animated: "medium",            control:"#sidetreecontrol",            prerendered: false,            persist: "location"        });    })</script>{% endblock %}{% block maincontent %}
 <h2>Author/Title Index: K</h2>
 <div class="letterlinks"><a href="/authortitle/browse/A/">A</a>
 <span class="spacer"> </span><a href="/authortitle/browse/B/">B</a>
@@ -28,17 +28,24 @@
 <span class="spacer"> </span><a href="/authortitle/browse/W/">W</a>
 <span class="spacer"> </span><a href="/authortitle/browse/X/">X</a>
 <span class="spacer"> </span><a href="/authortitle/browse/Z/">Z</a>
+</div><div id="sidetreecontrol">
+<a href="?#">Collapse All</a> | <a href="?#">Expand All</a>
 </div>
-<br>
-<h3 class="index_entry"><i>Kalendar of Shepherdes</i>, tr. from <i>Le compost et Kalendrier des 
-bergeres</i></h3>: pr. by R. Pynson, London 1506 (<i>STC</i> 22408), &amp;c.
+<ul class="treeview" id="tree">
 
-<br>
 
+<li class="expandable outerhead">
+<div class="hitarea expandable-hitarea"></div>
+<span class="outerhead index_entry" title="expand/collapse this section"><i>Kalendar of Shepherdes</i>, tr. from <i>Le compost et Kalendrier des 
+bergeres</i></span>
+: pr. by R. Pynson, London 1506 (<i>STC</i> 22408), &amp;c.
+
+<br><span class="totals">
+2 catalogue entries.</span>
 <ul>
 <li>
 <table class="catalogue_entries">
-<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue where found</td></tr>
+<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Kalendar of Shepherdes, tr. from Le compost et Kalendrier des 
@@ -53,20 +60,24 @@ bergeres" class="index_catalogue_entry">C7.&para;12</span></td>
 
 </tr>
 </table>
-</li>
-</ul>
+</li><!-- end of one book -->
+</ul><!-- end list of books for one author -->
 
-<br>
-<h3 class="index_entry">Khalid []
-</h3>
-<br>
+</li><!-- end outerhead list item -->
 
+<li class="expandable outerhead">
+<div class="hitarea expandable-hitarea"></div>
+<span class="outerhead index_entry" title="expand/collapse this section">Khalid []
+</span>
+
+<br><span class="totals">
+1 catalogue entry (1 book).</span>
 <ul>
 <li><i>Quaestiones et responsiones</i>, Latin tr.: unpr.; Singer 67;
 Thorndike/Kibre 882.
 
 <table class="catalogue_entries">
-<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue where found</td></tr>
+<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Khalid []
@@ -75,8 +86,10 @@ Thorndike/Kibre 882.
 
 </tr>
 </table>
-</li>
-</ul>
+</li><!-- end of one book -->
+</ul><!-- end list of books for one author -->
+
+</li><!-- end outerhead list item --></ul><!-- end tree -->
 {% endblock %}
 {% block search %}
 {% endblock %}

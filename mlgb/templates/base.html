@@ -26,6 +26,7 @@
 <link rel="stylesheet" href="/mlgb/media/css/jquery.autocomplete.css" type="text/css" />
 <script type="text/javascript" src="/mlgb/media/js/jquery.autocomplete.js"></script>
 
+{% block treeview %}
 <script type="text/javascript">
     $(function() {
         $("#tree").treeview({
@@ -37,6 +38,7 @@
         });
     })
 </script>
+{% endblock %}
 
 <script type="text/javascript">
 function jsChangeSearch( parmName, parmVal ) {

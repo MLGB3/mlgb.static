@@ -2,7 +2,7 @@
 {% block title %}
 <title>MLGB3 Author/Title Index</title>
 {% endblock %}
-{% block maincontent %}
+{% block treeview %}<script type="text/javascript">    $(function() {        $("#tree").treeview({            collapsed: true,            animated: "medium",            control:"#sidetreecontrol",            prerendered: false,            persist: "location"        });    })</script>{% endblock %}{% block maincontent %}
 <h2>Author/Title Index: X</h2>
 <div class="letterlinks"><a href="/authortitle/browse/A/">A</a>
 <span class="spacer"> </span><a href="/authortitle/browse/B/">B</a>
@@ -28,17 +28,24 @@
 <span class="spacer"> </span><a href="/authortitle/browse/W/">W</a>
 <span class="spacer"> </span><a href="/authortitle/browse/X/">X</a>
 <span class="spacer"> </span><a href="/authortitle/browse/Z/">Z</a>
+</div><div id="sidetreecontrol">
+<a href="?#">Collapse All</a> | <a href="?#">Expand All</a>
 </div>
-<br>
-<h3 class="index_entry">Xenocrates of Chalcedon [<i>c</i>396&ndash;<i>c</i>314 BC]
-</h3>
-<br>
+<ul class="treeview" id="tree">
 
+
+<li class="expandable outerhead">
+<div class="hitarea expandable-hitarea"></div>
+<span class="outerhead index_entry" title="expand/collapse this section">Xenocrates of Chalcedon [<i>c</i>396&ndash;<i>c</i>314 BC]
+</span>
+
+<br><span class="totals">
+1 catalogue entry (1 book).</span>
 <ul>
 <li><i>De morte</i>, tr. Marsilio Ficino: pr. Venice 1497 (Goff J216), &amp;c.
 
 <table class="catalogue_entries">
-<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue where found</td></tr>
+<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Xenocrates of Chalcedon [c396--c314 {sc}BC{sc}]
@@ -47,20 +54,24 @@
 
 </tr>
 </table>
-</li>
-</ul>
+</li><!-- end of one book -->
+</ul><!-- end list of books for one author -->
 
-<br>
-<h3 class="index_entry">Xenophon [428/7&ndash;354 BC]
-</h3>
-<br>
+</li><!-- end outerhead list item -->
 
+<li class="expandable outerhead">
+<div class="hitarea expandable-hitarea"></div>
+<span class="outerhead index_entry" title="expand/collapse this section">Xenophon [428/7&ndash;354 BC]
+</span>
+
+<br><span class="totals">
+16 catalogue entries (8 books).</span>
 <ul>
 <li><i>Opera</i>, in Greek: pr. Florence 1516, &amp;c.; ed. E. C. Marchant,
 OCT (1900&ndash;1920).
 
 <table class="catalogue_entries">
-<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue where found</td></tr>
+<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Xenophon [428/7--354 {sc}BC{sc}]
@@ -87,11 +98,11 @@ OCT (1900&ndash;1920).
 
 </tr>
 </table>
-</li><li><i>Xenophontis omissa</i>, ed. Georgius Gemistus Plethon: pr. Venice
+</li><!-- end of one book --><li><i>Xenophontis omissa</i>, ed. Georgius Gemistus Plethon: pr. Venice
 1503 [<i>recte c.</i> 1525] (Adams P1530).
 
 <table class="catalogue_entries">
-<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue where found</td></tr>
+<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Xenophon [428/7--354 {sc}BC{sc}]
@@ -102,11 +113,11 @@ OCT (1900&ndash;1920).
 
 </tr>
 </table>
-</li><li><i>Anabasis</i>, French tr. from the Latin of Jan Lascaris by Claude 
+</li><!-- end of one book --><li><i>Anabasis</i>, French tr. from the Latin of Jan Lascaris by Claude 
 de Seyssel: &para;*pr. Paris 1529 (Moreau, 3. 1954); Chavy, 1466.
 
 <table class="catalogue_entries">
-<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue where found</td></tr>
+<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Xenophon [428/7--354 {sc}BC{sc}]
@@ -116,11 +127,11 @@ de Seyssel" class="index_catalogue_entry">H2.&para;*189 (`expeditio Cyri minoris
 
 </tr>
 </table>
-</li><li><i>Cyropaedia</i>, French tr. by Vasco de Lucena: part ed. D. 
+</li><!-- end of one book --><li><i>Cyropaedia</i>, French tr. by Vasco de Lucena: part ed. D. 
 Gallet-Guerne (Geneva 1974); Chavy, 1466.
 
 <table class="catalogue_entries">
-<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue where found</td></tr>
+<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Xenophon [428/7--354 {sc}BC{sc}]
@@ -135,10 +146,10 @@ Gallet-Guerne (Geneva 1974); Chavy, 1466.
 
 </tr>
 </table>
-</li><li><i>Cyropaedia</i>, French tr. by Jacques de Vintimille: pr. Paris 1547, &amp;c.
+</li><!-- end of one book --><li><i>Cyropaedia</i>, French tr. by Jacques de Vintimille: pr. Paris 1547, &amp;c.
 
 <table class="catalogue_entries">
-<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue where found</td></tr>
+<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Xenophon [428/7--354 {sc}BC{sc}]
@@ -147,11 +158,11 @@ Gallet-Guerne (Geneva 1974); Chavy, 1466.
 
 </tr>
 </table>
-</li><li>$sp$$`Ellhnik&aacute;$rm$$: pr. Venice 1503 &amp;c.; ed. E. C. Marchant, 
+</li><!-- end of one book --><li>$sp$$`Ellhnik&aacute;$rm$$: pr. Venice 1503 &amp;c.; ed. E. C. Marchant, 
 OCT (1900).
 
 <table class="catalogue_entries">
-<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue where found</td></tr>
+<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Xenophon [428/7--354 {sc}BC{sc}]
@@ -160,12 +171,12 @@ OCT (1900).
 
 </tr>
 </table>
-</li><li><i>Hiero</i>, Latin tr. by Leonardo Bruni: pr. [Venice, ?1471] (Goff X6),
+</li><!-- end of one book --><li><i>Hiero</i>, Latin tr. by Leonardo Bruni: pr. [Venice, ?1471] (Goff X6),
 &amp;c.; preface, ed. H. Baron, <i>Leonardo Bruni</i> (Berlin 1928), 100&ndash;101; <i>CTC</i>
 7. 148&ndash;55.
 
 <table class="catalogue_entries">
-<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue where found</td></tr>
+<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Xenophon [428/7--354 {sc}BC{sc}]
@@ -192,7 +203,7 @@ OCT (1900).
 
 </tr>
 </table>
-</li><li>Year Books, comprising notes made in the courts at Westminster of the
+</li><!-- end of one book --><li>Year Books, comprising notes made in the courts at Westminster of the
 arguments made by counsel and points of law pronounced by judges, circulated
 among students in the inns of court from at least the early 14th cent. The
 printing of year books had begun by the 1480s, though the earliest editions 
@@ -205,7 +216,7 @@ from Edward III's reign onwards begins in the early 16th cent. (<i>STC</i>
 9551&ndash;9967).
 
 <table class="catalogue_entries">
-<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue where found</td></tr>
+<tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <tr class="catalogue_entry">
 <td class="catalogue_entry_code"><span title="Xenophon [428/7--354 {sc}BC{sc}]
@@ -228,8 +239,10 @@ to survive are not contemporary with the terms reported" class="index_catalogue_
 
 </tr>
 </table>
-</li>
-</ul>
+</li><!-- end of one book -->
+</ul><!-- end list of books for one author -->
+
+</li><!-- end outerhead list item --></ul><!-- end tree -->
 {% endblock %}
 {% block search %}
 {% endblock %}

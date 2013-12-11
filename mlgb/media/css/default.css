@@ -555,6 +555,10 @@ div.category, div.treeview, div.browse {
   max-width: 740px;
 }
 
+ul#tree {
+  margin-top: 10px;
+}
+
 div.category {
   width: 700px;
 }
