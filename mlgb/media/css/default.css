@@ -789,6 +789,8 @@ select#order_by2 {
 
 /* ================= Index ================= */
 
+div.index { width: 640px; }
+
 table.catalogue_entries { margin-top: 10px; 
                           margin-bottom: 20px; 
                           border-bottom-style: dotted; 
