@@ -111,6 +111,14 @@
     {% endif %}
 
 
+    {% if object.medieval_catalogue_notes %}
+    <tr>
+    <td id="mlgbdetailtext">Medieval Catalogue Notes:</td>
+    <td id="mlgbdetailvalue">{{object.medieval_catalogue_notes|fix_dashes}}</td>
+    </tr>
+    {% endif %}
+
+
     {% if object.ownership %}
     <tr>
     <td id="mlgbdetailtext">Ownership:</td>
