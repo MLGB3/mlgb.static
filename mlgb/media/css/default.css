@@ -475,22 +475,27 @@ div#maincontent {
   margin-left:20px;
 }
 
-#mlgbdetailtext {
-  text-transform:uppercase;
-  text-align:left;
+#mlgbdetail td {
   vertical-align:top;
-  font-weight:bold;
-  width:17%;
+  padding-top: 10px;
 }
 
-#mlgbdetailvalue {
+.mlgbdetailtext {
+  text-transform:uppercase;
+  text-align:left;
+  font-weight:bold;
+  width:17%;
+  padding-right: 10px;
+}
+
+.mlgbdetailvalue {
   margin-left:10px;
   color:#333;
 }
 
-#mlgbdetailvalue p {
+.mlgbdetailvalue p, .contains p {
   margin:0;
-  margin-top:5px;
+  margin-bottom:5px;
 }
 
 #mlgbdetail ul {

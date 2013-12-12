@@ -21,33 +21,33 @@
   <table id="mlgbdetail">
 
     <tr>
-    <td id="mlgbdetailtext">Provenance:</td>
-    <td id="mlgbdetailvalue">{{object.provenance|fix_dashes}}</td>
+    <td class="mlgbdetailtext">Provenance:</td>
+    <td class="mlgbdetailvalue">{{object.provenance|fix_dashes}}</td>
     </tr>
 
     <tr>
-    <td id="mlgbdetailtext">Location:</td>
-    <td id="mlgbdetailvalue">
+    <td class="mlgbdetailtext">Location:</td>
+    <td class="mlgbdetailvalue">
     {{object.modern_location_2|fix_dashes}}, {{object.modern_location_1|fix_dashes}} 
     </td>
     </tr>
 
     {% if object.shelfmark_1 or object.shelfmark_2 %}
     <tr>
-    <td id="mlgbdetailtext">Shelfmark:</td>
-    <td id="mlgbdetailvalue">{{object.shelfmark_1|fix_dashes}} {{object.shelfmark_2|fix_dashes}}</td>
+    <td class="mlgbdetailtext">Shelfmark:</td>
+    <td class="mlgbdetailvalue">{{object.shelfmark_1|fix_dashes}} {{object.shelfmark_2|fix_dashes}}</td>
     </tr>
     {% endif %}
 
     <tr>
-    <td id="mlgbdetailtext">Author/Title:</td>
-    <td id="mlgbdetailvalue">{{ object.author_title|fix_dashes }}</td>
+    <td class="mlgbdetailtext">Author/Title:</td>
+    <td class="mlgbdetailvalue">{{ object.author_title|fix_dashes }}</td>
     </tr>
 
     {% if object.evidence %}
     <tr>
-    <td id="mlgbdetailtext">Type of evidence:</td>
-    <td id="mlgbdetailvalue"><i>{{object.evidence}}</i> 
+    <td class="mlgbdetailtext">Type of evidence:</td>
+    <td class="mlgbdetailvalue"><i>{{object.evidence}}</i> 
     {{evidence_desc}}</td>
     </tr>
     {% endif %}
@@ -66,16 +66,16 @@
 
     {% if object.evidence_notes %}
     <tr>
-    <td id="mlgbdetailtext">Notes on evidence:</td>
-    <td id="mlgbdetailvalue">{{object.evidence_notes|fix_dashes}}</td>
+    <td class="mlgbdetailtext">Notes on evidence:</td>
+    <td class="mlgbdetailvalue">{{object.evidence_notes|fix_dashes}}</td>
     </tr>
     {% endif %}
 
 
     {% for contains in object.contains_set.all %}
     <tr>
-    <td id="mlgbdetailtext">Contents of the book:</td>
-    <td id="contains">
+    <td class="mlgbdetailtext">Contents of the book:</td>
+    <td class="contains">
     {{ contains.contains|fix_dashes }}
     {% if contains.urls %}
     <a href="{{ contains.urls }}">
@@ -89,56 +89,56 @@
 
     {% if object.date %}
     <tr>
-    <td id="mlgbdetailtext">Date:</td>
-    <td id="mlgbdetailvalue">{{object.date|fix_dashes}}</td>
+    <td class="mlgbdetailtext">Date:</td>
+    <td class="mlgbdetailvalue">{{object.date|fix_dashes}}</td>
     </tr>
     {% endif %}
 
 
     {% if object.pressmark %}
     <tr>
-    <td id="mlgbdetailtext">Pressmark:</td>
-    <td id="mlgbdetailvalue">{{object.pressmark|fix_dashes}}</td>
+    <td class="mlgbdetailtext">Pressmark:</td>
+    <td class="mlgbdetailvalue">{{object.pressmark|fix_dashes}}</td>
     </tr>
     {% endif %}
 
 
     {% if object.medieval_catalogue %}
     <tr>
-    <td id="mlgbdetailtext">Medieval Catalogue:</td>
-    <td id="mlgbdetailvalue">{{object.medieval_catalogue|fix_dashes}}</td>
+    <td class="mlgbdetailtext">Medieval Catalogue:</td>
+    <td class="mlgbdetailvalue">{{object.medieval_catalogue|fix_dashes}}</td>
     </tr>
     {% endif %}
 
 
     {% if object.medieval_catalogue_notes %}
     <tr>
-    <td id="mlgbdetailtext">Medieval Catalogue Notes:</td>
-    <td id="mlgbdetailvalue">{{object.medieval_catalogue_notes|fix_dashes}}</td>
+    <td class="mlgbdetailtext">Medieval Catalogue Notes:</td>
+    <td class="mlgbdetailvalue">{{object.medieval_catalogue_notes|fix_dashes}}</td>
     </tr>
     {% endif %}
 
 
     {% if object.ownership %}
     <tr>
-    <td id="mlgbdetailtext">Ownership:</td>
-    <td id="mlgbdetailvalue">{{object.ownership|fix_dashes}}</td>
+    <td class="mlgbdetailtext">Ownership:</td>
+    <td class="mlgbdetailvalue">{{object.ownership|fix_dashes}}</td>
     </tr>
     {% endif %}
 
 
     {% if object.notes %}
     <tr>
-    <td id="mlgbdetailtext">Notes:</td>
-    <td id="mlgbdetailvalue">{{object.notes|fix_dashes}}</td>
+    <td class="mlgbdetailtext">Notes:</td>
+    <td class="mlgbdetailvalue">{{object.notes|fix_dashes}}</td>
     </tr>
     {% endif %}
 
 
     {% if object.pr_bk %}
     <tr>
-    <td id="mlgbdetailtext"></td>
-    <td id="mlgbdetailvalue">Printed Book</td>
+    <td class="mlgbdetailtext"></td>
+    <td class="mlgbdetailvalue">Printed Book</td>
     </tr>
     {% endif %}
 
