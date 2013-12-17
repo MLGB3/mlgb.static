@@ -801,7 +801,8 @@ table.catalogue_entries { margin-top: 10px;
                           border-bottom-style: dotted; 
                           border-bottom-width: 1px; 
                           border-bottom-color: #44687d; /* teal */
-                          width: 90%;
+                          width: 85%;
+                          margin-left: 5%;
                         }
 
 tr.catalogue_entry_head td { font-size: 0.9em;
