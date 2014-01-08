@@ -144,7 +144,11 @@ MLGB3: Medieval Libraries of Great Britain III
 
     <li id="index_listitem"
     {% if pagename == "index" %} class="active" {% endif %}
-    ><a id="index_link" href="{% if editable %}/e{% endif %}/authortitle/browse/">Author/Title Index</a></li>
+    ><a id="index_link" href="{% if editable %}/e{% endif %}/authortitle/browse/">Authors/Titles</a></li>
+
+    <li id="cats_listitem"
+    {% if pagename == "cats" %} class="active" {% endif %}
+    ><a id="cats_link" href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/">Medieval catalogues</a></li>
 
     <li id="about_listitem"
     {% if pagename == "about" %} class="active" {% endif %}
