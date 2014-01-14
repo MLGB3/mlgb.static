@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}
+<title>MLGB3 List of Medieval Catalogues</title>
+{% endblock %}
+{% block maincontent %}
+<h2>List of medieval catalogues</h2>
+<p><a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues" title="Back to list of medieval catalogues">Medieval catalogues</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/SH" title="SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions">SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions</a>  &gt; Kepier hospital</p><div class="index">
+
+<ul class="AAA" id="catalogue_tree">
+
+
+<li class="outerhead AAA"><span class="outerhead AAA">
+SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions</span>
+
+<ul><!-- start BBB list -->
+<li class="innerhead BBB"><span class="innerhead BBB">
+Kepier hospital</span>
+
+<ul><!-- start CCC list -->
+<li><!-- start CCC list item -->
+<a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/SH17"  title="View details of catalogue SH17">SH17 Bequest by Robert Wycliffm 8 September 1423 (1)</a>
+
+</li><!-- end CCC list item -->
+<li><!-- start CCC list item -->
+<a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/SH18"  title="View details of catalogue SH18">SH18 Inventory of goods, 7 December 1507 (3)</a>
+
+</li><!-- end CCC list item -->
+</ul><!-- end CCC list -->
+</li><!-- end BBB list item -->
+</ul><!-- end BBB list -->
+
+</li><!-- end AAA outerhead list item --></ul><!-- end tree AAA -->
+</div><!-- end div class "index" -->
+<br>
+<em>2 catalogues found.</em>
+<p>
+All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications (PDF)</a> by Professor Richard Sharpe.
+</p>
+{% endblock %}
+{% block search %}
+{% endblock %}
+{% block useful_links %}
+{% endblock %}

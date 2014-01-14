@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}
+<title>MLGB3 List of Medieval Catalogues</title>
+{% endblock %}
+{% block maincontent %}
+<h2>List of medieval catalogues</h2>
+<p><a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues" title="Back to list of medieval catalogues">Medieval catalogues</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/SH" title="SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions">SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions</a>  &gt; Norwich, St Giles</p><div class="index">
+
+<ul class="AAA" id="catalogue_tree">
+
+
+<li class="outerhead AAA"><span class="outerhead AAA">
+SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions</span>
+
+<ul><!-- start BBB list -->
+<li class="innerhead BBB"><span class="innerhead BBB">
+Norwich, St Giles</span>
+
+<ul><!-- start CCC list -->
+<li><!-- start CCC list item -->
+SH54 Bequest by John Smith, 11 June 1489 (0)
+</li><!-- end CCC list item -->
+<li><!-- start CCC list item -->
+SH55 List of expenditure on books, 1512-13 (0)
+</li><!-- end CCC list item -->
+</ul><!-- end CCC list -->
+</li><!-- end BBB list item -->
+</ul><!-- end BBB list -->
+
+</li><!-- end AAA outerhead list item --></ul><!-- end tree AAA -->
+</div><!-- end div class "index" -->
+<br>
+<em>2 catalogues found.</em>
+<p>
+All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications (PDF)</a> by Professor Richard Sharpe.
+</p>
+{% endblock %}
+{% block search %}
+{% endblock %}
+{% block useful_links %}
+{% endblock %}

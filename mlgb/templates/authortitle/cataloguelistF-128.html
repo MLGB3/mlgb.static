@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}
+<title>MLGB3 List of Medieval Catalogues</title>
+{% endblock %}
+{% block maincontent %}
+<h2>List of medieval catalogues</h2>
+<p><a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues" title="Back to list of medieval catalogues">Medieval catalogues</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/F" title="NEW FRIARS">NEW FRIARS</a>  &gt; Lincoln-Dominican</p><div class="index">
+
+<ul class="AAA" id="catalogue_tree">
+
+
+<li class="outerhead AAA"><span class="outerhead AAA">
+NEW FRIARS</span>
+
+<ul><!-- start BBB list -->
+<li class="innerhead BBB"><span class="innerhead BBB">
+Lincoln-Dominican</span>
+
+<ul><!-- start CCC list -->
+<li><!-- start CCC list item -->
+<a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/F22"  title="View details of catalogue F22">F22 Lincolnshire list, 1528 (24)</a>
+
+</li><!-- end CCC list item -->
+</ul><!-- end CCC list -->
+</li><!-- end BBB list item -->
+</ul><!-- end BBB list -->
+
+</li><!-- end AAA outerhead list item --></ul><!-- end tree AAA -->
+</div><!-- end div class "index" -->
+<br>
+<em>1 catalogue found.</em>
+<p>
+All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications (PDF)</a> by Professor Richard Sharpe.
+</p>
+{% endblock %}
+{% block search %}
+{% endblock %}
+{% block useful_links %}
+{% endblock %}

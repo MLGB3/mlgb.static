@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}
+<title>MLGB3 List of Medieval Catalogues</title>
+{% endblock %}
+{% block maincontent %}
+<h2>List of medieval catalogues</h2>
+<p><a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues" title="Back to list of medieval catalogues">Medieval catalogues</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/UO" title="UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD">UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</a>  &gt; Exeter College</p><div class="index">
+
+<ul class="AAA" id="catalogue_tree">
+
+
+<li class="outerhead AAA"><span class="outerhead AAA">
+UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD</span>
+
+<ul><!-- start BBB list -->
+<li class="innerhead BBB"><span class="innerhead BBB">
+Exeter College</span>
+
+<ul><!-- start CCC list -->
+<li><!-- start CCC list item -->
+<a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/UO34"  title="View details of catalogue UO34">UO34 Gift of books from William Reed, bishop of Chichester, 22 October 1374 (24)</a>
+
+</li><!-- end CCC list item -->
+<li><!-- start CCC list item -->
+<a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/UO35"  title="View details of catalogue UO35">UO35 Indenture recording delivery of books from Bishop William Reed, 8 Aug. 1400 (50)</a>
+
+</li><!-- end CCC list item -->
+<li><!-- start CCC list item -->
+<a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/UO36"  title="View details of catalogue UO36">UO36 Gift of books by Henry Boner, 9 April 1427 (3)</a>
+
+</li><!-- end CCC list item -->
+</ul><!-- end CCC list -->
+</li><!-- end BBB list item -->
+</ul><!-- end BBB list -->
+
+</li><!-- end AAA outerhead list item --></ul><!-- end tree AAA -->
+</div><!-- end div class "index" -->
+<br>
+<em>3 catalogues found.</em>
+<p>
+All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications (PDF)</a> by Professor Richard Sharpe.
+</p>
+{% endblock %}
+{% block search %}
+{% endblock %}
+{% block useful_links %}
+{% endblock %}
