@@ -717,7 +717,7 @@ div.browseresults div.book_row_1 div.first2cols  {
   width: 45px;
 }
 
-div.browse_concertina button {
+div.browse_concertina button, button.concertina {
   padding: 0px;
   height: 20px;
   width: 15px;
@@ -796,6 +796,45 @@ select#order_by2 {
 /* ================= Index ================= */
 
 div.index { width: 640px; }
+
+ul.authortreeview, .authortreeview ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none outside none;
+}
+
+ul.authortreeview {
+  margin-top: 15px;
+} 
+
+.authortreeview ul {
+  margin-top: 5px;
+}
+
+ul.authortreeview li {
+  margin-bottom: 10px;
+}
+
+ul.authortreeview li span.outerhead, 
+ul.authortreeview li span.outer_subhead, 
+ul.authortreeview li ul li span.innerhead,
+span.like_a_link {
+  cursor: pointer;
+}
+
+ul.authortreeview li span.outerhead:hover, 
+ul.authortreeview li span.outer_subhead:hover, 
+ul.authortreeview li ul li span.innerhead:hover,
+span.like_a_link:hover {
+  color: #FF0000;
+}
+
+span.like_a_link {
+  text-decoration: underline;
+}
+span.like_a_link:hover {
+  text-decoration: none;
+}
 
 table.catalogue_entries { margin-top: 10px; 
                           margin-bottom: 20px; 

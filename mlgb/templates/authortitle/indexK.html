@@ -2,7 +2,49 @@
 {% block title %}
 <title>MLGB3 Author/Title Index</title>
 {% endblock %}
-{% block treeview %}<script type="text/javascript">    $(function() {        $("#tree").treeview({            collapsed: true,            animated: "medium",            control:"#sidetreecontrol",            prerendered: false,            persist: "location"        });    })</script>{% endblock %}{% block maincontent %}
+{% block treeview %}
+
+
+ <script type="text/javascript">
+ function expand_or_collapse( display_id, action ) {
+   var button_id = "concertina" + display_id;
+   var the_button = document.getElementById( button_id );
+   var ul_id = "entry" + display_id + "_ul";
+   var the_ul = document.getElementById( ul_id );
+   if( action == "+" ) {
+     the_ul.style.display = "block";
+     the_button.value = "-";
+     the_button.innerHTML = "-";
+   }
+   else {
+     the_ul.style.display = "none";
+     the_button.value = "+";
+     the_button.innerHTML = "+";
+   }
+ }
+</script>
+
+
+
+
+
+<script type="text/javascript">
+  var idsOnPage = new Array( '1980', '1981' );
+  function expandAllEntries() {
+    for (var i = 0; i < idsOnPage.length; i++ ) {
+      expand_or_collapse( idsOnPage[i], "+" );
+    }
+  }
+  function collapseAllEntries() {
+    for (var i = 0; i < idsOnPage.length; i++ ) {
+      expand_or_collapse( idsOnPage[i], "-" );
+    }
+  }
+</script>
+
+
+{% endblock %}
+{% block maincontent %}
 <h2>Author/Title Index: K</h2>
 <p>
 All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications (PDF)</a> by Professor Richard Sharpe.
@@ -35,23 +77,27 @@ All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf
 
 <div class="index">
 
-<div id="sidetreecontrol">
-<a href="?#">Collapse All</a> | <a href="?#">Expand All</a>
+<div id="authortreecontrol">
+<span class="like_a_link" onclick="collapseAllEntries()">Collapse All</span>  | <span class="like_a_link" onclick="expandAllEntries()">Expand All</span> 
 </div>
-<ul class="treeview" id="tree">
+<ul class="authortreeview" id="authortree">
 
 
 <!-- Start new entry "<i>Kalendar of Shepherdes</i>, tr. from <i>Le compost et Kalendrier des 
 bergeres</i>", entry ID 1980 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section"><i>Kalendar of Shepherdes</i>, tr. from <i>Le compost et Kalendrier des 
+<a name="entry1980_anchor"></a>
+<li class="outerhead">
+<button name="concertina1980" id="concertina1980"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '1980', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '1980', getElementById( 'concertina1980' ).value )"><i>Kalendar of Shepherdes</i>, tr. from <i>Le compost et Kalendrier des 
 bergeres</i></span>
-: pr. by R. Pynson, London 1506 (<i>STC</i> 22408), &amp;c.
 
 <br><span class="totals">
-2 catalogue entries.</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '1980', getElementById( 'concertina1980' ).value )">2 catalogue entries</span>
+
+<ul id="entry1980_ul" style="display:none">
+<li>pr. by R. Pynson, London 1506 (<i>STC</i> 22408), &amp;c.
+</li>
 
 <li><!-- start entry ID 1980, book 1 -->
 
@@ -85,14 +131,16 @@ bergeres" class="index_catalogue_entry"  onclick="alert('Kalendar of Shepherdes,
 bergeres</i>) -->
 
 <!-- Start new entry "Khalid []", entry ID 1981 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Khalid []
-</span>
+<a name="entry1981_anchor"></a>
+<li class="outerhead">
+<button name="concertina1981" id="concertina1981"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '1981', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '1981', getElementById( 'concertina1981' ).value )">Khalid []</span>
 
 <br><span class="totals">
-1 catalogue entry (1 book).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '1981', getElementById( 'concertina1981' ).value )">1 catalogue entry (1 book)</span>
+
+<ul id="entry1981_ul" style="display:none">
 
 <li><!-- start entry ID 1981, book 1 -->
 <i>Quaestiones et responsiones</i>, Latin tr.: unpr.; Singer 67;

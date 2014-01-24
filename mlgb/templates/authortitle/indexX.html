@@ -2,7 +2,49 @@
 {% block title %}
 <title>MLGB3 Author/Title Index</title>
 {% endblock %}
-{% block treeview %}<script type="text/javascript">    $(function() {        $("#tree").treeview({            collapsed: true,            animated: "medium",            control:"#sidetreecontrol",            prerendered: false,            persist: "location"        });    })</script>{% endblock %}{% block maincontent %}
+{% block treeview %}
+
+
+ <script type="text/javascript">
+ function expand_or_collapse( display_id, action ) {
+   var button_id = "concertina" + display_id;
+   var the_button = document.getElementById( button_id );
+   var ul_id = "entry" + display_id + "_ul";
+   var the_ul = document.getElementById( ul_id );
+   if( action == "+" ) {
+     the_ul.style.display = "block";
+     the_button.value = "-";
+     the_button.innerHTML = "-";
+   }
+   else {
+     the_ul.style.display = "none";
+     the_button.value = "+";
+     the_button.innerHTML = "+";
+   }
+ }
+</script>
+
+
+
+
+
+<script type="text/javascript">
+  var idsOnPage = new Array( '3815', '3816' );
+  function expandAllEntries() {
+    for (var i = 0; i < idsOnPage.length; i++ ) {
+      expand_or_collapse( idsOnPage[i], "+" );
+    }
+  }
+  function collapseAllEntries() {
+    for (var i = 0; i < idsOnPage.length; i++ ) {
+      expand_or_collapse( idsOnPage[i], "-" );
+    }
+  }
+</script>
+
+
+{% endblock %}
+{% block maincontent %}
 <h2>Author/Title Index: X</h2>
 <p>
 All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications (PDF)</a> by Professor Richard Sharpe.
@@ -35,21 +77,23 @@ All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf
 
 <div class="index">
 
-<div id="sidetreecontrol">
-<a href="?#">Collapse All</a> | <a href="?#">Expand All</a>
+<div id="authortreecontrol">
+<span class="like_a_link" onclick="collapseAllEntries()">Collapse All</span>  | <span class="like_a_link" onclick="expandAllEntries()">Expand All</span> 
 </div>
-<ul class="treeview" id="tree">
+<ul class="authortreeview" id="authortree">
 
 
 <!-- Start new entry "Xenocrates of Chalcedon [<i>c</i>396&ndash;<i>c</i>314 BC]", entry ID 3815 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Xenocrates of Chalcedon [<i>c</i>396&ndash;<i>c</i>314 BC]
-</span>
+<a name="entry3815_anchor"></a>
+<li class="outerhead">
+<button name="concertina3815" id="concertina3815"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3815', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3815', getElementById( 'concertina3815' ).value )">Xenocrates of Chalcedon [<i>c</i>396&ndash;<i>c</i>314 BC]</span>
 
 <br><span class="totals">
-1 catalogue entry (1 book).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3815', getElementById( 'concertina3815' ).value )">1 catalogue entry (1 book)</span>
+
+<ul id="entry3815_ul" style="display:none">
 
 <li><!-- start entry ID 3815, book 1 -->
 <i>De morte</i>, tr. Marsilio Ficino: pr. Venice 1497 (Goff J216), &amp;c.
@@ -75,14 +119,16 @@ All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf
 <!-- end entry ID 3815 (Xenocrates of Chalcedon [<i>c</i>396&ndash;<i>c</i>314 BC]) -->
 
 <!-- Start new entry "Xenophon [428/7&ndash;354 BC]", entry ID 3816 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Xenophon [428/7&ndash;354 BC]
-</span>
+<a name="entry3816_anchor"></a>
+<li class="outerhead">
+<button name="concertina3816" id="concertina3816"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3816', getElementById( 'concertina3816' ).value )">Xenophon [428/7&ndash;354 BC]</span>
 
 <br><span class="totals">
-16 catalogue entries (8 books).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3816', getElementById( 'concertina3816' ).value )">16 catalogue entries (8 books)</span>
+
+<ul id="entry3816_ul" style="display:none">
 
 <li><!-- start entry ID 3816, book 1 -->
 <i>Opera</i>, in Greek: pr. Florence 1516, &amp;c.; ed. E. C. Marchant,

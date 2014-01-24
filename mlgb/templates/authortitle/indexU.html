@@ -2,7 +2,49 @@
 {% block title %}
 <title>MLGB3 Author/Title Index</title>
 {% endblock %}
-{% block treeview %}<script type="text/javascript">    $(function() {        $("#tree").treeview({            collapsed: true,            animated: "medium",            control:"#sidetreecontrol",            prerendered: false,            persist: "location"        });    })</script>{% endblock %}{% block maincontent %}
+{% block treeview %}
+
+
+ <script type="text/javascript">
+ function expand_or_collapse( display_id, action ) {
+   var button_id = "concertina" + display_id;
+   var the_button = document.getElementById( button_id );
+   var ul_id = "entry" + display_id + "_ul";
+   var the_ul = document.getElementById( ul_id );
+   if( action == "+" ) {
+     the_ul.style.display = "block";
+     the_button.value = "-";
+     the_button.innerHTML = "-";
+   }
+   else {
+     the_ul.style.display = "none";
+     the_button.value = "+";
+     the_button.innerHTML = "+";
+   }
+ }
+</script>
+
+
+
+
+
+<script type="text/javascript">
+  var idsOnPage = new Array( '3428', '3429', '3431', '3433', '3434', '3435', '3436', '3438', '3439', '3440', '3441', '3442', '3443', '3444', '3445', '3447' );
+  function expandAllEntries() {
+    for (var i = 0; i < idsOnPage.length; i++ ) {
+      expand_or_collapse( idsOnPage[i], "+" );
+    }
+  }
+  function collapseAllEntries() {
+    for (var i = 0; i < idsOnPage.length; i++ ) {
+      expand_or_collapse( idsOnPage[i], "-" );
+    }
+  }
+</script>
+
+
+{% endblock %}
+{% block maincontent %}
 <h2>Author/Title Index: U</h2>
 <p>
 All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications (PDF)</a> by Professor Richard Sharpe.
@@ -35,21 +77,23 @@ All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf
 
 <div class="index">
 
-<div id="sidetreecontrol">
-<a href="?#">Collapse All</a> | <a href="?#">Expand All</a>
+<div id="authortreecontrol">
+<span class="like_a_link" onclick="collapseAllEntries()">Collapse All</span>  | <span class="like_a_link" onclick="expandAllEntries()">Expand All</span> 
 </div>
-<ul class="treeview" id="tree">
+<ul class="authortreeview" id="authortree">
 
 
 <!-- Start new entry "Ubertinus de Casali [1259&ndash;<i>c.</i> 1330]", entry ID 3428 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Ubertinus de Casali [1259&ndash;<i>c.</i> 1330]
-</span>
+<a name="entry3428_anchor"></a>
+<li class="outerhead">
+<button name="concertina3428" id="concertina3428"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3428', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3428', getElementById( 'concertina3428' ).value )">Ubertinus de Casali [1259&ndash;<i>c.</i> 1330]</span>
 
 <br><span class="totals">
-2 catalogue entries (1 book).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3428', getElementById( 'concertina3428' ).value )">2 catalogue entries (1 book)</span>
+
+<ul id="entry3428_ul" style="display:none">
 
 <li><!-- start entry ID 3428, book 1 -->
 <i>Arbor uitae crucifixae Iesus Christi</i>: pr. Venice 1485 (Goff U85).
@@ -84,16 +128,20 @@ All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf
 
 <!-- Start new entry "<i>Vnum ex quatuor</i> most commonly refers to the gospel harmony of Tatian, as
 translated by Victor of Capua", entry ID 3429 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section"><i>Vnum ex quatuor</i> most commonly refers to the gospel harmony of Tatian, as
+<a name="entry3429_anchor"></a>
+<li class="outerhead">
+<button name="concertina3429" id="concertina3429"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3429', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3429', getElementById( 'concertina3429' ).value )"><i>Vnum ex quatuor</i> most commonly refers to the gospel harmony of Tatian, as
 translated by Victor of Capua</span>
-: <i>PL</i> 68. 255&ndash;358; Stegm&uuml;ller <i>Bibl.</i> 1280.
-It is also the title of works by Clement of Lanthony and Zacharias of Besan&ccedil;on.
 
 <br><span class="totals">
-15 catalogue entries.</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3429', getElementById( 'concertina3429' ).value )">15 catalogue entries</span>
+
+<ul id="entry3429_ul" style="display:none">
+<li><i>PL</i> 68. 255&ndash;358; Stegm&uuml;ller <i>Bibl.</i> 1280.
+It is also the title of works by Clement of Lanthony and Zacharias of Besan&ccedil;on.
+</li>
 
 <li><!-- start entry ID 3429, book 1 -->
 
@@ -232,23 +280,24 @@ translated by Victor of Capua" class="index_catalogue_entry"  onclick="alert('Vn
 translated by Victor of Capua) -->
 
 <!-- Start new entry "Uhtred", entry ID 3430 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Uhtred </span>
-&rarr; Uthred of Boldon
+<a name="entry3430_anchor"></a>
+<li class="outerhead">
+<span class="outerhead">Uhtred</span> &rarr; Uthred of Boldon
 
 </li><!-- end outerhead list item -->
 <!-- end entry ID 3430 (Uhtred) -->
 
 <!-- Start new entry "Ulf Birgersson OSS [&dagger;1433]", entry ID 3431 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Ulf Birgersson OSS [&dagger;1433]
-</span>
+<a name="entry3431_anchor"></a>
+<li class="outerhead">
+<button name="concertina3431" id="concertina3431"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3431', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3431', getElementById( 'concertina3431' ).value )">Ulf Birgersson OSS [&dagger;1433]</span>
 
 <br><span class="totals">
-1 catalogue entry (1 book).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3431', getElementById( 'concertina3431' ).value )">1 catalogue entry (1 book)</span>
+
+<ul id="entry3431_ul" style="display:none">
 
 <li><!-- start entry ID 3431, book 1 -->
 <i>Vita Katerinae</i>: ed. T. Lunden (Uppsala 1981); <i>BHL</i> 1710.
@@ -274,23 +323,24 @@ translated by Victor of Capua) -->
 <!-- end entry ID 3431 (Ulf Birgersson OSS [&dagger;1433]) -->
 
 <!-- Start new entry "Ulgerius", entry ID 3432 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Ulgerius </span>
-&rarr; Ogier, Hoger
+<a name="entry3432_anchor"></a>
+<li class="outerhead">
+<span class="outerhead">Ulgerius</span> &rarr; Ogier, Hoger
 
 </li><!-- end outerhead list item -->
 <!-- end entry ID 3432 (Ulgerius) -->
 
 <!-- Start new entry "Domitius Ulpianus [<i>c</i>160&ndash;228]", entry ID 3433 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Domitius Ulpianus [<i>c</i>160&ndash;228]
-</span>
+<a name="entry3433_anchor"></a>
+<li class="outerhead">
+<button name="concertina3433" id="concertina3433"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3433', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3433', getElementById( 'concertina3433' ).value )">Domitius Ulpianus [<i>c</i>160&ndash;228]</span>
 
 <br><span class="totals">
-12 catalogue entries (2 books).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3433', getElementById( 'concertina3433' ).value )">12 catalogue entries (2 books)</span>
+
+<ul id="entry3433_ul" style="display:none">
 
 <li><!-- start entry ID 3433, book 1 -->
 Scholia on Demosthenes: pr. Venice 1503 (Adams U49), &amp;c.; ed. C. 
@@ -418,14 +468,16 @@ M&uuml;ller, <i>Oratores Attici</i> (Paris 1847&ndash;58), 2. 518&ndash;738.
 <!-- end entry ID 3433 (Domitius Ulpianus [<i>c</i>160&ndash;228]) -->
 
 <!-- Start new entry "&lt;&gt;Ulricus Engelberti OP of Strassburg [&dagger; after 1278]", entry ID 3434 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">&lt;&gt;Ulricus Engelberti OP of Strassburg [&dagger; after 1278]
-</span>
+<a name="entry3434_anchor"></a>
+<li class="outerhead">
+<button name="concertina3434" id="concertina3434"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3434', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3434', getElementById( 'concertina3434' ).value )">&lt;&gt;Ulricus Engelberti OP of Strassburg [&dagger; after 1278]</span>
 
 <br><span class="totals">
-1 catalogue entry (1 book).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3434', getElementById( 'concertina3434' ).value )">1 catalogue entry (1 book)</span>
+
+<ul id="entry3434_ul" style="display:none">
 
 <li><!-- start entry ID 3434, book 1 -->
 works reported from the Dominican catalogue, &sect; 24.
@@ -452,14 +504,16 @@ works reported from the Dominican catalogue, &sect; 24.
 <!-- end entry ID 3434 (&lt;&gt;Ulricus Engelberti OP of Strassburg [&dagger; after 1278]) -->
 
 <!-- Start new entry "Udalricus Zasius (Ulrich Zasius) [1461&ndash;1535]", entry ID 3435 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Udalricus Zasius (Ulrich Zasius) [1461&ndash;1535]
-</span>
+<a name="entry3435_anchor"></a>
+<li class="outerhead">
+<button name="concertina3435" id="concertina3435"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3435', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3435', getElementById( 'concertina3435' ).value )">Udalricus Zasius (Ulrich Zasius) [1461&ndash;1535]</span>
 
 <br><span class="totals">
-7 catalogue entries (4 books).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3435', getElementById( 'concertina3435' ).value )">7 catalogue entries (4 books)</span>
+
+<ul id="entry3435_ul" style="display:none">
 
 <li><!-- start entry ID 3435, book 1 -->
 <i>Consilia</i>: pr. Basel 1538.
@@ -564,14 +618,16 @@ works reported from the Dominican catalogue, &sect; 24.
 <!-- end entry ID 3435 (Udalricus Zasius (Ulrich Zasius) [1461&ndash;1535]) -->
 
 <!-- Start new entry "Ulrich Zwingli [1484&ndash;1531]", entry ID 3436 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Ulrich Zwingli [1484&ndash;1531]
-</span>
+<a name="entry3436_anchor"></a>
+<li class="outerhead">
+<button name="concertina3436" id="concertina3436"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3436', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3436', getElementById( 'concertina3436' ).value )">Ulrich Zwingli [1484&ndash;1531]</span>
 
 <br><span class="totals">
-1 catalogue entry (1 book).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3436', getElementById( 'concertina3436' ).value )">1 catalogue entry (1 book)</span>
+
+<ul id="entry3436_ul" style="display:none">
 
 <li><!-- start entry ID 3436, book 1 -->
 <i>Opera</i>: pr. Zurich 1545 (Adams Z216), &amp;c.
@@ -597,23 +653,24 @@ works reported from the Dominican catalogue, &sect; 24.
 <!-- end entry ID 3436 (Ulrich Zwingli [1484&ndash;1531]) -->
 
 <!-- Start new entry "<i>Vrbanus</i>", entry ID 3437 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section"><i>Vrbanus</i> </span>
-&rarr; Daniel of Beccles; John of Garland, <i>Facetus</i>
+<a name="entry3437_anchor"></a>
+<li class="outerhead">
+<span class="outerhead"><i>Vrbanus</i></span> &rarr; Daniel of Beccles; John of Garland, <i>Facetus</i>
 
 </li><!-- end outerhead list item -->
 <!-- end entry ID 3437 (<i>Vrbanus</i>) -->
 
 <!-- Start new entry "Urban II (Odo of Lagery OSB) [<i>c</i>1035&ndash;1099, <i>sedit</i> 1088&ndash;1099]", entry ID 3438 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Urban II (Odo of Lagery OSB) [<i>c</i>1035&ndash;1099, <i>sedit</i> 1088&ndash;1099]
-</span>
+<a name="entry3438_anchor"></a>
+<li class="outerhead">
+<button name="concertina3438" id="concertina3438"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3438', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3438', getElementById( 'concertina3438' ).value )">Urban II (Odo of Lagery OSB) [<i>c</i>1035&ndash;1099, <i>sedit</i> 1088&ndash;1099]</span>
 
 <br><span class="totals">
-4 catalogue entries (2 books).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3438', getElementById( 'concertina3438' ).value )">4 catalogue entries (2 books)</span>
+
+<ul id="entry3438_ul" style="display:none">
 
 <li><!-- start entry ID 3438, book 1 -->
 Decrees of the council of Clermont (1095): R. Somerville,
@@ -677,14 +734,16 @@ note.
 <!-- end entry ID 3438 (Urban II (Odo of Lagery OSB) [<i>c</i>1035&ndash;1099, <i>sedit</i> 1088&ndash;1099]) -->
 
 <!-- Start new entry "Urban IV (Jacques Pantal&eacute;on) [c. 1200&ndash;1264, <i>sedit</i> 1261&ndash;4]", entry ID 3439 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Urban IV (Jacques Pantal&eacute;on) [c. 1200&ndash;1264, <i>sedit</i> 1261&ndash;4]
-</span>
+<a name="entry3439_anchor"></a>
+<li class="outerhead">
+<button name="concertina3439" id="concertina3439"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3439', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3439', getElementById( 'concertina3439' ).value )">Urban IV (Jacques Pantal&eacute;on) [c. 1200&ndash;1264, <i>sedit</i> 1261&ndash;4]</span>
 
 <br><span class="totals">
-1 catalogue entry (1 book).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3439', getElementById( 'concertina3439' ).value )">1 catalogue entry (1 book)</span>
+
+<ul id="entry3439_ul" style="display:none">
 
 <li><!-- start entry ID 3439, book 1 -->
 Bull `Transiturus de hoc' (1264): ed. J. Guiraud, <i>Les Registres
@@ -711,14 +770,16 @@ d'Urbain IV</i> (Rome 1892&ndash;8), 2. 423&ndash;5 (no. 874); Potthast 18998.
 <!-- end entry ID 3439 (Urban IV (Jacques Pantal&eacute;on) [c. 1200&ndash;1264, <i>sedit</i> 1261&ndash;4]) -->
 
 <!-- Start new entry "Urban VI (Bartolomeo Prignano) [1318&ndash;1389, <i>sedit</i> 1378&ndash;1389]", entry ID 3440 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Urban VI (Bartolomeo Prignano) [1318&ndash;1389, <i>sedit</i> 1378&ndash;1389]
-</span>
+<a name="entry3440_anchor"></a>
+<li class="outerhead">
+<button name="concertina3440" id="concertina3440"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3440', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3440', getElementById( 'concertina3440' ).value )">Urban VI (Bartolomeo Prignano) [1318&ndash;1389, <i>sedit</i> 1378&ndash;1389]</span>
 
 <br><span class="totals">
-1 catalogue entry (1 book).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3440', getElementById( 'concertina3440' ).value )">1 catalogue entry (1 book)</span>
+
+<ul id="entry3440_ul" style="display:none">
 
 <li><!-- start entry ID 3440, book 1 -->
 <i>Factum Vrbani</i>: ed. O. Raynaldus, <i>Annales ecclesiastici</i>,
@@ -746,20 +807,21 @@ of the Great Schism</i> (London 1948), 11&ndash;25.
 <!-- end entry ID 3440 (Urban VI (Bartolomeo Prignano) [1318&ndash;1389, <i>sedit</i> 1378&ndash;1389]) -->
 
 <!-- Start new entry "Urbanus Averroista of Bologna OSM [early 14th cent.]", entry ID 3441 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Urbanus Averroista of Bologna OSM [early 14th cent.]
-</span>
+<a name="entry3441_anchor"></a>
+<li class="outerhead">
+<button name="concertina3441" id="concertina3441"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3441', this.value )">+</button>
 
-<br>
-<span class="biblio_block">
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3441', getElementById( 'concertina3441' ).value )">Urbanus Averroista of Bologna OSM [early 14th cent.]</span>
+
+<br><span class="totals">
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3441', getElementById( 'concertina3441' ).value )">1 catalogue entry (1 book)</span>
+
+<ul id="entry3441_ul" style="display:none">
+<li><span class="biblio_block">
 C. J. Ermatinger, `Urbanus Averroista and some early fourteenth-century
 philosophers', <i>Manuscripta</i> 11 (1967) 3&ndash;38.
 </span>
-
-<br><span class="totals">
-1 catalogue entry (1 book).</span>
-<ul>
+</li>
 
 <li><!-- start entry ID 3441, book 1 -->
 <i>Expositio commenti Averrois in VIII libros Physicorum</i>: pr.
@@ -786,14 +848,16 @@ Venice 1492 (Goff U65); Lohr, 194.
 <!-- end entry ID 3441 (Urbanus Averroista of Bologna OSM [early 14th cent.]) -->
 
 <!-- Start new entry "Urbanus Regius (Urbano Regio) [1489&ndash;1541]", entry ID 3442 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Urbanus Regius (Urbano Regio) [1489&ndash;1541]
-</span>
+<a name="entry3442_anchor"></a>
+<li class="outerhead">
+<button name="concertina3442" id="concertina3442"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3442', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3442', getElementById( 'concertina3442' ).value )">Urbanus Regius (Urbano Regio) [1489&ndash;1541]</span>
 
 <br><span class="totals">
-2 catalogue entries (2 books).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3442', getElementById( 'concertina3442' ).value )">2 catalogue entries (2 books)</span>
+
+<ul id="entry3442_ul" style="display:none">
 
 <li><!-- start entry ID 3442, book 1 -->
 <i>De noua ac antiqua doctrina</i>, French tr. as <i>La doctrine 
@@ -840,14 +904,16 @@ nouuelle et ancienne" class="index_catalogue_entry"  onclick="alert('Urbanus Reg
 <!-- end entry ID 3442 (Urbanus Regius (Urbano Regio) [1489&ndash;1541]) -->
 
 <!-- Start new entry "&lt;&gt;Ursinus []", entry ID 3443 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">&lt;&gt;Ursinus []
-</span>
+<a name="entry3443_anchor"></a>
+<li class="outerhead">
+<button name="concertina3443" id="concertina3443"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3443', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3443', getElementById( 'concertina3443' ).value )">&lt;&gt;Ursinus []</span>
 
 <br><span class="totals">
-1 catalogue entry (1 book).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3443', getElementById( 'concertina3443' ).value )">1 catalogue entry (1 book)</span>
+
+<ul id="entry3443_ul" style="display:none">
 
 <li><!-- start entry ID 3443, book 1 -->
 work reported from Gennadius, &sect; 27.
@@ -874,14 +940,16 @@ work reported from Gennadius, &sect; 27.
 <!-- end entry ID 3443 (&lt;&gt;Ursinus []) -->
 
 <!-- Start new entry "Urso of Calabria [late 12th cent.]", entry ID 3444 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Urso of Calabria [late 12th cent.]
-</span>
+<a name="entry3444_anchor"></a>
+<li class="outerhead">
+<button name="concertina3444" id="concertina3444"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3444', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3444', getElementById( 'concertina3444' ).value )">Urso of Calabria [late 12th cent.]</span>
 
 <br><span class="totals">
-11 catalogue entries (2 books).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3444', getElementById( 'concertina3444' ).value )">11 catalogue entries (2 books)</span>
+
+<ul id="entry3444_ul" style="display:none">
 
 <li><!-- start entry ID 3444, book 1 -->
 <i>Liber aphorismorum</i>: ed. G. von Jagow, diss. (Leipzig 1924); 
@@ -1002,14 +1070,16 @@ Thorndike/Kibre 334.
 <!-- end entry ID 3444 (Urso of Calabria [late 12th cent.]) -->
 
 <!-- Start new entry "Usuard [&dagger;877]", entry ID 3445 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Usuard [&dagger;877]
-</span>
+<a name="entry3445_anchor"></a>
+<li class="outerhead">
+<button name="concertina3445" id="concertina3445"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3445', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3445', getElementById( 'concertina3445' ).value )">Usuard [&dagger;877]</span>
 
 <br><span class="totals">
-2 catalogue entries (1 book).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3445', getElementById( 'concertina3445' ).value )">2 catalogue entries (1 book)</span>
+
+<ul id="entry3445_ul" style="display:none">
 
 <li><!-- start entry ID 3445, book 1 -->
 <i>Martyrologium</i>: <i>PL</i> 123. 601&ndash;992, 124. 9&ndash;860.
@@ -1043,23 +1113,23 @@ Thorndike/Kibre 334.
 <!-- end entry ID 3445 (Usuard [&dagger;877]) -->
 
 <!-- Start new entry "<i>Vsus ecclesiae Sariburiensis</i>, printed books for the liturgy <i>Antiphonale</i>, <i>Breuiarium</i>, <i>Graduale</i>, <i>Legenda</i>, <i>Missale</i>, <i>Processionale</i>", entry ID 3446 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section"><i>Vsus ecclesiae Sariburiensis</i>, printed books for the liturgy <i>Antiphonale</i>, <i>Breuiarium</i>, <i>Graduale</i>, <i>Legenda</i>, <i>Missale</i>, <i>Processionale</i>
-</span>
-
+<a name="entry3446_anchor"></a>
+<li class="outerhead">
+<span class="outerhead"><i>Vsus ecclesiae Sariburiensis</i>, printed books for the liturgy <i>Antiphonale</i>, <i>Breuiarium</i>, <i>Graduale</i>, <i>Legenda</i>, <i>Missale</i>, <i>Processionale</i></span>
 </li><!-- end outerhead list item -->
 <!-- end entry ID 3446 (<i>Vsus ecclesiae Sariburiensis</i>, printed books for the liturgy <i>Antiphonale</i>, <i>Breuiarium</i>, <i>Graduale</i>, <i>Legenda</i>, <i>Missale</i>, <i>Processionale</i>) -->
 
 <!-- Start new entry "Uthred of Boldon OSB [&dagger;1397]", entry ID 3447 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Uthred of Boldon OSB [&dagger;1397]
-</span>
+<a name="entry3447_anchor"></a>
+<li class="outerhead">
+<button name="concertina3447" id="concertina3447"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3447', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3447', getElementById( 'concertina3447' ).value )">Uthred of Boldon OSB [&dagger;1397]</span>
 
 <br><span class="totals">
-8 catalogue entries (4 books).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3447', getElementById( 'concertina3447' ).value )">8 catalogue entries (4 books)</span>
+
+<ul id="entry3447_ul" style="display:none">
 
 <li><!-- start entry ID 3447, book 1 -->
 <i>Contra iniustas querelas fratrum</i>: ed. M. E. Marcett,

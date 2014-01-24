@@ -2,7 +2,49 @@
 {% block title %}
 <title>MLGB3 Author/Title Index</title>
 {% endblock %}
-{% block treeview %}<script type="text/javascript">    $(function() {        $("#tree").treeview({            collapsed: true,            animated: "medium",            control:"#sidetreecontrol",            prerendered: false,            persist: "location"        });    })</script>{% endblock %}{% block maincontent %}
+{% block treeview %}
+
+
+ <script type="text/javascript">
+ function expand_or_collapse( display_id, action ) {
+   var button_id = "concertina" + display_id;
+   var the_button = document.getElementById( button_id );
+   var ul_id = "entry" + display_id + "_ul";
+   var the_ul = document.getElementById( ul_id );
+   if( action == "+" ) {
+     the_ul.style.display = "block";
+     the_button.value = "-";
+     the_button.innerHTML = "-";
+   }
+   else {
+     the_ul.style.display = "none";
+     the_button.value = "+";
+     the_button.innerHTML = "+";
+   }
+ }
+</script>
+
+
+
+
+
+<script type="text/javascript">
+  var idsOnPage = new Array( '3817', '3818', '3819', '3820', '3821' );
+  function expandAllEntries() {
+    for (var i = 0; i < idsOnPage.length; i++ ) {
+      expand_or_collapse( idsOnPage[i], "+" );
+    }
+  }
+  function collapseAllEntries() {
+    for (var i = 0; i < idsOnPage.length; i++ ) {
+      expand_or_collapse( idsOnPage[i], "-" );
+    }
+  }
+</script>
+
+
+{% endblock %}
+{% block maincontent %}
 <h2>Author/Title Index: Z</h2>
 <p>
 All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications (PDF)</a> by Professor Richard Sharpe.
@@ -35,21 +77,23 @@ All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf
 
 <div class="index">
 
-<div id="sidetreecontrol">
-<a href="?#">Collapse All</a> | <a href="?#">Expand All</a>
+<div id="authortreecontrol">
+<span class="like_a_link" onclick="collapseAllEntries()">Collapse All</span>  | <span class="like_a_link" onclick="expandAllEntries()">Expand All</span> 
 </div>
-<ul class="treeview" id="tree">
+<ul class="authortreeview" id="authortree">
 
 
 <!-- Start new entry "Zacharias of Besan&ccedil;on OPrem [&dagger;1156]", entry ID 3817 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Zacharias of Besan&ccedil;on OPrem [&dagger;1156]
-</span>
+<a name="entry3817_anchor"></a>
+<li class="outerhead">
+<button name="concertina3817" id="concertina3817"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3817', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3817', getElementById( 'concertina3817' ).value )">Zacharias of Besan&ccedil;on OPrem [&dagger;1156]</span>
 
 <br><span class="totals">
-10 catalogue entries (1 book).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3817', getElementById( 'concertina3817' ).value )">10 catalogue entries (1 book)</span>
+
+<ul id="entry3817_ul" style="display:none">
 
 <li><!-- start entry ID 3817, book 1 -->
 <i>De concordia euangelistarum</i>: <i>CPG</i> 1106,12; <i>PL</i> 186. 11&ndash;620; 
@@ -148,14 +192,16 @@ Stegm&uuml;ller <i>Bibl.</i> 8400.
 <!-- end entry ID 3817 (Zacharias of Besan&ccedil;on OPrem [&dagger;1156]) -->
 
 <!-- Start new entry "Zacharias Salernitanus [12th cent.]", entry ID 3818 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Zacharias Salernitanus [12th cent.]
-</span>
+<a name="entry3818_anchor"></a>
+<li class="outerhead">
+<button name="concertina3818" id="concertina3818"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3818', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3818', getElementById( 'concertina3818' ).value )">Zacharias Salernitanus [12th cent.]</span>
 
 <br><span class="totals">
-1 catalogue entry (1 book).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3818', getElementById( 'concertina3818' ).value )">1 catalogue entry (1 book)</span>
+
+<ul id="entry3818_ul" style="display:none">
 
 <li><!-- start entry ID 3818, book 1 -->
 <i>De passionibus oculorum</i>: ed. P. Pansier, <i>Collectio 
@@ -183,14 +229,16 @@ Lindberg 212; Thorndike/Kibre 116.
 <!-- end entry ID 3818 (Zacharias Salernitanus [12th cent.]) -->
 
 <!-- Start new entry "Zahel (Sahl ibn Bishr al-Isra'ili) [&dagger;822/50]", entry ID 3819 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Zahel (Sahl ibn Bishr al-Isra'ili) [&dagger;822/50]
-</span>
+<a name="entry3819_anchor"></a>
+<li class="outerhead">
+<button name="concertina3819" id="concertina3819"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3819', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3819', getElementById( 'concertina3819' ).value )">Zahel (Sahl ibn Bishr al-Isra'ili) [&dagger;822/50]</span>
 
 <br><span class="totals">
-23 catalogue entries (6 books).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3819', getElementById( 'concertina3819' ).value )">23 catalogue entries (6 books)</span>
+
+<ul id="entry3819_ul" style="display:none">
 
 <li><!-- start entry ID 3819, book 1 -->
 <i>De interrogationibus qui dicitur liber iudiciorum arabum</i>, tr. 
@@ -478,17 +526,17 @@ Thorndike/Kibre 595.
 <!-- end entry ID 3819 (Zahel (Sahl ibn Bishr al-Isra'ili) [&dagger;822/50]) -->
 
 <!-- Start new entry "Zenobius Acciaiolus (Zanobi Acciaiuoli) [1461&ndash;1519]", entry ID 3820 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">Zenobius Acciaiolus (Zanobi Acciaiuoli) [1461&ndash;1519]
-</span>
+<a name="entry3820_anchor"></a>
+<li class="outerhead">
+<button name="concertina3820" id="concertina3820"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3820', this.value )">+</button>
 
-<br>
-<span class="biblio_block">
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3820', getElementById( 'concertina3820' ).value )">Zenobius Acciaiolus (Zanobi Acciaiuoli) [1461&ndash;1519]</span>
+
+<ul id="entry3820_ul" style="display:none">
+<li><span class="biblio_block">
 <i>DBI</i> 1. 93&ndash;4.
 </span>
-
-<ul>
+</li>
 
 <li><!-- start entry ID 3820, book 1 -->
 (as translator) &rarr; Olympiodorus of Alexandria
@@ -501,14 +549,16 @@ Thorndike/Kibre 595.
 <!-- end entry ID 3820 (Zenobius Acciaiolus (Zanobi Acciaiuoli) [1461&ndash;1519]) -->
 
 <!-- Start new entry "&lt;&gt;`Zoroastes, king of Bactria'", entry ID 3821 -->
-<li class="expandable outerhead">
-<div class="hitarea expandable-hitarea"></div>
-<span class="outerhead index_entry" title="expand/collapse this section">&lt;&gt;`Zoroastes, king of Bactria'
-</span>
+<a name="entry3821_anchor"></a>
+<li class="outerhead">
+<button name="concertina3821" id="concertina3821"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3821', this.value )">+</button>
+
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3821', getElementById( 'concertina3821' ).value )">&lt;&gt;`Zoroastes, king of Bactria'</span>
 
 <br><span class="totals">
-1 catalogue entry (1 book).</span>
-<ul>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3821', getElementById( 'concertina3821' ).value )">1 catalogue entry (1 book)</span>
+
+<ul id="entry3821_ul" style="display:none">
 
 <li><!-- start entry ID 3821, book 1 -->
 work reported from Higden's <i>Polychronicon</i>, II 9 (ed. Lumby, 2. 276),
