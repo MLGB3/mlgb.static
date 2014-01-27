@@ -869,6 +869,11 @@ span.index_catalogue_entry:hover, a.link_from_index_to_book:hover {
 
 span.biblio_block { font-size: 0.9em; }
 
+div.author_biblio_block { margin-top: 5px;
+                          margin-bottom: 5px;
+                          padding-top: 0px;
+                          padding-bottom: 0px; }
+
 a.link_to_catalogue {
   text-decoration: none;
   color: #666666;
