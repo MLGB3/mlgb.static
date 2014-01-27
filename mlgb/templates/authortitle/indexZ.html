@@ -6,20 +6,43 @@
 
 
  <script type="text/javascript">
- function expand_or_collapse( display_id, action ) {
+ function expand_or_collapse( display_id, action, depth ) {
    var button_id = "concertina" + display_id;
    var the_button = document.getElementById( button_id );
-   var ul_id = "entry" + display_id + "_ul";
-   var the_ul = document.getElementById( ul_id );
+   if( ! the_button ) {
+     return;
+   }
+   var element_type = "div";
+   if( depth == 2 ) {
+     element_type = "tab";
+   }
+   var element_id="entry" + display_id + "_" + element_type;
+   var the_element = document.getElementById( element_id );
+   if( ! the_element ) {
+     return;
+   }
    if( action == "+" ) {
-     the_ul.style.display = "block";
+     the_element.style.display = "block";
      the_button.value = "-";
      the_button.innerHTML = "-";
    }
    else {
-     the_ul.style.display = "none";
+     the_element.style.display = "none";
      the_button.value = "+";
      the_button.innerHTML = "+";
+   }
+   if( depth == 1 ) {
+     element_id = "biblio_" + element_id;
+     the_element = document.getElementById( element_id );
+     if( ! the_element ) {
+       return;
+     }
+     if( action == "+" ) {
+       the_element.style.display = "block";
+     }
+     else {
+       the_element.style.display = "none";
+     }
    }
  }
 </script>
@@ -29,15 +52,16 @@
 
 
 <script type="text/javascript">
-  var idsOnPage = new Array( '3817', '3818', '3819', '3820', '3821' );
+  var idsOnPage = new Array( '3817', '3817_1', '3818', '3818_1', '3819', '3819_1', '3819_2', '3819_3', '3819_4', '3819_5', '3819_6', '3820', '3820_1', '3821', '3821_1' );
+  var idDepths = new Array( 1, 2, 1, 2, 1, 2, 2, 2, 2, 2, 2, 1, 2, 1, 2 );
   function expandAllEntries() {
     for (var i = 0; i < idsOnPage.length; i++ ) {
-      expand_or_collapse( idsOnPage[i], "+" );
+      expand_or_collapse( idsOnPage[i], "+", idDepths[i] );
     }
   }
   function collapseAllEntries() {
     for (var i = 0; i < idsOnPage.length; i++ ) {
-      expand_or_collapse( idsOnPage[i], "-" );
+      expand_or_collapse( idsOnPage[i], "-", idDepths[i] );
     }
   }
 </script>
@@ -49,30 +73,30 @@
 <p>
 All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications (PDF)</a> by Professor Richard Sharpe.
 </p>
-<div class="letterlinks"><a href="{% if editable %}/e{% endif %}/authortitle/browse/A/">A</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/B/">B</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/C/">C</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/D/">D</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/E/">E</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/F/">F</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/G/">G</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/H/">H</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/IJ/">IJ</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/K/">K</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/L/">L</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/M/">M</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/N/">N</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/O/">O</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/P/">P</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/Q/">Q</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/R/">R</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/S/">S</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/T/">T</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/U/">U</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/V/">V</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/W/">W</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/X/">X</a>
-<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/Z/">Z</a>
+<div class="letterlinks"><a href="{% if editable %}/e{% endif %}/authortitle/browse/A/"  >A</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/B/"  >B</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/C/"  >C</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/D/"  >D</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/E/"  >E</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/F/"  >F</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/G/"  >G</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/H/"  >H</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/IJ/"  >IJ</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/K/"  >K</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/L/"  >L</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/M/"  >M</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/N/"  >N</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/O/"  >O</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/P/"  >P</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/Q/"  >Q</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/R/"  >R</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/S/"  >S</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/T/"  >T</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/U/"  >U</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/V/"  >V</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/W/"  >W</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/X/"  >X</a>
+<span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/Z/"  class="selected"  >Z</a>
 </div>
 
 <div class="index">
@@ -86,20 +110,23 @@ All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf
 <!-- Start new entry "Zacharias of Besan&ccedil;on OPrem [&dagger;1156]", entry ID 3817 -->
 <a name="entry3817_anchor"></a>
 <li class="outerhead">
-<button name="concertina3817" id="concertina3817"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3817', this.value )">+</button>
+<button name="concertina3817" id="concertina3817"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3817', this.value, 1 )">+</button>
 
-<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3817', getElementById( 'concertina3817' ).value )">Zacharias of Besan&ccedil;on OPrem [&dagger;1156]</span>
-
-<br><span class="totals">
-<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3817', getElementById( 'concertina3817' ).value )">10 catalogue entries (1 book)</span>
-
-<ul id="entry3817_ul" style="display:none">
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3817', getElementById( 'concertina3817' ).value, 1 )">Zacharias of Besan&ccedil;on OPrem [&dagger;1156]</span>
+<div id="biblio_entry3817_div" style="display:none" class="author_biblio_block"></div>
+<div class="totals">
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3817', getElementById( 'concertina3817' ).value, 1 )">10 catalogue entries (1 book)</span>
+</div><!-- end "totals" div -->
+<div id="entry3817_div" class="expand_entry" style="display:none">
+<ul><!-- start list of books -->
 
 <li><!-- start entry ID 3817, book 1 -->
-<i>De concordia euangelistarum</i>: <i>CPG</i> 1106,12; <i>PL</i> 186. 11&ndash;620; 
-Stegm&uuml;ller <i>Bibl.</i> 8400.
+<button name="concertina3817_1" id="concertina3817_1"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3817_1', this.value, 2 )">+</button>
 
-<table class="catalogue_entries">
+<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3817_1', getElementById( 'concertina3817_1' ).value, 2 )"><i>De concordia euangelistarum</i>: <i>CPG</i> 1106,12; <i>PL</i> 186. 11&ndash;620; 
+Stegm&uuml;ller <i>Bibl.</i> 8400.</span>
+
+<table id="entry3817_1_tab" style="display:none"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3817, book 1, copy 1 -->
@@ -188,27 +215,32 @@ Stegm&uuml;ller <i>Bibl.</i> 8400.
 
 </ul><!-- end list of books for one author -->
 
+</div><!-- end outer expandable/collapsible section -->
+
 </li><!-- end outerhead list item -->
 <!-- end entry ID 3817 (Zacharias of Besan&ccedil;on OPrem [&dagger;1156]) -->
 
 <!-- Start new entry "Zacharias Salernitanus [12th cent.]", entry ID 3818 -->
 <a name="entry3818_anchor"></a>
 <li class="outerhead">
-<button name="concertina3818" id="concertina3818"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3818', this.value )">+</button>
+<button name="concertina3818" id="concertina3818"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3818', this.value, 1 )">+</button>
 
-<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3818', getElementById( 'concertina3818' ).value )">Zacharias Salernitanus [12th cent.]</span>
-
-<br><span class="totals">
-<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3818', getElementById( 'concertina3818' ).value )">1 catalogue entry (1 book)</span>
-
-<ul id="entry3818_ul" style="display:none">
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3818', getElementById( 'concertina3818' ).value, 1 )">Zacharias Salernitanus [12th cent.]</span>
+<div id="biblio_entry3818_div" style="display:none" class="author_biblio_block"></div>
+<div class="totals">
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3818', getElementById( 'concertina3818' ).value, 1 )">1 catalogue entry (1 book)</span>
+</div><!-- end "totals" div -->
+<div id="entry3818_div" class="expand_entry" style="display:none">
+<ul><!-- start list of books -->
 
 <li><!-- start entry ID 3818, book 1 -->
-<i>De passionibus oculorum</i>: ed. P. Pansier, <i>Collectio 
-ophthalmologica ueterum auctorum</i> (Paris 1903&ndash;33), 2/5. 59&ndash;94; 
-Lindberg 212; Thorndike/Kibre 116.
+<button name="concertina3818_1" id="concertina3818_1"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3818_1', this.value, 2 )">+</button>
 
-<table class="catalogue_entries">
+<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3818_1', getElementById( 'concertina3818_1' ).value, 2 )"><i>De passionibus oculorum</i>: ed. P. Pansier, <i>Collectio 
+ophthalmologica ueterum auctorum</i> (Paris 1903&ndash;33), 2/5. 59&ndash;94; 
+Lindberg 212; Thorndike/Kibre 116.</span>
+
+<table id="entry3818_1_tab" style="display:none"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3818, book 1, copy 1 -->
@@ -225,27 +257,51 @@ Lindberg 212; Thorndike/Kibre 116.
 
 </ul><!-- end list of books for one author -->
 
+</div><!-- end outer expandable/collapsible section -->
+
 </li><!-- end outerhead list item -->
 <!-- end entry ID 3818 (Zacharias Salernitanus [12th cent.]) -->
 
 <!-- Start new entry "Zahel (Sahl ibn Bishr al-Isra'ili) [&dagger;822/50]", entry ID 3819 -->
 <a name="entry3819_anchor"></a>
 <li class="outerhead">
-<button name="concertina3819" id="concertina3819"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3819', this.value )">+</button>
+<button name="concertina3819" id="concertina3819"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3819', this.value, 1 )">+</button>
 
-<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3819', getElementById( 'concertina3819' ).value )">Zahel (Sahl ibn Bishr al-Isra'ili) [&dagger;822/50]</span>
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3819', getElementById( 'concertina3819' ).value, 1 )">Zahel (Sahl ibn Bishr al-Isra'ili) [&dagger;822/50]</span>
+<div id="biblio_entry3819_div" style="display:none" class="author_biblio_block"></div>
+<div class="totals">
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3819', getElementById( 'concertina3819' ).value, 1 )">23 catalogue entries (6 books)</span>
+</div><!-- end "totals" div -->
+<div id="entry3819_div" class="expand_entry" style="display:none"><script type="text/javascript">
+  function expand_books_for_entry_3819() { 
+    expand_or_collapse( '3819_1', '+', 2 );
+    expand_or_collapse( '3819_2', '+', 2 );
+    expand_or_collapse( '3819_3', '+', 2 );
+    expand_or_collapse( '3819_4', '+', 2 );
+    expand_or_collapse( '3819_5', '+', 2 );
+    expand_or_collapse( '3819_6', '+', 2 );
+  }
+  function collapse_books_for_entry_3819() { 
+  expand_or_collapse( '3819_1', '-', 2 );
+  expand_or_collapse( '3819_2', '-', 2 );
+  expand_or_collapse( '3819_3', '-', 2 );
+  expand_or_collapse( '3819_4', '-', 2 );
+  expand_or_collapse( '3819_5', '-', 2 );
+  expand_or_collapse( '3819_6', '-', 2 );
+  }
+</script>
+<span class="like_a_link" onclick="collapse_books_for_entry_3819()">Collapse  all 6 books</span>  | <span class="like_a_link" onclick="expand_books_for_entry_3819()">Expand  all 6 books</span> <br><br>
 
-<br><span class="totals">
-<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3819', getElementById( 'concertina3819' ).value )">23 catalogue entries (6 books)</span>
-
-<ul id="entry3819_ul" style="display:none">
+<ul><!-- start list of books -->
 
 <li><!-- start entry ID 3819, book 1 -->
-<i>De interrogationibus qui dicitur liber iudiciorum arabum</i>, tr. 
-John of Seville: pr. with Ptolemy's works, Venice 1493 (Goff P1089), 
-sig. Q5r&ndash;R8v; Carmody, 40&ndash;43; Thorndike/Kibre 312, 1411. 
+<button name="concertina3819_1" id="concertina3819_1"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3819_1', this.value, 2 )">+</button>
 
-<table class="catalogue_entries">
+<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3819_1', getElementById( 'concertina3819_1' ).value, 2 )"><i>De interrogationibus qui dicitur liber iudiciorum arabum</i>, tr. 
+John of Seville: pr. with Ptolemy's works, Venice 1493 (Goff P1089), 
+sig. Q5r&ndash;R8v; Carmody, 40&ndash;43; Thorndike/Kibre 312, 1411.</span>
+
+<table id="entry3819_1_tab" style="display:none"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3819, book 1, copy 1 -->
@@ -299,11 +355,13 @@ John of Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn 
 
 
 <li><!-- start entry ID 3819, book 2 -->
-<i>De significatore temporis in interrogationibus</i>, tr. John of
-Seville: pr. with Ptolemy's works, Venice 1493 (Goff P1089),
-sig. S3v&ndash;S5v; Carmody, 40&ndash;43; Thorndike/Kibre 1411.
+<button name="concertina3819_2" id="concertina3819_2"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3819_2', this.value, 2 )">+</button>
 
-<table class="catalogue_entries">
+<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3819_2', getElementById( 'concertina3819_2' ).value, 2 )"><i>De significatore temporis in interrogationibus</i>, tr. John of
+Seville: pr. with Ptolemy's works, Venice 1493 (Goff P1089),
+sig. S3v&ndash;S5v; Carmody, 40&ndash;43; Thorndike/Kibre 1411.</span>
+
+<table id="entry3819_2_tab" style="display:none"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3819, book 2, copy 1 -->
@@ -330,11 +388,13 @@ Seville" class="index_catalogue_entry"  onclick="alert('Zahel (Sahl ibn Bishr al
 
 
 <li><!-- start entry ID 3819, book 3 -->
-<i>Fatidica</i>, tr. Hermann of Carinthia: pr. Prague 1592; Carmody, 
-44&ndash;5; Thorndike/Kibre 1424. Hermann referred to it as `the sixth book
-of Zahel'.
+<button name="concertina3819_3" id="concertina3819_3"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3819_3', this.value, 2 )">+</button>
 
-<table class="catalogue_entries">
+<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3819_3', getElementById( 'concertina3819_3' ).value, 2 )"><i>Fatidica</i>, tr. Hermann of Carinthia: pr. Prague 1592; Carmody, 
+44&ndash;5; Thorndike/Kibre 1424. Hermann referred to it as `the sixth book
+of Zahel'.</span>
+
+<table id="entry3819_3_tab" style="display:none"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3819, book 3, copy 1 -->
@@ -374,15 +434,17 @@ of Zahel'.
 
 
 <li><!-- start entry ID 3819, book 4 -->
-<i>Introductorius ad scienciam iudiciorum astrorum in 
+<button name="concertina3819_4" id="concertina3819_4"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3819_4', this.value, 2 )">+</button>
+
+<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3819_4', getElementById( 'concertina3819_4' ).value, 2 )"><i>Introductorius ad scienciam iudiciorum astrorum in 
 interrogationibus</i>, tr. John of Seville: pr. with Ptolemy's works, Venice 
 1493 (Goff P1089), sig. P8v&ndash;Q4r; Carmody, 40&ndash;43; Thorndike/Kibre 
 1411. [The Latin Zahel is usually in five books, not exactly corresponding 
 to the Arabic original. The five are <i>Introductorius</i>, <i>Quinquaginta praecepta</i>
 (sig. Q4r&ndash;Q5r), <i>De interrogationibus</i>, <i>De significatore temporis</i>, and 
-<i>Liber electionum</i>. The fifth is a separate work in the Arabic.]
+<i>Liber electionum</i>. The fifth is a separate work in the Arabic.]</span>
 
-<table class="catalogue_entries">
+<table id="entry3819_4_tab" style="display:none"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3819, book 4, copy 1 -->
@@ -455,11 +517,13 @@ interrogationibus, tr. John of Seville" class="index_catalogue_entry"  onclick="
 
 
 <li><!-- start entry ID 3819, book 5 -->
-<i>Liber electionum</i>, tr. John of Seville: pr. with Ptolemy's works, 
-Venice 1493 (Goff P1089), sig. R8v&ndash;S3v; ed. C. M. Crofts, PhD diss. 
-(Glasgow 1985); Carmody, 41&ndash;3; Diaz 980; Thorndike/Kibre 985.
+<button name="concertina3819_5" id="concertina3819_5"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3819_5', this.value, 2 )">+</button>
 
-<table class="catalogue_entries">
+<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3819_5', getElementById( 'concertina3819_5' ).value, 2 )"><i>Liber electionum</i>, tr. John of Seville: pr. with Ptolemy's works, 
+Venice 1493 (Goff P1089), sig. R8v&ndash;S3v; ed. C. M. Crofts, PhD diss. 
+(Glasgow 1985); Carmody, 41&ndash;3; Diaz 980; Thorndike/Kibre 985.</span>
+
+<table id="entry3819_5_tab" style="display:none"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3819, book 5, copy 1 -->
@@ -501,11 +565,13 @@ Venice 1493 (Goff P1089), sig. R8v&ndash;S3v; ed. C. M. Crofts, PhD diss.
 
 
 <li><!-- start entry ID 3819, book 6 -->
-<i>Quinquaginta praecepta</i>, Latin tr.: pr. with Ptolemy's works,
-Venice 1493 (Goff P1089), fols. 126r&ndash;127r; Carmody, 43&ndash;4; 
-Thorndike/Kibre 595.
+<button name="concertina3819_6" id="concertina3819_6"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3819_6', this.value, 2 )">+</button>
 
-<table class="catalogue_entries">
+<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3819_6', getElementById( 'concertina3819_6' ).value, 2 )"><i>Quinquaginta praecepta</i>, Latin tr.: pr. with Ptolemy's works,
+Venice 1493 (Goff P1089), fols. 126r&ndash;127r; Carmody, 43&ndash;4; 
+Thorndike/Kibre 595.</span>
+
+<table id="entry3819_6_tab" style="display:none"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3819, book 6, copy 1 -->
@@ -522,21 +588,24 @@ Thorndike/Kibre 595.
 
 </ul><!-- end list of books for one author -->
 
+</div><!-- end outer expandable/collapsible section -->
+
 </li><!-- end outerhead list item -->
 <!-- end entry ID 3819 (Zahel (Sahl ibn Bishr al-Isra'ili) [&dagger;822/50]) -->
 
 <!-- Start new entry "Zenobius Acciaiolus (Zanobi Acciaiuoli) [1461&ndash;1519]", entry ID 3820 -->
 <a name="entry3820_anchor"></a>
 <li class="outerhead">
-<button name="concertina3820" id="concertina3820"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3820', this.value )">+</button>
+<button name="concertina3820" id="concertina3820"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3820', this.value, 1 )">+</button>
 
-<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3820', getElementById( 'concertina3820' ).value )">Zenobius Acciaiolus (Zanobi Acciaiuoli) [1461&ndash;1519]</span>
-
-<ul id="entry3820_ul" style="display:none">
-<li><span class="biblio_block">
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3820', getElementById( 'concertina3820' ).value, 1 )">Zenobius Acciaiolus (Zanobi Acciaiuoli) [1461&ndash;1519]</span>
+<div id="biblio_entry3820_div" style="display:none" class="author_biblio_block"><span class="biblio_block">
 <i>DBI</i> 1. 93&ndash;4.
 </span>
-</li>
+
+</div>
+<div id="entry3820_div" class="expand_entry" style="display:none">
+<ul><!-- start list of books -->
 
 <li><!-- start entry ID 3820, book 1 -->
 (as translator) &rarr; Olympiodorus of Alexandria
@@ -545,26 +614,31 @@ Thorndike/Kibre 595.
 
 </ul><!-- end list of books for one author -->
 
+</div><!-- end outer expandable/collapsible section -->
+
 </li><!-- end outerhead list item -->
 <!-- end entry ID 3820 (Zenobius Acciaiolus (Zanobi Acciaiuoli) [1461&ndash;1519]) -->
 
 <!-- Start new entry "&lt;&gt;`Zoroastes, king of Bactria'", entry ID 3821 -->
 <a name="entry3821_anchor"></a>
 <li class="outerhead">
-<button name="concertina3821" id="concertina3821"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3821', this.value )">+</button>
+<button name="concertina3821" id="concertina3821"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3821', this.value, 1 )">+</button>
 
-<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3821', getElementById( 'concertina3821' ).value )">&lt;&gt;`Zoroastes, king of Bactria'</span>
-
-<br><span class="totals">
-<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3821', getElementById( 'concertina3821' ).value )">1 catalogue entry (1 book)</span>
-
-<ul id="entry3821_ul" style="display:none">
+<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3821', getElementById( 'concertina3821' ).value, 1 )">&lt;&gt;`Zoroastes, king of Bactria'</span>
+<div id="biblio_entry3821_div" style="display:none" class="author_biblio_block"></div>
+<div class="totals">
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3821', getElementById( 'concertina3821' ).value, 1 )">1 catalogue entry (1 book)</span>
+</div><!-- end "totals" div -->
+<div id="entry3821_div" class="expand_entry" style="display:none">
+<ul><!-- start list of books -->
 
 <li><!-- start entry ID 3821, book 1 -->
-work reported from Higden's <i>Polychronicon</i>, II 9 (ed. Lumby, 2. 276),
-who had the reference from Isidore.
+<button name="concertina3821_1" id="concertina3821_1"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3821_1', this.value, 2 )">+</button>
 
-<table class="catalogue_entries">
+<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3821_1', getElementById( 'concertina3821_1' ).value, 2 )">work reported from Higden's <i>Polychronicon</i>, II 9 (ed. Lumby, 2. 276),
+who had the reference from Isidore.</span>
+
+<table id="entry3821_1_tab" style="display:none"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3821, book 1, copy 1 -->
@@ -582,6 +656,8 @@ who had the reference from Isidore.
 
 
 </ul><!-- end list of books for one author -->
+
+</div><!-- end outer expandable/collapsible section -->
 
 </li><!-- end outerhead list item -->
 <!-- end entry ID 3821 (&lt;&gt;`Zoroastes, king of Bactria') --></ul><!-- end tree -->
