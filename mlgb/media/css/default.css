@@ -883,3 +883,13 @@ a.link_to_catalogue:hover {
   color: #666666;
 }
 
+table.century tr td { vertical-align: top;
+                      padding: 5px; }
+
+
+div.navigate_catalogues {
+  border-top-style: dotted; 
+  border-top-width: 1px; 
+  border-top-color: #44687d; /* teal */
+  margin-top: 10px;
+}
