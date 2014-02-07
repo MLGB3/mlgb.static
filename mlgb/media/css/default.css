@@ -893,3 +893,7 @@ div.navigate_catalogues {
   border-top-color: #44687d; /* teal */
   margin-top: 10px;
 }
+
+dl.catalogue_entry_flags dt { font-weight: bold;
+                              margin-top: 10px; }
+
