@@ -1,4 +1,4 @@
-{% extends "feeds/Gbase.html" %}
+{% extends "books/photo_base.html" %}
 {% block title %} {{ object.item.author_title }} - {{ object.title }}{% endblock %}
 {% block content %}
 <a href="{{object.item.get_absolute_url}}">&laquo; Back to "{{ object.item.author_title }}" detail page</a>
