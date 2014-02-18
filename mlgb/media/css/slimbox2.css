@@ -27,7 +27,10 @@
 	left: 0;
 	top: 0;
 	border: 10px solid #fff;
+	max-width: 900px;
+	max-height: 900px;
 	background-repeat: no-repeat;
+	background-size: 100%;
 }
 
 #lbPrevLink, #lbNextLink {
