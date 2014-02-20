@@ -120,7 +120,7 @@ br.clearright {
 #pages {
   clear: both;
   width: 100%;
-  min-width: 728px;
+  min-width: 868px;
   height: 40px;
   background-color: #c7c2bc; /* warm grey */
   border-bottom: 5px solid #44687d; /* teal */
