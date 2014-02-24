@@ -14,7 +14,7 @@
 
       {% for fieldname, label, value in form_fields %}
         <p>
-        {% if fieldname != 'printed_book' %}
+        {% if fieldname != 'printed_book' and fieldname != 'evidence_code' %}
           <label for="{{fieldname}}">{{label}}</label><br />
           <input type="text" name="{{fieldname}}" id="{{fieldname}}" value="{{value}}" />
         {% endif %}
@@ -28,6 +28,16 @@
             <label for="{{radio_id}}">{{radio_label}}</label>
             <br/>
           {% endfor %}
+        {% endif %}
+
+        {% if fieldname == 'evidence_code' %}
+          <select name="evidence_code" id="evidence_code">
+          {% for evcode, evdesc in evidence_dropdown_options %}
+            <option value="{{evcode}}"
+            {% if evcode == value %}SELECTED{% endif %}
+            >{{evdesc}}</option>
+          {% endfor %}
+          </select>
         {% endif %}
         </p>
       {% endfor %}
@@ -47,6 +57,8 @@
       function clearSearchFields() {
         var radio_field = document.getElementById( "printed_book_any" );
         radio_field.checked = true;
+        var dropdown = document.getElementById( "evidence_code" )
+        dropdown.selectedIndex = 0;
         var search_term = "";
         {% for fieldname, label, value in form_fields %}
           {% if fieldname != 'printed_book' and fieldname != 'evidence_code' %}
