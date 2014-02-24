@@ -15,18 +15,40 @@
 
   <div class="resultdetails">
   
-  {% if search_term %}
+  {% if search_term or advanced_search %}
     <div class="treeheader">
-    {% if search_term == '*' %}
-    Displaying all records...
+    {% if get_everything %}
+      Displaying all records...
     {% else %}
-    Searching {{field_label|lower|default:"all fields"}} for: <strong> {{search_term}}</strong>
+      {% if not advanced_search %}
+        Searching {{field_label|lower|default:"all fields"}} for: <strong> {{search_term}}</strong>
+      {% else %}{# advanced search has list of [ fieldname, label, value ] #}
+        Searching for: <ul>
+        {% for fieldname, label, value in form_fields %}
+          {% if value %}
+            <li>
+            {{label}}: {{value}}
+            </li>
+          {% endif %}
+        {% endfor %}
+        </ul>
+      {% endif %}
     {% endif %}
     </div><!-- end div class "treeheader" -->
   {% endif %}
 
   {% if not number_of_records %}
-    {% if search_term %}<p>No records retrieved.</p>{% endif %}
+    {% if search_term %}
+      <p>No records retrieved.</p>
+    {% else  %}
+      {% if advanced_search and not empty_form %}
+        <p>No records retrieved.</p>
+      {% else %}
+        {% if not advanced_search %}
+          <p>No search term was entered.</p>
+        {% endif %}
+      {% endif %}
+    {% endif %}
   {% endif %}
 
   {% if result_string %} {# the HTML for the search results is already set in variable 'result_string' #}
@@ -54,7 +76,11 @@
 {% endblock %}
 
 {% block search %}  
-  {% include 'includes/searchwithoptions.html' %}
+  {% if advanced_search %}
+    {% include 'includes/advanced_search_fields.html' %}
+  {% else %}
+    {% include 'includes/searchwithoptions.html' %}
+  {% endif %}
 {% endblock %}
 
 {% block useful_links %} 

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load mlgb_custom_filters %}
+
+{% block title %}
+<title>MLGB3 Advanced Search</title>
+{% endblock %}
+
+{% block content_wrapper %}
+
+
+{% block maincontent %}
+  {% include 'includes/advanced_search_fields.html' %}
+{% endblock %} {# end block 'maincontent' #}
+
+
+{% block moreoptions %} 
+{% if not printing %}
+
+{% block browseoptions %} 
+{% endblock %}
+
+{% block archives %} 
+{% endblock %}
+
+{% block search %}  
+{% endblock %}
+
+{% block useful_links %} 
+{% endblock %}
+
+{% endif %}
+{% endblock %}  {# end block moreoptions #}
+
+{% endblock %}{# end block 'content_wrapper' #}
+

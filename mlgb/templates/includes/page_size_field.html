@@ -1,0 +1,17 @@
+
+      <label for="page_size">Records per page: </label>
+      <br />
+      {% for possible_size in page_sizes %}
+        <input type="radio" value="{{possible_size}}" name="page_size" id="page_size_{{possible_size}}"
+        {% if page_size %}
+          {% if possible_size == page_size %} CHECKED {% endif %}
+        {% else %}
+          {% if possible_size|lower == 'all' %} CHECKED {% endif %}
+        {% endif %}
+        />
+        <label for="page_size_{{possible_size}}"> 
+        {{possible_size}} 
+        </label>
+        <br>
+      {% endfor %}
+

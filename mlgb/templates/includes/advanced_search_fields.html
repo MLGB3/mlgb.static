@@ -1,39 +1,27 @@
 
   <div id="search" class="boxed">
-    <h2 class="heading">Search
-    {% if search_term %} Again {% endif %}
+    <h2 class="heading">
+    {% if empty_form %}Advanced Search{% else %}Search Again{% endif %}
     </h2>
     <div class="pretty-print">
 
     {# ================== start search form ================== #}
-    <form action="{% if editable %}/e{% endif %}/mlgb/" method="get">
+    <form action="{% if editable %}/e{% endif %}/mlgb/advancedsearch" method="get">
       <div>
-      <label for="search_term">Enter your search term: </label>
-      <br>
-      <input name="search_term" id="search_term" type="text" size="30" 
-      {% if search_term == "*" or not search_term %} 
-      value=""
-      {% else %}
-      value="{{search_term}}" 
-      {% endif %}
-      /> <br > <br >
 
-      <label for="field_to_search">Field to search: </label>
-      <br />
-      {% for field_dict in searchable_fields %}
-        {% for val, desc in field_dict.items %}
-        <input type="radio" value="{{val}}" name="field_to_search" id="search_{{val|default:'all'}}"
-        {% if val == field_to_search %} CHECKED {% endif %}
-        /> 
-        <label for="search_{{val|default:'all'}}">
-        {{desc}} 
-        </label>
-        <br>
-        {% endfor %}
+      {% for fieldname, label, value in form_fields %}
+        <p>
+        {% if fieldname != 'printed_book' %}
+          <label for="{{fieldname}}">{{label}}</label><br />
+          <input type="text" name="{{fieldname}}" id="{{fieldname}}" value="{{value}}" />
+        {% endif %}
+        </p>
       {% endfor %}
+
       <br />
 
       {% include 'includes/page_size_field.html' %}
+
       <br />
 
       {{order_options|safe}}
