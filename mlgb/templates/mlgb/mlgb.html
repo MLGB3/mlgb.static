@@ -27,7 +27,19 @@
         {% for fieldname, label, value in form_fields %}
           {% if value %}
             <li>
-            {{label}}: {{value}}
+
+            {% if fieldname != 'printed_book' and fieldname != 'evidence_code' %}
+              {{label}}: {{value}}
+
+            {% else %}
+              {% if fieldname == 'printed_book' %}
+                {{label}}:
+                {% for radio_id, radio_val, radio_label in printed_book_radio_options %} 
+                  {% if radio_val == value %}{{radio_label}}{% endif %}
+                {% endfor %}
+              {% endif %}
+            {% endif %}
+
             </li>
           {% endif %}
         {% endfor %}

@@ -7,7 +7,10 @@
 
     {# ================== start search form ================== #}
     <form action="{% if editable %}/e{% endif %}/mlgb/advancedsearch" method="get">
+
       <div>
+      <input type="submit" value="Go" name="go_button_top"/>
+      <input type="button" value="Clear" onclick="clearSearchFields()" name="clear_button_top" />
 
       {% for fieldname, label, value in form_fields %}
         <p>
@@ -15,10 +18,20 @@
           <label for="{{fieldname}}">{{label}}</label><br />
           <input type="text" name="{{fieldname}}" id="{{fieldname}}" value="{{value}}" />
         {% endif %}
+
+        {% if fieldname == 'printed_book' %}
+          {{label}}:<br />
+          {% for radio_id, radio_val, radio_label in printed_book_radio_options %} 
+            <input type="radio" name="printed_book" id="{{radio_id}}" value="{{radio_val}}" 
+            {% if radio_val == value %}CHECKED{% endif %}
+            />
+            <label for="{{radio_id}}">{{radio_label}}</label>
+            <br/>
+          {% endfor %}
+        {% endif %}
         </p>
       {% endfor %}
 
-      <br />
 
       {% include 'includes/page_size_field.html' %}
 
@@ -32,34 +45,22 @@
 
       <script type="text/javascript">
       function clearSearchFields() {
-
-        var search_term = document.getElementById( 'search_term' );
-        search_term.value = "";
-
-        {% for field_dict in searchable_fields %} {% for val, desc in field_dict.items %}
-        var oneField = document.getElementById( 'search_{{val|default:"all"}}' );
-        if( oneField.value == '') {
-          oneField.checked = true;
-        }
-        else {
-          oneField.checked = false;
-        }
-        {% endfor %} {% endfor %}
-
-        {% for possible_size in page_sizes %}
-        var pageSize = document.getElementById( 'page_size_{{possible_size}}' );
-        if( pageSize.value.toLowerCase() == '{{default_rows_per_page}}' ) {
-          pageSize.checked = true;
-        }
-        else {
-          pageSize.checked = false;
-        }
+        var radio_field = document.getElementById( "printed_book_any" );
+        radio_field.checked = true;
+        var search_term = "";
+        {% for fieldname, label, value in form_fields %}
+          {% if fieldname != 'printed_book' and fieldname != 'evidence_code' %}
+          search_term = document.getElementById( "{{fieldname}}" );
+          search_term.value = "";
+          {% endif %}
         {% endfor %}
+
+        {% include 'includes/reset_page_size.html' %}
       }
       </script>
 
-      <input type="submit" value="Go" />
-      <input type="button" value="Clear" onclick="clearSearchFields()" />
+      <input type="submit" value="Go" name="go_button_bottom" />
+      <input type="button" value="Clear" onclick="clearSearchFields()" name="clear_button_bottom" />
       </div>
     </form>
     {# ================== end search form ================== #}

@@ -58,15 +58,7 @@
         }
         {% endfor %} {% endfor %}
 
-        {% for possible_size in page_sizes %}
-        var pageSize = document.getElementById( 'page_size_{{possible_size}}' );
-        if( pageSize.value.toLowerCase() == '{{default_rows_per_page}}' ) {
-          pageSize.checked = true;
-        }
-        else {
-          pageSize.checked = false;
-        }
-        {% endfor %}
+        {% include 'includes/reset_page_size.html' %}
       }
       </script>
 
