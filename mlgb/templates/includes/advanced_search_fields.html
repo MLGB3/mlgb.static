@@ -48,22 +48,26 @@
       {% endfor %}
 
       <br class="clearboth" />{% if empty_form %}<br />{% endif %}
+      {% if not empty_form %}
       <input type="submit" value="Go" name="go_button_mid"/>
       <input type="button" value="Clear" onclick="clearSearchFields()" name="clear_button_mid" />
       <br class="clearboth" />
+      {% endif %}
       <hr/>
-      <br />
 
-
+      <div class="advanced_search_field">
       {% include 'includes/page_size_field.html' %}
+      </div>
 
-      <br />
-
+      <div class="advanced_search_field">
       {{order_options|safe}}
-      <br> <br>
+      </div>
 
+      <div class="advanced_search_field">
       {{output_styles|safe}}
-      <br> <br>
+      </div>
+
+      <br class="clearboth" />
 
       <script type="text/javascript">
       function clearSearchFields() {
