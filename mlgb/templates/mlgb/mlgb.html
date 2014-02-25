@@ -37,6 +37,12 @@
                 {% for radio_id, radio_val, radio_label in printed_book_radio_options %} 
                   {% if radio_val == value %}{{radio_label}}{% endif %}
                 {% endfor %}
+
+              {% else %}{# evidence type #}
+                {{label}}:
+                {% for evcode, evdesc in evidence_dropdown_options %}
+                  {% if evcode == value %}{{evdesc}}{% endif %}
+                {% endfor %}
               {% endif %}
             {% endif %}
 
