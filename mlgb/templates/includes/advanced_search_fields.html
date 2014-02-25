@@ -10,9 +10,15 @@
 
       <div>
       {% if not empty_form %}
-      <input type="submit" value="Go" name="go_button_start"/>
-      <input type="button" value="Clear" onclick="clearSearchFields()" name="clear_button_start" />
-      <br class="clearright" />
+        <input type="submit" value="Go" name="go_button_start"/>
+        <input type="button" value="Clear" onclick="clearSearchFields()" name="clear_button_start" />
+        <br class="clearright" />
+      {% else %}
+        Enter selection in any combination of fields. 
+        E.g. to find printed books from the medieval libraries of Oxford, enter <em>Oxford</em> 
+        in Medieval Library and select <em>Only printed</em> under Type of Book. 
+        <br />
+        <br />
       {% endif %}
 
 
