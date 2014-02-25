@@ -251,12 +251,16 @@ div.moreoptions {
 }
 
 .boxed select {
-  max-width: 220px;
+  max-width: 215px;
   font-size: 0.9em;
 }
 
 .wideboxed select {
-  max-width: 680px;
+  max-width: 310px;
+}
+
+.wideboxed input[type="text"] {
+  width: 140px;
 }
 
 /* ==================  class "main-pretty-print"  ================== */
@@ -429,6 +433,18 @@ div#maincontent {
   -webkit-border-radius: 4px;  
   -moz-border-radius: 4px;  
   border-radius: 4px; 
+}
+
+div.advanced_search_field {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div.wideboxed div.advanced_search_field {
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /* ==================  Footer  ================== */
