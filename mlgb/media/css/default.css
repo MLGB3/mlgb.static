@@ -438,6 +438,7 @@ div#maincontent {
 div.advanced_search_field {
   margin-top: 10px;
   margin-bottom: 10px;
+  min-width: 140px;
 }
 
 div.wideboxed div.advanced_search_field {
