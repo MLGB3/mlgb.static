@@ -185,14 +185,21 @@ div.moreoptions {
 }
 
 .boxed {
-  float: left;
   width: 230px;
+}
+
+.wideboxed {
+  width: 700px;
+}
+
+.boxed, .wideboxed {
+  float: left;
   margin-bottom: 12px;
   padding-left: 10px;
   margin-right: 10px;
 }
 
-.boxed .heading {
+.boxed .heading, .wideboxed .heading {
   height: 26px;
   padding: 6px 0 0 10px;
   border: 1px solid #000000;
@@ -212,35 +219,44 @@ div.moreoptions {
   border-bottom: 5px solid #44687d; /* teal */
 }
 
-.boxed .pretty-print {
+.boxed .pretty-print, .wideboxed .pretty-print  {
   background-color:  #F2F2F2;
   border-bottom: 1px dotted #c5d2e0; /* Wedgwood blue */
 }
 
-.boxed .pretty-print ul {
+.boxed .pretty-print ul, .wideboxed .pretty-print ul {
   margin: 0;
   padding: 10px;
   list-style: none;
 }
 
-.boxed .pretty-print li {
+.boxed .pretty-print li, .wideboxed .pretty-print li {
   padding: 3px 0;
   border-top: 1px dotted #c5d2e0; /* Wedgwood blue */
 }
 
-.boxed .pretty-print li.first {
+.boxed .pretty-print li.first, .wideboxed .pretty-print li.first {
   border: none;
 }
 
-.boxed .pretty-print a {
+.boxed .pretty-print a, .wideboxed .pretty-print a {
   padding-left: 10px;
   background: transparent url(../img/img8.gif) no-repeat left center;
   text-decoration: none;
   color: #5D0E0E;
 }
 
-.boxed .pretty-print a:hover {
+.boxed .pretty-print a:hover, .wideboxed .pretty-print a:hover {
   color: #FF0000;
+}
+
+.boxed select {
+  max-width: 220px;
+  font-size: 0.9em;
+}
+
+.wideboxed select {
+  max-width: 680px;
 }
 
 /* ==================  class "main-pretty-print"  ================== */
