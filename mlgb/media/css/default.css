@@ -819,7 +819,7 @@ a.editlink {
   font-size: 0.9em;
 }
 
-select#order_by2 {
+.boxed select#order_by2 {
   width: 210px;
   font-size: 0.9em;
 }
