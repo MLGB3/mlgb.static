@@ -9,12 +9,15 @@
     <form action="{% if editable %}/e{% endif %}/mlgb/advancedsearch" method="get">
 
       <div>
-      <input type="submit" value="Go" name="go_button_top"/>
-      <input type="button" value="Clear" onclick="clearSearchFields()" name="clear_button_top" />
+      {% if not empty_form %}
+      <input type="submit" value="Go" name="go_button_start"/>
+      <input type="button" value="Clear" onclick="clearSearchFields()" name="clear_button_start" />
+      <br class="clearright" />
+      {% endif %}
 
 
       {% for fieldname, label, value in form_fields %}
-        <p>
+        <div class="advanced_search_field">
         {% if fieldname != 'printed_book' and fieldname != 'evidence_code' %}
           <label for="{{fieldname}}">{{label}}</label><br />
           <input type="text" name="{{fieldname}}" id="{{fieldname}}" value="{{value}}" />
@@ -41,9 +44,15 @@
           {% endfor %}
           </select>
         {% endif %}
-        </p>
+        </div>
       {% endfor %}
-      <br /><hr/>
+
+      <br class="clearboth" />{% if empty_form %}<br />{% endif %}
+      <input type="submit" value="Go" name="go_button_mid"/>
+      <input type="button" value="Clear" onclick="clearSearchFields()" name="clear_button_mid" />
+      <br class="clearboth" />
+      <hr/>
+      <br />
 
 
       {% include 'includes/page_size_field.html' %}
@@ -74,8 +83,8 @@
       }
       </script>
 
-      <input type="submit" value="Go" name="go_button_bottom" />
-      <input type="button" value="Clear" onclick="clearSearchFields()" name="clear_button_bottom" />
+      <input type="submit" value="Go" name="go_button_end" />
+      <input type="button" value="Clear" onclick="clearSearchFields()" name="clear_button_end" />
       </div>
     </form>
     {# ================== end search form ================== #}
