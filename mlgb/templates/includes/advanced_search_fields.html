@@ -1,5 +1,5 @@
 
-  <div id="search" class="boxed">
+  <div id="search" class="{% if empty_form %}wideboxed{% else %}boxed{% endif %}">
     <h2 class="heading">
     {% if empty_form %}Advanced Search{% else %}Search Again{% endif %}
     </h2>
@@ -11,6 +11,7 @@
       <div>
       <input type="submit" value="Go" name="go_button_top"/>
       <input type="button" value="Clear" onclick="clearSearchFields()" name="clear_button_top" />
+
 
       {% for fieldname, label, value in form_fields %}
         <p>
@@ -31,9 +32,10 @@
         {% endif %}
 
         {% if fieldname == 'evidence_code' %}
+          {{label}}:<br />
           <select name="evidence_code" id="evidence_code">
           {% for evcode, evdesc in evidence_dropdown_options %}
-            <option value="{{evcode}}"
+            <option value="{{evcode}}" title="{{evdesc}}"
             {% if evcode == value %}SELECTED{% endif %}
             >{{evdesc}}</option>
           {% endfor %}
@@ -41,6 +43,7 @@
         {% endif %}
         </p>
       {% endfor %}
+      <br /><hr/>
 
 
       {% include 'includes/page_size_field.html' %}
