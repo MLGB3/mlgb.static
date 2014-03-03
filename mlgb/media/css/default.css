@@ -7,6 +7,8 @@ Adapted 2010-2013 by BDLSS
 
 /*
 Colours from the University of Oxford branding toolkit:
+http://www.ox.ac.uk/branding_toolkit/the_brand_colours/index.html
+
 teal: R=68 G=104 B=125 = #44687d
 Wedgwood blue: #c5d2e0
 brown: #a79d96 
@@ -344,6 +346,10 @@ div.moreoptions {
   margin: 0 auto;
   padding: 20px ;
   margin-top: 20px;
+}
+
+body.printout #wrapper {
+  margin-top: 0px;
 }
 
 /* ==================  About  ================== */
@@ -828,7 +834,16 @@ a.editlink {
 
 /* ================= Index ================= */
 
-div.index { width: 640px; }
+
+div.index { width: 640px; 
+            display: inline-block; 
+            float: left; }
+
+div.indexmenu { margin-left: 30px; 
+                display: inline-block; 
+                float: left;
+                clear: right;
+              }
 
 ul.authortreeview, .authortreeview ul {
   padding: 0px;
