@@ -1,0 +1,39 @@
+{% if not printing %} 
+  <div class="indexmenu boxed">
+    <div class="pretty-print">
+
+      <h2 class="heading">Further options</h2>
+      <ul>
+        <li class="first">
+        <a href="{{print_link}}" target="_blank"  
+         title="Print current page{% if called_by_collapsible_page %} (expanded){% endif %}">
+         Print current page {% if called_by_collapsible_page %} (expanded){% endif %}
+        </a> 
+        </li> 
+      </ul> 
+      <br /> 
+
+      <!-- ====================================== -->
+
+      <h2 class="heading">Quick search</h2>
+
+      <form method="get" action="{% if editable %}/e{% endif %}/authortitle/results/">
+
+        <p>
+        <input type="text" id="search_term" name="search_term" size="35" 
+               value="{% if search_type == 'quick' %}{{search_term}}{% endif %}" /> 
+        </p>
+
+        <input type="submit" id="submit_quicksearch" value="Go" /> 
+
+        <input type="hidden" name="page_size" value="{{default_rows_per_page}}" /> 
+        <input type="hidden" name="search_type" value="quick" /> 
+
+      </form> 
+
+      <!-- ====================================== -->
+    </div>
+  </div> <!-- end indexmenu -->
+{% endif %}
+
+
