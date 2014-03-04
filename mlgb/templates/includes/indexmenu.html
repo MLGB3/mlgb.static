@@ -2,22 +2,31 @@
   <div class="indexmenu boxed">
     <div class="pretty-print">
 
-      <h2 class="heading">Further options</h2>
-      <ul>
-        <li class="first">
-        <a href="{{print_link}}" target="_blank"  
-         title="Print current page{% if called_by_collapsible_page %} (expanded){% endif %}">
-         Print current page {% if called_by_collapsible_page %} (expanded){% endif %}
-        </a> 
-        </li> 
-      </ul> 
-      <br /> 
+      {% if letter or pagename != 'index' %}
+        <h2 class="heading">Further options</h2>
+        <ul>
+          <li class="first">
+          <a href="{{print_link}}" target="_blank"  
+           title="Print current page{% if called_by_collapsible_page %} (expanded){% endif %}">
+           Print current page {% if called_by_collapsible_page %} (expanded){% endif %}
+          </a> 
+          </li> 
+        </ul> 
+        <br /> 
+      {% endif %}
 
       <!-- ====================================== -->
 
       <h2 class="heading">Quick search</h2>
 
-      <form method="get" action="{% if editable %}/e{% endif %}/authortitle/results/">
+      <form class="indexmenu" method="get" action="{% if editable %}/e{% endif %}/authortitle/results/">
+
+        <script type="text/javascript">
+          function clear_search_term() {
+            var searchTermField = document.getElementById( "search_term" );
+            searchTermField.value = "";
+          }
+        </script>
 
         <p>
         <input type="text" id="search_term" name="search_term" size="35" 
@@ -25,6 +34,7 @@
         </p>
 
         <input type="submit" id="submit_quicksearch" value="Go" /> 
+        <input type="button" id="clear_quicksearch" value="Clear" onclick="clear_search_term()" /> 
 
         <input type="hidden" name="page_size" value="{{default_rows_per_page}}" /> 
         <input type="hidden" name="search_type" value="quick" /> 
