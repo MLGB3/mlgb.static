@@ -429,16 +429,22 @@ div#maincontent {
   font: "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
 
-#submit1 {
-  width: 40px;
+#submit1, #submit_quicksearch, #clear_quicksearch {
+  font: bold 12px "Trebuchet MS", Arial, Helvetica, sans-serif;
   background-color: #44687d; /* teal */
   border: 1px solid #44687d ;
-  text-transform: uppercase;
-  font: bold 10px "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: #FFFFFF;
   -webkit-border-radius: 4px;  
   -moz-border-radius: 4px;  
   border-radius: 4px; 
+}
+
+#submit1 {
+  width: 40px;
+}
+
+#submit_quicksearch, #clear_quicksearch {
+  width: 50px;
 }
 
 div.advanced_search_field {
@@ -845,6 +851,9 @@ div.indexmenu { margin-left: 30px;
                 clear: right;
               }
 
+form.indexmenu { padding: 10px; 
+               }
+
 ul.authortreeview, .authortreeview ul {
   padding: 0px;
   margin: 0px;
@@ -862,8 +871,7 @@ ul.authortreeview {
 ul.authortreeview li {
   margin-bottom: 10px;
 }
-
-ul.authortreeview li span.outerhead, 
+.authortreeview li span.outerhead, 
 ul.authortreeview li span.outer_subhead, 
 ul.authortreeview li ul li span.innerhead,
 span.like_a_link {
@@ -944,4 +952,16 @@ div.navigate_catalogues {
 
 dl.catalogue_entry_flags dt { font-weight: bold;
                               margin-top: 10px; }
+
+
+button.manicule {
+  background: #ffffff;
+  border: none;
+  padding: 1px;
+  vertical-align: middle;
+}
+
+a img.manicule {
+  vertical-align: middle;
+}
 
