@@ -69,8 +69,10 @@
 
 {% endblock %}
 {% block maincontent %}
+<div class="index">
+
 <h2>Author/Title Index: X</h2>
-<div class="letterlinks"><a href="{% if editable %}/e{% endif %}/authortitle/browse/A/"  >A</a>
+{% if not printing %}<div class="letterlinks"><a href="{% if editable %}/e{% endif %}/authortitle/browse/A/"  >A</a>
 <span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/B/"  >B</a>
 <span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/C/"  >C</a>
 <span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/D/"  >D</a>
@@ -94,12 +96,10 @@
 <span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/W/"  >W</a>
 <span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/X/"  class="selected"  >X</a>
 <span class="spacer"> </span><a href="{% if editable %}/e{% endif %}/authortitle/browse/Z/"  >Z</a>
-</div>
-
-<div class="index">
+</div><!-- end div "letterlinks" -->{% endif %}
 
 <div id="authortreecontrol">
-<span class="like_a_link" onclick="collapseAllEntries()">Collapse All</span>  | <span class="like_a_link" onclick="expandAllEntries()">Expand All</span> 
+{% if not printing %}<span class="like_a_link" onclick="collapseAllEntries()">Collapse All</span>  | <span class="like_a_link" onclick="expandAllEntries()">Expand All</span> {% endif %}
 </div>
 <ul class="authortreeview" id="authortree">
 
@@ -107,22 +107,22 @@
 <!-- Start new entry "Xenocrates of Chalcedon [<i>c</i>396&ndash;<i>c</i>314 BC]", entry ID 3815 -->
 <a name="entry3815_anchor"></a>
 <li class="outerhead">
-<button name="concertina3815" id="concertina3815"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3815', this.value, 1 )">+</button>
+{% if not printing %}<button name="concertina3815" id="concertina3815"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3815', this.value, 1 )">+</button>
 
-<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3815', getElementById( 'concertina3815' ).value, 1 )">Xenocrates of Chalcedon [<i>c</i>396&ndash;<i>c</i>314 BC]</span>
-<div id="biblio_entry3815_div" style="display:none" class="author_biblio_block"></div>
+{% endif %}<span class="index_entry outerhead"  title="expand/collapse this section"  {% if not printing %}onclick="expand_or_collapse( '3815', getElementById( 'concertina3815' ).value, 1 ){% endif %}">Xenocrates of Chalcedon [<i>c</i>396&ndash;<i>c</i>314 BC]</span>
+<div id="biblio_entry3815_div" class="author_biblio_block" style="display:{%if printing%}block{%else%}none{%endif%}"></div>
 <div class="totals">
-<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3815', getElementById( 'concertina3815' ).value, 1 )">1 catalogue entry (1 book)</span>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  {% if not printing %}onclick="expand_or_collapse( '3815', getElementById( 'concertina3815' ).value, 1 ){% endif %}">1 catalogue entry (1 book)</span>
 </div><!-- end "totals" div -->
-<div id="entry3815_div" class="expand_entry" style="display:none">
+<div id="entry3815_div" class="expand_entry"  style="display:{%if printing%}block{%else%}none{%endif%}">
 <ul><!-- start list of books -->
 
 <li><!-- start entry ID 3815, book 1 -->
-<button name="concertina3815_1" id="concertina3815_1"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3815_1', this.value, 2 )">+</button>
+{% if not printing %}<button name="concertina3815_1" id="concertina3815_1"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3815_1', this.value, 2 )">+</button>
 
-<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3815_1', getElementById( 'concertina3815_1' ).value, 2 )"><i>De morte</i>, tr. Marsilio Ficino: pr. Venice 1497 (Goff J216), &amp;c.</span>
+{% endif %}<span class="index_entry innerhead"  title="expand/collapse this section"  {% if not printing %}onclick="expand_or_collapse( '3815_1', getElementById( 'concertina3815_1' ).value, 2 ){% endif %}"><i>De morte</i>, tr. Marsilio Ficino: pr. Venice 1497 (Goff J216), &amp;c.</span>
 
-<table id="entry3815_1_tab" style="display:none"  class="catalogue_entries">
+<table id="entry3815_1_tab" style="display:{%if printing%}block{%else%}none{%endif%}"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3815, book 1, copy 1 -->
@@ -147,14 +147,14 @@
 <!-- Start new entry "Xenophon [428/7&ndash;354 BC]", entry ID 3816 -->
 <a name="entry3816_anchor"></a>
 <li class="outerhead">
-<button name="concertina3816" id="concertina3816"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816', this.value, 1 )">+</button>
+{% if not printing %}<button name="concertina3816" id="concertina3816"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816', this.value, 1 )">+</button>
 
-<span class="index_entry outerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3816', getElementById( 'concertina3816' ).value, 1 )">Xenophon [428/7&ndash;354 BC]</span>
-<div id="biblio_entry3816_div" style="display:none" class="author_biblio_block"></div>
+{% endif %}<span class="index_entry outerhead"  title="expand/collapse this section"  {% if not printing %}onclick="expand_or_collapse( '3816', getElementById( 'concertina3816' ).value, 1 ){% endif %}">Xenophon [428/7&ndash;354 BC]</span>
+<div id="biblio_entry3816_div" class="author_biblio_block" style="display:{%if printing%}block{%else%}none{%endif%}"></div>
 <div class="totals">
-<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  onclick="expand_or_collapse( '3816', getElementById( 'concertina3816' ).value, 1 )">16 catalogue entries (8 books)</span>
+<span class="index_entry outer_subhead totals"  title="expand/collapse this section"  {% if not printing %}onclick="expand_or_collapse( '3816', getElementById( 'concertina3816' ).value, 1 ){% endif %}">16 catalogue entries (8 books)</span>
 </div><!-- end "totals" div -->
-<div id="entry3816_div" class="expand_entry" style="display:none"><script type="text/javascript">
+<div id="entry3816_div" class="expand_entry"  style="display:{%if printing%}block{%else%}none{%endif%}"><script type="text/javascript">
   function expand_books_for_entry_3816() { 
     expand_or_collapse( '3816_1', '+', 2 );
     expand_or_collapse( '3816_2', '+', 2 );
@@ -176,17 +176,17 @@
   expand_or_collapse( '3816_8', '-', 2 );
   }
 </script>
-<span class="like_a_link" onclick="collapse_books_for_entry_3816()">Collapse  all 8 books</span>  | <span class="like_a_link" onclick="expand_books_for_entry_3816()">Expand  all 8 books</span> <br><br>
-
+{% if not printing %}<span class="like_a_link" onclick="collapse_books_for_entry_3816()">Collapse  all 8 books</span>  | <span class="like_a_link" onclick="expand_books_for_entry_3816()">Expand  all 8 books</span> <br><br>
+{% endif %}
 <ul><!-- start list of books -->
 
 <li><!-- start entry ID 3816, book 1 -->
-<button name="concertina3816_1" id="concertina3816_1"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816_1', this.value, 2 )">+</button>
+{% if not printing %}<button name="concertina3816_1" id="concertina3816_1"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816_1', this.value, 2 )">+</button>
 
-<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3816_1', getElementById( 'concertina3816_1' ).value, 2 )"><i>Opera</i>, in Greek: pr. Florence 1516, &amp;c.; ed. E. C. Marchant,
+{% endif %}<span class="index_entry innerhead"  title="expand/collapse this section"  {% if not printing %}onclick="expand_or_collapse( '3816_1', getElementById( 'concertina3816_1' ).value, 2 ){% endif %}"><i>Opera</i>, in Greek: pr. Florence 1516, &amp;c.; ed. E. C. Marchant,
 OCT (1900&ndash;1920).</span>
 
-<table id="entry3816_1_tab" style="display:none"  class="catalogue_entries">
+<table id="entry3816_1_tab" style="display:{%if printing%}block{%else%}none{%endif%}"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3816, book 1, copy 1 -->
@@ -226,12 +226,12 @@ OCT (1900&ndash;1920).</span>
 
 
 <li><!-- start entry ID 3816, book 2 -->
-<button name="concertina3816_2" id="concertina3816_2"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816_2', this.value, 2 )">+</button>
+{% if not printing %}<button name="concertina3816_2" id="concertina3816_2"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816_2', this.value, 2 )">+</button>
 
-<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3816_2', getElementById( 'concertina3816_2' ).value, 2 )"><i>Xenophontis omissa</i>, ed. Georgius Gemistus Plethon: pr. Venice
+{% endif %}<span class="index_entry innerhead"  title="expand/collapse this section"  {% if not printing %}onclick="expand_or_collapse( '3816_2', getElementById( 'concertina3816_2' ).value, 2 ){% endif %}"><i>Xenophontis omissa</i>, ed. Georgius Gemistus Plethon: pr. Venice
 1503 [<i>recte c.</i> 1525] (Adams P1530).</span>
 
-<table id="entry3816_2_tab" style="display:none"  class="catalogue_entries">
+<table id="entry3816_2_tab" style="display:{%if printing%}block{%else%}none{%endif%}"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3816, book 2, copy 1 -->
@@ -249,12 +249,12 @@ OCT (1900&ndash;1920).</span>
 
 
 <li><!-- start entry ID 3816, book 3 -->
-<button name="concertina3816_3" id="concertina3816_3"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816_3', this.value, 2 )">+</button>
+{% if not printing %}<button name="concertina3816_3" id="concertina3816_3"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816_3', this.value, 2 )">+</button>
 
-<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3816_3', getElementById( 'concertina3816_3' ).value, 2 )"><i>Anabasis</i>, French tr. from the Latin of Jan Lascaris by Claude 
+{% endif %}<span class="index_entry innerhead"  title="expand/collapse this section"  {% if not printing %}onclick="expand_or_collapse( '3816_3', getElementById( 'concertina3816_3' ).value, 2 ){% endif %}"><i>Anabasis</i>, French tr. from the Latin of Jan Lascaris by Claude 
 de Seyssel: &para;*pr. Paris 1529 (Moreau, 3. 1954); Chavy, 1466.</span>
 
-<table id="entry3816_3_tab" style="display:none"  class="catalogue_entries">
+<table id="entry3816_3_tab" style="display:{%if printing%}block{%else%}none{%endif%}"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3816, book 3, copy 1 -->
@@ -271,12 +271,12 @@ de Seyssel" class="index_catalogue_entry"  onclick="alert('Xenophon [428/7–354
 
 
 <li><!-- start entry ID 3816, book 4 -->
-<button name="concertina3816_4" id="concertina3816_4"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816_4', this.value, 2 )">+</button>
+{% if not printing %}<button name="concertina3816_4" id="concertina3816_4"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816_4', this.value, 2 )">+</button>
 
-<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3816_4', getElementById( 'concertina3816_4' ).value, 2 )"><i>Cyropaedia</i>, French tr. by Vasco de Lucena: part ed. D. 
+{% endif %}<span class="index_entry innerhead"  title="expand/collapse this section"  {% if not printing %}onclick="expand_or_collapse( '3816_4', getElementById( 'concertina3816_4' ).value, 2 ){% endif %}"><i>Cyropaedia</i>, French tr. by Vasco de Lucena: part ed. D. 
 Gallet-Guerne (Geneva 1974); Chavy, 1466.</span>
 
-<table id="entry3816_4_tab" style="display:none"  class="catalogue_entries">
+<table id="entry3816_4_tab" style="display:{%if printing%}block{%else%}none{%endif%}"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3816, book 4, copy 1 -->
@@ -300,11 +300,11 @@ Gallet-Guerne (Geneva 1974); Chavy, 1466.</span>
 
 
 <li><!-- start entry ID 3816, book 5 -->
-<button name="concertina3816_5" id="concertina3816_5"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816_5', this.value, 2 )">+</button>
+{% if not printing %}<button name="concertina3816_5" id="concertina3816_5"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816_5', this.value, 2 )">+</button>
 
-<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3816_5', getElementById( 'concertina3816_5' ).value, 2 )"><i>Cyropaedia</i>, French tr. by Jacques de Vintimille: pr. Paris 1547, &amp;c.</span>
+{% endif %}<span class="index_entry innerhead"  title="expand/collapse this section"  {% if not printing %}onclick="expand_or_collapse( '3816_5', getElementById( 'concertina3816_5' ).value, 2 ){% endif %}"><i>Cyropaedia</i>, French tr. by Jacques de Vintimille: pr. Paris 1547, &amp;c.</span>
 
-<table id="entry3816_5_tab" style="display:none"  class="catalogue_entries">
+<table id="entry3816_5_tab" style="display:{%if printing%}block{%else%}none{%endif%}"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3816, book 5, copy 1 -->
@@ -320,12 +320,12 @@ Gallet-Guerne (Geneva 1974); Chavy, 1466.</span>
 
 
 <li><!-- start entry ID 3816, book 6 -->
-<button name="concertina3816_6" id="concertina3816_6"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816_6', this.value, 2 )">+</button>
+{% if not printing %}<button name="concertina3816_6" id="concertina3816_6"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816_6', this.value, 2 )">+</button>
 
-<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3816_6', getElementById( 'concertina3816_6' ).value, 2 )">&#160; &#788;&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#945;&#769;: pr. Venice 1503 &amp;c.; ed. E. C. Marchant, 
+{% endif %}<span class="index_entry innerhead"  title="expand/collapse this section"  {% if not printing %}onclick="expand_or_collapse( '3816_6', getElementById( 'concertina3816_6' ).value, 2 ){% endif %}">&#160; &#788;&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#945;&#769;: pr. Venice 1503 &amp;c.; ed. E. C. Marchant, 
 OCT (1900).</span>
 
-<table id="entry3816_6_tab" style="display:none"  class="catalogue_entries">
+<table id="entry3816_6_tab" style="display:{%if printing%}block{%else%}none{%endif%}"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3816, book 6, copy 1 -->
@@ -341,13 +341,13 @@ OCT (1900).</span>
 
 
 <li><!-- start entry ID 3816, book 7 -->
-<button name="concertina3816_7" id="concertina3816_7"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816_7', this.value, 2 )">+</button>
+{% if not printing %}<button name="concertina3816_7" id="concertina3816_7"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816_7', this.value, 2 )">+</button>
 
-<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3816_7', getElementById( 'concertina3816_7' ).value, 2 )"><i>Hiero</i>, Latin tr. by Leonardo Bruni: pr. [Venice, ?1471] (Goff X6),
+{% endif %}<span class="index_entry innerhead"  title="expand/collapse this section"  {% if not printing %}onclick="expand_or_collapse( '3816_7', getElementById( 'concertina3816_7' ).value, 2 ){% endif %}"><i>Hiero</i>, Latin tr. by Leonardo Bruni: pr. [Venice, ?1471] (Goff X6),
 &amp;c.; preface, ed. H. Baron, <i>Leonardo Bruni</i> (Berlin 1928), 100&ndash;101; <i>CTC</i>
 7. 148&ndash;55.</span>
 
-<table id="entry3816_7_tab" style="display:none"  class="catalogue_entries">
+<table id="entry3816_7_tab" style="display:{%if printing%}block{%else%}none{%endif%}"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3816, book 7, copy 1 -->
@@ -387,9 +387,9 @@ OCT (1900).</span>
 
 
 <li><!-- start entry ID 3816, book 8 -->
-<button name="concertina3816_8" id="concertina3816_8"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816_8', this.value, 2 )">+</button>
+{% if not printing %}<button name="concertina3816_8" id="concertina3816_8"  title="expand/collapse this section" class="concertina"  value="+"  onclick="expand_or_collapse( '3816_8', this.value, 2 )">+</button>
 
-<span class="index_entry innerhead"  title="expand/collapse this section"  onclick="expand_or_collapse( '3816_8', getElementById( 'concertina3816_8' ).value, 2 )">Year Books, comprising notes made in the courts at Westminster of the
+{% endif %}<span class="index_entry innerhead"  title="expand/collapse this section"  {% if not printing %}onclick="expand_or_collapse( '3816_8', getElementById( 'concertina3816_8' ).value, 2 ){% endif %}">Year Books, comprising notes made in the courts at Westminster of the
 arguments made by counsel and points of law pronounced by judges, circulated
 among students in the inns of court from at least the early 14th cent. The
 printing of year books had begun by the 1480s, though the earliest editions 
@@ -401,7 +401,7 @@ Edward IV dates from 1492&ndash;3 (<i>STC</i> 9770, 9825); the printing of year 
 from Edward III's reign onwards begins in the early 16th cent. (<i>STC</i> 
 9551&ndash;9967).</span>
 
-<table id="entry3816_8_tab" style="display:none"  class="catalogue_entries">
+<table id="entry3816_8_tab" style="display:{%if printing%}block{%else%}none{%endif%}"  class="catalogue_entries">
 <tr class="catalogue_entry_head"><td>Catalogue entry</td><td>Catalogue</td></tr>
 
 <!-- start entry 3816, book 8, copy 1 -->
@@ -438,10 +438,14 @@ to survive are not contemporary with the terms reported" class="index_catalogue_
 
 </li><!-- end outerhead list item -->
 <!-- end entry ID 3816 (Xenophon [428/7&ndash;354 BC]) --></ul><!-- end tree -->
-</div><!-- end div class "index" -->
 <p>
 All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications</a> by Professor Richard Sharpe.
-<br/><em>A <a href="/authortitle/medieval_catalogues/decode/" title="Definition of codes used in the List" target="_blank">key to codes</a> used in the List is available (opens in new tab).</em></p>
+{% if not printing %}<br/><em>A <a href="/authortitle/medieval_catalogues/decode/" title="Definition of codes used in the List" target="_blank">key to codes</a> used in the List is available (opens in new tab).</em>{% endif %}</p>
+</div><!-- end div class "index" -->
+
+{% include 'includes/indexmenu.html' %}
+
+{% if printing %}<script>window.print();</script>{% endif %}
 {% endblock %}
 {% block search %}
 {% endblock %}

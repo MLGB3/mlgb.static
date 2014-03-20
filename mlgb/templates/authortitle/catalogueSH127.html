@@ -4,7 +4,8 @@
 {% endblock %}
 
 {% block maincontent %}
-<p><a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues" title="Back to list of medieval catalogues">Medieval catalogues</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/SH" title="SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions">SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/SH/322" title="York, St Leonard">York, St Leonard</a>  &gt; Bequest by John de Stokeslay, 10 August 1400</p><h2>SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions: York, St Leonard</h2><h3 class="medieval_catalogue_desc">SH127. Bequest by John de Stokeslay, 10 August 1400</h3>
+<div class="index">
+{% if not printing %}<p><a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues" title="Back to list of medieval catalogues">Medieval catalogues</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/SH" title="SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions">SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/SH/322" title="York, St Leonard">York, St Leonard</a>  &gt; Bequest by John de Stokeslay, 10 August 1400</p>{% endif %}<h2>SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions: York, St Leonard</h2><h3 class="medieval_catalogue_desc">SH127. Bequest by John de Stokeslay, 10 August 1400</h3>
 <em>2 identified entries found.</em>
 <div class="index">
 
@@ -36,7 +37,12 @@ ed. L. W. &amp; B. A. Daly (Padua 1975); Stegm&uuml;ller <i>Bibl.</i> 2820.
 
 <p>
 All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications</a> by Professor Richard Sharpe.
-<br/><em>A <a href="/authortitle/medieval_catalogues/decode/" title="Definition of codes used in the List" target="_blank">key to codes</a> used in the List is available (opens in new tab).</em></p>
+{% if not printing %}<br/><em>A <a href="/authortitle/medieval_catalogues/decode/" title="Definition of codes used in the List" target="_blank">key to codes</a> used in the List is available (opens in new tab).</em>{% endif %}</p>
+</div><!-- end div class "index" -->
+
+{% include 'includes/indexmenu.html' %}
+
+{% if printing %}<script>window.print();</script>{% endif %}
 {% endblock %}
 {% block search %}
 {% endblock %}

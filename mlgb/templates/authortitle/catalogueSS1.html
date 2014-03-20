@@ -4,7 +4,8 @@
 {% endblock %}
 
 {% block maincontent %}
-<p><a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues" title="Back to list of medieval catalogues">Medieval catalogues</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/SS" title="BRIGITTINES">BRIGITTINES</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/SS/330" title="Syon">Syon</a>  &gt; Registrum of the library of the Brethren, c. 1500-c. 1524</p><h2>BRIGITTINES: Syon</h2><h3 class="medieval_catalogue_desc">SS1. Registrum of the library of the Brethren, c. 1500-c. 1524</h3>
+<div class="index">
+{% if not printing %}<p><a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues" title="Back to list of medieval catalogues">Medieval catalogues</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/SS" title="BRIGITTINES">BRIGITTINES</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/SS/330" title="Syon">Syon</a>  &gt; Registrum of the library of the Brethren, c. 1500-c. 1524</p>{% endif %}<h2>BRIGITTINES: Syon</h2><h3 class="medieval_catalogue_desc">SS1. Registrum of the library of the Brethren, c. 1500-c. 1524</h3>
 <em>3116 identified entries found.</em>
 <div class="index">
 
@@ -32578,7 +32579,12 @@ carta</i>, <i>Statuta noua</i>.]
 
 <p>
 All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications</a> by Professor Richard Sharpe.
-<br/><em>A <a href="/authortitle/medieval_catalogues/decode/" title="Definition of codes used in the List" target="_blank">key to codes</a> used in the List is available (opens in new tab).</em></p>
+{% if not printing %}<br/><em>A <a href="/authortitle/medieval_catalogues/decode/" title="Definition of codes used in the List" target="_blank">key to codes</a> used in the List is available (opens in new tab).</em>{% endif %}</p>
+</div><!-- end div class "index" -->
+
+{% include 'includes/indexmenu.html' %}
+
+{% if printing %}<script>window.print();</script>{% endif %}
 {% endblock %}
 {% block search %}
 {% endblock %}

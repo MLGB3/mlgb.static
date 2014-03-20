@@ -4,6 +4,7 @@
 {% endblock %}
 
 {% block maincontent %}
+<div class="index">
 <h3>Definition of codes used in the index</h3><dl class="catalogue_entry_flags"><dt>
 * (asterisk) e.g. B79.*241
 </dt>
@@ -92,6 +93,11 @@ Occurs only with BA1 and signifies that an entry is matched with the medieval in
 <p>
 All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications</a> by Professor Richard Sharpe.
 </p>
+</div><!-- end div class "index" -->
+
+{% include 'includes/indexmenu.html' %}
+
+{% if printing %}<script>window.print();</script>{% endif %}
 {% endblock %}
 {% block search %}
 {% endblock %}

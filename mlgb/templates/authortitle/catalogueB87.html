@@ -4,7 +4,8 @@
 {% endblock %}
 
 {% block maincontent %}
-<p><a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues" title="Back to list of medieval catalogues">Medieval catalogues</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/B" title="BENEDICTINES: THE SHORTER CATALOGUES">BENEDICTINES: THE SHORTER CATALOGUES</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/B/84" title="St Albans">St Albans</a>  &gt; Borrowers' list, 1420 &times; 1437</p><h2>BENEDICTINES: THE SHORTER CATALOGUES: St Albans</h2><h3 class="medieval_catalogue_desc">B87. Borrowers' list, 1420 &times; 1437</h3>
+<div class="index">
+{% if not printing %}<p><a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues" title="Back to list of medieval catalogues">Medieval catalogues</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/B" title="BENEDICTINES: THE SHORTER CATALOGUES">BENEDICTINES: THE SHORTER CATALOGUES</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/B/84" title="St Albans">St Albans</a>  &gt; Borrowers' list, 1420 &times; 1437</p>{% endif %}<h2>BENEDICTINES: THE SHORTER CATALOGUES: St Albans</h2><h3 class="medieval_catalogue_desc">B87. Borrowers' list, 1420 &times; 1437</h3>
 <em>74 identified entries found.</em>
 <div class="index">
 
@@ -870,7 +871,12 @@ unpr.; Sharpe, <i>Latin Writers</i>, 799; Bloomfield
 
 <p>
 All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications</a> by Professor Richard Sharpe.
-<br/><em>A <a href="/authortitle/medieval_catalogues/decode/" title="Definition of codes used in the List" target="_blank">key to codes</a> used in the List is available (opens in new tab).</em></p>
+{% if not printing %}<br/><em>A <a href="/authortitle/medieval_catalogues/decode/" title="Definition of codes used in the List" target="_blank">key to codes</a> used in the List is available (opens in new tab).</em>{% endif %}</p>
+</div><!-- end div class "index" -->
+
+{% include 'includes/indexmenu.html' %}
+
+{% if printing %}<script>window.print();</script>{% endif %}
 {% endblock %}
 {% block search %}
 {% endblock %}

@@ -4,7 +4,8 @@
 {% endblock %}
 
 {% block maincontent %}
-<p><a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues" title="Back to list of medieval catalogues">Medieval catalogues</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/FA" title="FRIARS">FRIARS</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/FA/108" title="York Austin Friars">York Austin Friars</a>  &gt; Catalogue, 1382, with additions</p><h2>FRIARS: York Austin Friars</h2><h3 class="medieval_catalogue_desc">FA8. Catalogue, 1382, with additions</h3>
+<div class="index">
+{% if not printing %}<p><a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues" title="Back to list of medieval catalogues">Medieval catalogues</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/FA" title="FRIARS">FRIARS</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/FA/108" title="York Austin Friars">York Austin Friars</a>  &gt; Catalogue, 1382, with additions</p>{% endif %}<h2>FRIARS: York Austin Friars</h2><h3 class="medieval_catalogue_desc">FA8. Catalogue, 1382, with additions</h3>
 <em>1327 identified entries found.</em>
 <div class="index">
 
@@ -14927,7 +14928,12 @@ Thomas Bradwardine); Sharpe, <i>Latin Writers</i>, 611; Thorndike/Kibre 1175.
 
 <p>
 All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications</a> by Professor Richard Sharpe.
-<br/><em>A <a href="/authortitle/medieval_catalogues/decode/" title="Definition of codes used in the List" target="_blank">key to codes</a> used in the List is available (opens in new tab).</em></p>
+{% if not printing %}<br/><em>A <a href="/authortitle/medieval_catalogues/decode/" title="Definition of codes used in the List" target="_blank">key to codes</a> used in the List is available (opens in new tab).</em>{% endif %}</p>
+</div><!-- end div class "index" -->
+
+{% include 'includes/indexmenu.html' %}
+
+{% if printing %}<script>window.print();</script>{% endif %}
 {% endblock %}
 {% block search %}
 {% endblock %}

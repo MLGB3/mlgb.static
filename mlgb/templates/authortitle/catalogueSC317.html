@@ -4,7 +4,8 @@
 {% endblock %}
 
 {% block maincontent %}
-<p><a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues" title="Back to list of medieval catalogues">Medieval catalogues</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/SC" title="SECULAR INSTITUTIONS: Secular Colleges">SECULAR INSTITUTIONS: Secular Colleges</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/SC/223" title="Warwick">Warwick</a>  &gt; Bequest by Thomas Yonge, by 10 April 1432</p><h2>SECULAR INSTITUTIONS: Secular Colleges: Warwick</h2><h3 class="medieval_catalogue_desc">SC317. Bequest by Thomas Yonge, by 10 April 1432</h3>
+<div class="index">
+{% if not printing %}<p><a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues" title="Back to list of medieval catalogues">Medieval catalogues</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/SC" title="SECULAR INSTITUTIONS: Secular Colleges">SECULAR INSTITUTIONS: Secular Colleges</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/SC/223" title="Warwick">Warwick</a>  &gt; Bequest by Thomas Yonge, by 10 April 1432</p>{% endif %}<h2>SECULAR INSTITUTIONS: Secular Colleges: Warwick</h2><h3 class="medieval_catalogue_desc">SC317. Bequest by Thomas Yonge, by 10 April 1432</h3>
 <em>5 identified entries found.</em>
 <div class="index">
 
@@ -61,7 +62,12 @@ Sylwan, <i>CCCM</i> 191 (2005).
 
 <p>
 All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications</a> by Professor Richard Sharpe.
-<br/><em>A <a href="/authortitle/medieval_catalogues/decode/" title="Definition of codes used in the List" target="_blank">key to codes</a> used in the List is available (opens in new tab).</em></p>
+{% if not printing %}<br/><em>A <a href="/authortitle/medieval_catalogues/decode/" title="Definition of codes used in the List" target="_blank">key to codes</a> used in the List is available (opens in new tab).</em>{% endif %}</p>
+</div><!-- end div class "index" -->
+
+{% include 'includes/indexmenu.html' %}
+
+{% if printing %}<script>window.print();</script>{% endif %}
 {% endblock %}
 {% block search %}
 {% endblock %}

@@ -4,7 +4,8 @@
 {% endblock %}
 
 {% block maincontent %}
-<p><a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues" title="Back to list of medieval catalogues">Medieval catalogues</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/R" title="REGISTRUM ANGLIE">REGISTRUM ANGLIE</a>  &gt; Union catalogue by author and title, early 14th cent.</p><h2>REGISTRUM ANGLIE</h2><h3 class="medieval_catalogue_desc">R38. Union catalogue by author and title, early 14th cent.</h3>
+<div class="index">
+{% if not printing %}<p><a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues" title="Back to list of medieval catalogues">Medieval catalogues</a>  &gt; <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/source/R" title="REGISTRUM ANGLIE">REGISTRUM ANGLIE</a>  &gt; Union catalogue by author and title, early 14th cent.</p>{% endif %}<h2>REGISTRUM ANGLIE</h2><h3 class="medieval_catalogue_desc">R38. Union catalogue by author and title, early 14th cent.</h3>
 <em>11 identified entries found.</em>
 <div class="index">
 
@@ -122,7 +123,12 @@ R38.11 (attrib. Alcuin, 1 copy) = K7.30:
 
 <p>
 All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications</a> by Professor Richard Sharpe.
-<br/><em>A <a href="/authortitle/medieval_catalogues/decode/" title="Definition of codes used in the List" target="_blank">key to codes</a> used in the List is available (opens in new tab).</em></p>
+{% if not printing %}<br/><em>A <a href="/authortitle/medieval_catalogues/decode/" title="Definition of codes used in the List" target="_blank">key to codes</a> used in the List is available (opens in new tab).</em>{% endif %}</p>
+</div><!-- end div class "index" -->
+
+{% include 'includes/indexmenu.html' %}
+
+{% if printing %}<script>window.print();</script>{% endif %}
 {% endblock %}
 {% block search %}
 {% endblock %}

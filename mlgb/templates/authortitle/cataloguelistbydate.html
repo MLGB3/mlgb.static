@@ -4,13 +4,14 @@
 {% endblock %}
 
 {% block maincontent %}
+<div class="index">
 <h2>List of medieval catalogues</h2>
 <div class="index">
 
-<h3 class="inline_heading">Overview by date</h3> | <a href="/authortitle/medieval_catalogues">Overview by type</a>
+<h3 class="inline_heading">Overview by date</h3>{% if printing %}<br />{%else%} | <a href="/authortitle/medieval_catalogues">Overview by provenance</a>{% endif %}
 
 <div id="catalogues_by_date">
-<p><a name="century10_anchor"></a></p><div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>
+<p><a name="century10_anchor"></a></p>{% if not printing %}<div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>{% endif %}
 <h4>10th century</h4>
 <table class="century" id="century10tab">
 <tr><td>
@@ -23,7 +24,7 @@ BP1. Books given by Bishop &AElig;thelwold (d. 984)   (18)</a>
 </td></tr></table>
 
 <p><em>Number of 10th century catalogues found: 1</em></p>
-<p><a name="century11_anchor"></a></p><div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>
+<p><a name="century11_anchor"></a></p>{% if not printing %}<div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>{% endif %}
 <h4>11th century</h4>
 <table class="century" id="century11tab">
 <tr><td>
@@ -48,7 +49,7 @@ B12. Books held by monks, late 11th cent. (0)
 </td></tr></table>
 
 <p><em>Number of 11th century catalogues found: 3</em></p>
-<p><a name="century12_anchor"></a></p><div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>
+<p><a name="century12_anchor"></a></p>{% if not printing %}<div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>{% endif %}
 <h4>12th century</h4>
 <table class="century" id="century12tab">
 <tr><td>
@@ -232,7 +233,7 @@ BA2. Books noted in additions to Martyrology, late 12th to early 13th cent. (0)
 </td></tr></table>
 
 <p><em>Number of 12th century catalogues found: 25</em></p>
-<p><a name="century13_anchor"></a></p><div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>
+<p><a name="century13_anchor"></a></p>{% if not printing %}<div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>{% endif %}
 <h4>13th century</h4>
 <table class="century" id="century13tab">
 <tr><td>
@@ -595,7 +596,7 @@ F9. Receipts for books borrowed (1299-1339) (3)</a>
 </td></tr></table>
 
 <p><em>Number of 13th century catalogues found: 49</em></p>
-<p><a name="century14_anchor"></a></p><div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>
+<p><a name="century14_anchor"></a></p>{% if not printing %}<div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>{% endif %}
 <h4>14th century</h4>
 <table class="century" id="century14tab">
 <tr><td>
@@ -3044,6 +3045,14 @@ B33. Record of books on loan, 1363 &times; 1366 (5)</a>
 
 </td></tr>
 <tr><td>
+<em>1363</em>
+</td><td>
+SECULAR INSTITUTIONS: Secular Colleges: Windsor</td><td>
+<a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/SC347"  title="View details of catalogue SC347">
+SC347. Excerpts from the Precentors' Rolls, 1363-4 to 1383-4 (1)</a>
+
+</td></tr>
+<tr><td>
 <em>1364</em>
 </td><td>
 SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions: York, St Leonard</td><td>
@@ -3056,7 +3065,7 @@ SH126. Record of inquisition, 9 September 1364 (2)</a>
 </td><td>
 NEW FRIARS: Hulne-Carmelite</td><td>
 <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/F15"  title="View details of catalogue F15">
-F15. Catlogue, 1366 (2)</a>
+F15. Catalogue, 1366 (2)</a>
 
 </td></tr>
 <tr><td>
@@ -3328,14 +3337,6 @@ SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions: Winchester, Holy Cr
 SH118. Inventory of goods, 4 April 1383 (0)
 </td></tr>
 <tr><td>
-<em>1383</em>
-</td><td>
-SECULAR INSTITUTIONS: Secular Colleges: Windsor</td><td>
-<a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/SC347"  title="View details of catalogue SC347">
-SC347. Excerpts from the Precentors' Rolls, 1363-4 to 1383-4 (1)</a>
-
-</td></tr>
-<tr><td>
 <em>1384</em>
 </td><td>
 SECULAR INSTITUTIONS: Secular Colleges: Arundel</td><td>
@@ -3356,6 +3357,12 @@ UNIVERSITY AND COLLEGE LIBRARIES OF CAMBRIDGE: King's Hall</td><td>
 <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/UC34"  title="View details of catalogue UC34">
 UC34. Register of books borrowed, 1385 &times; 1388 (1)</a>
 
+</td></tr>
+<tr><td>
+<em>1385</em>
+</td><td>
+SECULAR INSTITUTIONS: Secular Colleges: Windsor</td><td>
+SC350. Excerpts from the Precentors' Rolls, 1385-6 to 1408-9      (0)
 </td></tr>
 <tr><td>
 <em>1386</em>
@@ -3617,8 +3624,8 @@ Z25. Books given by Peter, late 14th or early 15th cent. (8)</a>
 
 </td></tr></table>
 
-<p><em>Number of 14th century catalogues found: 827</em></p>
-<p><a name="century15_anchor"></a></p><div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>
+<p><em>Number of 14th century catalogues found: 828</em></p>
+<p><a name="century15_anchor"></a></p>{% if not printing %}<div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>{% endif %}
 <h4>15th century</h4>
 <table class="century" id="century15tab">
 <tr><td>
@@ -3779,12 +3786,6 @@ UO73. Books donated by John Elmer, 21 December 1408 and 1416 (18)</a>
 <tr><td>
 <em>1408</em>
 </td><td>
-SECULAR INSTITUTIONS: Secular Colleges: Windsor</td><td>
-SC350. Excerpts from the Precentors' Rolls, 1385-6 to 1408-9      (0)
-</td></tr>
-<tr><td>
-<em>1408</em>
-</td><td>
 UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD: Merton College</td><td>
 <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/UO51"  title="View details of catalogue UO51">
 UO51. Electio list of philosophical books, 1408&ndash;9 (41)</a>
@@ -3839,6 +3840,12 @@ SECULAR INSTITUTIONS: Secular Colleges: Winchester College</td><td>
 <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/SC332"  title="View details of catalogue SC332">
 SC332. Memoranda on the purchase of books, 1412-13 (25)</a>
 
+</td></tr>
+<tr><td>
+<em>1413</em>
+</td><td>
+SECULAR INSTITUTIONS: Secular Colleges: Windsor</td><td>
+SC353. Excerpts from the Precentors' Rolls, 1413-14 to 1428-9 (0)
 </td></tr>
 <tr><td>
 <em>1414</em>
@@ -4093,12 +4100,6 @@ SC335. Inventory of the library, 30 July 1428 &times; 24 August 1429  (83)</a>
 
 </td></tr>
 <tr><td>
-<em>1428</em>
-</td><td>
-SECULAR INSTITUTIONS: Secular Colleges: Windsor</td><td>
-SC353. Excerpts from the Precentors' Rolls, 1413-14 to 1428-9 (0)
-</td></tr>
-<tr><td>
 <em>1429</em>
 </td><td>
 SECULAR INSTITUTIONS: Secular Colleges: Windsor</td><td>
@@ -4127,6 +4128,12 @@ CISTERCIANS: London</td><td>
 <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/Z12"  title="View details of catalogue Z12">
 Z12. Valuation of goods, 1430 (6)</a>
 
+</td></tr>
+<tr><td>
+<em>1430</em>
+</td><td>
+SECULAR INSTITUTIONS: Secular Colleges: Windsor</td><td>
+SC355. Excerpts from the account rolls, 1430-31 to 1492-3 (0)
 </td></tr>
 <tr><td>
 <em>1431</em>
@@ -4424,6 +4431,14 @@ UO6. Inventory of the library, c. 1443 (395)</a>
 UNIVERSITY AND COLLEGE LIBRARIES OF OXFORD: All Souls College</td><td>
 <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/UO7"  title="View details of catalogue UO7">
 UO7. Inventory of the library, c. 1443 (84)</a>
+
+</td></tr>
+<tr><td>
+<em>1443</em>
+</td><td>
+SECULAR INSTITUTIONS: Secular Colleges: Tattershall</td><td>
+<a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/SC313"  title="View details of catalogue SC313">
+SC313. Excerpts from the accounts, 1443-4 to 1498-9 (4)</a>
 
 </td></tr>
 <tr><td>
@@ -5452,12 +5467,6 @@ ADDITIONAL DOCUMENTS: Warden</td><td>
 X-. (Z25a) Visitation record, 26 September 1492 (0)
 </td></tr>
 <tr><td>
-<em>1492</em>
-</td><td>
-SECULAR INSTITUTIONS: Secular Colleges: Windsor</td><td>
-SC355. Excerpts from the account rolls, 1430-31 to 1492-3 (0)
-</td></tr>
-<tr><td>
 <em>1493</em>
 </td><td>
 SECULAR INSTITUTIONS: Secular Colleges: London, St Peter-upon-Cornhill</td><td>
@@ -5689,14 +5698,6 @@ UC113. Record of book given by William Carlell, before 1498; Michaelhouse (1)</a
 
 </td></tr>
 <tr><td>
-<em>1498</em>
-</td><td>
-SECULAR INSTITUTIONS: Secular Colleges: Tattershall</td><td>
-<a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/SC313"  title="View details of catalogue SC313">
-SC313. Excerpts from the accounts, 1443-4 to 1498-9 (4)</a>
-
-</td></tr>
-<tr><td>
 <em>1499</em>
 </td><td>
 SECULAR INSTITUTIONS: Secular Colleges: Bishop Auckland</td><td>
@@ -5738,8 +5739,8 @@ S26. Inventory of service books, late 1th or early 16th cent. (1)</a>
 
 </td></tr></table>
 
-<p><em>Number of 15th century catalogues found: 284</em></p>
-<p><a name="century16_anchor"></a></p><div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>
+<p><em>Number of 15th century catalogues found: 283</em></p>
+<p><a name="century16_anchor"></a></p>{% if not printing %}<div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>{% endif %}
 <h4>16th century</h4>
 <table class="century" id="century16tab">
 <tr><td>
@@ -6518,6 +6519,12 @@ S20. Books in the possession of John Grierson OP, c. 1522 (118)</a>
 
 </td></tr>
 <tr><td>
+<em>1522</em>
+</td><td>
+SECULAR INSTITUTIONS: Secular Colleges: Windsor</td><td>
+SC359. Excerpts from the Precentors' Rolls, 1522-3 to 1546-7 (0)
+</td></tr>
+<tr><td>
 <em>1523</em>
 </td><td>
 SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions: Boston guild</td><td>
@@ -6865,6 +6872,14 @@ Z13. Lincolnshire list, 1528 (0)
 CISTERCIANS: Revesby</td><td>
 <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/Z18"  title="View details of catalogue Z18">
 Z18. Lincolnshire list, 1528 (11)</a>
+
+</td></tr>
+<tr><td>
+<em>1528</em>
+</td><td>
+SECULAR INSTITUTIONS: Secular Colleges: Winchester College</td><td>
+<a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/SC343"  title="View details of catalogue SC343">
+SC343. Excerpts from the Bursars' Rolls, 1528-9 to 1555-6   (4)</a>
 
 </td></tr>
 <tr><td>
@@ -8056,12 +8071,6 @@ SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions: Canterbury, St Nich
 SH12. Inventory of goods, 1546 (0)
 </td></tr>
 <tr><td>
-<em>1546</em>
-</td><td>
-SECULAR INSTITUTIONS: Secular Colleges: Windsor</td><td>
-SC359. Excerpts from the Precentors' Rolls, 1522-3 to 1546-7 (0)
-</td></tr>
-<tr><td>
 <em>1547</em>
 </td><td>
 SECULAR INSTITUTIONS: Secular Colleges: Eton College</td><td>
@@ -8143,6 +8152,14 @@ SC327. Inventory of church goods taken at dissolution, 1548  (0)
 SECULAR INSTITUTIONS: Secular Colleges: London, St Peter-upon-Cornhill</td><td>
 <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/SC270"  title="View details of catalogue SC270">
 SC270. Memoranda, Michaelmas 1548 to Michaelmas 1551 (5)</a>
+
+</td></tr>
+<tr><td>
+<em>1548</em>
+</td><td>
+SECULAR INSTITUTIONS: Secular Colleges: Eton College</td><td>
+<a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/SC242"  title="View details of catalogue SC242">
+SC242. Excerpts from the Audit Books, 1548-9 to 1558-9  (4)</a>
 
 </td></tr>
 <tr><td>
@@ -8248,6 +8265,14 @@ B7. Books in the possession of former steward, 1553 (26)</a>
 
 </td></tr>
 <tr><td>
+<em>1553</em>
+</td><td>
+SECULAR INSTITUTIONS: Secular Colleges: Windsor</td><td>
+<a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/SC361"  title="View details of catalogue SC361">
+SC361. Excerpts from the Precentors' Rolls, 1553-4 to 1557-8  (1)</a>
+
+</td></tr>
+<tr><td>
 <em>1554</em>
 </td><td>
 SECULAR INSTITUTIONS: Secular Colleges: Westminster, St Peter</td><td>
@@ -8258,14 +8283,6 @@ SC324. Bill for service books, c. November 1554 (0)
 </td><td>
 SECULAR INSTITUTIONS: Hospitals, Towns, and the Professions: London, Lincoln's Inn</td><td>
 SH44. List of books purchased for the chapel, 1554-5 (0)
-</td></tr>
-<tr><td>
-<em>1555</em>
-</td><td>
-SECULAR INSTITUTIONS: Secular Colleges: Winchester College</td><td>
-<a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/SC343"  title="View details of catalogue SC343">
-SC343. Excerpts from the Bursars' Rolls, 1528-9 to 1555-6   (4)</a>
-
 </td></tr>
 <tr><td>
 <em>1556</em>
@@ -8378,14 +8395,6 @@ UC45. Inventory for the Marian commissioners, 1557 (78)</a>
 
 </td></tr>
 <tr><td>
-<em>1557</em>
-</td><td>
-SECULAR INSTITUTIONS: Secular Colleges: Windsor</td><td>
-<a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/SC361"  title="View details of catalogue SC361">
-SC361. Excerpts from the Precentors' Rolls, 1553-4 to 1557-8  (1)</a>
-
-</td></tr>
-<tr><td>
 <em>1558</em>
 </td><td>
 SECULAR INSTITUTIONS: Secular Colleges: Winchester College</td><td>
@@ -8415,14 +8424,6 @@ SC243. List of books returned to the bursars, 8 December 1558 (27)</a>
 BENEDICTINES: THE SHORTER CATALOGUES: Monk Bretton</td><td>
 <a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/B55"  title="View details of catalogue B55">
 B55. Inventory of books, 1558 (160)</a>
-
-</td></tr>
-<tr><td>
-<em>1558</em>
-</td><td>
-SECULAR INSTITUTIONS: Secular Colleges: Eton College</td><td>
-<a href="{% if editable %}/e{% endif %}/authortitle/medieval_catalogues/SC242"  title="View details of catalogue SC242">
-SC242. Excerpts from the Audit Books, 1548-9 to 1558-9  (4)</a>
 
 </td></tr>
 <tr><td>
@@ -8663,7 +8664,7 @@ S24. Inventory of books, 1598 (5)</a>
 </td></tr></table>
 
 <p><em>Number of 16th century catalogues found: 391</em></p>
-<p><a name="century17_anchor"></a></p><div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>
+<p><a name="century17_anchor"></a></p>{% if not printing %}<div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>{% endif %}
 <h4>17th century</h4>
 <table class="century" id="century17tab">
 <tr><td>
@@ -8692,7 +8693,7 @@ UC10. Medieval donors in a register of donors, 1623 (61)</a>
 </td></tr></table>
 
 <p><em>Number of 17th century catalogues found: 3</em></p>
-<p><a name="undated_anchor"></a></p><div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>
+<p><a name="undated_anchor"></a></p>{% if not printing %}<div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>{% endif %}
 <h4>Undated</h4>
 <table class="century" id="century21tab">
 <tr><td>
@@ -8756,13 +8757,18 @@ X-. (B83a) Note on book by William Worcestre (0)
 
 <p><em>Number of undated catalogues found: 10</em></p>
 </div><!-- end list of catalogues by date -->
-<div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>
+{% if not printing %}<div class="navigate_catalogues"><p><a href="#century10_anchor">10th century</a> | <a href="#century11_anchor">11th century</a> | <a href="#century12_anchor">12th century</a> | <a href="#century13_anchor">13th century</a> | <a href="#century14_anchor">14th century</a> | <a href="#century15_anchor">15th century</a> | <a href="#century16_anchor">16th century</a> | <a href="#century17_anchor">17th century</a> | <a href="#undated_anchor">Undated</a></p></div>{% endif %}
 </div><!-- end div class "index" -->
 
 
 <p>
 All data was derived from the <a href="http://www.history.ox.ac.uk/fileadmin/ohf/documents/projects/List-of-Identifications.pdf" title="List of Identifications (PDF) by Richard Sharpe" target="_blank">List of Identifications</a> by Professor Richard Sharpe.
-<br/><em>A <a href="/authortitle/medieval_catalogues/decode/" title="Definition of codes used in the List" target="_blank">key to codes</a> used in the List is available (opens in new tab).</em></p>
+{% if not printing %}<br/><em>A <a href="/authortitle/medieval_catalogues/decode/" title="Definition of codes used in the List" target="_blank">key to codes</a> used in the List is available (opens in new tab).</em>{% endif %}</p>
+</div><!-- end div class "index" -->
+
+{% include 'includes/indexmenu.html' %}
+
+{% if printing %}<script>window.print();</script>{% endif %}
 {% endblock %}
 {% block search %}
 {% endblock %}
