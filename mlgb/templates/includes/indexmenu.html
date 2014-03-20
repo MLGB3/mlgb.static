@@ -33,12 +33,15 @@
                value="{% if search_type == 'quick' %}{{search_term}}{% endif %}" /> 
         </p>
 
+        <p>
+        {% include 'includes/authortitle_order_by_field.html' %}
+        </p>
+
         <input type="submit" id="submit_quicksearch" value="Go" /> 
         <input type="button" id="clear_quicksearch" value="Clear" onclick="clear_search_term()" /> 
 
         <input type="hidden" name="page_size" value="{{default_rows_per_page}}" /> 
         <input type="hidden" name="search_type" value="quick" /> 
-
       </form> 
 
       <!-- ====================================== -->
