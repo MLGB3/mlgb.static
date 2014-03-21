@@ -14,6 +14,20 @@
   {% else %}
     Searching all fields for: {{search_term}}
   {% endif %}
+
+{% else %}
+  Searching for:
+  <ul>
+  {% for field in advanced_search_fields %}
+    {% if field.value %}
+      {% if field.fieldname == 'text' and field.value == '*' %}
+        <li>All records</li>
+      {% else %}
+        <li>{{field.label}}: {{field.value}}</li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  </ul>
 {% endif %}
 
 {{pagination}}
