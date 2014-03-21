@@ -8,9 +8,15 @@
 
 <h2>Author/Title/Catalogue Search Results</h2>
 
+{% if search_type == 'quick' %}
+  {% if search_term == '*' or not search_term %}
+    Retrieving all records...
+  {% else %}
+    Searching all fields for: {{search_term}}
+  {% endif %}
+{% endif %}
+
 {{pagination}}
-{{search_term}}
-{{number_of_records}}
 
 {# results is a list of dictionaries #}
 {% autoescape off %}
