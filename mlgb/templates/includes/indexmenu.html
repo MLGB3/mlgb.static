@@ -16,35 +16,42 @@
       {% endif %}
 
       <!-- ====================================== -->
+      {% if pagename == 'index' and not letter %}
 
-      <h2 class="heading">Quick search</h2>
+        <h2 class="heading">Quick search</h2>
 
-      <form class="indexmenu" method="get" action="{% if editable %}/e{% endif %}/authortitle/results/">
+        <form class="indexmenu" method="get" action="{% if editable %}/e{% endif %}/authortitle/results/">
 
-        <script type="text/javascript">
-          function clear_search_term() {
-            var searchTermField = document.getElementById( "search_term" );
-            searchTermField.value = "";
-          }
-        </script>
+          <script type="text/javascript">
+            function clear_search_term() {
+              var searchTermField = document.getElementById( "search_term" );
+              searchTermField.value = "";
+            }
+          </script>
 
-        <p>
-        <input type="text" id="search_term" name="search_term" size="35" 
-               value="{% if search_type == 'quick' %}{{search_term}}{% endif %}" /> 
-        </p>
+          <p>
+          <input type="text" id="search_term" name="search_term" size="35" 
+                 value="{% if search_type == 'quick' %}{{search_term}}{% endif %}" /> 
+          </p>
 
-        <p>
-        {% include 'includes/authortitle_order_by_field.html' %}
-        </p>
+          <p>
+          {% include 'includes/authortitle_order_by_field.html' %}
+          </p>
 
-        <input type="submit" id="submit_quicksearch" value="Go" /> 
-        <input type="button" id="clear_quicksearch" value="Clear" onclick="clear_search_term()" /> 
+          <input type="submit" id="submit_quicksearch" value="Go" /> 
+          <input type="button" id="clear_quicksearch" value="Clear" onclick="clear_search_term()" /> 
 
-        <input type="hidden" name="page_size" value="{{default_rows_per_page}}" /> 
-        <input type="hidden" name="search_type" value="quick" /> 
-      </form> 
+          <input type="hidden" name="page_size" value="{{default_rows_per_page}}" /> 
+          <input type="hidden" name="search_type" value="quick" /> 
+        </form> 
 
+      {% endif %}
       <!-- ====================================== -->
+
+      {% if letter or pagename != 'index' %}
+        {% include 'includes/authortitle_adv_search.html' %}
+      {% endif %}
+
     </div>
   </div> <!-- end indexmenu -->
 {% endif %}

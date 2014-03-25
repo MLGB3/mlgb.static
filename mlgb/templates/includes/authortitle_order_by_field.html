@@ -1,20 +1,20 @@
         Order results by:
         <br />
         <input type="radio" name="order_by" 
-        id="order_by_author{{search_type}}" value="solr_id_sort" 
+        id="order_by_author" value="solr_id_sort" 
         {% if order_by != "catalogue_provenance" and order_by != "catalogue_date" %}CHECKED {%endif%}/>
-        <label for="order_by_author{{search_type}}">Author/title</label>
+        <label for="order_by_author">Author/title</label>
 
         <br />
         <input type="radio" name="order_by" 
-        id="order_by_catprov{{search_type}}" value="catalogue_provenance" 
+        id="order_by_catprov" value="catalogue_provenance" 
         {% if order_by == "catalogue_provenance" %}CHECKED {%endif%}/>
-        <label for="order_by_catprov{{search_type}}">Catalogue provenance</label>
+        <label for="order_by_catprov">Catalogue provenance</label>
 
         <br />
         <input type="radio" name="order_by" 
-        id="order_by_catdate{{search_type}}" value="catalogue_date" 
+        id="order_by_catdate" value="catalogue_date" 
         {% if order_by == "catalogue_date" %}CHECKED {%endif%}/>
-        <label for="order_by_catdate{{search_type}}">Catalogue date</label>
+        <label for="order_by_catdate">Catalogue date</label>
 
 

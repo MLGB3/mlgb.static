@@ -1,0 +1,79 @@
+  <div class="pretty-print">
+  <h2 class="heading">
+  Search Medieval Catalogues
+  </h2>
+
+  {# ================== start search form ================== #}
+  <form action="{% if editable %}/e{% endif %}/authortitle/results/" method="get" class="indexmenu">
+
+    <input type="hidden" value="advanced" name="search_type"/>
+
+    Enter selections in any combination of the fields below. 
+    <p></p>
+
+    <input type="submit" value="Go" name="go_button_start" class="searchformbutton"/>
+    <input type="button" value="Clear" onclick="clearSearchFields()" name="clear_button_start"
+    class="searchformbutton" />
+    <br class="clearright" />
+
+
+    {% for f in advanced_search_fields %}
+      <div class="advanced_search_field">
+      {% if f.fieldname != 's_document_type' %}
+        <label for="{{f.fieldname}}">{{f.label}}</label><br />
+        <input type="text" name="{{f.fieldname}}" id="{{f.fieldname}}" value="{{f.value}}" />
+        {% if f.info %}
+        <div><em>({{f.info|safe}})</em></div>
+        {% endif %}
+      {% endif %}
+
+      {% if f.fieldname == 's_document_type' %}
+        {{f.label}}:<br />
+        <select name="s_document_type" id="s_document_type">
+        {% for doctype in doctype_dropdown_options %}
+          <option {% if doctype == f.value %}SELECTED{% endif %}
+          >{{doctype}}</option>
+        {% endfor %}
+        </select>
+      {% endif %}
+      </div>
+    {% endfor %}
+
+    <br class="clearboth" />
+    <hr/>
+
+    <div class="advanced_search_field">
+    <p>
+    {% include 'includes/authortitle_order_by_field.html' %}
+    </p>
+    </div>
+
+    <br class="clearboth" />
+
+    <script type="text/javascript">
+    function clearSearchFields() {
+      var dropdown = document.getElementById( "s_document_type" )
+      dropdown.selectedIndex = 0;
+      var search_term = "";
+      {% for f in advanced_search_fields %}
+        {% if f.fieldname != 's_document_type' %}
+        search_term = document.getElementById( "{{f.fieldname}}" );
+        search_term.value = "";
+        {% endif %}
+      {% endfor %}
+
+      {% include 'includes/reset_page_size.html' %}
+    }
+    </script>
+
+    <input type="submit" value="Go" name="go_button_end"
+    class="searchformbutton" />
+    <input type="button" value="Clear" onclick="clearSearchFields()" name="clear_button_end"
+    class="searchformbutton" />
+  </form>
+  {# ================== end search form ================== #}
+
+  </div>   <!-- end div "pretty-print" -->
+
+
+
