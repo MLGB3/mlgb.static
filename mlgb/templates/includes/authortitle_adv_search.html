@@ -1,6 +1,17 @@
+  {% if pagename == 'index' and not letter %}
+  <div class="indexsearch">
+  {% endif %}
   <div class="pretty-print">
   <h2 class="heading">
-  Search Medieval Catalogues
+  {% if pagename == 'index' %}
+    {% if letter %}
+      Search the index
+    {% else %}
+      Search author/title index:
+    {% endif %}
+  {% else %}
+    Search Medieval Catalogues
+  {% endif %}
   </h2>
 
   {# ================== start search form ================== #}
@@ -75,5 +86,8 @@
 
   </div>   <!-- end div "pretty-print" -->
 
+  {% if pagename == 'index' and not letter %}
+  </div><!-- end indexsearch -->
+  {% endif %}
 
 
