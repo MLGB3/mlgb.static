@@ -221,7 +221,7 @@ div.moreoptions {
   border-bottom: 5px solid #44687d; /* teal */
 }
 
-.boxed .pretty-print, .wideboxed .pretty-print  {
+.boxed .pretty-print, .wideboxed .pretty-print, .indexsearch .pretty-print  {
   background-color:  #F2F2F2;
   border-bottom: 1px dotted #c5d2e0; /* Wedgwood blue */
 }
@@ -967,5 +967,9 @@ a img.manicule {
 
 li.medieval_cat_result {
   margin-top: 12px;
+}
+
+div.indexsearch div.pretty-print {
+  padding: 10px;
 }
 
