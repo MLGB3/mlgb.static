@@ -18,7 +18,7 @@
       <!-- ====================================== -->
       {% if pagename == 'index' and not letter %}
 
-        <h2 class="heading">Quick search</h2>
+        <h2 class="heading">Quick search of index</h2>
 
         <form class="indexmenu" method="get" action="{% if editable %}/e{% endif %}/authortitle/results/">
 
@@ -35,7 +35,26 @@
           </p>
 
           <p>
-          {% include 'includes/authortitle_order_by_field.html' %}
+          Order results by:
+          <br />
+          <input type="radio" name="order_by" 
+          id="quick_order_by_author" value="solr_id_sort" 
+          {% if order_by != "catalogue_provenance" and order_by != "catalogue_date" %}CHECKED {%endif%}/>
+          <label for="quick_order_by_author">Author/title</label>
+
+          <br />
+          <input type="radio" name="order_by" 
+          id="quick_order_by_catprov" value="catalogue_provenance" 
+          {% if order_by == "catalogue_provenance" %}CHECKED {%endif%}/>
+          <label for="quick_order_by_catprov">Catalogue provenance</label>
+
+          <br />
+          <input type="radio" name="order_by" 
+          id="quick_order_by_catdate" value="catalogue_date" 
+          {% if order_by == "catalogue_date" %}CHECKED {%endif%}/>
+          <label for="quick_order_by_catdate">Catalogue date</label>
+
+
           </p>
 
           <input type="submit" id="submit_quicksearch" value="Go" /> 

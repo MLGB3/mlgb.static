@@ -10,7 +10,11 @@
       Search author/title index:
     {% endif %}
   {% else %}
-    Search Medieval Catalogues
+    {% if pagename == 'results' %}
+      Search Again
+    {% else %}
+      Search Medieval Catalogues
+    {% endif %}
   {% endif %}
   </h2>
 
