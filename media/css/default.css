@@ -973,3 +973,10 @@ div.indexsearch div.pretty-print {
   padding: 10px;
 }
 
+.funder_title, .funder_title a {
+    font-family: Trebuchet MS;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #989189 !important;
+}
