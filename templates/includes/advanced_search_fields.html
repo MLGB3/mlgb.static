@@ -29,6 +29,13 @@
           <input type="text" name="{{fieldname}}" id="{{fieldname}}" value="{{value}}" />
         {% endif %}
 
+        {% if fieldname == 'image' %}
+          {{label}}:<br />
+            <input type="checkbox" name="image" id="image" value="true"
+            {% if image_val == true%} CHECKED{% endif %}
+            />
+        {% endif %}
+
         {% if fieldname == 'printed_book' %}
           {{label}}:<br />
           {% for radio_id, radio_val, radio_label in printed_book_radio_options %} 
