@@ -24,15 +24,17 @@
 
       {% for fieldname, label, value in form_fields %}
         <div class="advanced_search_field">
-        {% if fieldname != 'printed_book' and fieldname != 'evidence_code' %}
+        {% if fieldname != 'printed_book' and fieldname != 'evidence_code' and fieldname != 'has_images'%}
           <label for="{{fieldname}}">{{label}}</label><br />
           <input type="text" name="{{fieldname}}" id="{{fieldname}}" value="{{value}}" />
         {% endif %}
 
-        {% if fieldname == 'image' %}
+        {# CTB - adding 'has images' field in advanced search #}
+
+        {% if fieldname == 'has_images' %}
           {{label}}:<br />
-            <input type="checkbox" name="image" id="image" value="true"
-            {% if image_val == true%} CHECKED{% endif %}
+            <input type="checkbox" name="has_images" id="has_images" value="{{value}}"
+            {% if value != false%} CHECKED{% endif %}
             />
         {% endif %}
 
