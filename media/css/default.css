@@ -476,7 +476,7 @@ div.wideboxed div.advanced_search_field {
 }
 
 #footer {
-  clear: both;
+  xclear: both;
   position:absolute;
   bottom:0;  
   width: 100%;
