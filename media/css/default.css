@@ -27,9 +27,11 @@ body {
   padding-left: 12px;
   padding-right: 12px;
   background: #FFFFFF;
-  font: normal small "Trebuchet MS", Arial, Helvetica, sans-serif;
+  xfont: normal small "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: #666666;
   height: 100%;
+  font-family: Arial;
+  font-size: 14px;
 }
 
 body.printout {
