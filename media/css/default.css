@@ -444,7 +444,7 @@ div#maincontent {
 }
 
 #submit1, #submit_quicksearch, #clear_quicksearch, .searchformbutton {
-  font: bold 12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font: bold 14px Arial, Helvetica, sans-serif;
   background-color: #44687d; /* teal */
   border: 1px solid #44687d ;
   color: #FFFFFF;
