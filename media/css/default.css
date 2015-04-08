@@ -29,6 +29,7 @@ body {
   background: #FFFFFF;
   font: normal small "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: #666666;
+  height: 100%;
 }
 
 body.printout {
@@ -352,6 +353,7 @@ div.moreoptions {
   margin: 0 auto;
   padding: 20px ;
   margin-top: 20px;
+  padding-bottom:70px;
 }
 
 body.printout #wrapper {
@@ -468,11 +470,19 @@ div.wideboxed div.advanced_search_field {
 
 /* ==================  Footer  ================== */
 
+#container {
+  min-height:100%;
+  position:relative;
+}
+
 #footer {
   clear: both;
+  position:absolute;
+  bottom:0;  
   width: 100%;
-  margin: 0 auto;
-  margin-bottom: 5px;
+  height: 70px;
+  xmargin: 0 auto;
+  xmargin-bottom: 5px;
   background-color: #767676 ;
   border-top-width: 3px;
   border-top-color: #3E3E3E;
