@@ -72,7 +72,7 @@ br.clearright {
 
 #header {
   width: 100%;
-  xheight: 105px;
+  height: 135px;
   margin: none;
   background-color: ##c7c2bc; /* warm grey */
   background: #c7c2bc url(../photos/Peterborough_Bodley_163_2.jpg);
