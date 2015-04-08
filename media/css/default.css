@@ -269,7 +269,8 @@ div.moreoptions {
 
 .wideboxed select {
   max-width: 310px;
-  font: small Arial;
+  font-family: Arial;
+  font-size: 14px;
 }
 
 .wideboxed input[type="text"] {
