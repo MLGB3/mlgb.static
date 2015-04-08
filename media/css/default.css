@@ -474,9 +474,11 @@ div.wideboxed div.advanced_search_field {
   margin: 0 auto;
   margin-bottom: 5px;
   background-color: #767676 ;
-  border-bottom-style: dotted;
-  border-bottom-width: 1px;
-  border-bottom-color: #44687d; /* teal */
+  border-top-width: 2px;
+  border-top-color: #3E3E3E;
+  xborder-bottom-style: dotted;
+  xborder-bottom-width: 1px;
+  xborder-bottom-color: #44687d; /* teal */
   color: #FFFFFF;
   font-size: 18px;
 }
