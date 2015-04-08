@@ -474,7 +474,7 @@ div.wideboxed div.advanced_search_field {
   margin: 0 auto;
   margin-bottom: 5px;
   background-color: #767676 ;
-  border-top-width: 2px;
+  border-top-width: 3px;
   border-top-color: #3E3E3E;
   border-top-style: solid;
   xborder-bottom-style: dotted;
@@ -485,8 +485,9 @@ div.wideboxed div.advanced_search_field {
 }
 
 #footer p {
-  padding: 10px;
   font-size: .8em;
+  padding: 10px 10px 20px;
+  text-align: center;
 }
 
 #footer a {
