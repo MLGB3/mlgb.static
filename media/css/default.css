@@ -158,7 +158,9 @@ br.clearright {
   letter-spacing: -1px;
   font-size: 14px;
   font-weight: bold;
-  color: #44687d; /* teal */
+  xcolor: #44687d; /* teal */
+  color: #fff; /* teal */
+
 }
 
 #pages a:hover, #pages .active a {
