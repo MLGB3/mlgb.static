@@ -212,7 +212,8 @@ div.moreoptions {
   height: 26px;
   padding: 6px 0 0 10px;
   border: 1px solid #000000;
-  font-size: 1em;
+  xfont-size: 1em;
+  font-size: 14px;
   color: #44687d; /* teal */
   background-color: #c5d2e0; /* wedgwood blue */
 
