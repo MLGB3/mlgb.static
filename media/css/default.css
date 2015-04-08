@@ -90,15 +90,19 @@ br.clearright {
 
   border-top-width: 9px;
   border-top-style: solid;
-  border-top-color: #c7c2bc; /* warm grey */
+  xborder-top-color: #c7c2bc; /* warm grey */
+  border-top-color: #002147;
 
   border-right-width: 15px;
   border-right-style: solid;
-  border-right-color: #c7c2bc; /* warm grey */
+  xborder-right-color: #c7c2bc; /* warm grey */
+  border-right-color: #002147;
 
   border-left-width: 15px;
   border-left-style: solid;
-  border-left-color: #c7c2bc; /* warm grey */
+  xborder-left-color: #c7c2bc; /* warm grey */
+  border-left-color: #002147;
+
 }
 
 #mellon a img {
