@@ -74,7 +74,7 @@ br.clearright {
   margin: none;
   background-color: ##c7c2bc; /* warm grey */
   background: #c7c2bc url(../photos/Peterborough_Bodley_163_2.jpg);
-  padding-right: 15px;
+  xpadding-right: 15px;
 }
 
 #header img {
@@ -131,7 +131,7 @@ br.clearright {
   height: 40px;
   background-color: #002147; /* warm grey */
   border-bottom: 5px solid #44687d; /* teal */
-  padding-right: 15px;
+  xpadding-right: 15px;
 
 }
 
