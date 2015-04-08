@@ -264,7 +264,9 @@ div.moreoptions {
 
 .boxed select {
   max-width: 215px;
-  font-size: 0.9em;
+  xfont-size: 0.9em;
+  font-family: arial;
+  font-size: 14px;
 }
 
 .wideboxed select {
@@ -727,7 +729,7 @@ span.outerhead {
   font-size: 11pt;
 }
 span.heading2 {
-  font-size: 9pt;
+  font-size: 14px;
 }
 
 span.spacer {
