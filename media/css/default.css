@@ -353,7 +353,6 @@ div.moreoptions {
   margin: 0 auto;
   padding: 20px ;
   margin-top: 20px;
-  padding-bottom:70px;
 }
 
 body.printout #wrapper {
@@ -470,15 +469,8 @@ div.wideboxed div.advanced_search_field {
 
 /* ==================  Footer  ================== */
 
-#container {
-  min-height:100%;
-  position:relative;
-}
-
 #footer {
-  xclear: both;
-  position:absolute;
-  bottom:0;  
+  clear: both;
   width: 100%;
   height: 70px;
   xmargin: 0 auto;
