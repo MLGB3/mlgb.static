@@ -179,9 +179,9 @@ br.clearright {
   padding-right: 14px;
   background-color: #44687d; /* teal */
   color: #FFFFFF;
-  border-top: 1px solid #44687d; /* teal */
-  border-left: 1px solid #44687d; /* teal */
-  border-right: 1px solid #44687d; /* teal */
+  xborder-top: 1px solid #44687d; /* teal */
+  xborder-left: 1px solid #44687d; /* teal */
+  xborder-right: 1px solid #44687d; /* teal */
   -webkit-border-top-left-radius: 6px;  
   -moz-border-top-left-radius: 6px;  
   border-top-left-radius: 6px; 
