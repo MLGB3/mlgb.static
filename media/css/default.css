@@ -160,9 +160,9 @@ br.clearright {
 #pages a {
   display: block;
   float: left;
-  height: 26px;
+  height: 27px;
   xmargin: 0 2px 0 0;
-  padding: 6px 15px 0 15px;
+  padding: 6px 16px 0 15px;
   xtext-transform: uppercase;
   text-decoration: none;
   xletter-spacing: 0px;
@@ -176,7 +176,7 @@ br.clearright {
 #pages a:hover, #pages .active a {
   display: inline-block;
   xpadding-left: 14px;
-  padding-right: 15px;
+  padding-right: 16px;
   background-color: #44687d; /* teal */
   color: #FFFFFF;
   xborder-top: 1px solid #44687d; /* teal */
