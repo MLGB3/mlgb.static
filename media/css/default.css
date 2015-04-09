@@ -1015,9 +1015,11 @@ div.indexsearch div.pretty-print {
     text-decoration: none;
     font-weight: bold;
     color: #989189 !important;
-    padding-left: 9px;
 }
 
+.funder_title {
+    padding-left: 9px;
+}
 .container {
     background-attachment: scroll;
     background-clip: border-box;
