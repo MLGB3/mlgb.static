@@ -106,7 +106,7 @@ br.clearright {
   xborder-left-color: #c7c2bc; /* warm grey */
   xborder-left-color: #002147;
 
-  margin: 15px;
+  margin: 15px 15px 0px 15px;
 }
 
 #mellon a img {
@@ -120,6 +120,7 @@ br.clearright {
   xmargin-left: 22px;
   color: #EEEEEE;
   margin-left: 16px;
+  padding: 10px 0px;
 }
 
 #header a {
