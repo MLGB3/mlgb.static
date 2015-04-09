@@ -457,7 +457,7 @@ div#maincontent {
 }
 
 #submit1 {
-  width: 40px;
+  xwidth: 40px;
 }
 
 #submit_quicksearch, #clear_quicksearch, .searchformbutton {
