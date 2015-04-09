@@ -161,7 +161,7 @@ br.clearright {
   display: block;
   float: left;
   height: 27px;
-  xmargin: 0 2px 0 0;
+  margin: 0 2px 0 0;
   padding: 6px 14px 0 15px;
   xtext-transform: uppercase;
   text-decoration: none;
