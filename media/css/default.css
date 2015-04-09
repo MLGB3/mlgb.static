@@ -285,7 +285,7 @@ div.moreoptions {
 /* ==================  class "main-pretty-print"  ================== */
 
 .main-pretty-print {
-  background: #F2F2F2 url(../img/img5.gif) repeat-x left bottom;
+  background: #F2F2F2; /* url(../img/img5.gif) repeat-x left bottom; */
 }
 
 .main-pretty-print .title {
