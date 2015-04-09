@@ -34,7 +34,7 @@
         {% if fieldname == 'has_images' %}
           {{label}}<br />
             <input type="checkbox" name="has_images" id="has_images" value="True"
-            {% if value == True %} checked="True"{% endif %}
+            {% if value != False %} checked="True"{% endif %}
             />
         {% endif %}
 
