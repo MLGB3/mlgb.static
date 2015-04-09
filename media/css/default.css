@@ -24,8 +24,8 @@ very, very pale grey/blue: #F2F2F2
 
 body {
   margin: 0 0 0 0;
-  padding-left: 12px;
-  padding-right: 12px;
+  xpadding-left: 12px;
+  xpadding-right: 12px;
   background: #FFFFFF;
   xfont: normal small "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: #666666;
@@ -1014,4 +1014,5 @@ div.indexsearch div.pretty-print {
     text-decoration: none;
     font-weight: bold;
     color: #989189 !important;
+    padding-left: 9px;
 }
