@@ -117,7 +117,9 @@ br.clearright {
 }
 
 #mlgb3 a h1 {
-  margin-left: 22px;
+  xmargin-left: 22px;
+  color: #EEEEEE;
+  margin-left: 16px;
 }
 
 #header a {
