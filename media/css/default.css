@@ -72,7 +72,7 @@ br.clearright {
 
 #header {
   width: 100%;
-  height: 135px;
+  xheight: 135px;
   margin: none;
   background-color: ##c7c2bc; /* warm grey */
   background: #c7c2bc url(../photos/Peterborough_Bodley_163_2.jpg);
@@ -358,8 +358,8 @@ div.moreoptions {
 
 #wrapper {
   width: 1000px;
-  margin: 0 auto;
-  padding: 20px ;
+  margin: 10px auto 0;
+  xpadding: 20px ;
   margin-top: 20px;
 }
 
@@ -1008,7 +1008,8 @@ div.indexsearch div.pretty-print {
 .funder_title, .funder_title a {
     font-family: Arial;
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 10px;
+    text-decoration: none;
     font-weight: bold;
     color: #989189 !important;
 }
