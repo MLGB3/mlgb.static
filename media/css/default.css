@@ -360,7 +360,7 @@ div.moreoptions {
   width: 1000px;
   margin: 10px auto 0;
   xpadding: 20px ;
-  margin-top: 20px;
+  xmargin-top: 20px;
 }
 
 body.printout #wrapper {
