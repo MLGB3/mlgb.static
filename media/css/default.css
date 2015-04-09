@@ -41,7 +41,7 @@ body.printout {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
-  text-transform: uppercase;
+  xtext-transform: uppercase;
 }
 
 a {
@@ -163,10 +163,10 @@ br.clearright {
   height: 25px;
   margin: 0 2px 0 0;
   padding: 7px 15px 0 15px;
-  text-transform: uppercase;
+  xtext-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0px;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: bold;
   xcolor: #44687d; /* teal */
   color: #fff; /* teal */
