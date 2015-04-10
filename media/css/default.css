@@ -494,7 +494,7 @@ div.wideboxed div.advanced_search_field {
   xborder-bottom-style: dotted;
   xborder-bottom-width: 1px;
   xborder-bottom-color: #44687d; /* teal */
-  color: #FFFFFF;
+  color: #666666;
   font-size: 18px;
 }
 
@@ -505,7 +505,7 @@ div.wideboxed div.advanced_search_field {
 }
 
 #footer a {
-  color:white;
+  color: #666666;
   text-decoration: none;
 }
 
