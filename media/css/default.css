@@ -880,7 +880,8 @@ a.editlink {
 
 div.index { width: 640px; 
             display: inline-block; 
-            float: left; }
+            float: left; 
+            margin-bottom: 20px;}
 
 div.indexmenu { margin-left: 30px; 
                 display: inline-block; 
