@@ -487,7 +487,7 @@ div.wideboxed div.advanced_search_field {
   height: 70px;
   xmargin: 0 auto;
   xmargin-bottom: 5px;
-  background-color: #767676 ;
+  xbackground-color: #767676 ;
   border-top-width: 3px;
   border-top-color: #3E3E3E;
   border-top-style: solid;
