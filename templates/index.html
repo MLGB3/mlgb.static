@@ -10,41 +10,7 @@
  
 {# ====== start block js ====== #}
 {% block js %}
-<script type='text/javascript'>
-$().ready(function() {
 
-    // switch header images - CTB
-   
-    var header = document.getElementById('header');
-    var pictures = new Array('/mlgb/media/img/bannerimages/bannerimage1.jpg','/mlgb/media/img/bannerimages/bannerimage2.jpg','/mlgb/media/img/bannerimages/bannerimage3.jpg','/mlgb/media/img/bannerimages/bannerimage4.jpg','/mlgb/media/img/bannerimages/bannerimage5.jpg','/mlgb/media/img/bannerimages/bannerimage6.jpg','/mlgb/media/img/bannerimages/bannerimage7.jpg','/mlgb/media/img/bannerimages/bannerimage8.jpg');
-    var numPics = pictures.length;
-    var chosenPic = Math.floor((Math.random() * numPics));
-    header.style.background = 'url(' + pictures[chosenPic] + ')';
-
-
-	function formatData(data) {
-        return data ;
-    }
-	$("#s").autocomplete("mlgb/fulltext", {
-		width: 210,
-		dataType: "json",
-		selectFirst: false,
-        parse: function(data) {
-            return $.map(data, function(row) {
-                return {
-                    data: row,
-                    value: row,
-                    result: row
-                }
-            });
-        },
-        formatItem: function(item) {
-            return formatData(item);
-        }
-    });
-	
- });
-</script>
 {% endblock %}
 {# ======= end block js ======= #}
 
