@@ -75,7 +75,7 @@ br.clearright {
   xheight: 135px;
   margin: none;
   background-color: ##c7c2bc; /* warm grey */
-  background: #c7c2bc url(../photos/Peterborough_Bodley_163_2.jpg);
+  xbackground: #c7c2bc url(../photos/Peterborough_Bodley_163_2.jpg);
   xpadding-right: 15px;
 }
 
