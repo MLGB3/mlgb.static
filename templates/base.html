@@ -80,17 +80,6 @@ function jsChangeSearch( parmName, parmVal ) {
   window.location.search = newSearch;
 }
 </script>
-<script type="text/javascript">
-$().ready(function() {
-  alert('aloha!');
-    var header = document.getElementById('header');
-    var pictures = new Array('/mlgb/media/img/bannerimages/bannerimage1.jpg','/mlgb/media/img/bannerimages/bannerimage2.jpg','/mlgb/media/img/bannerimages/bannerimage3.jpg','/mlgb/media/img/bannerimages/bannerimage4.jpg','/mlgb/media/img/bannerimages/bannerimage5.jpg','/mlgb/media/img/bannerimages/bannerimage6.jpg','/mlgb/media/img/bannerimages/bannerimage7.jpg','/mlgb/media/img/bannerimages/bannerimage8.jpg',);
-    var numPics = pictures.length;
-    var chosenPic = Math.floor((Math.random() * numPics));
-    header.style.background = 'url(' + pictures[chosenPic] + ')';
-   
-}));
-</script>
 {% block js %}
 {% endblock %}
 
@@ -298,7 +287,6 @@ MLGB3: Medieval Libraries of Great Britain III
   </p>
 </div><!-- end div id "footer" -->
 {% endblock %}{# end block footer #}
-<script src="/mlgb/media/js/randomheaderimage.js" type="text/javascript"></script>
 </body>
 {# ============================================================= #}
 </html>
