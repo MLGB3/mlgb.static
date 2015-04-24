@@ -717,7 +717,7 @@ div.resultdetails {
   xborder-color: #c5d2e0; /* wedgwood blue */
   xborder-width: 1px;
   xborder-top: none; 
-  padding: 10px;
+  xpadding: 10px;
   margin-bottom: 20px;
 }
 
