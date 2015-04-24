@@ -366,6 +366,7 @@ div.moreoptions {
   margin: 10px auto 0;
   xpadding: 20px ;
   xmargin-top: 20px;
+  padding-left:10px;
 }
 
 body.printout #wrapper {
@@ -880,7 +881,9 @@ a.editlink {
 /* ================= Index ================= */
 
 
-div.index { width: 640px; 
+div.index {     
+            padding-left: 10px;
+            width: 700px;
             display: inline-block; 
             float: left; 
             margin-bottom: 20px;}
