@@ -71,12 +71,12 @@ br.clearright {
 /* ================== Header ================== */
 
 #header {
-  width: 100%;
-  height: 230px;
-  margin: none;
-  background-color: ##c7c2bc; /* warm grey */
+  xbackground-color: ##c7c2bc; /* warm grey */
   xbackground: #c7c2bc url(../photos/Peterborough_Bodley_163_2.jpg);
   xpadding-right: 15px;
+  height: 230px;
+  margin: auto;
+  width: 1000px;
 }
 
 #header img {
@@ -132,7 +132,8 @@ br.clearright {
 
 #pages {
   clear: both;
-  width: 100%;
+  width: 1000px;
+  margin: auto;
   min-width: 868px;
   height: 40px;
   background-color: #002147; /* warm grey */
@@ -483,7 +484,8 @@ div.wideboxed div.advanced_search_field {
 
 #footer {
   clear: both;
-  width: 100%;
+  margin: 10px auto;
+  width: 1000px;
   height: 70px;
   xmargin: 0 auto;
   xmargin-bottom: 5px;
@@ -1014,8 +1016,9 @@ div.indexsearch div.pretty-print {
 .funder_title, .funder_title a {
     font-family: Arial;
     font-size: 18px;
-    margin-top: 10px;
+    margin: 10px auto;
     text-decoration: none;
+    width: 1000px;
     font-weight: bold;
     color: #989189 !important;
 }
