@@ -1030,12 +1030,12 @@ div.indexsearch div.pretty-print {
     text-decoration: none;
     font-weight: bold;
     color: #989189 !important;
-
+    padding:10px;
 }
 
 .funder_wrapper {
     width:1000px;
-    padding:10px;
+    margin: 0 auto;
 }
 .container {
     background-attachment: scroll;
