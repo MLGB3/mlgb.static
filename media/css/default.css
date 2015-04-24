@@ -882,13 +882,14 @@ a.editlink {
 
 
 div.index {     
-            padding-left: 10px;
-            width: 700px;
+            xpadding-left: 10px;
+            max-width: 740px;
+            width: 75%;
             display: inline-block; 
             float: left; 
             margin-bottom: 20px;}
 
-div.indexmenu { margin-left: 30px; 
+div.indexmenu { xmargin-left: 30px; 
                 display: inline-block; 
                 float: left;
                 clear: right;
