@@ -1021,6 +1021,11 @@ div.indexsearch div.pretty-print {
 .funder_title {
     float:right;
     padding:10px;
+    font-family: Arial;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #989189 !important;    
 }
 
 .funder_title a {
