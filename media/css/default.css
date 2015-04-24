@@ -713,10 +713,10 @@ p.back_to_top {
 }
 
 div.resultdetails {
-  border-style: solid;
-  border-color: #c5d2e0; /* wedgwood blue */
-  border-width: 1px;
-  border-top: none; 
+  xborder-style: solid;
+  xborder-color: #c5d2e0; /* wedgwood blue */
+  xborder-width: 1px;
+  xborder-top: none; 
   padding: 10px;
   margin-bottom: 20px;
 }
