@@ -1026,7 +1026,7 @@ div.indexsearch div.pretty-print {
 .funder_title a {
     font-family: Arial;
     font-size: 18px;
-    margin: 10px auto;
+    xmargin: 10px auto;
     text-decoration: none;
     font-weight: bold;
     color: #989189 !important;
@@ -1035,6 +1035,7 @@ div.indexsearch div.pretty-print {
 
 .funder_wrapper {
     width:1000px;
+    padding:10px;
 }
 .container {
     background-attachment: scroll;
