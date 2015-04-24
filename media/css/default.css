@@ -1044,3 +1044,7 @@ div.indexsearch div.pretty-print {
     height: 100%;
     width: 100%;
 }
+
+#search {
+    width: 99%;
+}
