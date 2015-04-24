@@ -201,7 +201,7 @@ div.moreoptions {
 }
 
 .boxed {
-  width: 240px;
+  width: 240px !important;
 }
 
 .wideboxed {
