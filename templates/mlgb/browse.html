@@ -11,7 +11,7 @@
   {% if number_of_records %}
   id="{% if output_style == 'table' %}mlgbbrowse{% else %}mlgbtreeview{% endif %}"
   {% else %}id="nonefound"{% endif %} 
-  class="boxed treeview{% if output_style == 'table' %}browse{% endif %}">
+  class="index{% if output_style == 'table' %}browse{% endif %}">
 
   <h2 class="heading">{{page_title|default:"Browse"}}</h2>
 
