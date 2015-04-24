@@ -1018,18 +1018,23 @@ div.indexsearch div.pretty-print {
   padding: 10px;
 }
 
-.funder_title, .funder_title a {
+.funder_title {
+    padding-left: 9px;
+    float:right;
+}
+
+.funder_title a {
     font-family: Arial;
     font-size: 18px;
     margin: 10px auto;
     text-decoration: none;
-    width: 1000px;
     font-weight: bold;
     color: #989189 !important;
+
 }
 
-.funder_title {
-    padding-left: 9px;
+.funder_wrapper {
+    width:1000px;
 }
 .container {
     background-attachment: scroll;
