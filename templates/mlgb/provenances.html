@@ -1,0 +1,71 @@
+{% extends "mlgb/mlgb.html" %}
+{% load mlgb_custom_filters %}
+
+{% block title %}
+<title>MLGB3 Browse</title>
+{% endblock %}
+
+{% block maincontent %}
+
+  <h2 class="heading">Provenances</h2>
+
+  <div class="resultdetails">
+  {% if result_string %} {# the HTML for the search results is already set in variable 'result_string' #}
+    {% autoescape off %}{{ result_string|fix_dashes }}{% endautoescape %}
+  {% endif %}
+  </div> <!-- end div class resultdetails -->
+
+  {% if printing %}
+  <script>
+    window.print();
+  </script>
+  {% endif %}
+
+{% endblock %} {# end block 'maincontent' #}
+
+{% block moreoptions %}  
+{% if not printing %}
+<div id="rightbar_options">
+
+{% block browseoptions %} 
+
+  <div id="browseoptions" class="boxed">
+    <h2 class="heading">Browse Options</h2>
+    <div class="pretty-print">
+      <ul>
+
+        <li class="first">
+        <a href="{% if editable %}/e{% endif %}/mlgb/browse/?field_to_search=medieval_library">
+        Browse by medieval library
+        </a> 
+        </li>
+
+        <li>
+        <a href="{% if editable %}/e{% endif %}/mlgb/browse/?field_to_search=modern_library">
+        Browse by modern lib/institution
+        </a> 
+        </li>
+
+        <li>
+        <a href="{% if editable %}/e{% endif %}/mlgb/browse/?field_to_search=location">
+        Browse by current location
+        </a> 
+        </li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}
+
+{% block archives %}
+  {% include 'includes/categorylinks.html' %}
+{% endblock %}
+
+{% block search %}
+  {% include 'includes/searchwithoptions.html' %}
+{% endblock %}
+
+</div><!-- end rightbar options -->
+{% endif %}
+{% endblock %} {# end block moreoptions #}
+
+
