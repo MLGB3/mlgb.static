@@ -24,11 +24,14 @@ very, very pale grey/blue: #F2F2F2
 
 body {
   margin: 0 0 0 0;
-  padding-left: 12px;
-  padding-right: 12px;
-  background: #FFFFFF;
-  font: normal small "Trebuchet MS", Arial, Helvetica, sans-serif;
+  xpadding-left: 12px;
+  xpadding-right: 12px;
+  xbackground-color: #767676;
+  xfont: normal small "Trebuchet MS", Arial, Helvetica, sans-serif;
   color: #666666;
+  height: 100%;
+  font-family: Arial;
+  font-size: 14px;
 }
 
 body.printout {
@@ -38,7 +41,7 @@ body.printout {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
-  text-transform: uppercase;
+  xtext-transform: uppercase;
 }
 
 a {
@@ -68,12 +71,12 @@ br.clearright {
 /* ================== Header ================== */
 
 #header {
-  width: 100%;
-  height: 105px;
-  margin: none;
-  background-color: ##c7c2bc; /* warm grey */
-  background: #c7c2bc url(../photos/Peterborough_Bodley_163_2.jpg);
-  padding-right: 15px;
+  xbackground-color: ##c7c2bc; /* warm grey */
+  xbackground: #c7c2bc url(../photos/Peterborough_Bodley_163_2.jpg);
+  xpadding-right: 15px;
+  height: 230px;
+  margin: auto;
+  width: 1000px;
 }
 
 #header img {
@@ -90,15 +93,20 @@ br.clearright {
 
   border-top-width: 9px;
   border-top-style: solid;
-  border-top-color: #c7c2bc; /* warm grey */
+  xborder-top-color: #c7c2bc; /* warm grey */
+  border-top-color: #002147;
 
-  border-right-width: 15px;
-  border-right-style: solid;
-  border-right-color: #c7c2bc; /* warm grey */
+  xborder-right-width: 15px;
+  xborder-right-style: solid;
+  xborder-right-color: #c7c2bc; /* warm grey */
+  xborder-right-color: #002147;
 
-  border-left-width: 15px;
-  border-left-style: solid;
-  border-left-color: #c7c2bc; /* warm grey */
+  xborder-left-width: 15px;
+  xborder-left-style: solid;
+  xborder-left-color: #c7c2bc; /* warm grey */
+  xborder-left-color: #002147;
+
+  margin: 15px 15px 0px 15px;
 }
 
 #mellon a img {
@@ -109,7 +117,10 @@ br.clearright {
 }
 
 #mlgb3 a h1 {
-  margin-left: 22px;
+  xmargin-left: 22px;
+  color: #EEEEEE;
+  margin-left: 16px;
+  padding: 10px 0px;
 }
 
 #header a {
@@ -121,12 +132,13 @@ br.clearright {
 
 #pages {
   clear: both;
-  width: 100%;
+  width: 1000px;
+  margin: auto;
   min-width: 868px;
   height: 40px;
-  background-color: #c7c2bc; /* warm grey */
+  background-color: #002147; /* warm grey */
   border-bottom: 5px solid #44687d; /* teal */
-  padding-right: 15px;
+  xpadding-right: 15px;
 
 }
 
@@ -150,26 +162,28 @@ br.clearright {
 #pages a {
   display: block;
   float: left;
-  height: 25px;
+  height: 27px;
   margin: 0 2px 0 0;
-  padding: 7px 15px 0 15px;
-  text-transform: uppercase;
+  padding: 6px 14px 0 15px;
+  xtext-transform: uppercase;
   text-decoration: none;
-  letter-spacing: -1px;
-  font-size: 14px;
+  xletter-spacing: 0px;
+  font-size: 17px;
   font-weight: bold;
-  color: #44687d; /* teal */
+  xcolor: #44687d; /* teal */
+  color: #fff; /* teal */
+
 }
 
 #pages a:hover, #pages .active a {
   display: inline-block;
-  padding-left: 14px;
+  xpadding-left: 14px;
   padding-right: 14px;
   background-color: #44687d; /* teal */
   color: #FFFFFF;
-  border-top: 1px solid #44687d; /* teal */
-  border-left: 1px solid #44687d; /* teal */
-  border-right: 1px solid #44687d; /* teal */
+  xborder-top: 1px solid #44687d; /* teal */
+  xborder-left: 1px solid #44687d; /* teal */
+  xborder-right: 1px solid #44687d; /* teal */
   -webkit-border-top-left-radius: 6px;  
   -moz-border-top-left-radius: 6px;  
   border-top-left-radius: 6px; 
@@ -187,16 +201,17 @@ div.moreoptions {
 }
 
 .boxed {
-  width: 230px;
+  width: 240px !important;
 }
 
 .wideboxed {
-  width: 700px;
+  width: 740px;
+  padding-left: 0 !important;
 }
 
 .boxed, .wideboxed {
   float: left;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   padding-left: 10px;
   margin-right: 10px;
 }
@@ -205,7 +220,8 @@ div.moreoptions {
   height: 26px;
   padding: 6px 0 0 10px;
   border: 1px solid #000000;
-  font-size: 1em;
+  xfont-size: 1em;
+  font-size: 16px;
   color: #44687d; /* teal */
   background-color: #c5d2e0; /* wedgwood blue */
 
@@ -218,7 +234,7 @@ div.moreoptions {
   -webkit-border-top-right-radius: 6px;  
   -moz-border-top-right-radius: 6px;  
   border-top-right-radius: 6px; 
-  border-bottom: 5px solid #44687d; /* teal */
+  border-bottom: 2px solid #44687d; /* teal */
 }
 
 .boxed .pretty-print, .wideboxed .pretty-print, .indexsearch .pretty-print  {
@@ -254,11 +270,15 @@ div.moreoptions {
 
 .boxed select {
   max-width: 215px;
-  font-size: 0.9em;
+  xfont-size: 0.9em;
+  font-family: arial;
+  font-size: 14px;
 }
 
 .wideboxed select {
   max-width: 310px;
+  font-family: Arial;
+  font-size: 14px;
 }
 
 .wideboxed input[type="text"] {
@@ -268,7 +288,8 @@ div.moreoptions {
 /* ==================  class "main-pretty-print"  ================== */
 
 .main-pretty-print {
-  background: #F2F2F2 url(../img/img5.gif) repeat-x left bottom;
+  background: #F2F2F2; /* url(../img/img5.gif) repeat-x left bottom; */
+  padding-bottom: 20px;
 }
 
 .main-pretty-print .title {
@@ -323,7 +344,7 @@ div.moreoptions {
   -webkit-border-top-right-radius: 6px;  
   -moz-border-top-right-radius: 6px;  
   border-top-right-radius: 6px; 
-  border-bottom: 5px solid #44687d; /* teal */
+  border-bottom: 2px solid #44687d; /* teal */
 }
 
 
@@ -343,9 +364,10 @@ div.moreoptions {
 
 #wrapper {
   width: 1000px;
-  margin: 0 auto;
-  padding: 20px ;
-  margin-top: 20px;
+  margin: 10px auto 0;
+  xpadding: 20px ;
+  xmargin-top: 20px;
+  padding-left:10px;
 }
 
 body.printout #wrapper {
@@ -430,7 +452,7 @@ div#maincontent {
 }
 
 #submit1, #submit_quicksearch, #clear_quicksearch, .searchformbutton {
-  font: bold 12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font: bold 14px Arial, Helvetica, sans-serif;
   background-color: #44687d; /* teal */
   border: 1px solid #44687d ;
   color: #FFFFFF;
@@ -440,7 +462,7 @@ div#maincontent {
 }
 
 #submit1 {
-  width: 40px;
+  xwidth: 40px;
 }
 
 #submit_quicksearch, #clear_quicksearch, .searchformbutton {
@@ -464,19 +486,37 @@ div.wideboxed div.advanced_search_field {
 
 #footer {
   clear: both;
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 5px;
-  background-color: #F2F2F2 ;
-  border-bottom-style: dotted;
-  border-bottom-width: 1px;
-  border-bottom-color: #44687d; /* teal */
+  margin: 10px auto;
+  width: 1000px;
+  height: 70px;
+  xmargin: 0 auto;
+  xmargin-bottom: 5px;
+  xbackground-color: #767676 ;
+  border-top-width: 3px;
+  border-top-color: #3E3E3E;
+  border-top-style: solid;
+  xborder-bottom-style: dotted;
+  xborder-bottom-width: 1px;
+  xborder-bottom-color: #44687d; /* teal */
+  color: #666666;
+  font-size: 18px;
 }
 
 #footer p {
-  padding: 10px;
   font-size: .8em;
+  padding: 10px 10px 20px;
+  text-align: center;
 }
+
+#footer a {
+  color: #666666;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
 /* ----------  Banner -------------*/
 #oxbanner {
   width: 384px;
@@ -673,11 +713,12 @@ p.back_to_top {
 }
 
 div.resultdetails {
-  border-style: solid;
-  border-color: #c5d2e0; /* wedgwood blue */
-  border-width: 1px;
-  border-top: none; 
-  padding: 10px;
+  xborder-style: solid;
+  xborder-color: #c5d2e0; /* wedgwood blue */
+  xborder-width: 1px;
+  xborder-top: none; 
+  xpadding: 10px;
+  margin-bottom: 20px;
 }
 
 a.booklink, .browse_provenance a, .browse_modern_library a, a.editlink  {
@@ -698,7 +739,7 @@ span.outerhead {
   font-size: 11pt;
 }
 span.heading2 {
-  font-size: 9pt;
+  font-size: 14px;
 }
 
 span.spacer {
@@ -841,11 +882,15 @@ a.editlink {
 /* ================= Index ================= */
 
 
-div.index { width: 640px; 
+div.index {     
+            xpadding-left: 10px;
+            max-width: 740px;
+            width: 75%;
             display: inline-block; 
-            float: left; }
+            float: left; 
+            margin-bottom: 20px;}
 
-div.indexmenu { margin-left: 30px; 
+div.indexmenu { xmargin-left: 30px; 
                 display: inline-block; 
                 float: left;
                 clear: right;
@@ -973,10 +1018,44 @@ div.indexsearch div.pretty-print {
   padding: 10px;
 }
 
-.funder_title, .funder_title a {
-    font-family: Trebuchet MS;
-    font-size: 16px;
-    margin-top: 20px;
+.funder_title {
+    float:right;
+    padding:10px;
+    font-family: Arial;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #989189 !important;    
+}
+
+.funder_title a {
+    font-family: Arial;
+    font-size: 18px;
+    xmargin: 10px auto;
+    text-decoration: none;
     font-weight: bold;
     color: #989189 !important;
+
+}
+
+.funder_wrapper {
+    width:1000px;
+    margin: 0 auto;
+}
+.container {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #FFFFFF !important;
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+#search {
+    width: 99%;
 }

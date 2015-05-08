@@ -10,32 +10,7 @@
  
 {# ====== start block js ====== #}
 {% block js %}
-<script type='text/javascript'>
-$().ready(function() {
- 
-	function formatData(data) {
-        return data ;
-    }
-	$("#s").autocomplete("mlgb/fulltext", {
-		width: 210,
-		dataType: "json",
-		selectFirst: false,
-        parse: function(data) {
-            return $.map(data, function(row) {
-                return {
-                    data: row,
-                    value: row,
-                    result: row
-                }
-            });
-        },
-        formatItem: function(item) {
-            return formatData(item);
-        }
-    });
-	
- });
-</script>
+
 {% endblock %}
 {# ======= end block js ======= #}
 
