@@ -719,6 +719,8 @@ div.resultdetails {
   xborder-top: none; 
   xpadding: 10px;
   margin-bottom: 20px;
+  float:left;
+  width: 740px;
 }
 
 a.booklink, .browse_provenance a, .browse_modern_library a, a.editlink  {
